@@ -1,0 +1,377 @@
+<div class="preencabezado text-right ">
+
+   
+
+    <button mat-button class="login"[routerLink]="['/login']"  *ngIf="!isLogged" >
+        <i class="material-icons">input</i>
+        <b>Ingresar</b>
+
+    </button>
+
+    <button mat-button class="login" [routerLink]="['/registro']" *ngIf="!isLogged">
+        <i class="material-icons">person_add</i>
+        <b>Regístrate</b>
+    </button>
+
+    <div ngbDropdown class="d-inline-block" *ngIf="isLogged" id="cuentaDown">
+        <button class="logueado" id="logueado" ngbDropdownToggle>
+            <i class="material-icons">person</i>
+            <b>{{nameUser}}</b>
+        </button>
+
+        <div class="alerta_notificacion" *ngIf="total_mensajes>0">
+            <span>!</span>
+        </div>
+
+
+        <div ngbDropdownMenu aria-labelledby="logueado"  id="cuenta-opc">
+            <button class="dropdown-item"  [routerLink]="['/cuenta',{ outlets: { 'cuenta-opcion': ['configurar'] } }]">
+                <i class="material-icons">person</i> Mi cuenta</button>
+
+            <div class="opc-down">
+                <button class="dropdown-item" [routerLink]="['/cuenta',{ outlets: { 'cuenta-opcion': ['conversaciones',''] } }]" >
+                    <i class="material-icons">message</i> Mensajes</button>      
+            
+                <div class="alerta_notificacion" >
+                    <span>{{total_mensajes}}</span>
+                    <div class="nueva_alerta"></div>
+                </div>  
+            
+
+                
+            </div>    
+            <button class="dropdown-item"  [routerLink]="['/cuenta',{ outlets: { 'cuenta-opcion': ['favorito'] } }]" >
+            <i class="material-icons">favorite</i>Mis Favoritos</button>                        
+            <button class="dropdown-item" [routerLink]="['/cuenta',{ outlets: { 'cuenta-opcion': ['clasificado','A'] } }]" >
+            <i class="material-icons">label</i> Mis Clasificados</button>    
+            
+            <button class="dropdown-item"  [routerLink]="['/clasificados']" [queryParams]="{p_cliente: currentuser.codigo}"  *ngIf="currentuser.tipocliente=='02' ">
+                <i class="material-icons">web</i> Mi Micrositio</button>
+            <!--button class="dropdown-item" [routerLink]="['/cuenta',{ outlets: { 'cuenta-opcion': ['solicitudes'] } }]" >Mis solicitudes de crédito</button-->                                                
+            <!--button class="dropdown-item" routerLink="/cuenta">
+                <i class="material-icons">settings</i> Configurar</button-->
+            <hr>
+            <button class="dropdown-item" (click)="logout();">
+                <i class="material-icons">exit_to_app</i>Salir</button>
+        </div>
+    </div>
+
+    <div class="logo">
+        <a routerLink="/">
+            <img class="img-responsive logo_blanco" src="assets/images/indicar.svg" alt="Indicar Logo">
+        </a>
+    </div>
+
+    <!--
+    <button class="mensajes" *ngIf="isLogged">
+        <i class="material-icons">message</i>
+        <span>10</span>
+
+    </button>
+
+    <button class="favoritos" *ngIf="isLogged">
+        <i class="material-icons">favorite</i>
+        <span>2</span>
+    </button>
+
+    <button class="ayuda" *ngIf="isLogged">
+        <i class="material-icons">help</i>
+    </button>-->
+
+</div>
+
+
+<header>
+    <div class="container">
+
+
+         <!-- LOGO INDICAR -->
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="logo">
+
+            <a routerLink="/">
+                <img class="img-responsive logo_blanco" src="assets/images/indicar.svg" alt="Indicar Logo">
+                <img class="img-responsive logo_color" src="assets/images/indicar-color.svg" alt="Indicar Logo">
+
+            </a>
+        </div>
+    </div>
+
+     <div class="col busqueda-contenido" >
+
+        <button #hola class="{{bt_busqueda_respo}}" (click)="toggleSearch=!toggleSearch" (click)="btnBuscar($event)" [ngClass]="toggleSearch ? 'active' : 'inactive'" >
+            <i class="material-icons busqueda-abrir">search</i>
+          
+        </button>
+
+        <button  mat-button class="boton-busqueda web" (click)="btnBuscar($event)" >
+             <i class="material-icons busqueda-abrir">search</i>
+        </button>
+
+        <div class="barra-busqueda" [ngClass]="toggleSearch ? 'active' : 'inactive'">
+            <input type="text"  #buscador [(ngModel)]="palabra" placeholder="Busca tu vehículo ideal" (keydown)="keyDownFunction($event)">
+        </div>
+
+    </div>
+    
+        <a href="javascript:history.back()" class="atras" *ngIf="btAtrasActive"><i class="material-icons">navigate_before</i></a>
+
+
+        <button class="boton-menu hidden-md-up" (click)="headerNav=!headerNav" [ngClass]="headerNav ? 'active' : 'inactive'" type="button" *ngIf="btAtras">
+
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </button>
+
+        <!-- side bar -->
+        <div class="sidebar" [ngClass]="headerNav ? 'show' : 'hide'" >
+
+            <div class="content-sidebar">
+
+                <div class="usuario d-md-none" >
+
+                    <div class="info-usuario text-left" *ngIf="isLogged" >
+                        <!--div class="perfil">
+                            <img src="" alt="logo-empresa">
+                        </div-->
+                        <div class="logo-concesionario" (click)="headerNav=!headerNav" [routerLink]="['/cuenta',{ outlets: { 'cuenta-opcion': ['configurar'] } }]">
+                            <img src="{{currentuser.clienteimagen}}">
+                         </div>
+                        
+                        <h5 class="nombre-perfil text-left" [innerHTML]="nameUser">11</h5>
+                        
+                    </div>
+
+                    <!-- botones de inciar sesior y registro movil -->
+
+                    <!--button class="login" (click)="headerNav=!headerNav" routerLink="/login"  *ngIf="!isLogged" >
+                        <i class="material-icons">account_circle</i>
+                              <b>Ingresa</b>
+                    </button>
+
+                    <button class="registrate" (click)="headerNav=!headerNav" routerLink="/registro"   *ngIf="!isLogged" >
+                        <i class="material-icons">account_circle</i>
+                             <b>Regístrate</b>
+                    </button>
+
+
+                    <li class="mi-cuenta-menu">
+                        <i class="material-icons">account_circle</i>
+                        <a (click)="headerNav=!headerNav" [routerLink]="['/cuenta',{ outlets: { 'cuenta-opcion': ['configurar'] } }]" >Mi cuenta</a>
+                    </li-->
+                    
+                    <div class="login" *ngIf="!isLogged" (click)="headerNav=!headerNav" [routerLink]="['/login']">
+                        <i class="material-icons">account_circle</i>
+                        <h5 _ngcontent-c1="" class="nombre-perfil text-left" style="position: relative;left: 39px;">Ingresar</h5>
+                    </div>
+
+                
+                </div>
+
+                <ul >
+
+                    <li class="mi-cuenta-menu" *ngIf="isLogged">
+                        <i class="material-icons">account_circle</i>
+                        <a (click)="headerNav=!headerNav" [routerLink]="['/cuenta',{ outlets: { 'cuenta-opcion': ['configurar'] } }]" >Mi cuenta</a>
+                    </li>
+                         <!--      
+                    <li>
+                        <i class="material-icons">flag</i>
+                        <a (click)="headerNav=!headerNav" routerLink="/noticias">Noticia</a>
+                    </li>
+              
+
+                    <li ngbDropdown class="down-menu libroAzul-pc">
+                      
+                        <button id="menu-libroAzul" ngbDropdownToggle>Libro azul</button>
+                        <div ngbDropdownMenu aria-labelledby="menu-libroAzul" class="libroAzul">
+                          <a class="dropdown-item"routerLink="/libro_azul_nuevo">Nuevos</a>
+                          <a class="dropdown-item" routerLink="/libro_azul_usado">Usados</a>
+                          <a class="dropdown-item" routerLink="/valora">Valorar su vehículo</a>
+                        </div>
+                    </li>
+                -->
+
+                    <!-- libro azul para el menu responsive-->
+                    <!--      
+                    <li class="libroAzul-cel">
+                        <i class="material-icons">book</i>
+                        <mat-accordion>
+                              <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                  <mat-panel-title>
+                                   Libro azul
+                                  </mat-panel-title>
+                                 </mat-expansion-panel-header>
+                                   <ul class="libroAzul-menu">
+                                      <li><a mat-menu-item routerLink="/libro_azul_nuevo" (click)="headerNav=!headerNav">Nuevos</a></li>
+                                      <li><a mat-menu-item routerLink="/libro_azul_usado" (click)="headerNav=!headerNav">Usados</a></li>
+                                      <li><a mat-menu-item routerLink="/valora" (click)="headerNav=!headerNav">Valorar su vehículo</a></li>
+                                    </ul>
+                                  
+                               
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </li>
+                
+                -->
+
+                        <!--       
+                    <li>
+                        <i class="material-icons">new_releases</i>
+                        <a (click)="headerNav=!headerNav" routerLink="/nuevo">Vitrina de Nuevos</a>
+
+                    </li>
+                -->
+
+                    <li>
+                        <i class="material-icons">directions_car</i>
+                        <a (click)="headerNav=!headerNav" routerLinkActive="active" routerLink="/clasificados">Clasificados</a>
+                    </li>
+
+                      
+                    <li *ngIf="comparador">
+                        <i class="material-icons">compare</i>
+                        <a (click)="headerNav=!headerNav" routerLinkActive="active" routerLink="/comparador">
+                            Comparador
+                           
+                        </a>
+                        <div class="alerta_notificacion">
+                            <span>{{cantComparador}}</span>
+                        </div>
+                    </li>
+               
+                
+                
+
+                  
+            
+                    <!--li class="down-menu">
+                        <i class="material-icons">store</i>
+                        <a (click)="headerNav=!headerNav" routerLink="/financiera">Financiamiento</a>
+                    </li-->
+
+
+                    <li ngbDropdown class="down-menu libroAzul-pc">
+                      
+                        <button id="menu-financiamiento" ngbDropdownToggle>Financiamiento</button>
+                        <div ngbDropdownMenu aria-labelledby="menu-financiamiento"  class="libroAzul">
+                          <a class="dropdown-item"routerLink="/financiera">Calcula tu cuota</a>
+                          <a class="dropdown-item" routerLink="/solicitar-credito">Solicitar crédito</a>
+                        </div>
+                    </li>
+
+                     <li class="libroAzul-cel">
+                        <i class="material-icons">attach_money</i>
+                        <mat-accordion>
+                              <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                  <mat-panel-title>
+                                   Financiamiento
+                                  </mat-panel-title>
+                                 </mat-expansion-panel-header>
+                                   <ul class="libroAzul-menu">
+                                      <li><a mat-menu-item routerLink="/financiera" (click)="headerNav=!headerNav">Calcula tu cuota</a></li>
+                                      <li><a mat-menu-item routerLink="/solicitar-credito" (click)="headerNav=!headerNav">Solicitar crédito</a></li>
+                                     
+                                    </ul>
+                                  
+                               
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </li>
+
+
+               
+                    <!--
+                     <li>
+                        <i class="material-icons">stars</i>
+                        <a (click)="headerNav=!headerNav" routerLink="/valora">Valorador</a>
+                    </li>
+
+                     <li>
+                        <i class="material-icons">book</i>
+                        <a (click)="headerNav=!headerNav" routerLink="/noticias">Noticias</a>
+                    </li>
+                -->
+                    <li class="boton-publicar-gratis">
+                        <a class="btn-material btn-red" (click)="headerNav=!headerNav" routerLink="/publicar">Publica gratis</a>
+                    </li>
+
+                    <hr>
+
+                    <li *ngIf="isLogged" class="salir-sidebar">
+                        <button class="dropdown-item" (click)="logout();">Salir</button>
+                    </li>
+
+
+                </ul>
+
+                
+                   
+
+            </div>
+
+        </div>
+
+        <div class="overlay" (click)="headerNav=!headerNav" [ngClass]="headerNav ? 'show' : 'hide'" style="z-index: 1"></div>
+        <!-- fin side bar -->
+
+       
+
+    </div>
+
+
+   
+
+</header>
+
+<div class="overlay-busqueda" #hola (click)="toggleSearch=!toggleSearch" [ngClass]="toggleSearch ? 'active' : 'inactive'"></div>
+
+
+<div id="contenido-app">        
+    <router-outlet></router-outlet>
+    <div class="iframe_content" name="iframe_content" id="" ng-view></div>
+
+</div>
+
+<!-- Inicio sesión -->
+<ng-template #login let-c="close" let-d="dismiss" id="login_modal" >
+    <div class="modal-header">
+        <h4 class="modal-title">Inicia sesión</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+    <div class="modal-body">
+        <app-login  (myEvent)="closeModal($event)" ></app-login>
+    </div>
+</ng-template>
+
+
+<!-- Registro -->
+<ng-template #registro let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Regístrate</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+    <div class="modal-body">
+        <app-registro (myEvent)="closeModal($event)"></app-registro>
+    </div>
+</ng-template>
+
+<!-- Recuperar contraseña -->
+<ng-template #recovery let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Recupera tu contraseña</h4>
+        <button type="button" class="close" aria-label="Close" (click)="c('Cross click')">
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+    <div class="modal-body">
+        <app-contrasena (myEvent)="closeModal($event)"></app-contrasena>
+    </div>
+</ng-template>

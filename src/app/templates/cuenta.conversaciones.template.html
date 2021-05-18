@@ -1,0 +1,228 @@
+
+<div class="container-fluid fix vehiculos-nuevos">
+   
+   <div class="col-12 titulo-seccion no-padding">
+      <h3 class="titulo"> <a href="">Conversaciones</a></h3>
+   </div>
+   <mat-form-field>
+     <!--
+      <input matInput [(ngModel)]="p_textofiltro" (keyup)="applyFilter($event.target.value)" placeholder="Buscar con palabra clave">
+     -->
+     <input matInput [(ngModel)]="p_textofiltro" (keyup)="applyAllfilter()" placeholder="Buscar con palabra clave">
+     <i _ngcontent-c6="" class="material-icons busqueda-abrir">search</i>
+   </mat-form-field>   
+   
+   <ngx-daterangepicker [(ngModel)]="value_dates" [options]="options"></ngx-daterangepicker>
+
+   <mat-form-field class="mt-3 mb-3 input-full-width">
+    <mat-select placeholder="Estado Conversación?"  [(ngModel)]="p_estadoconversacion" (change)="onChange($event)">
+        <mat-option value="T">Todas</mat-option>
+        <mat-option value="P">Pendientes</mat-option>
+        <mat-option value="L">Leidas</mat-option>      
+    </mat-select>
+  </mat-form-field>
+
+   
+   
+   <!--
+     <lib-daterangepicker  #dpic [ranges]="customRanges" [(start)]="start" [(end)]="end" format="MM-DD-YYYY" opens="left" [pill]="true" (complete)="onSelectDate($event.start,$event.end)"></lib-daterangepicker>
+   <mat-radio-group  formControlName="vehiculo_unicopropietario" class="input-full-width unico-dueno">
+     <label class="col-12 pl-0">
+       Estado :
+     </label>
+     <mat-radio-button value="T">Todos</mat-radio-button>
+     <mat-radio-button value="P">Pendientes</mat-radio-button>
+     <mat-radio-button value="E">Eliminados</mat-radio-button>
+  </mat-radio-group>  <br><br>
+-->
+
+<mat-toolbar  color="primary">  
+    <mat-toolbar-row>
+        
+        <span></span>
+        <span class="example-spacer" style="flex: 1 1 auto;"></span>
+        <button  class="link-button" ng-class="myVar='my-class'" (click)='search()' matTooltip="Aplica Filtros de Fechas"  matTooltipShowDelay="300" matTooltipHideDelay="300"><i _ngcontent-c5="" class="material-icons">search</i></button>
+        <button  class="link-button" ng-class="myVar='my-class'" (click)='sendVistoEliminar()' matTooltip="Eliminar los Seleccionados"  matTooltipShowDelay="300" matTooltipHideDelay="300"><i _ngcontent-c5="" class="material-icons">delete_forever</i></button>
+        <button  class="link-button" ng-class="myVar='my-class'" (click)='exportAsXLSX()' matTooltip="Exportar a Excel los Seleccionados"  matTooltipShowDelay="300" matTooltipHideDelay="300"><i _ngcontent-c5="" class="material-icons">import_export</i></button>
+        
+
+       
+    </mat-toolbar-row>  
+  </mat-toolbar>
+   <mat-accordion class="conversacion" *ngIf="total_items > 0" >
+    <!-- vehiculo -->
+    <mat-expansion-panel class="producto"   *ngFor='let detail of items;let i = index' (opened)="sendVisto(detail,i)"   >
+      
+      <!-- Nombre del vehiculo -->
+      <mat-expansion-panel-header>
+          <div class="alerta_notificacion" *ngIf="detail.pendientes > 0" >
+              <span>{{detail.pendientes}}</span>
+              <div class="nueva_alerta"></div>
+          </div>  
+        <mat-panel-title>
+          <mat-panel-description>
+          <mat-checkbox (click)="$event.stopPropagation();" [checked]="items[i].select" [(ngModel)]="items[i].select"></mat-checkbox>
+          </mat-panel-description>
+
+          <div class="foto-conversacion">
+            <img src="{{detail.fotosventa_ruta}}">
+          </div>
+                   
+        </mat-panel-title>
+        <mat-panel-description>
+         {{detail.conv_nombre}}
+        </mat-panel-description>
+        <mat-panel-description>
+          {{detail.conv_correo}}
+         </mat-panel-description>
+         <mat-panel-description>
+          {{detail.conv_telefono}}
+         </mat-panel-description>
+         <mat-panel-description>
+          {{detail.fultimamod}}
+         </mat-panel-description>
+         <mat-panel-description>
+          {{detail.venta_matricula_placa}}
+         </mat-panel-description>
+         
+      </mat-expansion-panel-header>    
+     
+      
+      <!--comentarios--->
+    
+      <div class="titulo-comentarios producto-usuario" *ngFor='let detail_c of  detail.ldetalle ;let j = index' >
+    
+           
+        <div class="dialogo">
+          <div class="pregunta" id="dialogo" *ngIf="detail_c.tmensaje=='2'" >
+            <div class="position-relative">
+                
+                
+                <p class="comentario">
+                  <span>{{detail_c.fechahora_p | amTimeAgo}}</span>
+                  {{detail_c.detaveco_mensaje }}
+                   
+                <p> 
+            </div>
+          </div>
+          <div class="respuesta" id="dialogo"  *ngIf="detail_c.tmensaje=='1'" >
+              <div class="position-relative">
+                  
+                
+                  <p class="comentario">
+                    <span>{{detail_c.fechahora_p | amTimeAgo}}</span>
+                    {{detail_c.detaveco_mensaje}}
+                     
+                  </p> 
+              </div>
+            </div>
+           <!-- respuesta-->
+           <!--
+          <div class="ml-4 respuesta" *ngFor='let detail4 of detail2.lrespuesta' id="dialogo">
+            <div class="position-relative">
+                <i class="material-icons msjComent">message</i>
+                <label>{{detail_c.detaveco_fregistro}}</label> 
+                <p class="comentario">{{detail4.ventmens_contenido}} </p> 
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="row mt-4 mb-2">
+        <div class="responder">
+
+          
+                <input class="chat" placeholder="Escribe tu mensaje" [(ngModel)]="items[i].repuesta">                
+           
+
+
+          <!-- 
+          <button *ngIf="visible_responder" ng-class="myVar='my-class'"  class="btn btn-primary"  (click)="onEdit(detail)">Responder</button>           
+          -->
+          <button *ngIf="visible_responder" ng-class="myVar='my-class'"  class="btn btn-primary"  (click)="sendMensajeRespuesta(detail,i)">Enviar</button>           
+          
+        </div>        
+      </div>
+
+<!--
+      <div class="row mt-4 mb-4">
+        <div class="responder">
+          <button *ngIf="visible_responder" ng-class="myVar='my-class'"  (click)="onEdit(detail,detail2)"class="btn btn-primary">Responder</button>           
+        </div>
+        <div class="col">
+          <div class="row float-right">
+            <p class="mr-3 text-right">
+              <a href="mailto:{{detail2.ventmens_correo}}">
+                <i class="material-icons msjComent" style="float:inherit">email</i>
+                {{detail2.ventmens_correo}} 
+              </a>
+            </p>
+            <p class="text-right">
+              <a href="tel:+57{{detail2.ventmens_telefono}} "></a>
+              <i class="material-icons msjComent" style="float:inherit">phone</i>
+              {{detail2.ventmens_telefono}} 
+            </p>
+          </div>
+        </div>
+      </div>
+    -->
+      
+
+    </mat-expansion-panel>
+   <!--
+    <mat-expansion-panel class="producto">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <div class="foto-conversacion">
+            <img src="https://d1wx0q0ct4xanw.cloudfront.net/CV_TARJETAS/egEnv8pOANNWK3cIf5kDW0KHc3RZ5qMbcdxKbZybgoQ.jpg">
+          </div>
+                   
+        </mat-panel-title>
+        <mat-panel-description>
+         SSANGYONG NEW ACTYON 5P 4X2 AUT GSL 2300 CC FE 1 AB PRT
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div class="titulo-comentarios producto-usuario" >
+        
+        <div class="row mt-2">
+          <p class="col pl-0 nombre_usuario">
+            <b>claudia velasco</b>
+          </p>
+
+          <p class="mr-3 text-right">
+            <i class="material-icons msjComent" style="float:inherit">email</i>
+            email@hotmail.com
+          </p>
+          <p class="text-right">
+            <i class="material-icons msjComent" style="float:inherit">phone</i>
+            31712345678
+          </p>
+        </div>
+
+     
+        <div class="ml-2 pregunta ">
+          <div class="">
+              <i class="material-icons msjComent">message</i>
+              <p>sigue disponible 
+                <label>01/01/2018</label>  
+              </p> 
+          </div>
+        </div>
+     
+        <div class="ml-4 respuesta">
+          <div class="">
+              <i class="material-icons msjComent">message</i>
+              <p>si <label>01/01/2018</label> </p> 
+          </div>
+        </div>
+      </div>
+
+
+
+    </mat-expansion-panel>
+  -->
+  </mat-accordion>
+
+   
+</div>

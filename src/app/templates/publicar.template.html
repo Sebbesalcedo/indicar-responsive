@@ -1,0 +1,368 @@
+
+<div class="my-container">
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>    
+</div>
+<div class="container-fluid fix pt-4">
+  <mat-horizontal-stepper class="publicar" [linear]="false" #stepper >
+    <!--[linear]="true" #stepper -->
+
+    <!-- clase -->
+    <mat-step [stepControl]="form_linea">
+      <form [formGroup]="form_linea">
+       
+        <ng-template matStepLabel>Clase</ng-template>
+        <h4 class="text-center p-3">¿Qué clase de vehículo desea publicar?</h4>
+        <br>
+         <div class="row">
+          <div class="col-md-6">
+            <mat-form-field class="input-full-width mat-focused">
+              <mat-select placeholder="¿Cuál es la clase? " formControlName="cClase" required (change)="onChange($event)">
+                <mat-option value="" >Seleccione..</mat-option>
+                <mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovClase"> {{data.campo_descripcion}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="input-full-width">
+              <mat-select placeholder="¿Cuál es la marca? " formControlName="cMarca" (change)="onChange($event)">
+                  <mat-option value="" >Seleccione..</mat-option>
+                <mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovMarca"> {{data.campo_descripcion}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="input-full-width">
+              <mat-select placeholder="¿Cuál es el año modelo? " formControlName="cModelo" required (change)="onChange($event)">
+                  <mat-option value="" >Seleccione..</mat-option>
+                <mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovModelo"> {{data.campo_descripcion}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="input-full-width">
+              <mat-select placeholder="¿Cuál es la familia? " formControlName="cFamilia" required (change)="onChange($event)">
+                  <mat-option value="" >Seleccione..</mat-option>
+                <mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovFamilia"> {{data.campo_descripcion}}</mat-option>
+              </mat-select>
+            </mat-form-field>   
+          </div> 
+
+          <div class="col-md-6">
+              <mat-form-field class="input-full-width">
+          <mat-select placeholder="¿Cuál es el tipo de caja? " formControlName="cCaja" required (change)="onChange($event)">
+              <mat-option value="" >Seleccione..</mat-option>
+            <mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovCaja"> {{data.campo_descripcion}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="input-full-width">
+          <mat-select placeholder="¿Cuál es la línea?" formControlName="cLinea" required (change)="onChange($event)" >
+              <mat-option value="" >Seleccione..</mat-option>
+            <mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovLinea" id="cualLinea"> {{data.campo_descripcion}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-checkbox formControlName="publicar_nombre" checked="true" class="d-block">Publicar nombre del anunciante</mat-checkbox>
+        <mat-checkbox formControlName="recibir_alertas" checked="true">Recibir alertas al correo eléctronico de posibles clientes</mat-checkbox>
+          </div>
+
+        </div>
+            
+        
+        <div class="text-right">
+          <button (click)="goForward(stepper)" type="button" [disabled]="stepper.selectedIndex === stepper._steps.length-1">Siguiente</button>
+        </div>
+      </form>
+    </mat-step><!-- fin clase -->
+
+    <!-- descripcion -->
+    <mat-step [stepControl]="form_contacto">
+      <form [formGroup]="form_contacto">
+        <ng-template matStepLabel>Descripción</ng-template>
+        <h4 class="text-center p-3">Datos de tu vehículo</h4>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field class="input-full-width">
+              <input placeholder="¿En dónde está el vehículo?"  matInput formControlName="ubicacion_vehiculo"
+                [matAutocomplete]="auto" >
+              <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of lovCiudades" [value]="option"  >
+                  {{ option.ciudad_nombre }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+
+            <mat-form-field class="input-full-width">
+              <input type="text" placeholder="Ciudad de matrícula" class="form-control" matInput formControlName="ubicacion_matricula"
+                [matAutocomplete]="auto2">
+              <mat-autocomplete autoActiveFirstOption #auto2="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of lovCiudadesMatricula" [value]="option">
+                  {{ option.ciudad_nombre }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+            <mat-form-field class="input-full-width">
+              <input matInput placeholder="Placa" formControlName="vehiculo_placa" maxlength="6"style="text-transform: uppercase;" maxlength="6">
+            </mat-form-field>
+            <mat-form-field class="input-full-width">
+              <input matInput placeholder="Kilometraje" formControlName="vehiculo_kilometraje" [textMask]="{mask: numberMask, guide: false}"  maxlength="8">
+            </mat-form-field>
+            
+          </div>
+
+          <div class="col-md-6">
+            
+
+             <mat-form-field class="input-full-width">
+              <textarea matInput placeholder="Descripción" formControlName="vehiculo_comentario"></textarea>
+            </mat-form-field>
+
+            <mat-radio-group  formControlName="vehiculo_unicopropietario" class="input-full-width unico-dueno">
+
+               <!--p class="pregunta">¿Unico dueño?</p>
+                  <mat-slide-toggle></mat-slide-toggle-->
+                <label class="col-12 pl-0">
+                  ¿Es único dueño?
+                </label>
+                <mat-radio-button value="S">Si</mat-radio-button>
+                <mat-radio-button value="N">No</mat-radio-button>
+            </mat-radio-group>  
+            
+
+           
+          </div>
+        </div>
+        
+        <hr>
+        <!--<mat-checkbox formControlName="vehiculo_unicopropietario">Unico Propietario</mat-checkbox> -->
+        
+        <div class="pl-3 pr-3">
+          <label>Número de contacto principal</label>
+          <div class="row">
+            <mat-form-field class="col-md-4 pl-0">
+              <mat-select placeholder="Seleccione" formControlName="telefono_principal" required (change)="onChange($event)">
+                  <mat-option value="" ></mat-option>
+                  <mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovTelefono"> {{data.campo_descripcion}}</mat-option>
+              </mat-select>
+            </mat-form-field>          
+            <mat-form-field class="col-md-4">
+                <mat-select placeholder="Teléfono 2" formControlName="telefono_otro"  >
+                    <mat-option value="" ></mat-option>
+                    <mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovTelefono"> {{data.campo_descripcion}} </mat-option>
+                </mat-select>
+              <!--  
+              <input matInput placeholder="Otro" formControlName="telefono_otro" [textMask]="{mask: mask, guide: false, modelClean: true}">
+              -->
+            </mat-form-field>
+            <mat-form-field class="col-md-4">
+              <input matInput placeholder="Adicionar nuevo teléfono" formControlName="telefono_adicional" [textMask]="{mask: mask, guide: false, modelClean: true}">
+            </mat-form-field>
+          </div>  
+          <label *ngIf="isConcesionario">Nombre Asesor</label>    
+          <div class="row" *ngIf="isConcesionario">
+
+              <mat-form-field class="col-md-4 pl-0" *ngIf="isConcesionario">
+                <mat-select placeholder="Selecione" formControlName="nombre_asesor"  >
+                  <mat-option value="" ></mat-option>
+                  <mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovAsesor"> {{data.campo_descripcion}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+
+              <mat-form-field class="col-md-4 pl-0" *ngIf="isConcesionario">
+                <input matInput placeholder="Adicionar nuevo asesor" formControlName="nombre_asesor2">
+              </mat-form-field>
+
+          </div>
+        </div>
+        <div class="text-right">
+           <button (click)="goForward(stepper)" type="button" [disabled]="stepper.selectedIndex === stepper._steps.length-1">Siguiente</button>
+          <button (click)="goBack(stepper)" type="button" [disabled]="stepper.selectedIndex === 0">Anterior</button>
+        </div>
+
+        <!--div class="text-right">
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+        <div class="text-right">
+          <button mat-button matStepperPrevious>Anterior</button>
+        </div-->
+
+      </form>
+    </mat-step><!-- fin descripcion -->
+
+    <!-- imagenes -->
+    <mat-step [stepControl]="form_imagenes">
+      <form [formGroup]="form_imagenes">
+        <input type="hidden" formControlName="imagen_principal" value = ""  >
+        <input type="hidden" formControlName="imagen_otras"     value = ""  >
+
+        <!--
+        <p class="error_message" *ngIf="form_imagenes.get('imagen_principal').hasError('min') && (form_imagenes.submitted || form_imagenes.get('imagen_principal').touched)">Agregar una foto principal</p>
+        <p class="error_message" *ngIf="form_imagenes.get('imagen_otras').hasError('min') && (form_imagenes.submitted || form_imagenes.get('imagen_otras').touched)">Agregar por o menos 2 fotos del vehiculo</p>
+          -->
+        <ng-template matStepLabel>Fotos</ng-template>   
+        <h4 class="text-center p-3">Fotos de tu vehículo</h4>
+
+        <label class="text-danger">*Todas las fotos deben ser tomadas y subidas horizontalmente</label>
+        <div class="row">
+          <div id="ft-principal" class="col-md-4">
+            <image-upload 
+            #imagenUploadPrincipal
+              [max]="1" 
+              [extensions]="['jpeg','png','jpg']" 
+              dropBoxMessage="Arrastra la foto principal aquí"
+              clearButtonCaption="Limpiar"
+              buttonCaption="Buscar fotos"
+              (removed)="onRemoved($event)"
+              (uploadFinished)="onUploadFinished_principal($event)"          
+              (uploadStateChanged)="onUploadStateChanged($event)"
+              [uploadedFiles]="img_principal"
+              
+            ></image-upload>
+          </div>
+          <div id="ft-otros" class="col-md-8">
+            <image-upload
+            #imagenUploadOtras 
+            buttonCaption="Buscar fotos"
+            [extensions]="['jpeg','png','jpg']" 
+            dropBoxMessage="Arrastra las demás imágenes aquí"
+            clearButtonCaption="Limpiar"
+            (uploadFinished)="onUploadFinished_otras($event)"  
+            (removed)="onRemoved_otras($event)"
+            [beforeUpload]="onBeforeUpload"    
+            [uploadedFiles]="img_otras"
+            ></image-upload>
+          </div>
+          <!-- agregado -->
+          <!-- LOGICA 2 -->
+          <!-- <input #fileInput type='file' (change)="fileChanged($event)">
+          <div id="canvas-content">
+            <img src="" alt="image" id="imagen1">
+          </div> -->
+          <!-- fin agregado -->
+        </div>
+
+        <div class="text-right">
+
+          <button (click)="goForward(stepper)" type="button" [disabled]="stepper.selectedIndex === stepper._steps.length-1">Siguiente</button>
+          <button (click)="goBack(stepper)" type="button" [disabled]="stepper.selectedIndex === 0">Anterior</button>
+
+        </div>
+      </form>
+    </mat-step><!-- fin imagenes -->
+
+    <!-- accesorios -->
+    <mat-step [stepControl]="form_accesorios">
+      <form [formGroup]="form_accesorios">
+        <ng-template matStepLabel>Accesorios</ng-template>
+
+        <h4 class="text-center p-3">Accesorios de tu vehículo</h4>
+        <mat-selection-list formControlName="publicar_accesorios" class="publicar_accesorios">
+          <div class="row">
+            <mat-list-option *ngFor="let data of lovAccesorios" class="col-md-6" [value]="data.accref_codigo" >{{data.accref_nombre}}</mat-list-option>
+          </div> 
+        </mat-selection-list>
+
+        <div class="text-right">
+           <button (click)="goForward(stepper)" type="button" [disabled]="stepper.selectedIndex === stepper._steps.length-1">Siguiente</button>
+          <button (click)="goBack(stepper)" type="button" [disabled]="stepper.selectedIndex === 0">Anterior</button>
+        </div>
+      </form>
+    </mat-step><!-- fin accesorios -->
+
+
+    <mat-step><!-- precio -->
+      <form [formGroup]="form_precio">
+        <ng-template matStepLabel>Precio</ng-template>
+
+        <h4 class="text-center p-3">Valora tu vehículo</h4>
+
+        <mat-form-field class="valor">
+          <input matInput placeholder="Precio de venta" formControlName="precio_venta" [textMask]="{mask: numberMask, guide: false, modelClean: true}"  maxlength="12">
+          
+          <span matPrefix>$&nbsp;</span>
+        </mat-form-field>
+
+
+        <!-- acordeon Ficha técnica-->
+        <!--
+        <ngb-accordion #acc="ngbAccordion" activeIds="none">
+
+          <ngb-panel title="¿Quieres saber cuánto vale tu vehículo?">
+            <ng-template ngbPanelContent>
+              <div class="row contenido-ficha">
+                <h5 class="text-center col-12">Calcula el valor tu vehículo</h5>
+                <div>
+                  <p class="pregunta">¿El vehículo tiene rayones?</p>
+                  <mat-slide-toggle></mat-slide-toggle>
+                  <mat-form-field class="input-full-width">
+                    <input matInput type="number" maxlength="5" placeholder="Número de llantas como nuevas" formControlName="vehiculo_llantasnuevas">
+                  </mat-form-field>
+
+                </div>
+
+                <div class="estado-interior col-12 pr-0 pl-0">
+                  <p class="pregunta">Estado interior del vehículo</p>
+                  <mat-radio-group>
+                    <mat-radio-button value="1">Peor de lo normal</mat-radio-button>
+                    <mat-radio-button value="2">Normal</mat-radio-button>
+                    <mat-radio-button value="3">Mejor de lo normal</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+
+                <div class="form-group button valorar">
+                  <button class="btn-busqueda btn-material btn">Calcular valor</button>
+                </div>
+
+                <hr>
+
+                <div class="valor-sugerido">
+                  <h5 class="text-center">AVEO EMOTION GT 5P HB 4X2 AUT GSL 1600 CC FE 1 AB PRT</h5>
+
+                  <div class="row car-valor">
+                    <div class="col-md-4">
+                      <div class="title">Modelo</div>
+                      <div class="content">
+                        <p>2014</p>
+                      </div>
+                      <label>Año modelo del vehículo</label>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="title">Valor usado</div>
+                      <div class="content">
+                        <span _ngcontent-c4="" matprefix="">$&nbsp;</span>
+                        <p>24,230,000</p>
+                      </div>
+                      <label>Es el valor promedio por el cual el vehículo es vendido en el mercado.</label>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="title">Valor retoma</div>
+                      <div class="content">
+                        <span _ngcontent-c4="" matprefix="">$&nbsp;</span>
+                        <p>24,230,000</p>
+                      </div>
+                      <label>Es el valor promedio por el cual un concesionario de usados o un retomador compraría el vehículo.</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>-->
+
+
+        <div class="text-right">
+          <button mat-button (click)="submit2()" class="btn-material btn-red"  [disabled]="loading"  >Publicar</button>
+          <button (click)="goBack(stepper)" type="button" [disabled]="stepper.selectedIndex === 0">Anterior</button>
+
+          <button mat-button (click)="restart()" >Limpiar</button>
+
+
+          
+        </div>
+      </form>
+    </mat-step><!-- fin precio -->
+
+  </mat-horizontal-stepper>
+
+</div>

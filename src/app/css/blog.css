@@ -1,0 +1,32 @@
+
+#blog{
+    background:#fff;
+    padding-top:0;
+}
+
+.col-blog {
+    text-align: justify;
+    max-width: 700px;
+    margin:0 auto;
+
+}
+
+.col-blog p{
+    font-size: 18px;
+    color:#404040;
+    line-height: 1.7;
+}
+
+.titulo-blog {
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(to left,rgba(7,169,244,0.2),rgba(0,22,137,0.2)) 0% 0% / cover no-repeat,url(https://images.pexels.com/photos/1472612/pexels-photo-1472612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
+    background-position: center;
+}
+.titulo-blog .row{
+    height: 160px;
+}
+.titulo-blog h2{
+    color:#fff;
+}

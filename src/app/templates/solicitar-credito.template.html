@@ -1,0 +1,135 @@
+<!-- 
+	-
+	-
+	-
+	-
+	-
+verificar las funciones de los input para poder hacer funcional la alerta al enviar la informacion-->
+
+<div class="header-scredito">
+
+</div>
+<section class="pt-0">
+	<div class="col-12 titulo-seccion">
+		<div class="container-fluid">
+			<h3 class="titulo mb-3">Solicita tu crédito</h3>
+			<p>Invitamos a llenar el siguiente formulario para que un asesor se pueda contactar</p>
+		</div>
+	</div>
+
+	<div class="container-fluid bg-white pt-3 pb-3">
+		<h5 class="subtitle">Formulario de solicitud</h5>
+
+		<form [formGroup]="form_solicitud">
+
+			<mat-form-field class="input-full-width">
+				<input matInput placeholder="Nombre" formControlName="nombre">
+			</mat-form-field>
+
+			<!--mat-form-field class="input-full-width" >
+				          <input matInput [matDatepicker]="picker" placeholder="Fecha Nacimiento" formControlName="fnacimiento">
+				          <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+				          <mat-datepicker #picker></mat-datepicker>
+			        </mat-form-field-->
+
+			<!--mat-form-field class="input-full-width">
+			            <mat-select placeholder="Tipo Documento" formControlName="tipodocumento" name="tipoid" required >
+			               <mat-option value="{{data.campo_codigo}}"  *ngFor="let data of lovTipodocumento" > {{data.campo_descripcion}}</mat-option>
+			            </mat-select>          
+			        </mat-form-field-->
+
+			<!--mat-form-field class="input-full-width" >
+			            <input matInput placeholder="Numero Documento" formControlName="numerodocumento" >
+			        </mat-form-field-->
+
+
+			<mat-form-field class="input-full-width">
+				<mat-select placeholder="Perfil" formControlName="perfil">
+					<mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovPerfil"> {{data.campo_descripcion}}</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+			<!--mat-form-field class="input-full-width">
+			            <mat-select placeholder="Tipo Contrato" formControlName="tcontrato" >
+			               <mat-option value="{{data.campo_codigo}}"  *ngFor="let data of lovTipoContrato" > {{data.campo_descripcion}}</mat-option>
+			            </mat-select>          
+			        </mat-form-field-->
+
+			<!--mat-form-field class="input-full-width">
+			          <input matInput [matDatepicker]="picker2" placeholder="Fecha de ingreso" formControlName="fingreso">
+			          <mat-datepicker-toggle matSuffix [for]="picker2" ></mat-datepicker-toggle>
+			          <mat-datepicker #picker2></mat-datepicker>
+			          
+			        </mat-form-field-->
+
+			<!--mat-form-field class="input-full-width" >
+			            <input matInput placeholder="Ingresos demostrables" formControlName="idemostrable" 
+			            [textMask]="{mask: numberMask, guide: false, modelClean: true}">
+			        </mat-form-field-->
+
+
+			<mat-form-field class="input-full-width">
+				<input matInput placeholder="Telefono" formControlName="telefono" [textMask]="{mask: mask, guide: false, modelClean: true}">
+			</mat-form-field>
+
+			<mat-form-field class="input-full-width">
+				<input type="text" placeholder="Ciudad de residencia" class="form-control" matInput formControlName="ciudad_residencia"
+				 [matAutocomplete]="auto2">
+				<mat-autocomplete autoActiveFirstOption #auto2="matAutocomplete" [displayWith]="displayFn">
+					<mat-option *ngFor="let option of lovCiudades" [value]="option">
+						{{ option.ciudad_nombre }}
+					</mat-option>
+				</mat-autocomplete>
+			</mat-form-field>
+
+			<mat-form-field class="input-full-width" >
+				<input matInput placeholder="Email" formControlName="email">
+			</mat-form-field>
+
+			<mat-form-field class="input-full-width" >
+				<input matInput placeholder="Repita su Email" formControlName="email_confirmacion">
+			</mat-form-field>
+
+
+			<div class="col text-center mt-5 logos-financiera">
+				<h3>Quiere enviar sus datos a:</h3>
+				<div class="row mt-5">
+					<div class="col-6" *ngFor="let data of lovFinancieras" >
+							<img src="{{data.financiera_logo}}">
+							<button class="btn btn-primary mt-3" (click)="onSubmit(data)" [disabled]="form_solicitud.invalid">Enviar datos</button>
+					</div>	
+					<!--
+					<div class="col-6">
+						<img src="assets/images/banco_occidente.jpg">
+						<button class="btn btn-primary mt-3" (click)="onSubmit('6')" [disabled]="form_solicitud.invalid">Enviar datos</button>
+					</div>
+				
+					<div class="col-6">
+						 <img src="assets/images/colpatria.jpg">
+						<button class="btn btn-primary mt-3" (click)="onSubmit('4')" [disabled]="form_solicitud.invalid">Enviar datos</button>
+					</div>
+				-->
+				</div>
+			</div>
+
+
+			<div class="col text-center mt-5 mb-5">
+				<p>Al decidir por cual de la(s) opciones desea solicitar un crédito de financiamiento, usted esta aceptando el <a
+					 href="https://cdnprocessoft.s3.amazonaws.com/SITIOS/XuQlxMLqjS_vGRUP1rcXyNlDKh3dwzcsokrQU-C0s2w/files/AVISO%20DE%20PRIVACIDAD.pdf">Aviso
+						de privacidad</a> y la <a href="https://cdnprocessoft.s3.amazonaws.com/SITIOS/XuQlxMLqjS_vGRUP1rcXyNlDKh3dwzcsokrQU-C0s2w/files/PTDP%20-%20PROCESSOFT%20S%20A%20S.pdf">Política
+						de tratamiento de datos</a></p>
+				<ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
+			<!--
+				<p>
+					<button class="btn btn-primary" (click)="onSubmit()">Enviar datos</button>
+				</p>
+			-->
+
+			</div>
+
+
+		</form>
+
+
+	</div>
+</section>

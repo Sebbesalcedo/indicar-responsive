@@ -1,0 +1,288 @@
+<div class="row">
+    <div class="col-lg-9 col-md-12 col-md-offset-3">
+
+        <div *ngIf="success" class="alert alert-success">{{success}}</div>
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+        <div class="col-12 titulo-seccion no-padding">
+            <h3 class="titulo mb-4"> <a href="">Datos de cuenta</a></h3>
+            <hr>
+        </div>
+        <form [formGroup]="configurarForm" (submit)="onSubmit(configurarForm.value)">
+
+            <h5>Datos de la cuenta</h5>
+           <!--<p> Puedes cambiar tu correo electrónico en cualquier momento.</p> --> 
+            <!-- Daniel Commented -->
+            <mat-form-field class="input-full-width mb-5">
+                <input matInput placeholder="E-mail" formControlName="email">
+                <!-- <mat-hint>Modifica tu correo electrónico</mat-hint> -->
+            </mat-form-field> 
+            <!-- ./ Daniel Commented -->
+            <!-- Daniel Added -->
+            <!-- <span>{{theemail}}</span><br> -->
+            <span mat-raised-button (click)="openEmail()" class="btn btn-primary pull-right mb-4">Cambiar email</span>
+            <!-- Added end by Daniel-->
+            <span mat-raised-button (click)="openContrasena()" class="btn btn-primary pull-right mb-4">Cambiar contraseña</span>
+
+
+            <!-- <mat-checkbox formControlName="permitecomentario" checked="true" class="d-block mb-4">Permite Comentarios</mat-checkbox>
+
+            <mat-checkbox formControlName="permitecorreogestion" checked="true" class="d-block mb-2">Permite Correo Gestion</mat-checkbox> -->
+
+
+            
+
+            <div class="form-group input input-full-width mb-2">
+                <mat-radio-group formControlName="tipocliente">
+                    <mat-radio-button value="01">Persona Natural</mat-radio-button>
+                    <mat-radio-button value="02">Concesionario y/o Compraventa</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div *ngIf="configurarForm.controls.tipocliente.value=='01'">
+                <h5>Datos personales</h5>
+                <hr>
+                <mat-form-field class="input-full-width">
+                    <input matInput placeholder="Primer nombre" formControlName="nombre1">
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width">
+                    <input matInput placeholder="Segundo nombre" formControlName="nombre2">
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width">
+                    <input matInput placeholder="Primer apellido" formControlName="apellido1">
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width">
+                    <input matInput placeholder="Segundo apellido" formControlName="apellido2">
+                </mat-form-field>
+
+                <!--
+                <mat-form-field class="input-full-width" >
+                    <input matInput placeholder="Nombres" formControlName="nombres" >
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width" >
+                    <input matInput placeholder="Apellidos" formControlName="apellidos" >
+                </mat-form-field>
+            -->
+
+                <mat-form-field class="input-full-width">
+                    <mat-select placeholder="Tipo de documento" formControlName="tipodocumento" name="tipoid" required>
+                        <mat-option value="{{data.campo_codigo}}" *ngFor="let data of lovTipodocumento">
+                            {{data.campo_descripcion}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width">
+                    <input type="number" matInput placeholder="Número de documento" formControlName="numerodocumento">
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width">
+                    <input matInput [matDatepicker]="picker" placeholder="Fecha de nacimiento" formControlName="fnacimiento">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width">
+                    <input matInput placeholder="Teléfono" formControlName="telefono" [textMask]="{mask: mask, guide: false, modelClean: true}">
+                </mat-form-field>
+            </div>
+            <div *ngIf="configurarForm.controls.tipocliente.value=='02'">
+                <h5>Datos de la Empresa</h5>
+                <hr>
+
+                <!--label>* El tamaño máximo del logo es de 510px de ancho y 170px de alto</label-->
+                <image-upload id="logoEmpresa"
+                #logoEmpresa
+                  [max]="1" 
+                  [extensions]="['jpeg','png','jpg']" 
+                  dropBoxMessage="Arrastra la imágen aquí"
+                  clearButtonCaption="Limpiar"
+                  buttonCaption="Buscar fotos"
+                  (removed)="onRemoved($event)"
+                  (uploadFinished)="onUploadFinished_principal($event)"          
+                  (uploadStateChanged)="onUploadStateChanged($event)"
+                  [uploadedFiles]="img_principal"
+                  *ngIf="isAdmin" ></image-upload>
+
+                <mat-form-field class="input-full-width">
+                    <input matInput placeholder="Razon Social" formControlName="razonsocial">
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width">
+                    <input type="number" matInput placeholder="Nit" formControlName="numerodocumento">
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width">
+                    <input type="text" placeholder="¿En dónde está la empresa?" matInput formControlName="ubicacion_empresa"
+                        [matAutocomplete]="auto">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn">
+                        <mat-option *ngFor="let option of lovCiudades" [value]="option">
+                            {{ option.ciudad_nombre }}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width">
+                    <input matInput placeholder="Dirección" formControlName="cliente_direccion" maxlength="200">
+                </mat-form-field>
+
+                <mat-form-field class="input-full-width">
+                    <input matInput type="url" placeholder="Pagina web" formControlName="cliente_url" maxlength="200">
+                </mat-form-field>
+
+                 <!-- <div>
+                    <h5>Mi micrositio</h5 >
+                    <a href="clasificados?p_cliente={{currentuser.codigo}}" class="text-decoration">Ir a mi micrositio</a>
+                </div> -->
+
+
+                <h5>Asesores</h5>
+            <hr>
+            <div class="telefonos mb-4" id="buscar-asesor">
+                <mat-toolbar> 
+                    <mat-toolbar-row class="row-busTelefono">
+                      <div class="buscador-telefono col-md-6 p-0">
+                        <mat-form-field class="busc p-0">
+                            <input matInput (keyup)="applyFilter_asesor($event.target.value)" placeholder="Buscar Asesor">
+                            <i _ngcontent-c6="" class="material-icons busqueda-abrir boton-busqueda">search</i>
+                        </mat-form-field>
+                      </div>
+                      <div (click)="add_asesor(null)" class="agregar-telefono col-md-6">
+                        <span>Agregar Asesor</span>
+                        <mat-icon class="example-icon">add</mat-icon>
+                       
+                      </div>                     
+                    </mat-toolbar-row>
+                </mat-toolbar>
+
+                <mat-table #table [dataSource]="dataSource_asesor" matSort ng-class="myVar" >
+                    <ng-container matColumnDef="telefono_codigo">
+                        <mat-header-cell *matHeaderCellDef>Código</mat-header-cell>
+                        <mat-cell *matCellDef="let element">
+                            {{element.telefono_codigo}}
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="telefono_numero">
+                        <mat-header-cell *matHeaderCellDef>Numero</mat-header-cell>
+                        <mat-cell *matCellDef="let element">
+                            {{element.telefono_numero}}
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="botones" >
+                        <mat-header-cell *matHeaderCellDef style="text-align: right;">Acciones</mat-header-cell>
+                        <mat-cell *matCellDef="let element" id="acciones-telefono">
+                            <span></span>
+                            
+
+                            <i _ngcontent-c6="" class="link-button material-icons" (click)='delete_asesor(element.telefono_codigo,element.telefono_numero)' matTooltip="Eliminar" matTooltipShowDelay="300" matTooltipHideDelay="300">delete</i>
+
+                            <i _ngcontent-c6="" class="link-button material-icons" (click)='edit_asesor(element.telefono_codigo,element.telefono_numero)' matTooltip="Eliminar" matTooltipShowDelay="300" matTooltipHideDelay="300">edit</i>
+            
+                        </mat-cell>
+                    </ng-container>
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="row.classleido" (click)="onEdit(row)"></mat-row>
+                </mat-table>
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+            </div>
+
+
+            </div>
+
+            <div class="mt-5">
+
+                <hr>
+                <button href="" class="btn-material btn-red outline"  type="button" (click)="inactivar_cuenta()">Eliminar cuenta</button>
+                <p><small>Eliminar Cuenta: En caso de que quieras volver a Indicar, deberás crear una cuenta nueva.</small></p>
+                <hr>
+            </div>
+            <!--
+        <h5>Datos para financiamiento</h5>
+        <hr>
+         <mat-form-field class="input-full-width">
+            <mat-select placeholder="Perfil" formControlName="perfil" name="tipoperfil" >
+               <mat-option value="{{data.campo_codigo}}"  *ngFor="let data of lovPerfil" > {{data.campo_descripcion}}</mat-option>
+            </mat-select>          
+        </mat-form-field>
+
+        <mat-form-field class="input-full-width">
+            <mat-select placeholder="Tipo Contrato" formControlName="tcontrato" name="tipocontrato" >
+               <mat-option value="{{data.campo_codigo}}"  *ngFor="let data of lovTipoContrato" > {{data.campo_descripcion}}</mat-option>
+            </mat-select>          
+        </mat-form-field>
+        
+         <mat-form-field class="input-full-width">
+          <input matInput [matDatepicker]="picker2" placeholder="Fecha de ingreso" formControlName="fingreso">
+          <mat-datepicker-toggle matSuffix [for]="picker2" ></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+          
+        </mat-form-field>
+        
+        <mat-form-field class="input-full-width" >
+            <input matInput placeholder="Ingresos demostrables" formControlName="idemostrable" 
+            [textMask]="{mask: numberMask, guide: false, modelClean: true}">
+        </mat-form-field>
+    -->
+
+
+            <h5>Teléfonos</h5>
+            <hr>
+            <div class="telefonos mb-4" id="buscar-telefono">
+                <mat-toolbar> 
+                    <mat-toolbar-row class="row-busTelefono">
+                      <div class="buscador-telefono col-md-6 p-0">
+                        <mat-form-field class="busc p-0">
+                            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar teléfono">
+                            <i _ngcontent-c6="" class="material-icons busqueda-abrir boton-busqueda">search</i>
+                        </mat-form-field>
+                      </div>
+                      <div (click)="add(null)" class="agregar-telefono col-md-6">
+                        <span>Agregar teléfono</span>
+                        <mat-icon class="example-icon">add</mat-icon>
+                       
+                      </div>                     
+                    </mat-toolbar-row>
+                </mat-toolbar>
+
+                <mat-table #table [dataSource]="dataSource" matSort ng-class="myVar" >
+                    <ng-container matColumnDef="telefono_codigo">
+                        <mat-header-cell *matHeaderCellDef>Código</mat-header-cell>
+                        <mat-cell *matCellDef="let element">
+                            {{element.telefono_codigo}}
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="telefono_numero">
+                        <mat-header-cell *matHeaderCellDef>Numero</mat-header-cell>
+                        <mat-cell *matCellDef="let element">
+                            {{element.telefono_numero}}
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="botones" >
+                        <mat-header-cell *matHeaderCellDef style="text-align: right;">Acciones</mat-header-cell>
+                        <mat-cell *matCellDef="let element" id="acciones-telefono">
+                            <span></span>
+                            
+
+                            <i _ngcontent-c6="" class="link-button material-icons" *ngIf="moreThanOne" (click)='delete(element.telefono_codigo,element.telefono_numero)' matTooltip="Eliminar" matTooltipShowDelay="300" matTooltipHideDelay="300">delete</i>
+
+                            <i _ngcontent-c6="" class="link-button material-icons" (click)='edit(element.telefono_codigo,element.telefono_numero)' matTooltip="Editar" matTooltipShowDelay="300" matTooltipHideDelay="300">edit</i>
+            
+                        </mat-cell>
+                    </ng-container>
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="row.classleido" (click)="onEdit(row)"></mat-row>
+                </mat-table>
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+            </div>
+
+            
+
+
+
+            <button class="btn btn-primary pull-right" type="submit">Guardar</button>
+
+            <!--<button class="btn btn-primary pull-right" type="button" (click)="inactivar_cuenta()">Inactivar Cuenta</button>-->
+        </form>
+    </div>
+</div>

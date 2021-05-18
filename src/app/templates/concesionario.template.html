@@ -1,0 +1,69 @@
+<div class="container-fluid fix pt-4" >
+	<div class="header-concesionario" id="contacto-vendedor">
+		<div class="row">
+			<div class="col titulo-conserionario" >
+				<h2 class="nombre-concesionario">
+						{{cliente.cliente_nombres}} {{cliente.cliente_apellidos}} 
+				</h2>
+			
+				<h5 class="dir-concesionario">
+					<i _ngcontent-c4="" class="material-icons">location_on</i> {{cliente.cliente_direccion}}
+				</h5>
+
+				<label class="text-secondary">{{cliente.ciudad_nombre}}, {{cliente.departamento_nombre}}</label>
+
+
+				<label *ngIf="cliente.cliente_url!=''&&cliente.cliente_url!=null">
+				<a href="{{cliente.cliente_url}}">
+					<i _ngcontent-c4="" class="material-icons mr-1">laptop</i>{{cliente.cliente_url}}
+				</a>
+				</label>
+
+			</div>
+			<div class="col-md-5 logo-concesionario-site">
+				<img src="{{cliente.cliente_imagen}}">
+			</div>
+			<div class="col tel-concesionaro">
+				<h5>Teléfono(s):</h5>
+                    <ul>
+						
+                        <li *ngFor="let tel of telefonos;let i = index;">{{tel.f2}}</li>
+                      <!--  <li>312 567 8908</li>
+                        <li>312 567 8908</li> -->
+                    </ul>
+                <a href="tel:{{cliente.cliente_telefonocelular}}" class="btn-material btn-green tel">{{cliente.cliente_telefonocelular}}</a>
+			</div>
+		</div>
+	</div>
+	<div class="gradiente-borde"></div>
+<!--	
+	<div class="row">
+		<div>
+			<app-usado-filtro></app-usado-filtro>
+		</div>
+		<div class="col">
+			<app-usado-item2 [item]="items"></app-usado-item2>
+			<app-paginador [total_items]="total_items"  
+			(eventPaginador)="setPage($event)"></app-paginador>
+		</div>		
+	</div>
+-->
+
+</div>
+
+ <section class="contacto-footer">
+            <div class="row">
+                <div class="col-6">
+                    <a href="tel:{{cliente.cliente_telefonocelular}}" class="btn-material btn-blue" >
+                        <i class="material-icons">call</i>LLAMAR</a>
+                </div>
+
+                <div class="col-6">
+                    <a class="btn-material btn-green" href="https://wa.me/57{{cliente.cliente_telefonocelular}}?text=Hola%20{{cliente.cliente_nombres}}%20estoy%20interesado%20en%20uno%20de%20sus%20vehículo%20publicado%20en%20Indicar.%20https://www.indicar.com.co/clasificados?{{cliente.cliente_codigo}}">
+                        <i class="icon-whatsapp"></i>WHATSSAP</a>
+
+                         <!--href="https://api.whatsapp.com/api/send?phone=+57{{datos.clasificado_telefono}}"-->
+                        
+                </div>
+            </div>
+        </section>

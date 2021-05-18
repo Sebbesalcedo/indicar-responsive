@@ -1,0 +1,312 @@
+<section class="categorias busqueda">
+    <div class="cuadro-negro"></div>
+    <div class="container-fluid fix buscador">
+
+        <div class="titulo-pagina-inicio">
+            <h2 class="col-12 ">
+                Encuentra tu vehículo ideal en un solo sitio
+            </h2>
+            <label>Clasificados, Financiamiento y Seguros</label>
+         </div>
+        <div class="buscafacil">
+            <app-inicio-filtro></app-inicio-filtro>
+        
+        </div>
+    </div>
+
+</section>  
+
+
+
+<section class="usados slider inicio p-0 mt-4" *ngIf="totalitems_gangas">
+
+    
+    <div class="container-fluid fix p-0">
+
+        <div class="row">
+
+            <div class="col-12 titulo-seccion">
+                <h3 class="titulo"> <a href="">Gangas del momento<span id="region"></span></a></h3>        
+                <p class="subtitulo">Vehículos con el mejor costo beneficio.</p>
+            </div> 
+        </div>
+
+        <div class="row rowslide"> 
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 contenedor-tarjeta" *ngFor="let datos of items_gangas"> 
+                <div class="tarjeta" [routerLink]="['/clasificados/detalle',  datos.venta_codigo]">
+                    <div class="tarjeta-imagen"  lazy-load-images>
+                        <img  alt="{{datos.fotosventa_nombre}}"  src="assets/images/dots.png" attr.data-src="{{datos.fotosventa_ruta}}"  >
+                    </div>  
+                   
+                    <div class="tarjeta-contenido">
+
+                        <a [routerLink]="['/clasificados/detalle',  datos.venta_codigo]">
+                            <!-- <a routerLink="/clasificados/detalle" [queryParams]="{ p_codigo: datos.venta_codigo}"> -->
+                            <h4 class="tarjeta-titulo">
+                                {{datos.linea_nombrecorto}}
+                            </h4>
+                        </a>
+                         <div class="tarjeta-precio">
+                            {{datos.venta_valor | currency:'COP':'symbol-narrow':'2.0-1'}}
+                        </div>
+                        <div class="tarjeta-tags .info-box">
+                            <span>{{datos.venta_kilometraje | number : '1.0-1'}} Km</span>
+                            <span>{{datos.venta_modelo}}</span>
+                            <span>{{datos.traccion_nombre}}</span>
+                            <span id="capacidad">{{datos.capacidadmotor_nombre}}</span>
+                            <!--span id="nombre">{{datos.tipomotor_nombre}}</span-->
+                            <p class="ciudad">Ubicado en {{datos.ciudad_nombre}}</p>
+
+                        </div>
+                         <!-- <div class="tarjeta-tags ciudad">
+                            <span>{{datos.ciudad_nombre}}</span>
+                        </div>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="usados slider inicio p-0" *ngIf="items_unicoduenno">
+
+    
+    <div class="container-fluid fix p-0">
+
+        <div class="row">
+
+            <div class="col-12 titulo-seccion">
+                <h3 class="titulo"> <a href="">Único Dueño<span id="region"></span></a></h3>        
+                <p class="subtitulo">Vehículos con único dueño.</p>
+            </div> 
+        </div>
+
+        <div class="row rowslide"> 
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 contenedor-tarjeta" *ngFor="let datos of items_unicoduenno"> 
+                <div class="tarjeta" [routerLink]="['/clasificados/detalle',  datos.venta_codigo]">
+                    <div class="tarjeta-imagen"  lazy-load-images>
+                        <img  alt="{{datos.fotosventa_nombre}}"  src="assets/images/dots.png" attr.data-src="{{datos.fotosventa_ruta}}"  >
+                      
+                    </div>  
+                    
+                    <div class="tarjeta-contenido" >
+                        
+                        <h4 class="tarjeta-titulo">
+                           {{datos.linea_nombrecorto}}
+                        </h4>
+                        <div class="tarjeta-precio">
+                            {{datos.venta_valor | currency:'COP':'symbol-narrow':'2.0-1'}}
+                        </div>
+                        <div class="tarjeta-tags .info-box">
+                            <span>{{datos.venta_kilometraje | number : '1.0-1'}} Km</span>
+                            <span>{{datos.venta_modelo}}</span>
+                            <span>{{datos.traccion_nombre}}</span>
+                            <span id="capacidad">{{datos.capacidadmotor_nombre}}</span>
+                            <span id="nombre">{{datos.tipomotor_nombre}}</span>
+                            <p class="ciudad">Ubicado en {{datos.ciudad_nombre}}</p>
+                        </div>
+                         <!-- <div class="tarjeta-tags ciudad">
+                            <span>{{datos.ciudad_nombre}}</span>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <section class="nuevos slider" *ngIf="items_novedades">
+    <div class="container-fluid fix p-0">
+        <div class="row">
+            <div class="col-12 titulo-seccion">
+                <h3 class="titulo"> <a href="">Lanzamientos<span id="region"></span></a></h3>        
+                <p class="subtitulo">Vehículos nuevos en Indicar.</p>
+            </div>  
+          </div>    
+        <div class="row rowslide">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 contenedor-tarjeta" *ngFor="let datos of items_novedades" > 
+                <div class="tarjeta" [routerLink]="['/nuevo/detalle',  datos.linea_codigo+datos.linea_modelo ]">
+
+                  
+                    <div class="tarjeta-imagen lanzamientos" lazy-load-images>
+                        <img src="assets/images/dots.png" attr.data-src="{{datos.fotoslinea_ruta}}" alt="{{datos.marca_nombre}} {{datos.linea_nombre}}" >
+                    </div>  
+
+
+                    <div class="tarjeta-contenido">
+                        <h4 class="tarjeta-titulo">
+                           {{datos.linea_nombrecorto}}
+                        </h4>
+
+                         <div class="tarjeta-precio">
+                            {{datos.linea_precio | currency:'COP':'symbol-narrow':'2.0-1'}} 
+                        </div>
+
+                        <div class="tarjeta-tags .info-box">
+                            <span>{{datos.traccion_nombre}}</span>
+                            <span>{{datos.cajacambios_nombre}}</span>
+                            <span>{{datos.tipomotor_nombre}}</span>
+                            <span>{{datos.capacidadmotor_nombre}}</span>
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section> -->
+
+<section class="bg-white">
+    <div class="container-fluid fix slider p-0">
+
+        <div class="col-12 titulo-seccion mb-4">
+            <h3 class="titulo"> <a href="/concesionarios">Concesionario</a></h3>        
+            <p class="subtitulo">Con los mejores concesionarios del país</p>
+        </div>  
+
+      
+
+        <swiper [config]="logoConcesionario" class="logoConcesionario">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let datos of items_concesionarios" >
+                   
+                    <img src="{{datos.cliente_imagen}}" [routerLink]="['/clasificados']" [queryParams]="{p_cliente:datos.cliente_codigo}"  >
+
+                </div>             
+            </div>
+
+            <div class="swiper-button-prev"><i class="material-icons">navigate_before</i></div>
+            <div class="swiper-button-next"><i class="material-icons">navigate_next</i></div>
+         
+        </swiper>
+    </div>
+</section>
+  <!--[queryParams]="{p_cliente: datos.cliente_codigo }"-->
+
+
+
+<!--section class="suscribir mb-4">
+    <div class="container-fluid fix">
+        <div class="row">
+            <form class="form-inline w-100">
+                <div class="col-md-4"><h5>Recibe ofertas y notificaciones de nuevas publicaciones de vehículos</h5></div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control w-100" id="exampleFormControlInput1" placeholder="Ingresa tu correo electrónico">
+                </div>
+                <div class="col-md-2 text-right">
+                    <button type="submit" class="btn-material btn-red">Suscríbete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section-->
+
+
+<section class="herramientas">
+
+    <div class="container-fluid fix">
+
+        <div class="row">
+            
+            <div class="col-12 titulo-seccion mb-4">
+                <h3 class="titulo"> <a href="">Herramientas</a></h3>        
+                <p class="subtitulo">Te ayudamos a encontrar el vehículo ideal</p>
+            </div> 
+       
+        
+            <!--div class="col-md-3 col-sm-3 col-6 herramientas">
+                <a href="/libro_azul_nuevo">
+                    <img src="assets/images/libro_azul_bl.svg" alt="" class="img-fluid">
+                    <h5>Libro azul</h5>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-6 herramientas">
+                <a href="/comparador">
+                    <img src="assets/images/comparar_bl.svg" alt="" class="img-fluid">
+                    <h5>Compara vehículos</h5>
+                </a>
+            </div-->
+        
+
+            <div class="col-md-3 col-sm-3 col-6 herramientas">
+                <a href="/financiera">
+                     <img src="assets/images/calcula_bl.svg" alt="" class="img-fluid">
+                     <h5>Calcula tu cuota</h5>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-6 herramientas">
+                <a href="solicitar-credito">
+                     <img src="assets/images/financia_bl.svg" alt="" class="img-fluid">
+                     <h5>Solicita credito</h5>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-6 herramientas" >
+                <div href="" routerLink="/concesionarios">
+                     <img src="assets/images/concesionario.svg" alt="" class="img-fluid">
+                     <h5>Concesionario</h5>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="financieras slider bg-white" *ngIf="items_novedades">
+    <div class="container-fluid fix p-0">
+        <div class="row">
+            <div class="col-12 titulo-seccion">
+                <h3 class="titulo"> <a href="">Financia<span id="region"></span></a></h3>        
+                <p class="subtitulo">Con estas financieras podrás adquirir tu vehículo</p>
+            </div>  
+          </div>    
+        <div class="row rowslide">
+              
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  text-center contenedor-tarjeta"  *ngFor="let data of lovFinancieras" > 
+
+                <div class="tarjeta no-shadow">
+                  <img src="{{data.financiera_logo}}">
+                </div>
+            </div>
+        
+          
+
+        </div>
+    </div>
+
+  
+
+</section>
+
+
+<!--section>
+    <image-upload>
+        [url]="'./assets/images-upload'"
+        [extensions]="['jpg','png','gif']"
+        (uploadFinished)="onUploadFinished($event)"
+        (removed)="onRemoved($event)"
+        (uploadStateChanged)="onUploadStateChanged($event)"
+    </image-upload>
+</section-->
+
+
+
+
+
+               

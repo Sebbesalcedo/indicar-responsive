@@ -1,0 +1,280 @@
+<section class="filtros">
+    
+    <div class="container-fluid fix filtros-contenido pt-0">
+         <div class="row mb-4">
+          <h3 class="subtitle">Filtros</h3>
+            
+          <a  class="limpiar" (click)="deselectAll()"> Limpiar filtros</a>
+        </div>
+
+        
+        <div class="">
+                 <!-- nuevos -->
+                 <div class="form-group col">
+                    <label>Clasificados</label>
+                    <div class="check-filtro">
+                        <mat-checkbox name="tipoclasificado" 
+                        *ngFor="let data of filtros.tipoclasificado; let i=index" 
+                        value="{{data.codigo}}" 
+                        (change)="change()" 
+                        [(ngModel)]="filtros.tipoclasificado[i].selected" >{{data.descripcion}} ({{data.cantidad}})</mat-checkbox>
+                    </div>                               
+                </div>
+
+                <!-- clases -->
+                <div class="form-group col">
+                    <label>Clases</label>
+                    <div class="check-filtro">
+                        <mat-checkbox name="clase" 
+                        *ngFor="let data of filtros.clase; let i=index" 
+                        value="{{data.codigo}}" 
+                        (change)="change()" 
+                        [(ngModel)]="filtros.clase[i].selected" >{{data.descripcion}} ({{data.cantidad}})</mat-checkbox>
+                    </div>                
+                </div>
+                 <!--marcas-->
+                 <div class="form-group col" >
+                    <label (click)="filmar=!filmar" [ngClass]="filmar ? 'active' : 'inactive'" class="mas-opciones">Marcas</label>
+
+                    <div class="check-filtro filtro-busqueda" [ngClass]="filmar ? 'active' : 'inactive'">
+                            <mat-checkbox name="marca" 
+                            *ngFor="let data of filtros.marca; let i=index" 
+                            value="{{data.codigo}}" 
+                            (change)="change()" 
+                            [(ngModel)]="filtros.marca[i].selected" >{{data.descripcion}} ({{data.cantidad}})</mat-checkbox>
+
+                    </div>
+                     <button *ngIf="verMarcas" (click)="filmar=!filmar" [ngClass]="filmar ? 'active' : 'inactive'" class="boton-ver-mas"><span>Ver más</span> <span>Ver menos</span></button>
+                    <hr>
+                    
+                </div>
+
+                <!-- familias -->
+                <div class="form-group col familia">
+                    <label (click)="filfam=!filfam" [ngClass]="filfam ? 'active' : 'inactive'" class="mas-opciones">Familias</label>
+                    <div class="check-filtro filtro-busqueda" [ngClass]="filfam ? 'active' : 'inactive'">
+                        <mat-checkbox name="familia" 
+                        *ngFor="let data of filtros.familia; let i=index" 
+                        value="{{data.codigo}}" 
+                        (change)="change()" 
+                        [(ngModel)]="filtros.familia[i].selected" >{{data.descripcion}} ({{data.cantidad}})</mat-checkbox>
+                    </div> 
+                    <button *ngIf="verFamilias" (click)="filfam=!filfam" [ngClass]="filfam ? 'active' : 'inactive'" class="boton-ver-mas" ><span>Ver más</span> <span>Ver menos</span></button>               
+                    <hr>
+                </div>
+
+
+                <!-- hacer bien el funcionamiento del ciudades -->
+                <div class="form-group col">
+                    <label (click)="filciu=!filciu" [ngClass]="filciu ? 'active' : 'inactive'" class="mas-opciones">Ciudades</label>
+                    <div class="check-filtro filtro-busqueda" [ngClass]="filciu ? 'active' : 'inactive'">
+                            <mat-checkbox name="ciudad" 
+                            *ngFor="let data of filtros.ciudad; let i=index" 
+                            value="{{data.codigo}}" 
+                            (change)="change()" 
+                            [(ngModel)]="filtros.ciudad[i].selected" >{{data.descripcion}} ({{data.cantidad}})</mat-checkbox>
+                            <!--
+                            <mat-checkbox  *ngFor="let data of lovCiudad" value="{{data.codigo}}" >{{data.descripcion}}({{data.cantidad}})</mat-checkbox>
+                            -->
+                    </div>
+                     <button *ngIf="verCiudades" (click)="filciu=!filciu" [ngClass]="filciu ? 'active' : 'inactive'" class="boton-ver-mas"><span>Ver más</span> <span>Ver menos</span></button>
+                     <hr>
+                </div>
+
+
+                <!-- precio -->
+                <div class="form-group col">
+                    <label>Precio</label>
+                    <!-- precio minimo -->
+                    <div class="row precio-form">
+                        <div class="form-select col">
+     
+                            <mat-select placeholder="Mínimo" id="precio_desde" name="precio_desde" #precio_minimo [(ngModel)]="p_filtros['p_preciodesde']">
+                                <mat-option *ngFor="let data of filtros.precio" value="{{data.codigo}}">
+                                  {{data.descripcion | currency:'COP':'symbol-narrow':'2.0-1'}} 
+                                </mat-option>
+                            </mat-select>
+                       
+                        </div>                  
+                        <!-- precio maximo -->
+                        <div class="form-select col">
+                            <mat-select placeholder="Máximo" id="precio_hasta" name="precio_hasta" #precio_hasta [(ngModel)]="p_filtros['p_preciohasta']" >
+                                <mat-option *ngFor="let data of filtros.precio" value="{{data.codigo}}">{{data.descripcion | currency:'COP':'symbol-narrow':'2.0-1'}} 
+                                </mat-option>
+                            </mat-select>
+                        </div>                    
+                        <!-- precio button-->
+                        <div class="col-2 bt-ok">
+                            <button name="btn_consultaprecio" (click)="change()">OK</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                    
+
+               
+                <!-- año ***** hacerlo funcional del minimo y hasta *****-->
+                <div class="form-group col">
+                    <label>Año modelo</label>
+                    <!-- año minimo -->
+                    <div class="row precio-form">
+                        <div class="form-select col">
+                    
+                            <mat-select placeholder="Mínimo" id="anno_minimo" name="anno_minimo" #anno_desde [(ngModel)]="p_filtros['p_modelodesde']">
+                                <mat-option  *ngFor="let data of filtros.modelo" value="{{data.codigo}}">{{data.descripcion }} 
+                                </mat-option>
+                            </mat-select>
+
+                        </div>                    
+                        <!-- año maximo -->
+                        <div class="form-select col">
+                     
+                             <mat-select placeholder="Máximo" id="anno_hasta" name="anno_hasta" #anno_hasta  [(ngModel)]="p_filtros['p_modelohasta']">
+                                <mat-option  *ngFor="let data of filtros.modelo" value="{{data.codigo}}">{{data.descripcion }} 
+                                </mat-option>
+                            </mat-select>
+                        </div>                    
+                        <!-- año button-->
+                        <div class="col-2 bt-ok">
+                            <button name="btn_consultamodelo" (click)="change()">OK</button>
+                        </div>
+                    </div>                
+                </div>
+
+                
+                <!-- kilometraje ****** hacerlo funcional ******-->
+                <div class="form-group col">
+                    <label>Kilometraje</label>
+                    <!-- km minimo -->
+                    <div class="row precio-form">
+                        <div class="form-select col">
+                    
+
+                            <mat-select placeholder="Mínimo" id="km_desde" name="km_desde" #km_desde  [(ngModel)]="p_filtros['p_kmdesde']">
+                                <mat-option  *ngFor="let data of filtros.km" value="{{data.codigo}}">{{data.descripcion }} 
+                                </mat-option>
+                            </mat-select>
+                        </div>                    
+                        <!-- km maximo -->
+                        <div class="form-select col">
+                         
+                             <mat-select placeholder="Máximo" id="km_hasta" name="km_hasta" #km_hasta  [(ngModel)]="p_filtros['p_kmhasta']">
+                                <mat-option  *ngFor="let data of filtros.km" value="{{data.codigo}}">{{data.descripcion }} 
+                                </mat-option>
+                            </mat-select>
+                        </div>
+                         
+                        <!-- km button-->
+                        <div class="col-2 bt-ok">
+                            <button name="btn_consultakm" (click)="change()">OK</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- formas -->
+                <div class="form-group col">
+                    <label>Formas</label>
+                        <div class="form-select">
+                            <mat-select placeholder="Todas" id="forma" name="forma" #forma  [(ngModel)]="p_filtros['p_forma']" (change)="change()">
+                                <mat-option  *ngFor="let data of filtros.forma" value="{{data.codigo}}">{{data.descripcion }} ({{data.cantidad}})
+                                </mat-option>
+                            </mat-select>
+                        </div>                
+                </div>
+
+                <!--traccion -->
+                <div class="form-group col">
+                    <label>Tracción</label>
+                        <div class="form-select">
+                            
+                            <mat-select placeholder="Todas" id="traccion" name="traccion" #traccion [(ngModel)]="p_filtros['p_traccion']" (change)="change()">
+                                <mat-option  *ngFor="let data of filtros.traccion" value="{{data.codigo}}">{{data.descripcion }} ({{data.cantidad}})
+                                </mat-option>
+                            </mat-select>
+                        </div>                
+                </div>
+
+                <!-- caja-->
+                <div class="form-group col">
+                    <label>Caja</label>
+                        <div class="form-select">
+                        
+                             <mat-select placeholder="Todas" id="caja" name="caja" #caja  [(ngModel)]="p_filtros['p_caja']" (change)="change()">
+                                <mat-option  *ngFor="let data of filtros.caja" value="{{data.codigo}}">{{data.descripcion }} ({{data.cantidad}})
+                                </mat-option>
+                            </mat-select>
+                        </div>
+                    
+                </div>
+
+                <!-- motor-->
+                <div class="form-group col">
+                    <label>Tipo de motor</label>
+                        <div class="form-select">
+                            <mat-select placeholder="Todos" id="tipomotor" name="tipomor" #tipomotor  [(ngModel)]="p_filtros['p_tipomotor']" (change)="change()">
+                                <mat-option  *ngFor="let data of filtros.tipomotor"value="{{data.codigo}}">{{data.descripcion }} ({{data.cantidad}}) 
+                                </mat-option>
+                            </mat-select>
+
+                        </div>
+                    
+                </div>
+
+                <!-- capacidad motor ****** hacerlo funcional ******-->
+                <div class="form-group col">
+                    <label>Capacidad del motor</label>
+                    <!-- motor minimo -->
+                    <div class="row precio-form">
+                        <div class="form-select col">
+                             <mat-select placeholder="Mínimo" id="capacidadmotor" name="capacidadmotor_desde" #capacidadmotor_desde  [(ngModel)]="p_filtros['p_capacidadmotordesde']">
+                                <mat-option *ngFor="let data of filtros.capacidad" value="{{data.codigo}}">{{data.descripcion }} 
+                                </mat-option>
+                            </mat-select>
+
+                        </div>
+                        
+                        <!-- motor maximo -->
+                        <div class="form-select col">
+                        
+                              <mat-select placeholder="Máximo" id="capacidadmotor" name="capacidadmotor_hasta" #capacidadmotor_hasta  [(ngModel)]="p_filtros['p_capacidadmotorhasta']">
+                                <mat-option *ngFor="let data of filtros.capacidad" value="{{data.codigo}}">{{data.descripcion }} 
+                                </mat-option>
+                            </mat-select>
+                        </div>
+                         
+                        <!-- motor button-->
+                        <div class="col-2 bt-ok">
+                            <button name="btn_consultacapacidad" (click)="change()">OK</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- unico dueño *** hacer funcional las placas terminadas en ****--->
+                 <div class="form-group col">
+                    <label (click)="filciu=!filciu" [ngClass]="filciu ? 'active' : 'inactive'" class="mas-opciones">Único dueño</label>
+                    <div class="check-filtro filtro-busqueda" [ngClass]="filciu ? 'active' : 'inactive'">
+                        <mat-checkbox>Único dueño</mat-checkbox>
+                    </div>
+
+                </div>
+
+
+                <!-- placa -->
+                <div class="form-group col">
+                     <label>Placa terminada en:</label>
+                    <div class="check-filtro filtro-busqueda" [ngClass]="filmar ? 'active' : 'inactive'">
+                            <mat-checkbox name="placa" 
+                            *ngFor="let data of filtros.placa; let i=index" 
+                            value="{{data.codigo}}" 
+                            (change)="change()" 
+                            [(ngModel)]="filtros.placa[i].selected" >{{data.descripcion}} ({{data.cantidad}})</mat-checkbox>                 
+                    </div>
+
+                        
+                    
+                </div>            
+      
+        </div>
+    </div>
+</section>

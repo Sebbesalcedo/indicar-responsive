@@ -1,0 +1,77 @@
+.miCuenta{
+	background: white;
+	min-height: 100vh;
+}
+
+.menu-lateral{
+	width: 250px;
+	position: relative;
+	display: block;
+}
+
+.container-fluid{
+	margin: 0px;
+}
+
+.contenido h5{
+	color: #3A67BA;
+	margin-bottom: 0;
+
+}
+
+.container-fluid.fix{
+	padding: 2rem;
+}
+
+.list-group-item{
+	border: none;
+	display: block;
+	padding-left: 0px;
+}
+
+.badge-primary{
+	background-color: #DA2304
+}
+
+.badge-primary.vacio{
+	background-color: initial;
+	color: gray;
+	border: gray solid 1px;
+}
+
+/*configuracion*/
+.configuracion{
+	color: gray;
+}
+
+.configuracion .form-control-plaintext{
+	border: none;
+	line-height: 34px;
+}
+
+.configuracion select{
+	box-shadow: none;
+	font-size: 16px;
+	padding: 0px;
+}
+
+#sec-personales label{
+	max-width: 200px;
+}
+
+.configuracion .btn-material{
+	display: inline-block;
+}
+
+@media only screen and (max-width: 1200px){
+	.menu-lateral{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 700px){
+ .container-fluid.fix{
+        padding: 1rem
+    }
+
+}

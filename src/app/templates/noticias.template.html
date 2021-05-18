@@ -1,0 +1,134 @@
+<div class="valorizador">
+    <div class="header-valorador noticia">
+        <div class="container-fluid fix">
+            <h1>
+                Noticias
+            </h1>
+        </div>
+    </div>
+    <div class="container-fluid fix noticias" >
+        <div>
+            
+        </div>
+        <div class="row">
+
+            <div class="col-12 col-md-8 col-lg-8">
+                <div class="tarjeta-contenido  mb-3 col-lg-4 col-md-6 col-12"  *ngFor="let data of items"   >
+                    <div class="bg-white noticia">
+                        <div class="tarjeta-imagen">
+                            <a routerLink="/noticias_detalle/{{data.noticia_codigo}}" >
+                                <img src="{{data.noticia_url_miniatura}}">
+                            </a>
+                        </div>
+                        
+                        <div class="tarjeta-info pt-4">
+                            
+
+                            <a routerLink="/noticias_detalle/{{data.noticia_codigo}}" >
+                                <h4 class="titulo-noticia">{{data.noticia_titulo}}</h4>
+                                <!--<div class="datos-noticia">
+                                    <label><i class="material-icons">calendar_today</i>{{data.noticia_fecha_creacion}}</label>
+                                    <label><i class="material-icons">person</i>{{data.grupo_nombre}}</label>
+                                </div>
+                                -->
+                                <p>{{data.noticia_descripcion}}.</p>
+                            </a>
+                        </div>
+
+                        <!--<a href="/noticias_detalle/{{data.noticia_codigo}}" class="link">Leer más</a>-->
+                    </div>
+                </div>
+
+                <div class="tarjeta-contenido bg-white mb-3">
+                    <div class="tarjeta-imagen">
+                        <a href="/noticias_detalle" >
+                            <img src="http://www.carroya.com/noticias/sites/default/files/entradillas/424916040comagro-cont-5.jpg">
+                        </a>
+                    </div>
+                    
+                    <div class="tarjeta-info pt-4">
+                        
+
+                        <a href="/noticias_detalle" >
+                            <h4>Gran remate de fin de año en vehículos usados en AUTOMOTORES COMAGRO</h4>
+                            <div class="datos-noticia">
+                                <label><i class="material-icons">calendar_today</i>Diciembre 21,2018</label>
+                                <label><i class="material-icons">person</i>Sandra</label>
+                            </div>
+                            <p>El gran remate de fin de año en vehículos usados está en AUTOMOTORES COMAGRO, donde podrás llevar tu vehículo usado con descuentos de hasta $3.500.000 y financiar hasta el 100% del valor de tu carro; y de obsequio tendrás ¡GASTOS DE TRASPASO GRATIS!.</p>
+                        </a>
+                    </div>
+
+                    <a href="/noticias_detalle" class="link">Leer más</a>
+                </div>
+            </div>
+
+
+            <div class="tarjeta-contenido col-12 col-md-4 col-lg-4 bg-white publicidad">
+                <div class="mb-3">
+                    <a href="/solicitar-credito" target="_blank"> <img src="/assets/images/credito.jpg"> </a>
+                </div>
+
+                <div>
+                    <a href="/valora" target="_blank"> <img src="/assets/images/valora.jpg"> </a>
+                </div>
+
+                 <div>
+                    <a href="/comparador" target="_blank"> <img src="/assets/images/compare.jpg"> </a>
+                </div>
+
+
+                <div  *ngIf="totalitems_gangas">
+
+                    <hr>
+
+                    <div class="clasificado"> 
+                        <div class="titulo-seccion">
+                            <h2>CLASIFICADOS</h2>
+                        </div>
+
+                        <div class="normal pr-0 ng-star-inserted" *ngFor="let datos of items_gangas"> 
+                            <div class="tarjeta" [routerLink]="['/clasificados/detalle',  datos.venta_codigo]">
+                                <div class="tarjeta-imagen"  lazy-load-images>
+                                    <img  alt="{{datos.fotosventa_nombre}}"  src="assets/images/dots.png" attr.data-src="{{datos.fotosventa_ruta}}"  >
+                                </div>  
+                               
+                                <div class="tarjeta-contenido">
+
+                                    <a [routerLink]="['/clasificados/detalle',  datos.venta_codigo]">
+                                        <!-- <a routerLink="/clasificados/detalle" [queryParams]="{ p_codigo: datos.venta_codigo}"> -->
+                                        <h4 class="tarjeta-titulo">
+                                            {{datos.linea_nombrecorto}}
+                                        </h4>
+                                    </a>
+                                     <div class="tarjeta-precio">
+                                        {{datos.venta_valor | currency:'COP':'symbol-narrow':'2.0-1'}}
+                                    </div>
+                                    <div class="tarjeta-tags">
+                                        <span>{{datos.venta_kilometraje | number : '1.0-1'}} Km</span>
+                                        <span>{{datos.venta_modelo}}</span>
+                                        <span>{{datos.traccion_nombre}}</span>
+                                        <span id="capacidad">{{datos.capacidadmotor_nombre}}</span>
+                                        <!--span id="nombre">{{datos.tipomotor_nombre}}</span-->
+                                        
+
+                                    </div>
+                                     <div class="tarjeta-tags ciudad">
+                                        <span>{{datos.ciudad_nombre}}</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <a href="/clasificados" target="_blank"> Ver más</a>
+                        </div>
+                    </div>
+               
+                </div>
+               
+            </div>
+
+        </div>
+    </div>
+</div>

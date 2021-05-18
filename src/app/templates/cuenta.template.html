@@ -1,0 +1,138 @@
+
+<div class="my-container">
+        <ngx-loading [show]="isloading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>    
+    </div>
+<div class="container-fluid fix p-0" [class.example-is-mobile]="mobileQuery.matches">
+    <!--div class="container-fluid fix" -->
+
+  <div class="filtro-btn">
+        <button mat-raised-button  class="btn filtro-icon-responsive" (click)="snav.toggle()"><i class="material-icons">tune</i></button>
+    </div>
+
+  <mat-sidenav-container class="example-sidenav-container rihgtResponsive" >
+
+        <!-- menu abierto-->
+        <!-- [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" opened="screenWidth<768"  -->
+       <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" opened={{varopened}}
+
+                 (window:resize)="$event.target.innerWidth<769? snav.close(): snav.open()" position="end">
+        <script>
+            // var bod = document.getElementsByTagName('body')[0].getBoundingClientRect();
+            // if(bod.width > 768){
+            //     document.getElementById('snav').open();
+            // }else{
+            //     document.getElementById('snav').close();
+            // }
+        </script>
+
+         <!--section class="vitrina col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12"-->
+
+            <div id="menu_lateral_user">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item active">                          
+                        <a  [routerLink]="[{ outlets: { 'cuenta-opcion': ['configurar'] } }]" routerLinkActive="active-link"> 
+                            <i class="material-icons">person</i>Mi cuenta</a>
+                    </li>
+
+
+                    <li class="list-group-item acordeon">
+                        <ngb-accordion [closeOthers]="true" activeIds="static-2" id="misClasificados" >
+                            <ngb-panel id="static-2">
+                                <ng-template ngbPanelTitle>
+                                    <i class="material-icons">message</i>Mensajes
+                                </ng-template>
+                                <ng-template ngbPanelContent>
+                                    <ul class="list-group">
+                                        <!--
+                                         <li class="list-group-item">
+                                             
+                                             <a  [routerLink]="[{ outlets: { 'cuenta-opcion': ['comentario'] } }]" routerLinkActive="active-link">Pendientes</a><span></span>
+                                           
+                                             <a  [routerLink]="[{ outlets: { 'cuenta-opcion': ['conversaciones','P'] } }]" routerLinkActive="active-link">Pendientes</a><span></span>
+                                             
+                                         </li>-->
+                                          <li class="list-group-item">
+                                             <a [routerLink]="[{ outlets: { 'cuenta-opcion': ['conversaciones',''] } }]" routerLinkActive="active-link">Conversaciones</a><span></span>
+                                         </li>
+                                    </ul>
+                                </ng-template>
+                            </ngb-panel>
+                        </ngb-accordion>
+                    </li>
+
+
+                    <li class="list-group-item">
+                        <a  [routerLink]="['/clasificados']" [queryParams]="{p_cliente: currentuser.codigo}"  *ngIf="currentuser.tipocliente=='02' " >
+                            
+                        <i class="material-icons">web</i>Mi micrositio</a>
+                    </li>
+
+                  
+                    
+                    <li class="list-group-item acordeon">
+                       
+                        <ngb-accordion [closeOthers]="true" activeIds="static-1" id="misClasificados" >
+                          <ngb-panel id="static-1">
+                             <ng-template ngbPanelTitle>
+                               <i class="material-icons">label</i> Mis clasificados
+                            </ng-template>
+                            <ng-template ngbPanelContent>
+                                 <ul class="list-group">
+                                     <li class="list-group-item">
+                                         <a   [routerLink]="[{ outlets: { 'cuenta-opcion': ['clasificado','P'] } }]" routerLinkActive="active-link">En aprobación({{parent.clasificadoRevision}})</a><span></span>
+                                     </li>
+                                      <li class="list-group-item">
+                                         <a   [routerLink]="[{ outlets: { 'cuenta-opcion': ['clasificado','A'] } }]" routerLinkActive="active-link">Aprobados({{parent.clasificadoAprobados}})</a><span></span>
+                                     </li>
+                                      <li class="list-group-item">
+                                         <a   [routerLink]="[{ outlets: { 'cuenta-opcion': ['clasificado','R'] } }]" routerLinkActive="active-link">Rechazados({{parent.clasificadoRechazados}})</a><span></span>
+                                     </li>
+                                     <li class="list-group-item">
+                                         <a   [routerLink]="[{ outlets: { 'cuenta-opcion': ['clasificado','I'] } }]" routerLinkActive="active-link">Inactivos({{parent.clasificadoInactivos}})</a><span></span>
+                                     </li>
+                                     <li class="list-group-item">
+                                        <a  [routerLink]="[{ outlets: { 'cuenta-opcion': ['clasificado','V'] } }]" routerLinkActive="active-link">Vendidos({{parent.clasificadoVendidos}})</a><span></span>
+                                    </li>
+                                 </ul>
+                            </ng-template>
+                          </ngb-panel>
+                        </ngb-accordion>
+                    </li>
+
+                      
+
+                
+                    <!-- <li class="list-group-item">
+                        <a  [routerLink]="[{ outlets: { 'cuenta-opcion': ['solicitudes'] } }]" routerLinkActive="active-link">Mis solicitudes de crédito</a>                        
+                    </li>-->
+                     <!--li class="list-group-item">
+                        <a  [routerLink]="[{ outlets: { 'cuenta-opcion': ['inicio'] } }]" routerLinkActive="active-link">
+                        <i class="material-icons">settings</i> Configurar</a>
+                    </li-->
+                    
+                     <!--li class="list-group-item">                      
+                        <a   routerLink="/" >Salir</a>
+                    </li>--->
+
+                    <div class="ocultar-filtro">
+                        <button mat-stroked-button class="btn" (click)="snav.toggle()">Cerrar menú</button>
+                    </div>
+                  
+                </ul>
+
+                  
+                  
+            </div>
+
+           </mat-sidenav> 
+
+        <mat-sidenav-content>
+        <!--section class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12"-->
+            <router-outlet  name="cuenta-opcion"></router-outlet>
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+</div>

@@ -1,0 +1,265 @@
+/**************************************
+Encabezado.css
+Indicar Expertos en vehículos.
+
+******************************************/
+.atras{
+	    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.atras i{
+	font-size: 2rem;
+    color: white;
+        width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.logo-concesionario {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    background: white;
+    position: relative;
+}
+
+.logo-concesionario img{
+    -webkit-transform: translateY(-50%) scale(0.8);
+    transform: translateY(-50%) scale(0.8);
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+}
+
+.alerta_notificacion{
+    position: absolute;
+    padding: 1px;
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    background: red;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    top: 5px;
+    margin-left: -3px;
+}
+
+.opc-down {
+	position: relative;
+}
+
+.opc-down .alerta_notificacion{
+    background: none;
+    color: white;
+    border-radius: 2px;
+    left: initial;
+    right: 0;
+    right: 10px;
+    background: #cc230e;
+    top: 7px;
+    border-radius: 50%;
+	font-size: 10px;
+	pointer-events: none;
+}
+/*
+.opc-down  .nueva_alerta{
+    display: block;
+    background: red;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    right: -3px;
+}
+*/
+
+.mi-cuenta-menu{
+	display: none;
+}
+
+#cuentaDown.dropdown{
+    position: relative;
+}
+.salir-sidebar{
+	display: none;
+	text-align: left;
+}
+
+header img.img-responsive.logo_blanco, .preencabezado img.img-responsive.logo_blanco{
+	display: none;
+
+}
+
+.libroAzul-pc{
+	display: block;
+}
+
+.libroAzul-cel{
+	display: none;
+}
+
+.libroAzul-cel .mat-expansion-panel-header-description, .mat-expansion-panel-header-title{
+	    padding-left: 37px;
+
+}
+
+.libroAzul-cel .mat-expansion-panel{
+	box-shadow: none;
+}
+
+
+.libroAzul-cel .header li{
+    padding: 0;
+    width: 50%;
+}
+
+header li.libroAzul-pc button{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+.boton-busqueda.active{
+		display: none;
+	}
+
+	.boton-busqueda.web{
+		display: inline-block;
+	}
+
+
+@media only screen and (max-width : 1200px) {
+}
+
+
+@media only screen and (max-width : 1235px) {
+	.busqueda-contenido{
+       width: initial;
+	   height: initial;
+	   right: initial;
+	   left: initial;
+	}
+
+	.boton-busqueda.web{
+		display: none;
+	}
+
+	.boton-busqueda.active{
+		display: inline-block;
+	}
+
+	.boton-busqueda{
+	    position: fixed;
+    	padding: 10px;
+    	width: auto;
+    	top: 30px;
+    	right: 0;
+	}
+
+	.barra-busqueda.active, .barra-busqueda.inactive {
+		position: fixed;
+    	width: 500px;
+    	
+	}
+
+	.barra-busqueda > input{
+		    width: calc(100% - 40px);
+	}
+
+	.sidebar{
+		right: 45px;
+	}
+	header .logo{
+		top: 38px;
+        left: calc(50% - 50px);
+	}
+	header img.img-responsive.logo_blanco, .preencabezado img.img-responsive.logo_blanco{
+		display: block;
+	    position: absolute;
+	    top: 7px;
+	    height: 15px;
+	    left: calc(50% - 74px);
+	    z-index: 28;
+	}
+
+	header img.img-responsive.logo_color{
+		display: none;
+		
+	}
+
+	.sidebar{
+		left: 1rem
+	}
+}
+
+@media only screen and (max-width : 815px) {
+
+	header img.img-responsive.logo_blanco, .preencabezado img.img-responsive.logo_blanco{
+		position: inherit;
+	    top: inherit;
+	    height: 23px;
+	}
+
+	header .logo{
+		top: 12px;
+        left: 50%;
+	}
+
+	header img.img-responsive.logo_color{
+		display: none;
+	}
+
+	.sidebar{
+		left: 0px;
+	}
+
+	.libroAzul-pc{
+		display: none;
+	}
+
+	.libroAzul-cel{
+		display: block;
+	}
+
+	.mi-cuenta-menu{
+		display: block;
+	}
+
+
+}
+
+@media only screen and (max-width : 787px) {
+
+	
+
+	.salir-sidebar{
+		display: block;
+	}
+
+	.sidebar{
+		left: 0px;
+	}
+
+	
+	.barra-busqueda.active{
+		
+		width: calc(100% - 40px);
+	}
+
+	.boton-busqueda{
+		top: 0;
+    	right: 40px;
+	}
+}

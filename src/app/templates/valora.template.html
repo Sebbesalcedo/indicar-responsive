@@ -1,0 +1,125 @@
+<div class="valorizador">
+    <div class="header-valorador">
+    <div class="container-fluid fix">
+        <h1>
+            Valora tú vehículo
+        </h1>
+    </div>
+</div>
+    <div class="container-fluid fix back-white w-900" >
+        
+        <!-- pagina 1-->
+        <section class="text-center" >
+        
+            <div class="form-group">
+                <h5>¿Qué clase de vehículo desea valorar?</h5>
+                <div class="row w-400">
+                    <div class="col-6">
+                        <input type="radio" name="clase" id="clase_1" class="input-hidden" value="1">
+                        <label for="clase_1">
+                            <p class="mt-3">AUTOMÓVIL</p>
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <input type="radio" name="clase" id="clase_2" class="input-hidden" value="2">
+                        <label for="clase_2">
+                            <p class="mt-3">CAMIONETA</p>
+                        </label>
+                    </div>
+                </div>
+                <hr>                
+            </div>
+
+            <div class="form-group">
+                <h5>¿Qué marca es?</h5>
+                <mat-form-field>
+                    <mat-select>
+                        <mat-option *ngFor="let marca of marcas" [value]="marca.value">
+                          {{marca.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                </mat-form-field>
+                <hr>
+            </div>
+
+             <div class="form-group">
+                <h5>¿Cuál es el año del modelo?</h5>
+                <mat-form-field>
+                    <mat-select>
+                        <mat-option *ngFor="let marca of marcas" [value]="marca.value">
+                          {{marca.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                </mat-form-field>
+                <hr>
+            </div>
+
+             <div class="form-group">
+                <h5>¿Cuál es la familia del modelo?</h5>
+                <mat-form-field>
+                    <mat-select>
+                        <mat-option *ngFor="let marca of marcas" [value]="marca.value">
+                          {{marca.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                </mat-form-field>
+                <hr>
+            </div>
+
+             <div class="form-group">
+                <h5>¿Cuál es el tipo de caja de cambios de tu vehículo?</h5>
+                <div class="caja w-600 row">
+                    <div class="col-4">
+                        <input type="radio" name="clase" id="mecanica" class="input-hidden" value="3">
+                        <label for="mecanica">
+                            <p class="mt-3">Mecánica</p>
+                        </label>
+                    </div>
+                    <div class="col-4">
+                        <input type="radio" name="clase" id="automatica" class="input-hidden" value="4">
+                        <label for="automatica">
+                            <p class="mt-3">Automática</p>
+                        </label>
+                    </div>
+                    <div class="col-4">
+                        <input type="radio" name="clase" id="dual" class="input-hidden" value="5">
+                        <label for="dual">
+                            <p class="mt-3">Dual</p>
+                        </label>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+             <div class="form-group">
+                <h5>¿Cuál es la linea?</h5>
+                <mat-form-field>
+                    <mat-select>
+                        <mat-option *ngFor="let marca of marcas" [value]="marca.value">
+                          {{marca.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                </mat-form-field>
+                <hr>
+            </div>
+
+            <div class="col-md-12 col-sm-12 text-center pt-3">
+                <a href="/valora-resultado" class="btn-material btn-red w-150">Valorar</a>
+            </div>
+
+            
+        </section><!-- Fina pagina1-->
+
+
+         
+    </div>
+
+</div>
+
+
+
+           
+        
+            
+
+

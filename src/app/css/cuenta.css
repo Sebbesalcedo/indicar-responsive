@@ -1,0 +1,49 @@
+body{
+	background:#FFF; 
+}
+
+.vitrina-responsive{
+	display: none;
+}
+
+.btn-micuenta{
+	display: none;
+}
+
+mat-sidenav{
+	padding-top: 1rem;
+}
+
+mat-sidenav-content{ 
+    min-height: 70vh;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}  
+
+.list-group.list-group-flush{
+	margin-left: 1rem;
+}
+
+
+@media (max-width: 768px){
+	.vitrina{
+		display: none;
+	}
+
+	.vitrina-responsive{
+		display: block;
+	}
+
+	.btn-micuenta{
+		position: relative;
+	    float: left;
+	    display: block;
+	    margin: 1rem;
+	}
+
+	mat-sidenav-container {
+    	width: 100%;
+	}
+}
+
+

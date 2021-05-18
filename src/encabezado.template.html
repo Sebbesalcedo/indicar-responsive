@@ -1,0 +1,177 @@
+
+<div class="preencabezado hidden-sm-down text-right ">
+
+    <button class="login" (click)="open(login)">
+
+        <i class="material-icons">account_circle</i>
+
+        <b>Inicia sesión</b>
+        
+    </button>
+
+    <button class="mensajes">
+        <i class="material-icons">message</i>
+        <span>10</span>
+    
+    </button>
+
+    <button class="favoritos">
+        <i class="material-icons">favorite</i>
+        <span>2</span>
+    </button>
+
+    <button class="ayuda">
+        <i class="material-icons">help</i>
+    </button>
+
+</div>
+
+
+
+
+
+
+
+<header> 
+    <div class="container" >
+
+        <button class="boton-menu hidden-md-up" (click)="headerNav=!headerNav"  [ngClass]="headerNav ? 'active' : 'inactive'" type="button">
+     
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </button>
+
+        <div class="sidebar" [ngClass]="headerNav ? 'show' : 'hide'"  >
+            
+            <div class="usuario hidden-md-up">
+                
+                <button class="login" (click)="headerNav=!headerNav" (click)="open(login) ">
+                    Inicia sesión
+                </button>
+
+                <button class="registrate" (click)="headerNav=!headerNav" (click)="open(registro)">
+                    Regístrate
+                </button>
+
+                
+            </div>
+
+            <ul>
+
+                <li>
+                    <i class="material-icons">new_releases</i>
+                    <a (click)="headerNav=!headerNav" routerLink="/nuevo">Guia de Precios</a>
+                </li>
+
+                <li>
+                    <i class="material-icons">directions_car</i>
+                    <a  (click)="headerNav=!headerNav" routerLink="/clasificados">Clasificados</a>
+                </li>
+
+             
+
+                <li>
+                    <i class="material-icons">store</i>
+                    <a  (click)="headerNav=!headerNav" routerLink="/financiera">Financiamiento</a>
+                </li>
+
+                <li class="boton-publicar-gratis">
+                    
+                    <a class="btn-material btn-red" (click)="headerNav=!headerNav" routerLink="/publicar">Publica gratis</a>
+                </li>
+
+            </ul>
+
+
+
+        </div>
+
+
+        <div class="busqueda-contenido">
+
+            <button class="boton-busqueda" (click)="toggleSearch=!toggleSearch" [ngClass]="toggleSearch ? 'active' : 'inactive'" >
+                <i class="material-icons busqueda-abrir">search</i>
+                <i class="material-icons busqueda-cerrar">close</i>
+            </button>
+
+            <div class="barra-busqueda" [ngClass]="toggleSearch ? 'active' : 'inactive'">
+                <input type="text" placeholder="Busca tu vehículo ideal">
+            </div>
+
+        </div>  
+
+    </div>
+  
+
+
+
+  <!-- LOGO INDICAR -->
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+    <div class="logo">
+
+      <a routerLink="/" >
+        <img class="img-responsive hidden-md-up" src="assets/images/indicar.svg" alt="Indicar Logo"> 
+        <img class="img-responsive hidden-sm-down" src="assets/images/indicar-color.svg" alt="Indicar Logo"> 
+      
+      </a>
+    </div>
+  </div>
+
+</header>
+
+<div class="overlay" (click)="headerNav=!headerNav" [ngClass]="headerNav ? 'show' : 'hide'" ></div>
+<div class="overlay-busqueda" [ngClass]="toggleSearch ? 'active' : 'inactive'" ></div>
+
+
+<div id="contenido-app">
+        <router-outlet></router-outlet>
+    <div class="iframe_content" name="iframe_content" id="" ng-view></div>
+
+</div>
+
+<!-- Inicio sesión -->
+<ng-template #login let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Inicia sesión</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <i class="material-icons">close</i>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Aquí va el inicio de sesión :v &hellip;</p>
+  </div>
+</ng-template>
+
+
+<!-- Registro -->
+<ng-template #registro let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Regístrate</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <i class="material-icons">close</i>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Aquí va el registro de usuario :v &hellip;</p>
+  </div>
+</ng-template>
+
+<!-- Recuperar contraseña -->
+<ng-template #recovery let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Recupera tu contraseña</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <i class="material-icons">close</i>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Aquí va el inicio de sesión :v &hellip;</p>
+  </div>
+</ng-template>
+
+
+
+
+
+

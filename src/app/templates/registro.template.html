@@ -1,0 +1,131 @@
+
+
+<div class="container">
+    <h2 class="titulo-registro">Regístrate a la red de Indicar</h2>
+    <div class="row mb-5">
+        <div class="bg-light cuadro-registro mx-auto p-3">
+                <div *ngIf="success" class="alert alert-success">{{success}}</div>  
+                <div *ngIf="error" class="alert alert-danger">{{error}}</div>  
+            <form [formGroup]="registroForm" (submit)="onSubmit(registroForm.value)" name="register" >
+                
+
+                <div class="form-group input">
+                    <mat-form-field class="input-full-width">
+                        <input  matInput placeholder="Email" type="email" formControlName="email" required (blur)="onValidate()"  >
+                    </mat-form-field>
+                    <div *ngIf="!validEmail">Email ya registrado por favor ingrese  <a  routerLink="/login">aqui.</a></div>
+                </div>
+
+                <div class="form-group input input-full-width mb-2">
+               
+                    <mat-radio-group  formControlName="tipocliente">
+                        <mat-radio-button value="01" matTooltip="Para usuarios que publican menos de 10 clasificados al mes">Persona Natural</mat-radio-button>
+                        <mat-radio-button value="02" matTooltip="Para usuarios o concesionarios que publiquen más de 10 clasificados al mes">Concesionario y/o compraventa</mat-radio-button>
+                    </mat-radio-group>  
+                   
+                </div>
+       
+            <div *ngIf="registroForm.controls.tipocliente.value=='01'">
+                <div class="form-group input">
+                    <mat-form-field class="input-full-width">
+                        <input matInput placeholder="Primer Nombre" formControlName="nombre1" type="text" [patterns]="customPatterns" mask="0{9}0{9}0{9}" title="No utilice números" required>
+
+            
+                    </mat-form-field>
+                    
+                </div>
+                <div class="form-group input">
+                    <mat-form-field class="input-full-width">
+                        <input matInput placeholder="Segundo Nombre" formControlName="nombre2" type="text" type='text' [patterns]="customPatterns" mask="0{9}0{9}0{9}" >
+                    </mat-form-field>
+                </div>
+                <div class="form-group input">
+                    <mat-form-field class="input-full-width">
+                        <input matInput placeholder="Primer Apellido" formControlName="apellido1" type="text" [patterns]="customPatterns" mask="0{9}0{9}0{9}" required>
+                    </mat-form-field>
+                </div>
+                <div class="form-group input">
+                    <mat-form-field class="input-full-width">
+                        <input matInput placeholder="Segundo Apellido" formControlName="apellido2" type="text" [patterns]="customPatterns" mask="0{9}0{9}0{9}">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div *ngIf="registroForm.controls.tipocliente.value=='02'">
+                <div class="form-group input">
+                    <mat-form-field class="input-full-width">
+                        <input matInput placeholder="Razon Social" formControlName="razonsocial" required class="mat-input-element" type="text" >
+                    </mat-form-field>
+                </div>
+           
+                <div class="form-group input">
+                    <mat-form-field class="input-full-width">
+                        <input matInput placeholder="Nit" formControlName="nit" type="number" required>
+                    </mat-form-field>
+                </div>
+                
+                <div class="form-group input">
+                    <mat-form-field class="input-full-width">
+                        <input matInput placeholder="Dirección" formControlName="direccion" required>
+                    </mat-form-field>
+                </div>
+            </div>  
+
+             
+            <div class="form-group input">
+                 <mat-form-field class="input-full-width">
+                    <input  matInput placeholder="Celular"  formControlName="celular" type="text" required [textMask]="{mask: mask, guide: false, modelClean: true}">
+                </mat-form-field>
+            </div>
+
+
+        <!--
+            <div class="form-group input">
+                <mat-form-field class="input-full-width">
+                    <input matInput placeholder="Nombres" formControlName="nombres" type="text" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group input">
+                <mat-form-field class="input-full-width">
+                    <input matInput placeholder="Apellidos"  formControlName="apellidos"  type="text"required>
+                </mat-form-field>
+            </div>
+        -->
+
+          
+
+            <div class="form-group input">
+                <mat-form-field class="input-full-width">
+                    <input  matInput placeholder="Contraseña" type="password"  formControlName="password" required>
+                </mat-form-field>
+            </div>
+
+            <div class="form-group input">
+                <mat-form-field class="input-full-width">
+                    <input  matInput placeholder="Confirma tu contraseña" type="password" formControlName="confirmarpassword" required>
+                </mat-form-field>
+            </div>
+           
+
+           
+            
+            <div class="custom-control custom-checkbox pl-0">
+                <mat-checkbox formControlName="acepto" checked="false" class="d-block acepto-registro mr-2"></mat-checkbox>
+                <p>Acepto el <a href="https://cdnprocessoft.s3.amazonaws.com/SITIOS/XuQlxMLqjS_vGRUP1rcXyNlDKh3dwzcsokrQU-C0s2w/files/AVISO%20DE%20PRIVACIDAD.pdf" target="_blank">&nbsp; Aviso de privacidad &nbsp;</a> 
+                    , las politicas de <a href="https://cdnprocessoft.s3.amazonaws.com/SITIOS/XuQlxMLqjS_vGRUP1rcXyNlDKh3dwzcsokrQU-C0s2w/files/PTDP%20-%20PROCESSOFT%20S%20A%20S.pdf" target="_blank">&nbsp; tratamiento de datos</a> 
+                    y <a href="https://cdnprocessoft.s3.amazonaws.com/SITIOS/XuQlxMLqjS_vGRUP1rcXyNlDKh3dwzcsokrQU-C0s2w/indicar/POLITICA%20DE%20PUBLICACIO%CC%81N%20DE%20CLASIFICADOS.pdf" target="_blank">&nbsp;publicación de clasificados</a> 
+                </p>    
+
+            </div>
+            
+            <div class="form-group button">
+                    <button [disabled]="loading" class="btn-busqueda btn-material btn btn-red ">Regístrate</button>
+                    <i *ngIf="loading" id="loading" class="material-icons">autorenew</i>
+            </div>
+
+            </form>
+
+           
+        </div>
+
+    </div>
+</div>

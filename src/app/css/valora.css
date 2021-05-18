@@ -1,0 +1,482 @@
+
+
+h1,h2,h3,h4,h5{
+	color: #013b8e;
+}
+
+h5{
+	margin: 1.5rem 0;
+    margin-top: 2rem;
+    font-size: 18px;
+
+}
+.chrome ._2tga._49ve{
+    display: none;
+}
+ 
+.w-150{
+	max-width: 150px;
+	margin:0 auto;
+}
+
+.w-400{
+	max-width: 400px;
+	margin:0 auto;
+}
+
+
+.w-600{
+	max-width: 600px;
+	margin:0 auto;
+}
+
+.w-900{
+	max-width: 900px;
+	margin:0 auto;
+}
+
+
+.back-white{
+	background: white;
+    padding: 2rem;
+    min-height: 60vh;
+        top: -4rem;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+}
+
+#valorador-paso-1.inactive,
+#valorador-paso-2.inactive{
+    display: none;
+}
+
+#valorador-paso-1.active,
+#valorador-paso-2.active{
+    display: block;
+}
+
+.paginator-top{
+	position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 1rem;
+    padding-right: 3rem;
+
+}
+
+.paginator-top span, .paginator-bottom span{
+	color: gray;
+	font-size: 12px;
+}
+
+.valorizador label:before {
+    border: 3px solid #404040;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 14px 0px;
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    background-size: 120px;
+}
+
+label:before{
+	font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+label[for="clase_1"]:before {
+       text-align: center;
+    content: '\E802';
+    font-size: 39px;
+    color: #404040;
+    line-height: 40px;
+}
+
+label[for="clase_2"]:before {
+    text-align: center;
+    content: '\E809';
+    font-size: 39px;
+    color: #404040;
+    line-height: 44px;
+}
+
+label[for="mecanica"]:before {
+    text-align: center;
+    content: '\e814';
+    font-size: 53px;
+    color: #404040;
+    line-height: 50px;
+}
+
+label[for="automatica"]:before {
+    text-align: center;
+    content: '\e812';
+    font-size: 53px;
+    color: #404040;
+    line-height: 50px;
+}
+
+label[for="dual"]:before {
+    text-align: center;
+    content: '\e813';
+    font-size: 53px;
+    color: #404040;
+    line-height: 50px;
+}
+
+
+/* Forma del vehículo*/
+label[for="2pnb"]:before{
+	text-align: center;
+    content: '\e800';
+    font-size: 50px;
+    color: #404040;
+    line-height: 80px;
+}
+
+label[for="3phb"]:before{
+	text-align: center;
+    content: '\e801';
+    font-size: 50px;
+    color: #404040;
+    line-height: 80px;
+}
+
+.icon-3phb:before { content: '\e801'; } /* '' */
+.icon-4pnb:before { content: '\e802'; } /* '' */
+.icon-5phb:before { content: '\e803'; } /* '' */
+.icon-busnato:before { content: '\e804'; } /* '' */
+.icon-bustrompon:before { content: '\e805'; } /* '' */
+.icon-cabinamedia:before { content: '\e806'; } /* '' */
+.icon-cabinamediapickup:before { content: '\e807'; } /* '' */
+.icon-cabinasencilla:before { content: '\e808'; } /* '' */
+.icon-cabinasencillachasis:before { content: '\e809'; } /* '' */
+.icon-cabinasencillapickup:before { content: '\e80a'; } /* '' */
+.icon-doblecabina:before { content: '\e80b'; } /* '' */
+.icon-doblecabinapickup:before { content: '\e80c'; } /* '' */
+.icon-tractocamion:before { content: '\e80d'; } /* '' */
+.icon-vancargo:before { content: '\e80e'; } /* '' */
+.icon-vanpasajeros:before { content: '\e80f'; } /* '' */
+.icon-wagon3p:before { content: '\e810'; } /* '' */
+.icon-wagon5p:before { content: '\e811'; } /* '' */
+.icon-transmision_auto:before { content: '\e812'; } /* '' */
+.icon-transmision_dual:before { content: '\e813'; } /* '' */
+.icon-transmision_manual:before { content: '\e814'; } /* '' */
+
+input[type=radio]:checked + label>img, input[type=radio]:checked + label:before {
+    border: 5px solid #0067bf !important;
+    fill: #0067bf;
+    z-index: 1;
+    position: relative;
+    color: #0067bf;
+}
+
+input[type=radio] + label:after {
+    width: 150px;
+    transform: scale(0);
+    height: 150px;
+    content: '';
+    position: absolute;
+    background: rgb(239, 241, 242);
+    border-radius: 50%;
+    transition: 200ms all ease;
+    transform-origin: center center;
+    margin-left: -75px;
+    top: 0;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+     margin-bottom: 2.2rem;
+}
+
+.custom-label input {
+    background-color: #fff;
+    color: #404040;
+    font-size: inherit;
+    padding: 5px 10px 5px 5px;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    -webkit-appearance: button;
+    -o-appearance: button;
+    appearance: button;
+}
+
+
+.custom-dropdown input {
+    background-color: #ecf0f1;
+    color: #404040;
+    font-size: inherit;
+    padding: 5px 10px 5px 5px;
+    border: 0;
+    margin: 0;
+    text-indent: .01px;
+    -webkit-appearance: button;
+    -o-appearance: button;
+    appearance: button;
+    box-shadow: none;
+    border-bottom: #ccc 1px solid;
+    border-radius: 0;
+}
+
+
+
+.custom-dropdown::after {
+    content: "\25BC";
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 1.2em;
+    top: 50%;
+    margin-top: -.4em;
+    z-index: 3;
+    color: #646464!important;
+    position: absolute;
+}
+
+.clean-style{
+	box-shadow: none;
+    border-bottom: solid 1px gray;
+    border-radius: 0;
+}
+
+.input-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+.interior{
+	display: block;
+	margin:0 auto;
+}
+
+.interior .form-check-input{
+	margin-left: 0;
+}
+
+.interior:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.row.interior .form-check{
+    text-align: center;
+}
+
+mat-form-field{
+    width: 100%;
+    max-width: 400px;
+}
+
+#mat-select-5> .mat-select-value-text{
+    white-space: normal !important;
+}
+
+#mat-select-5> span.mat-select-value-text.ng-tns-c9-12.ng-star-inserted{
+     white-space: normal !important;
+}
+
+.header-valorador.noticia{
+    background: url("https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/media/692999/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature-car-and-driver-photo-696572-s-original.jpg");
+    background-position-y: center;
+    background-size: cover;
+    height: 215px;
+}
+
+.header-valorador.noticia h1{
+    padding-top: 5rem
+}
+
+.header-valorador {
+    background: url("fondo_filtro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+}
+
+.header-valorador h1 {
+    color: white;
+    text-align: center;
+    padding-top: 7rem;
+    position: relative;
+}
+
+.tarjeta-info{
+    background: white;
+    padding: 0 15px;
+    display: block;
+    position: relative;
+    height: 120px;
+    float: left;
+    width: 100%;
+    border-radius: 0px 0px 8px 8px;
+    transition: 250ms ease all;
+    transform: translateY(0px);
+}
+.tarjeta-info .titulo-noticia{
+    height: 100px;
+}
+.tarjeta-contenido:hover .tarjeta-info{
+    transform: translateY(-80px);
+    transition: 250ms ease all;
+}
+
+.noticias .tarjeta-contenido{
+    width: 100%;
+}
+
+.noticias .tarjeta-contenido a.link{
+    color: #003993;
+    float: right;
+    cursor: pointer;
+    padding: .5rem .8rem;
+}
+
+.noticias .publicidad img{
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.noticias .redes{
+    padding-top: 5px;
+    flex: auto;
+    text-align: right;
+}
+
+.noticias .redes ul{
+    list-style: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0;
+}
+
+.datos-noticia{
+    font-size: 13px;
+    color: gray;
+    padding-top: 5px;
+}
+
+ .bg-white.noticia {
+        overflow: hidden;
+    }
+
+.tarjeta-info p{
+        overflow-y: auto;
+    height: calc(57% - 1rem);
+    position: relative;
+}
+
+.tarjeta-info h4{
+    font-size: 1rem;
+}
+
+.tarjeta-info a{
+    color: black;
+}
+
+.tarjeta-info.detalle{
+    height: auto
+}
+
+.tarjeta-info.detalle p{
+    text-align: justify;
+}
+
+/* noticia */
+
+.clasificado .tarjeta{
+    height: 130px;
+}
+
+.clasificado .tarjeta-imagen {
+    width: 40%;
+    height: inherit;
+    max-width: 155px;
+}
+
+.clasificado .tarjeta-imagen img {
+    width: 100%;
+    height: inherit;
+    -o-object-fit: scale-down;
+    object-fit: scale-down;
+}
+
+.clasificado .tarjeta-contenido {
+    width: 60%;
+}
+
+.clasificado .tarjeta-precio {
+    font-size: 1.3rem;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.clasificado .tarjeta-titulo {
+    min-height: inherit;
+}
+
+.clasificado .tarjeta-tags {
+    margin-bottom: 5px;
+}
+
+.clasificado .tarjeta-titulo{
+    margin: 0;
+}
+
+.clasificado .titulo-seccion h2{
+    color: #404040;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: .5rem;
+    text-align: center;
+}
+
+@media (max-width: 767px){
+    .tarjeta-contenido.publicidad{
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .form-check-inline+.form-check-inline{
+        margin-left: 0px;
+    }
+
+    .btn-material{
+        width: 100%;
+    }
+
+    .row.interior .form-check{
+        text-align: left;
+    }
+    
+}
+
+
+
+
+

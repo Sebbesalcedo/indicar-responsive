@@ -1,0 +1,45 @@
+    <div class="container">
+         <h3 class="titulo-registro">Cambiar contraseña</h3>
+        <div class="row mb-5">
+            <div class="bg-light mx-auto p-3 cuadro-registro login">
+      <!--
+                <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+                -->          
+                <form [formGroup]="form">    
+
+                    <div class="form-group input">
+                        
+                        <!--password nuevo-->
+                          <mat-form-field class="input-full-width">
+                            <input matInput placeholder="Contraseña nueva" type="password"  name="password"  formControlName="password" >
+                            <!--mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon-->
+                          </mat-form-field>
+
+                    </div>
+
+                    <div class="form-group input" >
+                        
+                        <!--password nuevo-->
+                          <mat-form-field class="input-full-width">
+                                <input matInput placeholder="Repetir contraseña nueva" type="password"  name="confirmacionpassword"  formControlName="confirmacionpassword" >                            
+                            <!--mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon-->
+                          </mat-form-field>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="form-group button">
+                                <button [disabled]="disable" class=" btn btn-busqueda btn-material btn-red " (click)="submit()">Cambiar</button>
+                               
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+                  
+                </form>
+            </div>
+        </div>
+    </div>  
+

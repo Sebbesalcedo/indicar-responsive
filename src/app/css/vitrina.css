@@ -1,0 +1,668 @@
+/**************************************
+vitrina.css
+Indicar Expertos en vehículos.
+
+******************************************/
+
+
+
+/********        1# - Vitrina       *******/
+.rte-vendido-propietario{
+    position: fixed;
+    top: 50%;
+    width: 150px;
+    right: 0;
+    z-index: 9999;
+}
+
+.rte-vendido-propietario button{
+    color: white;
+    background: #cc250e5c;
+    vertical-align: middle;
+    line-height: 2rem;
+    border-radius: 2rem 0rem 0 2rem;
+    width: 100%;
+    transform: translateX(90px);
+    margin-bottom: 5px;
+    text-shadow: -1px -1px #7d7b7b;
+    -webkit-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.38);
+    -moz-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.38);
+    box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.38);
+}
+
+.rte-vendido-propietario button:before{
+    font-size: 2rem;
+}
+
+.rte-vendido-propietario button:hover{
+     transform: translateX(0px);
+     transition: all 300ms linear;
+     text-shadow: none;
+}
+
+.rte-vendido-usuario, .rte-vendido-propietario{
+    text-align: right;
+    color: #013b8e;
+}
+.rte-vendido-usuario a{
+    cursor: pointer;
+}
+.rte-vendido-usuario span{
+    color: gray;
+    margin-right: 1rem;
+}
+
+.rte-vendido-propietario button:before {
+    font-family: 'Material Icons';
+    float: left;
+}
+
+.rte-vendido-propietario button:nth-child(1):before{
+    content: "mode_edit"
+} 
+.rte-vendido-propietario button:nth-child(2):before{
+      content: "phonelink_off"
+}
+.rte-vendido-propietario button:nth-child(3):before{
+      content: "gavel"
+}
+
+.rte-vendido-propietario button:hover, .rte-vendido-propietario button:focus,.rte-vendido-propietario button:active{
+    background: #cc250e;
+    color: white;
+}
+
+
+.imagenes-carro{
+    height: 30%;
+    position: relative;
+}
+
+.card .title{
+    padding: 1rem;
+    margin: 0;
+    font-size: 19px;
+    margin-top: .5rem;
+}
+
+ngb-accordion > .card {
+    padding:0;
+    margin-bottom: 0;
+    background-color: #ffffff;
+    border-bottom: 0;
+    color: #fff;
+}
+ 
+.tarjeta-comparar{
+    position: absolute;
+    right: 30px;
+    margin-top: -30px;
+    color: #404040;
+    border: 0px;
+    background: #e1e2e5;
+    padding: 5px;
+
+}
+.tarjeta-comparar i {
+    display: inline;
+    float: left;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.tarjeta-comparar p{
+    display: inline;
+    float: left;
+    font-size: 13px; 
+        margin: 0; 
+}
+
+.descripcion{
+    padding: 0 1.2rem;
+    text-align: justify;
+}
+
+.descripcion .titulo{
+    margin: 1rem 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.contacto{
+    background: #1F294C;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right:0;
+    height: 50px;
+    margin: 0;
+    z-index: 50;
+}
+
+.contacto a {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 10px;
+
+}
+
+.contacto i {
+    font-size: 16px;
+}
+
+section.ficha-tecnica {
+    margin-bottom: 35px;
+}
+
+.informacion, .ficha-tecnica{
+    z-index: 10;
+    padding: 15px !important;
+    position: relative;
+    top:-15px;
+    border-left: 1px solid #e4e4e4;
+    transform: none !important;
+
+
+}
+
+.informacion, .ficha-tecnica{
+    padding: 0 15px;
+
+}
+
+.informacion .tarjeta,
+.info.tarjeta{
+    padding:15px;
+}
+
+.informacion .tarjeta-precio {
+    font-size: 2.6rem;
+}
+
+.nombre-vehiculo{
+    font-size: 18px;
+    color: #404040;
+    margin-bottom: 5px;
+}
+
+
+.card-header a {
+    width: 100%;
+    display: inline-block;
+    padding: .75rem 1.25rem;
+}
+
+.card-header {
+    padding:0;
+    background-color: #f7f7f9;
+}
+
+.btn-financia{
+    margin-bottom: 0;
+}
+
+section.informacion.scroll-tarjeta {
+    position: fixed;
+    z-index: 90;
+    padding: 0;
+    transform: translateY(50px);
+    transition:200ms all linear;
+}
+
+
+section.informacion.scroll-tarjeta .tarjeta {
+    border-radius: 0;
+    padding: 10px 15px;
+
+}
+
+section.informacion.scroll-tarjeta .nombre-vehiculo {
+    font-size: 13px;
+}
+
+.scroll-tarjeta button.btn-material,
+.scroll-tarjeta .tarjeta-tags  {
+    display: none;
+}
+
+section.informacion.scroll-tarjeta .tarjeta-precio{
+    font-size: 18px;
+}
+.card {
+    box-shadow: none;
+    border:none;
+    border-top: 1px solid #e4e4e4;
+    border-radius: 0px;
+}
+.informacion .tarjeta-favorito {
+    right: 30px;
+    left: initial;
+    top: 50px;
+}
+
+
+/* contacto vendedor */
+.financia-box{
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    /*background: rgba(18,5,70,1);
+    background: -moz-linear-gradient(0deg, rgba(18,5,70,1) 0%, rgba(58,103,186,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(18,5,70,1)), color-stop(100%, rgba(58,103,186,1)));
+    background: -webkit-linear-gradient(0deg, rgba(18,5,70,1) 0%, rgba(58,103,186,1) 100%);
+    background: -o-linear-gradient(0deg, rgba(18,5,70,1) 0%, rgba(58,103,186,1) 100%);
+    background: -ms-linear-gradient(0deg, rgba(18,5,70,1) 0%, rgba(58,103,186,1) 100%);
+    background: linear-gradient(0deg, rgba(18,5,70,1) 0%, rgba(58,103,186,1) 100%);*/
+    background: #eee;
+}
+
+.financia-box .condicion{
+    font-size: 12px;
+    text-align: left;
+}
+
+.financia-box a{
+    display: block;
+    color: #013b8f;
+}
+
+/*accesorios*/
+.accesorios p{
+    float: left;
+    margin-right: 1rem;
+}
+
+.contacto-footer{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 50;
+    background: rgba(18,5,70,1);
+    background: -moz-linear-gradient(0deg, rgba(18,5,70,1) 0%, rgba(58,103,186,0) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(18,5,70,1)), color-stop(100%, rgba(58,103,186,0)));
+    background: -webkit-linear-gradient(0deg, rgba(18,5,70,1) 0%, rgba(58,103,186,0) 100%);
+    background: -o-linear-gradient(0deg, rgba(18,5,70,1) 0%, rgba(58,103,186,0) 100%);
+    background: -ms-linear-gradient(0deg, rgba(18,5,70,1) 0%, rgba(58,103,186,0) 100%);
+    background: linear-gradient(0deg, rgba(18,5,70,1) 0%, rgba(58,103,186,0) 100%);
+}
+
+.contacto-footer .btn-material{
+    margin: 0px;
+    font-size: 16px;
+    height: 45px;
+}
+
+.contacto-footer i{
+    margin-right: 5px;
+}
+
+.info-concesionario{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.logo-concesionario{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    margin:0 auto;
+        background: white;
+        position: relative;
+}
+
+.logo-concesionario img{
+   transform: translateY(-50%) scale(0.8);
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+}
+
+.info-concesionario h5{ 
+    margin: 0;
+    margin-top: .5rem;
+}
+
+
+.nombre-concesionario{
+    padding-top: 1rem;
+
+}
+
+.nombre-concesionario h5{
+    margin: 0;
+    font-size: 12px;
+}
+
+.nombre-concesionario label{
+    font-size: 18px;
+}
+
+.nombre-concesionario ul{
+    padding:0;
+    list-style: none;
+}
+
+.ver-carros{
+    padding-top: 5px;
+    display: block;
+}
+.concesionario .ubicacion{
+    color: gray;
+}
+.concesionario .ubicacion i{
+    font-size: 1rem;
+}
+
+.ver-carros .material-icons{
+    font-size: 1rem;
+}
+
+
+.header-concesionario{
+    background: white;
+    margin-top: -1rem;
+    font-size: 14px;
+    padding: 1rem 0;
+}
+
+.header-concesionario .nombre-concesionario{
+    font-weight: bold;
+    color: #013b8e;
+    margin-bottom: 1rem;
+}
+
+.header-concesionario h5{
+    margin: 0;
+}
+.header-concesionario label{
+    color: #013b8e
+}
+
+.header-concesionario#contacto-vendedor .tel{
+    width: 233px;
+    margin: 0;
+    float: right;
+}
+
+.tel-concesionaro{
+    text-align: right;
+    padding-top: 1rem;
+ 
+}
+
+.tel-concesionaro li{
+   
+    margin-left: 1rem;
+}
+
+.tel-concesionaro ul{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.logo-concesionario-site{
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: initial;
+    height: 170px;
+}
+
+.logo-concesionario-site img{    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.gradiente-borde{
+    width: 100%;
+    height: 5px;
+    margin-bottom: 2rem;
+    background: rgba(228,19,0,1);
+background: -moz-linear-gradient(left, rgba(228,19,0,1) 0%, rgba(3,86,173,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(228,19,0,1)), color-stop(100%, rgba(3,86,173,1)));
+background: -webkit-linear-gradient(left, rgba(228,19,0,1) 0%, rgba(3,86,173,1) 100%);
+background: -o-linear-gradient(left, rgba(228,19,0,1) 0%, rgba(3,86,173,1) 100%);
+background: -ms-linear-gradient(left, rgba(228,19,0,1) 0%, rgba(3,86,173,1) 100%);
+background: linear-gradient(to right, rgba(228,19,0,1) 0%, rgba(3,86,173,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e41300', endColorstr='#0356ad', GradientType=1 );
+}
+
+.informacion, .ficha-tecnica{
+    z-index: 10;
+    padding: 0 15px;
+    transform:translateY(15px);
+    -webkit-transform:translateY(15px);
+    position: relative;
+    top:0;
+}
+
+.imagenes-carro{
+    height: 385px;
+}
+
+.contenido-ficha > div {
+    font-size: 14px;
+}
+
+
+
+.celda-tarjeta{
+    border-bottom: 1px solid #e6e5e5;
+    padding: .5rem 0;
+}
+
+.celda-tarjeta img{
+    width: 100%;
+}
+
+.nombre-consecionario{
+    font-size: 18px;
+    margin-bottom: 2px;
+    color: #013b8e;
+}
+
+.celda-tarjeta .ubicacion{
+    color: gray;
+    font-size: 1rem;
+}
+
+.celda-tarjeta .ubicacion i{
+    font-size: 18px;
+}
+
+.tarjeta .titulo{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 1.3rem;
+}
+
+
+.tarjeta .consecionario{
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+.celda-tarjeta .logo-concesionario{
+    width: 70px;
+    height: 70px;
+}
+
+
+.contenedor-nombre-vehiculo{
+    display: none;
+}
+
+.contenedor-nombre-vehiculo-left{
+    display: block;
+}
+
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1360px) {
+
+    .info-concesionario{
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (max-width : 767px) {
+
+    .imagenes-carro{
+        height: 350px;
+    }
+
+    .contenedor-nombre-vehiculo{
+        display: block;
+        padding: .75rem 1.25rem
+    }
+
+    .contenedor-nombre-vehiculo-left{
+        display: none;
+    }
+
+     .boton-busqueda {
+            right: 45px !important;   
+         }
+
+    
+    
+
+}
+
+@media only screen and (max-width : 800px) {
+    .titulo-conserionario{
+        position: relative;
+        order: 2;
+    }
+
+    .logo-concesionario-site{
+        position: relative;
+        order: 1;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .logo-concesionario-site img{
+        position: relative;
+    }
+
+    .tel-concesionaro{
+        position: relative;
+        order: 3;
+    }
+
+     .contacto-footer{
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width : 411px) {
+
+   
+
+    .tarjeta-comparar[_ngcontent-c2]{
+        position: relative;
+        right: 0px;
+        margin-top: .5rem;
+    }
+
+    .imagenes-carro{
+        height: 250px;
+    }
+
+    
+}
+
+@media only screen and (max-width : 530px) {
+    .titulo-conserionario{
+        flex: 100%;
+        text-align: center;
+    }
+
+    .header-concesionario .nombre-concesionario{
+        font-size: 1.5rem;
+    }
+
+    .titulo-conserionario .dir-concesionario .material-icons{
+        float: inherit;
+    }
+
+    .titulo-conserionario .text-secondary{
+        text-align: center;
+    }
+
+    .tel-concesionaro{
+        text-align: center;
+    }
+
+    .tel-concesionaro ul{
+        padding: 0;
+    }
+
+    .header-concesionario#contacto-vendedor .tel{
+        margin: auto;
+        float: inherit;
+    }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+    swiper{
+        height: 180px;
+    }
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 375px) {
+
+    swiper{
+        height: 210px;
+    }
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 425px) {
+
+    swiper{
+        height: 240px;
+    }
+
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 480px) {
+
+    swiper{
+        height: 260px;
+    }
+
+
+}

@@ -1,0 +1,41 @@
+
+<div class="my-container">
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>    
+</div>
+
+<div class="container-fluid fix pt-4" >
+
+	<div class="row">
+		<app-concesionario-filtro class="filtro-pc"
+		[ftipoclasificado]="ftipoclasificado"  		
+  		[fmarca]="fmarca"  		
+		  [fciudad]="fciudad"
+		  [fconcesionario]="fconcesionario" 
+  		></app-concesionario-filtro>
+		<app-mapa-filtro-concesionario-responsive class="filtro-responsive fadeInRight"  [ngClass]="filtroR ? 'active' : 'inactive'"
+		[ftipoclasificado]="ftipoclasificado"  		
+  		[fmarca]="fmarca"  		
+		  [fciudad]="fciudad"
+		  [fconcesionario]="fconcesionario"  
+		></app-mapa-filtro-concesionario-responsive>
+		<div class="filtro-btn">
+            <!--button class="btn filtro-tablet" (click)="filtroR=!filtroR" [ngClass]="filtroR ? 'active' : 'inactive'" >Filtros</button-->
+            <button class="btn filtro-icon-responsive" (click)="filtroR=!filtroR" [ngClass]="filtroR ? 'active' : 'inactive'"><i class="material-icons">tune</i><i class="material-icons">close</i></button>
+        </div>
+		
+		<!--div>
+        	<button class="btn cerrar-filtro" (click)="filtroR=!filtroR" [ngClass]="filtroR ? 'active' : 'inactive'"><i class="material-icons">close</i></button>
+		</div-->
+
+		
+		<div class="overlay-busqueda" #hola (click)="filtroR=!filtroR"  [ngClass]="filtroR ? 'active' : 'inactive'"></div>
+
+		<div class="col">
+			<mapa-concesionario-item [item]="items" [filtros]="p_filtros" [totalregsitros]="total_items" [cliente]="cliente" ></mapa-concesionario-item>
+			<app-paginador [total_items]="total_items"  
+			(eventPaginador)="setPage($event)"></app-paginador>
+		</div>
+		
+	</div>
+
+</div>

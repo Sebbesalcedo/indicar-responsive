@@ -1,0 +1,86 @@
+<div class="vehiculos-nuevos">
+    <div class="col-12 titulo-seccion mb-4">
+        <div class="row">
+            <div class="col-lg-9 col p-0">
+                <p class="subtitulo responsive">
+                    Clasificados<br>
+                    <span style="color: red">{{totalregsitros}}</span>
+                    <label>vehículos</label>
+                <h3 class="titulo">
+                    <a href="">Clasificados</a>
+                </h3>
+                <p class="subtitulo">
+                    <span style="color: red">{{totalregsitros}}</span> opciones de clasificados</p>
+
+            </div>
+            <div class="col-lg-3 col-5 p-0 ordenar">
+                <!--hacerlo funcinal-->
+                <mat-form-field>
+                  <mat-select placeholder="Ordenar por:" [(ngModel)]="filtros['p_orderby']" (change)="change()">
+                    <mat-option value="PB">Precio Bajo</mat-option>
+                    <mat-option value="PA">Precio Alto</mat-option>
+                    <mat-option value="RE">Recientes</mat-option>
+                    <mat-option value="CB">Costo Beneficio</mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!--
+    <div *ngFor="let item1 of item | groupBy:'marca_nombre' | sort:'key'  ">
+            {{item1.value[0].marca_codigo}} Department {{ item1.key }} has111 {{ item1.value.length }} employees
+          </div>
+        -->
+    <div class="contenedor-tarjeta row clasificado" *ngIf="totalregsitros>0">
+        <div class="normal col-sm-12 col-md-6 col-lg-6 col-xl-4 pr-0" *ngFor="let datos of item;let i = index;trackBy: trackByFn" id="tarjeta">
+            <!--button class="tarjeta-favorito" (click)="tarjetaFav=!tarjetaFav"  [ngClass]="tarjetaFav ? 'active' : 'inactive'" type="button" id="1">
+                <i class="material-icons fav">favorite</i>
+                <i class="material-icons nofav">favorite_border</i>
+            </button-->
+            <button *ngIf="comparador" class="tarjeta-comparar" (click)="setCompare(datos.venta_codigo,i,datos.linea_nombrecorto) " type="button"  [ngClass]="listcompare.indexOf(datos.venta_codigo)>=0 ? 'active' : 'inactive'">
+                <i class="material-icons fav">compare_arrows</i>  
+                
+            </button>
+        
+            <button class="tarjeta-favorito" (click)="setFavorito(datos.venta_codigo,i,datos.linea_nombrecorto)" [ngClass]="datos.isfavorito=='S' ? 'active' : 'inactive'" type="button" *ngIf="codigo_usuario!=''">
+                <i class="material-icons fav">favorite</i>
+                <i class="material-icons nofav">favorite_border</i>
+            </button>
+            <div class="tarjeta" (click)='detail(datos.venta_codigo)'>
+                <!--
+                <div class="tarjeta-imagen image-list" lazy-load-images>
+                    <img src="assets/images/dots.png" attr.data-src="{{datos.foto_url}}" alt="{{datos.marca_nombre}} {{datos.linea_nombre}}">
+                
+                </div>
+            -->
+                <div class="tarjeta-imagen image-list" >
+                        <img src="{{datos.foto_url}}"  alt="{{datos.marca_nombre}} {{datos.linea_nombrecorto}}">
+                    
+                    </div>
+                <!-- src="{{datos.foto_url}}"-->
+                <!-- src="{{datos.foto_url}}"-->
+                <div class="tarjeta-contenido">
+                    <a [routerLink]="['/clasificados/detalle',  datos.venta_codigo]">
+                        <!-- <a routerLink="/clasificados/detalle" [queryParams]="{ p_codigo: datos.venta_codigo}"> -->
+                        <h4 class="tarjeta-titulo">
+                            {{datos.linea_nombrecorto}}
+                        </h4>
+                    </a>
+                     <div class="tarjeta-precio">
+                        {{datos.venta_valor | currency:'COP':'symbol-narrow':'2.0-1'}}
+                    </div>
+                    <div class="tarjeta-tags">
+                        <span>{{datos.venta_kilometraje | number : '1.0-1'}} Km</span>
+                        <span>{{datos.venta_modelo}}</span>
+                        <span>{{datos.traccion_nombre}}</span>
+                        <span id="capacidad">{{datos.capacidadmotor_nombre}}</span>
+                        <!--span id="nombre">{{datos.tipomotor_nombre}}</span-->
+                    </div>
+                     <div class="tarjeta-tags ciudad">
+                        <span>{{datos.ciudad_nombre}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

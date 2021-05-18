@@ -1,0 +1,16 @@
+<mat-dialog-content>
+  <div class="alert-success p-2">
+    <p>Gracias por usar indicar, el reporte ha sido enviado con éxito</p>
+  </div>
+
+  <p class="mt-3">Por favor indique si el carro fue vendido por:</p>
+   <mat-radio-group class="vendido-input">
+    <mat-radio-button value="1">Indicar</mat-radio-button>
+    <mat-radio-button value="2">Otro medio</mat-radio-button>
+  </mat-radio-group>
+
+</mat-dialog-content>
+<mat-dialog-actions class="vendido-button">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Enviar</button>
+</mat-dialog-actions>

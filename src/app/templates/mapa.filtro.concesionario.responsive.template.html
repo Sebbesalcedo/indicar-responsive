@@ -1,0 +1,75 @@
+
+<section class="filtros">
+    
+    <div class="container-fluid fix filtros-contenido p-0">
+
+        <div class="">
+             
+
+            <!-- clases -->
+            <div class="form-group col titulo-filtros">
+                 <label>Filtros</label>
+                <button 
+                  mat-raised-button 
+                  class="btn btn-limpiar" 
+                  (click)="deselectAll()">
+                  LIMPIAR
+                </button>
+            </div>
+
+           
+             <!-- nuevos -->
+             <div class="form-group col">
+                <label>Vehiculos</label>
+                <div class="check-filtro">
+                    <mat-checkbox name="tipoclasificado" 
+                    *ngFor="let data of filtros.tipoclasificado; let i=index" 
+                    value="{{data.codigo}}" 
+                    (change)="change()" 
+                    [(ngModel)]="filtros.tipoclasificado[i].selected" >{{data.descripcion}} ({{data.cantidad}})</mat-checkbox>
+                </div>                               
+            </div>
+
+
+             <!--marcas-->
+             <div class="form-group col" >
+                <label (click)="filmar=!filmar" [ngClass]="filmar ? 'active' : 'inactive'" class="mas-opciones">Marcas</label>
+
+                <div class="check-filtro filtro-busqueda" [ngClass]="filmar ? 'active' : 'inactive'">
+                        <mat-checkbox name="marca" 
+                        *ngFor="let data of filtros.marca; let i=index" 
+                        value="{{data.codigo}}" 
+                        (change)="change()" 
+                        [(ngModel)]="filtros.marca[i].selected" >{{data.descripcion}} ({{data.cantidad}})</mat-checkbox>
+
+                </div>
+                 <button *ngIf="verMarcas" (click)="filmar=!filmar" [ngClass]="filmar ? 'active' : 'inactive'" class="boton-ver-mas"><span>Ver más</span> <span>Ver menos</span></button>
+                <hr>
+                
+            </div>
+
+
+            <!-- hacer bien el funcionamiento del ciudades -->
+            <div class="form-group col">
+                <label (click)="filciu=!filciu" [ngClass]="filciu ? 'active' : 'inactive'" class="mas-opciones">Ciudades</label>
+                <div class="check-filtro filtro-busqueda" [ngClass]="filciu ? 'active' : 'inactive'">
+                        <mat-checkbox name="ciudad" 
+                        *ngFor="let data of filtros.ciudad; let i=index" 
+                        value="{{data.codigo}}" 
+                        (change)="change()" 
+                        [(ngModel)]="filtros.ciudad[i].selected" >{{data.descripcion}} ({{data.cantidad}})</mat-checkbox>
+                        <!--
+                        <mat-checkbox  *ngFor="let data of lovCiudad" value="{{data.codigo}}" >{{data.descripcion}}({{data.cantidad}})</mat-checkbox>
+                        -->
+                </div>
+                 <button *ngIf="verCiudades" (click)="filciu=!filciu" [ngClass]="filciu ? 'active' : 'inactive'" class="boton-ver-mas"><span>Ver más</span> <span>Ver menos</span></button>
+                 <hr>
+            </div>
+   
+        </div>
+    </div>
+</section>
+
+
+
+
