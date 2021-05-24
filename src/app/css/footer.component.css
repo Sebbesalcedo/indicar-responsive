@@ -5,43 +5,148 @@ since: 29-10-2019
 style: Estilos de footer de indicar
 */
 
-.container-fluid.fix {
-    max-width: 1300px;
-    padding: 1%;
-    margin: 0 auto;
-}
 footer{
-    background: #013b8e;
+    background: #333333;
     padding: 0;
-    color: #eee;
+    color: #a2a2a2;
     font-size: 14px;
 }
-footer .logo {
-    max-width: 150px;
+.footer-section {
+    padding: 56px 28px;
+    display: flex;
+}
+
+.column-section {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    min-width: 240px;
 }
 footer h4 {
     color: #fff;
     font-size: 18px;
     font-weight: 600;
 }
+.logo_blanco{
+    width: 190px;
+}
+.alert-footer {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+span.alert-footer-text {
+    padding-left: 8px;
+    max-width: 185px;
+    font-weight: 300;
+}
 footer a {
-    color: #8cc2f1;
+    color: #a2a2a2;
     display: block;
 }
 footer a:hover {
     color: white;
 }
-footer .row.social {
-    display: inline-flex;
-}
-footer .social a {
-    opacity: 0.8;
-}
-footer .social a>img {
+footer .social a > img {
     width: 32px;
     margin: 10px;
 }
-footer .subfooter {
+footer .social a > img:hover{
+    margin: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #565656;
+}
+.sec-footer-credits {
+    background: #2e2e2e;
+    color: #a2a2a2;
     font-size: 12px;
-    padding: 0px;
+}
+/* .credits{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 28px;
+} */
+a.webtronick{
+    display: inline-block !important;
+}
+
+
+
+
+
+
+.credits {
+    display: block;
+    overflow: hidden;
+    padding: 5px 0px;
+    position: relative;
+}
+.credits .webtronick-section {
+    width: calc( 100% - 212px);
+    float: left;
+}
+.credits .processoft-section {
+    width: calc( 100% - 212px );
+    position: absolute;
+    padding: 0px 20px;
+    z-index: 1;
+    top: 12px;
+}
+.credits img{
+    height:28px;
+}
+.energia-section {
+    display: block;
+    width: 182px;
+    float: left;
+}
+.copia {
+    display: block;
+    text-align: center;
+    background: gainsboro;
+    color: #4a4a4a;
+}
+@media screen and (max-width:768px){
+    .credits .webtronick-section {
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding: 10px 0px;
+    }
+    .credits .processoft-section {
+        width: 100%;
+        text-align: center;
+    }
+    .energia-section{
+        display: block;
+        clear: both;
+        width: 100%;
+        text-align: center;
+    }
+}
+@media(min-width:580px) and (max-width:1006px){
+    .footer-section{
+        flex-wrap: wrap;
+    }
+    .column-section{
+        min-width: 50%;
+        text-align: center !important;
+        margin: 8px 0px;
+    }
+}
+@media(min-width:280px) and (max-width:580px){
+    .footer-section{
+        flex-wrap: wrap;
+    }
+    .column-section{
+        min-width: 100%;
+        text-align: center !important;
+        margin: 8px 0px;
+    }
+    .credits .processoft-section{
+        top: 5px;
+    }
 }

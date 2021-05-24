@@ -16,10 +16,14 @@ h3.titulo {
     width: 230px;
     display: block;
     float: left;
-    background: #f7f7f7;
+    /* background: #f7f7f7; */
+    background: #ffffff;
     position: relative;
     padding-top: 140px;
     z-index: 2;
+}
+.comparator-term .term {
+    border-right: 1px solid #e6e6e6;
 }
 .container-comparator {
     display: block;
@@ -44,6 +48,9 @@ h3.titulo {
     width: 180px;
     float:left;
     overflow: hidden;
+}
+.comparator-item:nth-child(even) {
+    background: rgb(247, 247, 247);
 }
 .comparator-img {
     overflow: hidden;
@@ -85,12 +92,12 @@ h3.titulo {
 }
 
 .comparator-term .term {
-    font-weight: 600;
+    font-weight: 300;
     padding: 4px;
 }
 .term{
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 15px;
+    line-height: 18px;
     color: #868686;
     padding: 5px 0px;
     margin: 0px 4px;
@@ -102,17 +109,24 @@ h3.titulo {
     justify-content: center;
     overflow: hidden;
 }
+.comparator-term .term-group:nth-child(1){
+    border-top: 1px solid #f1f1f1;
+}
 .comparator-term .term-group{
     display: flex;
     height: 50px;
-    font-size: 13px;
-    color: #156be6;
+    font-size: 14px;
+    color: #2169c0;
     justify-content: center;
     align-items: center;
     font-weight: 900;
     text-transform: uppercase;
-    background: #d8d8d8;
-    line-height: 14px;
+    /* background: #d8d8d8; */
+    line-height: 16px;
+    letter-spacing: 1px;
+    background: #ffffff;
+    border-bottom: 3px solid #55a3ff;
+    word-break: break-word;
 }
 .detail-vehiculo{
     padding: 4px 5px 10px 5px;
@@ -127,7 +141,9 @@ h3.titulo {
 .comparator-body .term-group {
     display: flex;
     height: 50px;
-    background: #d8d8d8;
+    /* background: #d8d8d8; */
+    background: #ffffff;
+    border-bottom: 3px solid #55a3ff;
 }
 .comparator-body .comparator-item:nth-child(even){
     background: rgb(247, 247, 247);
@@ -135,7 +151,7 @@ h3.titulo {
 .hasComponent{
     font-size: 20px;
     font-weight: 900;
-    color: #7269fd;
+    color: #55a3ff;
 }
 
 

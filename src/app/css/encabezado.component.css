@@ -7,168 +7,287 @@ style: Estilos de cabecera de indicar
 
 
 /* ####################### DEFINITIVO ######################### */
-/* PRE ENCABEZADO */
-
-.preencabezado{
-    top: 0px;
+.encabezado{
+    background: #0053b7;
+    color: white;
     position: fixed;
-    background: #013b8e;
-    z-index: 26;
+    top: 0px;
+    height: 50px;
     width: 100%;
-    height: 30px;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 28px;
+    z-index: 10;
 }
-.preencabezado .login{
-    padding-right: 15px;
+/* SECCION LOGO */
+.logo{
+    flex-grow: 0.3;
+    flex-shrink: 0;
 }
-.preencabezado button{
+.logo a {
+    display: flex;
+    justify-content: center;
+}
+.logo a img {
+    width: 150px;
+}
+/*  SECCION DE BARRA DE BUSQUEDA */
+.busqueda-contenido.busqueda-contenido-desktop{
+    flex-grow: 10;
+}
+.input-icon-end {
+    display: flex;
+    position: relative;
+}
+.input-icon-end{
+    display: flex;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+/* input icon end */
+.input-icon-end div{
+    width:100%;
+    max-width: 600px;
+}
+.input-icon-end .input-icon{
+    position: absolute;
+    right: 0px;
+    z-index: 10;
     background: transparent;
     border: 0;
-    color: #fff;
-    font-size: 14px;
+    top: 3px;
+    color: white;
+}
+/* /input icon end */
+input#buscador {
+    color: white;
+    background: #2169c0;
     height: 30px;
-    padding: 4px 10px;
-    cursor: pointer;
-    border-radius: 0;
-    display: inline-flex;
+    border: 0px;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    padding-left: 10px;
 }
-.preencabezado button:hover{
-    background: #013b8e;
+input#buscador:focus {
+    outline: none;
 }
-.preencabezado button > b {
-    top: 0px;
+input#buscador::placeholder{
+    color:#efefef;
+    padding:5px;
+}
+
+/* SECCION DE OPCIONES HEADER */
+.options-header{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.section-publicar-gratis {
+    display: flex;
+    align-items: center;
+}
+.login-section {
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+}
+.text-login {
+    display: flex;
+    width: 90px;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 14px;
+}
+/* LOGUEADO */
+#logueado.dropdown-toggle::after{
+    display: none;
+}
+button#logueado {
+    height: 45px;
+    padding: 0px;
+    width: 65px;
+    background: transparent;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.img-user {
+    width: 35px;
+    overflow: hidden;
+    height: 35px;
+    background: transparent;
+    padding: 0px;
+    border: 0px;
+    border-radius: 50%;
+}
+.img-user img {
+    width: auto;
+    height: 100%;
     position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+/* boton menu */
+span.menu-icon {
+    background: white;
+    display: block;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+span.menu-icon:before, span.menu-icon:after {
+    content: "";
+    background: white;
+    display: block;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    position: relative;
+}
+span.menu-icon:before{
+    top:-9px;
+}
+span.menu-icon:after{
+    top: 4px;
+}
+/* MENU DE CUENTA */
+span.cuenta-name {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #f1f1f1;
+    padding: 5px 0px;
+    color: #888888;
+}
+.encabezado .dropdown-menu{
+    border-radius: 0px !important;
+    padding: 0px 0px 4px;
+    width: 200px;
+}
+.item-span{
+    padding-left: 8px;
     font-weight: 500;
+    color: #333333;
 }
-.preencabezado i.material-icons {
-    font-size: 22px;
-    color: white;
-    padding-right: 5px;
-}
-.preencabezado .dropdown-menu.show {
-    left: calc(100% - 220px) !important;
-    width: 210px;
-}
-.preencabezado button.dropdown-item, .preencabezado .dropdown-item i{
-    color:#212529;  
-}
-.preencabezado .dropdown-item:hover, .preencabezado .dropdown-item:hover i{
-    color:white;  
-}
-/* logo para tabs. */
-img.tab-responsive {
-    height: 18px;
-    margin: 6px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-/* logo for mobile */
-img.mobile-responsive{
-    height: 18px;
-    margin: 6px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 10px;
-    z-index: 3;
-}
-img.mobile-responsive-sidebar{
-    height: 28px;
-    margin: 6px;
-    position: absolute;
-    left: 45%;
-    transform: translateX(-50%);
-    top: 30px;
-    z-index: 3;
-}
-
-.dropdown-toggle::after {
-    top: 10px;
-    position: relative;
-}
-
-.alerta_notificacion{
-    position: absolute;
-    font-size: 10px;
-    color: white;
-    top: 5px;
-}
-
+/* alerta de mensajes */
 .opc-down {
     position: relative;
 }
-.opc-down .alerta_notificacion {
-    color: white;
-    border-radius: 2px;
-    left: initial;
-    right: 10px;
-    background: #cc230e;
-    top: 7px;
+.alerta_notificacion span {
+    background: #b80000;
+    color: #ffffff;
+    font-weight: 600;
+    height: 20px;
+    width: 20px;
+    display: block;
+    font-size: 14px;
     border-radius: 50%;
-    font-size: 10px;
-    pointer-events: none;
+    text-align: center;
+    position: absolute;
+    top: 7px;
+    right: 6px;
+    line-height: 20px;
+}
+.dropdown-item {
+    width: calc( 100% - 10px );
+    border-top: 1px solid #f3f3f38c;
+    margin: 0px 5px;
+    display: flex;
+    align-items: center;
+    padding: 7px 15px;
+}
+/* MENU PRINCIPAL */
+nav.main-menu {
+    background: #004196;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    /* color: white; */
+    color: #e8e8e8;
+    z-index: 9;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 25px;
+    height: 30px;
+}
+button.menu-item {
+    background: transparent;
+    /* color: white; */
+    color: #e8e8e8;
+    border: 0px;
+    padding: 0px 10px;
+    font-size: 16px;
+}
+button.menu-item:hover{
+    color: #ffffff;
+}
+/* button.menu-item:hover:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: white;
+    animation: line .3s forwards;
+} */
+.menu {
+    display: block;
+    padding: 2px 0px;
 }
 
-/* header */
-header{
-    position: fixed;
-    top:30px;
-    height: 50px;
-    width: 100%;
-    box-shadow: 0px 1px 13px rgba(0,0,0,0.2);
-    background: white;
-    z-index: 10;
+
+@keyframes line{
+    0%{
+        width:0%;
+    }
+    100%{
+        width: 100%
+    }
 }
-header.mobile {
-    top: 0px;
-    background: #053a8e;
-    z-index: 20;
-}
-/* logo */
-header .logo {
-    position:relative;
-    top: 10px;
-    /* left: 20px; */
-    left: 10%;
-}
-header .logo  img{
-    height: auto;
-    width: 100%;
-    max-width: 140px;
-}
-.busqueda-contenido{
-    position: relative;
-    width: 60%;
-    max-width: 700px;
-    padding: 5px 0px 5px 10px;
-}
-.busqueda-contenido-tab {
-    margin-right: 15px;
-    min-width:330px;
-}
-.barra-busqueda > input{
-    color: #404040;
-    height: 36px;
-    font-size: 14px;
-    background: #eeeeee;
-    width: 100%;
-    border: 0px;
-    padding: 5px 15px;
-    border-radius: 5px;
-    float: left;
-}
-.btn-encabezado{
-    right: 5px;
-    text-align: center;
-    color: #707070;
-    border: 0;
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    background: transparent;
-    z-index: 4;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* busqueda en mobile */
 .mobile.busqueda-contenido{

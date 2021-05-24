@@ -1,5 +1,5 @@
 section.header-principal{
-    background: url('../../../assets/images/header1.jpg');
+    background: url('../../../assets/template/bg-banner-indicar.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,22 +22,60 @@ section.header-principal{
 }
 .titulo-pagina-inicio h2{
     font-weight: 600;
-    font-size: 44px;
-    letter-spacing: 3px;
+    font-size: 28px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
 }
 .container-fluid.fix.buscador{
     z-index: 2;
     position: relative;
-    top: calc(75% - 288px);
+    top: calc(72% - 288px);
 }
 .buscafacil{
     padding: 20px 0px 10px 0;
     margin-bottom: 20px;
-    max-width: 650px;
+    max-width: 720px;
     margin: 0 auto;
     background: transparent;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.8);
+    /* background: rgba(255, 255, 255, 0.8); */
+}
+
+
+/* HERRAMIENTAS */
+section.herramientas2 {
+    display: block;
+    width: 80%;
+    margin: auto;
+    background: white;
+    min-width: 600px;
+}
+.tools-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+.tools-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0050ba;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 0px;
+    border-left: 1px solid #d2d2d2;
+}
+.tools-item:nth-child(1){
+    border-left: 0px;
+}
+.tools-item span {
+    padding-left: 12px;
 }
 
 @media(max-width:768px){

@@ -1,6 +1,66 @@
 <footer>
-    <div class="container-fluid fix row">   
-        <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12 footer-cont mt-3">
+  <div class="footer-section">
+    <div class="column-section text-center">
+      <img class="logo_blanco" src="assets/images/indicar.svg" title="Indicar" alt="Indicar Logo">
+      <div class="alert-footer">
+        <img class="icon-warning" src="assets/images/icon-advertencia.svg" title="Advertencia" alt="Advertencia al usuario">
+        <span class="text-alert alert-footer-text"> No somos vendedores ni intermediarios en la venta.</span>
+      </div>
+    </div>
+    <div class="column-section">
+      <h4 class="title-column-footer">Contacto</h4>
+      <span><a href="mailto:serviciocliente@processoft.com">serviciocliente@processoft.com.co</a></span>
+      <span>Teléfono: <a href="tel:+57324850808" style="display: inline-block;">(2) 485 08 08</a></span>
+    </div>
+    <div class="column-section">
+      <h4 class="title-column-footer">Sobre Indicar</h4>
+      <a [routerLink]="['/quienes-somos']" >¿Quíenes somos?</a>
+      <a [routerLink]="['/aviso-privacidad']">Aviso de privacidad</a>
+      <a [routerLink]='["/politicas-tratamiento-datos"]'>Política de tratamiento de datos </a>
+      <a [routerLink]="['/politicas-publicacion']">Publicación de clasificados</a>
+      <a [routerLink]="['/pqrs']">PQRS</a>
+    </div>
+    <div class="column-section">
+      <h4 class="title-column-footer">¡Síguenos!</h4>
+      <div class="row social">
+        <a href="https://www.facebook.com/indicarcolombia/" target="_blank">
+          <img src="assets/template/icon-fb.svg" alt="Facebook">
+        </a>
+        <a href="https://twitter.com/indicarcom" target="_blank">
+          <img src="assets/template/icon-tw.svg" alt="Twitter">
+        </a>
+        <a href="https://www.instagram.com/indicarcom/" target="_blank">
+          <img src="assets/template/icon-ig.svg" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="sec-footer-credits">
+    <div class="credits">
+      <div class="processoft-section">
+        Indicar Colombia - Marca Registrada {{fecha}}. Un producto de: 
+          <a class="processoft"style="display: inline; margin-left:10px;" target="_blank" href="https://www.processoft.com.co">
+            <img style="height: 11px;" src="https://cdnprocessoft.s3.amazonaws.com/SITIOS/xGJ4XukfAJKAPdHEBn0PZd87ZD0tRng595yu2SHQgDM/processoft-logo.svg"  alt="Processoft S.A.S.">
+          </a>
+      </div>
+      <div class="webtronick-section">
+        <span style="margin-left: 12px; color:#2e2e2e">
+          Desarrollado por:
+          <a class="webtronick" style="color:#2e2e2e" href="https://webtronick.com" target="_blank">Webtronick</a>
+        </span>
+      </div>
+      <div class="energia-section">
+        <img src="assets/template/energia-renovable.png" alt="energia-renovable">
+      </div>
+    </div>
+    <div class="copia">
+      Prohibida su reproducción total o parcial, así como su traducción a cualquier idioma sin autorización escrita de su titular.
+    </div>
+  </div>
+</footer>
+<!-- <footer>
+    <div class="container-fluid row">   
+        <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12 mt-3">
           <div class="logo">
             <img src="assets/images/indicar.svg " alt="Indicar Logo" title="Indicar ">
           </div>
@@ -11,7 +71,7 @@
                 <img style="height: 30px;" src="https://admin.indicar.com.co/librerias/images/energia-renovable.png" alt="Indicar medio ambiente" title="Indicar cuida el medio ambiente">
               </div>
         </div>
-    <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12 footer-cont no-border text-center mt-3">
+    <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12 footer-cont no-border text-center mt-3">
       <h4>¡Síguenos!</h4>
       <div class="row social">
         <a href="https://www.facebook.com/indicarcolombia/" target="_blank">
@@ -30,7 +90,7 @@
       </p>
       <!-- <p>
         Teléfono: <a href="tel:4850808">(2) 485 08 08</a>
-      </p> -->
+      </p> --
     </div>
     </div>
          <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12 footer-cont mt-3">  
@@ -47,7 +107,7 @@
               • PQRS</a>
           </div>
         </div>
-        <!-- TERCER FOOTER - PROCESSOFT -->
+        <!-- TERCER FOOTER - PROCESSOFT --
         <div class="subfooter">
           <div class="container-fluid fix row text-center">
             <div class="col-xl-6 col-lg-6 col-md-5 col-sm-6 col-xs-12">
@@ -58,4 +118,4 @@
             </div>
           </div>
         </div>
-    </footer>
+    </footer> -->

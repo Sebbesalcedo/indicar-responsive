@@ -106,10 +106,17 @@
                                         <span id="capacidad">{{item.capacidadmotor_nombre}}</span>
                                         <p class="ciudad">{{item.ciudad_nombre}}</p>
                                     </div>
-                                    <button class="tarjeta-comparar" *ngIf="encabezado.comparador" (click)="setCompare(item.venta_codigo,i,item.linea_nombrecorto) "  [ngClass]="listVehiculosComparar.indexOf(item.venta_codigo)>=0 ? 'active' : 'inactive'">
+                                    <button class="tarjeta-comparar" *ngIf="encabezado.comparador" mat-raised-button #tooltip="matTooltip"
+                                        matTooltip="Comparador"
+                                        matTooltipClass="tooltip-red"
+                                        (click)="setCompare(item.venta_codigo,i,item.linea_nombrecorto) "  [ngClass]="listVehiculosComparar.indexOf(item.venta_codigo)>=0 ? 'active' : 'inactive'">
                                         <i class="material-icons fav">compare_arrows</i>  
                                     </button>
-                                    <button class="tarjeta-favorito" (click)="setFavorito(item.venta_codigo,i,item.linea_nombrecorto,item.isfavorito)" [ngClass]="item.isfavorito=='S' ? 'active' : 'inactive'" type="button" >
+                                    <button class="tarjeta-favorito" 
+                                        mat-raised-button #tooltip="matTooltip"
+                                        matTooltip="Favorito"
+                                        matTooltipClass="tooltip-red"
+                                        (click)="setFavorito(item.venta_codigo,i,item.linea_nombrecorto,item.isfavorito)" title="favorito" [ngClass]="item.isfavorito=='S' ? 'active' : 'inactive'" type="button" >
                                         <i class="material-icons fav">favorite</i>
                                         <i class="material-icons nofav">favorite_border</i>
                                     </button>

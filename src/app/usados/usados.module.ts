@@ -18,6 +18,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import { MatExpansionModule } from '@angular/material';
 import { NgxGalleryModule } from 'ngx-gallery';
 import { UtilModule } from '../util/util.module';
+import {MatTooltipModule} from '@angular/material/tooltip';
 // COMPONENTES
 import { UsadosPublicarComponent } from './usados-publicar/usados-publicar.component';
 import { UsadosClasificadosComponent } from './usados-clasificados/usados-clasificados.component';
@@ -60,6 +61,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
     MatCheckboxModule,
     MatListModule,
     MatExpansionModule,
+    MatTooltipModule,
     CKEditorModule,
     SweetAlert2Module,
     NgxMaskModule,
