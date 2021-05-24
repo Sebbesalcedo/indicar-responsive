@@ -1,0 +1,35 @@
+<aside class="filtros">
+    <div class="container-fluid fix filtros-contenido p-0">
+        <div class="close-filter nv-d nv-t" (click)="closeFilter()">&times;</div>
+        <div class="form-group col titulo-filtros">
+            <label>Filtros</label>
+        </div>
+        <button 
+             mat-raised-button 
+             class="btn btn-limpiar" 
+             (click)="deselectAll()">
+             Limpiar filtros
+        </button>
+        <!-- <mat-form-field class="col-8"> -->
+        <mat-form-field appearance="outline" class="col-12">
+            <input type="text" matInput placeholder="Buscar concesionario" id="search_concesionario" #searchResponsive autocomplete="off" (keyup)="buscar_concesionario($event)">
+        </mat-form-field>
+        <!-- CIUDADES -->
+        <div class="form-group col">
+            <label (click)="filciu=!filciu" [ngClass]="filciu ? 'active' : 'inactive'" class="mas-opciones">Ciudades</label>
+            <div class="check-filtro filtro-busqueda" [ngClass]="filciu ? 'active' : 'inactive'">
+                <div *ngFor="let data of ciudades; let i=index">
+                    <mat-checkbox name="ciudad"
+                        *ngIf="data.descripcion != null "
+                        value="{{data.codigo}}"
+                        [(ngModel)]="data.selected"
+                        (change)="changes()">
+                        {{data.descripcion}} ({{data.cantidad}})
+                    </mat-checkbox>
+                </div>
+            </div>
+            <button (click)="filciu=!filciu" [ngClass]="filciu ? 'active' : 'inactive'" class="boton-ver-mas"><span>Ver más</span> <span>Ver menos</span></button>
+             <hr>
+        </div>
+    </div>    
+</aside>

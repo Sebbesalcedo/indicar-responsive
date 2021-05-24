@@ -1,0 +1,91 @@
+<div class="section-content-standard">
+    <div class="container-fluid">
+        <!-- CONTENT -->
+        <div class="global-content">
+            <div class="row padding-row">
+                <div class="section-title">
+                    <h3 class="titulo">Noticias</h3>
+                </div>
+                <section class="section-news-principal" *ngIf="viewPostPrimary">
+                    <!-- ARTICULO PRIMARIO -->
+                    <article class="col-12 col-md-7 col-xl-7 post-primary">
+                        <a routerLink="/noticias/{{post_primary.id}}">
+                            <figure>
+                                <img src="{{post_primary._embedded['wp:featuredmedia'][0].source_url}}" alt="">
+                                <figcaption>
+                                    <div class="author-post">
+                                        <img src="./../../../assets/images/user-icon-post.svg" class="icon-user-post" alt="Indicar noticias icon">
+                                        <span>{{post_primary._embedded.author[0].name}}</span>
+                                    </div>
+                                    <a routerLink="['/noticias',{{post_primary.id}}]">{{post_primary.title.rendered}}</a>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                    <!-- ARTICULO SECUNDARIO -->
+                    <section class="posts-secundary col-12 col-md-5 col-xl-5" *ngIf="viewPostSecundary">
+                        <article class="col-12 col-md-12 col-xl-12 post" *ngFor="let post of post_secundary">
+                            <a routerLink="/noticias/{{post.id}}">
+                                <figure>
+                                    <img src="{{post['_embedded']['wp:featuredmedia'][0].source_url}}" alt="{{post.title.rendered}}" title="{{post.title.rendered}}">
+                                    <figcaption>
+                                        <a>{{post.title.rendered}}</a>
+                                        <div class="author-post">
+                                            <img src="./../../../assets/images/user-icon-post.svg" class="icon-user-post" alt="Indicar noticias icon">
+                                            <span>{{post._embedded.author[0].name}}</span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </section>
+                </section>
+                <section class="section-news" *ngIf="news">
+                    <!--  OTROS ARTICULOS -->
+                    <article *ngFor="let post of other_posts" class="col-12 col-md-4 col-xl-4 posts">
+                        <a routerLink="/noticias/{{post.id}}">
+                            <figure>
+                                <img src="{{post['_embedded']['wp:featuredmedia'][0].source_url}}" alt="">
+                                <figcaption>
+                                    <a>{{post.title.rendered}}</a>
+                                </figcaption>
+                            </figure>
+                            <div class="post-excerpt" [innerHtml]="post.excerpt.rendered">
+                            </div>
+                        </a>
+                    </article>
+                </section>
+            </div>
+            <!-- PAGINADOR -->
+            <div class="container-fluid">
+                <div class="paginador text-center">
+                    <ul class="pagination" *ngIf="pages>0">
+                        <li class="pag pag-primera" [ngClass]="{disabled: paginator.currentPage === 1}">
+                            <a (click)="setPage(1)"><i class="material-icons">first_page</i></a>
+                        </li>
+                        <li class="pag pag-anterior" [ngClass]="{disabled:page === 1}">
+                            <a (click)="setPage(paginator.currentPage - 1)"><i class="material-icons">navigate_before</i></a>
+                        </li>
+                        <li class="pag" *ngFor="let page of paginator.pages" [ngClass]="{'active':paginator.currentPage == page}">
+                            <a (click)="setPage(page)">{{page}}</a>
+                        </li>
+                        <li class="pag pag-siguiente" [ngClass]="{disabled:paginator.currentPage == paginator.totalPages}">
+                            <a (click)="setPage(paginator.currentPage + 1)"><i class="material-icons">navigate_next</i></a>
+                        </li>
+                        <li class="pag pag-ultima" [ngClass]="{disabled:paginator.currentPage === paginator.totalPages}">
+                            <a (click)="setPage(paginator.totalPages)"><i class="material-icons">last_page</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /CONTENT -->
+    </div>
+</div>         
+<!-- loading -->
+<div class="load-content" *ngIf="loading">
+    <div class="content-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>
+

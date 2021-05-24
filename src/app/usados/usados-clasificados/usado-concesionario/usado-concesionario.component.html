@@ -1,0 +1,56 @@
+<div class="global-content global-header-concesionario" >
+	<div class="header-concesionario concesionarios">
+		<div class="row padding-row">
+			<div class="content-header-concesionario">
+				<div class="section-info-concesionario">
+					<div class="section-logo-concesionario">
+						<div class="logo-concesionario">
+							<img src="{{data.cliente_imagen}}">
+						</div>
+					</div>
+					<div class="section-info-content">
+						<h2 class="title-concesionario">
+							{{data.cliente_nombres}} {{data.cliente_apellidos}} 
+						</h2>
+						<div class="address" *ngIf="data.ciudad_nombre != null">
+							<h5 class="">
+								<i class="material-icons">location_on</i> {{data.cliente_direccion}}
+							</h5>
+							<label>{{data.ciudad_nombre}}, {{data.departamento_nombre}}</label>
+						</div>
+						<a class="url_concesionario" *ngIf="encabezado.responsive != 'mobile'" href="{{data.cliente_url}}" target="_blank">{{data.cliente_url_visible}}</a>
+					</div>
+				</div>
+				<div class="website">
+					<a class="url_concesionario" *ngIf="encabezado.responsive == 'mobile'" href="{{data.cliente_url}}" target="_blank">{{data.cliente_url_visible}}</a>
+				</div>
+				<div class="content-phone">
+					<div class="image-phone">
+						<img src="../../../../assets/images/icon-phone-rojo.svg" alt="teléfonos">
+					</div>
+                    <ul class="list-phones">
+						<li><a href="tel:{{data.cliente_telefonocelular}}">{{data.cliente_telefonocelular}}</a></li>
+                        <li *ngFor="let tel of telefonos;let i = index;">
+							<a href="tel:{{tel}}">{{tel}}</a>
+						</li>
+                    </ul>
+				</div>
+			</div>
+		</div>
+    </div>
+    <!-- borde -->
+	<!-- <div class="gradiente-borde"></div> -->
+</div>
+
+<section class="contacto-footer" *ngIf="encabezado.responsive == 'mobile'">
+    <div class="row">
+        <div class="col-6">
+            <a href="tel:{{data.cliente_telefonocelular}}" class="btn-material btn-blue" >
+                <i class="material-icons">call</i>LLAMAR</a>
+        </div>
+        <div class="col-6">
+            <a class="btn-material btn-green" href="https://wa.me/57{{data.cliente_telefonocelular}}?text=Hola%20{{data.cliente_nombres}}%20estoy%20interesado%20en%20uno%20de%20sus%20vehículo%20publicado%20en%20Indicar.%20https://www.indicar.com.co/clasificados?{{data.cliente_codigo}}">
+                <i class="icon-whatsapp"></i>WHATSSAP</a>
+        </div>
+    </div>
+</section>

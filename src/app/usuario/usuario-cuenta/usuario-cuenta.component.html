@@ -1,0 +1,276 @@
+<h3 class="titulo mb-0">Datos de cuenta
+    <span class="correo-cuenta">{{usuario.cliente_correo}}</span>
+</h3>
+<hr class="separator">
+<div class="row padding-row usuario">
+    <div class="col-md-12 mb-3">
+        <div class="text-center">
+            <button class="btn btn-blue" (click)="openDialog('correo')">Cambiar correo</button>
+            <button class="btn btn-blue" (click)="openDialog('contraseña')">Cambiar contraseña</button>
+        </div>
+    </div>
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{textDato}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <!-- usuario natural -->
+            <div *ngIf="cuser.tipocliente =='01'">   
+                <form [formGroup]="formUsuario" (submit)="onSubmit()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="label-mat-form">Nombres <span class="required">*</span></label>
+                            <mat-form-field class="input-full-width" appearance="outline">
+                                <input matInput placeholder="Nombres" formControlName="fnombres" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label-mat-form">Apellidos <span class="required">*</span></label>
+                            <mat-form-field class="input-full-width" appearance="outline">
+                                <input matInput placeholder="Apellidos" formControlName="fapellidos" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label-mat-form">Tipo documento</label>
+                            <mat-form-field  class="input-full-width" appearance="outline">
+                                <mat-select formControlName="ftipodocumento" placeholder="Seleccione...">
+                                    <mat-option value="">Seleccione...</mat-option>
+                                    <mat-option *ngFor="let item of tipoDocumentos" [value]="item.campo_codigo">
+                                    {{item.campo_descripcion}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label-mat-form">Nro. documento</label>
+                            <mat-form-field class="input-full-width" appearance="outline">
+                                <input matInput type="text" *ngIf="encabezado.responsive != 'mobile'" placeholder="Numero de documento" formControlName="fnumerodocumento" autocomplete="off">
+                                <input matInput type="number" *ngIf="encabezado.responsive == 'mobile'"placeholder="Numero de documento" formControlName="fnumerodocumento" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label-mat-form">Fecha Nacimiento</label>
+                            <mat-form-field class="input-full-width" appearance="outline">
+                                <input matInput [matDatepicker]="picker" placeholder="Seleccione" formControlName="ffechanacimiento" (focus)="picker.open()">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label-mat-form">Teléfono</label>
+                            <mat-form-field class="input-full-width" appearance="outline">
+                                <input matInput placeholder="Teléfono" formControlName="ftelefono" [mask]="maskPhone" autocomplete="off">
+                                
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <button mat-button class="btn-red" type="submit">Guardar</button>
+                </form> 
+            </div>
+            <!-- usuario juridico -->
+            <div *ngIf="cuser.tipocliente =='02'">
+                <div class="upload-foto">
+                    <img *ngIf="logo.length > 0" src="{{logo[0].src}}" alt="">
+                    <button (click)="openFolder()" class="btn btn-blue btn-upload" *ngIf="logo.length == 0">Publica el logo de tu empresa</button>
+                    <input type="file" class="noview" id="logoInput" (change)="handleFile($event)" accept="image/*">
+                    <button (click)="removeLogo()" *ngIf="logo.length > 0" class="remove-logo">&times;</button>
+                </div>
+                <form [formGroup]="formUsuarioJuridico">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="label-mat-form">Razón social <span class="required">*</span></label>
+                            <mat-form-field class="input-full-width" appearance="outline">
+                                <input matInput placeholder="Razón social" formControlName="frazonsocial" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label-mat-form">Nit <span class="required">*</span></label>
+                            <mat-form-field class="input-full-width" appearance="outline">
+                                <input matInput type="text" *ngIf="encabezado.responsive != 'mobile'" placeholder="Nit" formControlName="fnit" autocomplete="off">
+                                <input matInput type="number" *ngIf="encabezado.responsive == 'mobile'" placeholder="Nit" formControlName="fnit" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <!-- ubicacion empresa -->
+                        <div class="col-md-6">
+                            <label class="label-mat-form">¿En dónde está la empresa?</label>
+                            <mat-form-field class="input-full-width" appearance="outline">
+                              <input type="text" placeholder="Busque y seleccione..." matInput formControlName="fubicacion" [matAutocomplete]="ubicacion" (keyup)="filterOptions($event)" (change)="validateUbicacion($event)">
+                              <mat-autocomplete #ubicacion="matAutocomplete" [displayWith]="displayFn">
+                                <mat-option *ngFor="let option of ciudadesEmpresa" [value]="option">
+                                  {{option.ciudad_nombre}}
+                                </mat-option>
+                              </mat-autocomplete>
+                            </mat-form-field>
+                        </div>
+                        <!-- direccion -->
+                        <div class="col-md-6">
+                            <label class="label-mat-form">Dirección</label>
+                            <mat-form-field class="input-full-width" appearance="outline">
+                                <input matInput placeholder="Dirección" formControlName="fdireccion" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <!-- pagina web -->
+                        <div class="col-md-6">
+                            <label class="label-mat-form">Página web</label>
+                            <mat-form-field class="input-full-width" appearance="outline">
+                                <input matInput placeholder="Página web" formControlName="fwebsite" autocomplete="off">
+                            </mat-form-field>  
+                        </div>
+                    </div>
+                    <button mat-button class="btn-red" (click)="onSubmitJuridico()">Guardar</button>
+                </form>
+            </div>
+        </mat-expansion-panel>
+        
+        <!-- TELEFONOS -->
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Teléfonos
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <!-- SECCION DE TELEFONOS -->     
+            <div class="mb-4">
+                <div class="contenedor-tabla my-account">
+                    <mat-toolbar> 
+                        <mat-toolbar-row class="row-toolbar">
+                          <div class="col-md-10 col-8">
+                            <div class="input-search icon-input">
+                              <input type="text" class="search-input-table" placeholder="Buscar teléfono" (keyup)="applyFilterPhone($event.target.value)">
+                              <i class="material-icons">search</i>
+                            </div>
+                          </div>
+                          <div class="options-table-toolbar col-md-2 col-4">
+                            <div class="btn-delete-table" matTooltip="Agregar teléfono" matTooltipShowDelay="300" matTooltipHideDelay="300">
+                                <i class="material-icons"(click)="openDialog('phone')">add</i>
+                            </div>
+                            <div class="btn-delete-table" matTooltip="Eliminar seleccionados" matTooltipShowDelay="300" matTooltipHideDelay="300">
+                              <i class="material-icons" (click)='detailSelected("ELIMINAR","phone")'>delete_forever</i>
+                            </div>
+                          </div>
+                        </mat-toolbar-row>
+                      </mat-toolbar>
+                      <table mat-table [dataSource]="dataPhone" matSort *ngIf="registerPhone > 0">
+                        <!-- Select Column -->
+                        <ng-container matColumnDef="select"> 
+                            <!-- <mat-header-cell *matHeaderCellDef >Selección</mat-header-cell> -->
+                            <th mat-header-cell *matHeaderCellDef></th>
+                            <td mat-cell *matCellDef="let element" class="td-check-table">
+                              <mat-checkbox class="check-table" [checked]="element.select" [(ngModel)]="element.select"></mat-checkbox>
+                            </td>
+                        </ng-container>
+                        <!-- Cod Column -->
+                        <ng-container matColumnDef="codigo">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header="codigo" class="text-center"> Cod </th>
+                            <td mat-cell *matCellDef="let element" class="td-codigo-table">
+                              <a class="codigo-table">{{element.codigo}}</a>
+                            </td>
+                        </ng-container>
+                        <!-- Numero Column -->
+                        <ng-container matColumnDef="numero">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header="numero" class="text-center"> Número </th>
+                            <td mat-cell *matCellDef="let element"> {{element.numero}} </td>  
+                        </ng-container>
+                        <!-- Accion Column -->
+                        <ng-container matColumnDef="accion">
+                            <th mat-header-cell *matHeaderCellDef> Acción </th>
+                            <td mat-cell *matCellDef="let element" class="actions-table">
+                              <i class="material-icons" (click)="openDialog('phone',element.codigo,element.numero)">edit</i>
+                              <i class="material-icons" (click)="deleteRow('phone',element.codigo,element.numero)">delete</i>
+                            </td>
+                          </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumnsPhone"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumnsPhone;"></tr>
+                      </table>
+                      <h2 *ngIf="registerPhone == 0" class="no-register"> No hay teléfonos...</h2>
+                      <mat-paginator [length]="registerPhone" [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+                </div>
+            </div>
+            <!-- ./ SECCION DE TELEFONOS -->
+        </mat-expansion-panel>
+        
+        <!-- ASESORES -->
+        <mat-expansion-panel (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false" *ngIf="cuser.tipocliente == '02'">
+    	    <mat-expansion-panel-header>
+    	        <mat-panel-title>
+    	            Asesores
+    	        </mat-panel-title>
+    	    </mat-expansion-panel-header>
+            <!-- SECCION DE ASESORES -->  
+            <div class="mb-4">
+                <div class="contenedor-tabla my-account">
+                    <mat-toolbar> 
+                        <mat-toolbar-row class="row-toolbar">
+                          <div class="col-md-10 col-8">
+                            <div class="input-search icon-input">
+                              <input type="text" class="search-input-table" placeholder="Buscar asesor" (keyup)="applyFilterAsesor($event.target.value)">
+                              <i class="material-icons">search</i>
+                            </div>
+                          </div>
+                          <div class="options-table-toolbar col-md-2 col-4">
+                            <div class="btn-delete-table" matTooltip="Agregar asesor" matTooltipShowDelay="300" matTooltipHideDelay="300">
+                                <i class="material-icons"(click)="openDialog('asesor')">add</i>
+                            </div>
+                            <div class="btn-delete-table" matTooltip="Eliminar seleccionados" matTooltipShowDelay="300" matTooltipHideDelay="300">
+                              <i class="material-icons" (click)='detailSelected("ELIMINAR","asesor")'>delete_forever</i>
+                            </div>
+                          </div>
+                        </mat-toolbar-row>
+                      </mat-toolbar>
+                      <table mat-table [dataSource]="dataAsesor" matSort *ngIf="registerAsesor > 0">
+                        <!-- Select Column -->
+                        <ng-container matColumnDef="select"> 
+                            <!-- <mat-header-cell *matHeaderCellDef >Selección</mat-header-cell> -->
+                            <th mat-header-cell *matHeaderCellDef></th>
+                            <td mat-cell *matCellDef="let element" class="td-check-table">
+                              <mat-checkbox class="check-table" [checked]="element.select" [(ngModel)]="element.select"></mat-checkbox>
+                            </td>
+                        </ng-container>
+                        <!-- Cod Column -->
+                        <ng-container matColumnDef="codigo">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header="codigo" class="text-center"> Cod </th>
+                            <td mat-cell *matCellDef="let element" class="td-codigo-table">
+                              <a class="codigo-table">{{element.codigo}}</a>
+                            </td>
+                        </ng-container>
+                        <!-- Asesor Column -->
+                        <ng-container matColumnDef="asesor">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header="asesor" class="text-center"> Asesor </th>
+                            <td mat-cell *matCellDef="let element"> {{element.asesor}} </td>  
+                        </ng-container>
+                        <!-- Accion Column -->
+                        <ng-container matColumnDef="accion">
+                            <th mat-header-cell *matHeaderCellDef> Acción </th>
+                            <td mat-cell *matCellDef="let element" class="actions-table">
+                              <i class="material-icons" (click)="openDialog('asesor',element.codigo,element.asesor)">edit</i>
+                              <i class="material-icons" (click)="deleteRow('asesor',element.codigo)">delete</i>
+                            </td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumnsAsesor"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumnsAsesor;"></tr>
+                      </table>
+                      <h2 *ngIf="registerAsesor == 0" class="no-register"> No hay asesores...</h2>
+                      <mat-paginator [length]="registerAsesor" [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+                </div>
+            </div>
+            <!-- ./ SECCION DE ASESORES -->
+        </mat-expansion-panel>
+        
+    </mat-accordion>
+    <hr>
+    <div class="col-md-12 mt-3 text-center">
+        <button (click)="inactivatedAccount()" class="btn-red eliminar-cuenta">INACTIVAR CUENTA</button>
+    </div>
+</div>
+                        
+<!-- loading -->
+<div class="load-content" *ngIf="loading">
+    <div class="content-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>
+

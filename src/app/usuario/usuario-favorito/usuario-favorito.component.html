@@ -1,0 +1,73 @@
+<h3 class="titulo mb-0">Mis favoritos</h3>
+<div class="row padding-row">
+  <div class="content-table-general">
+    <mat-toolbar> 
+      <mat-toolbar-row class="row-toolbar">
+        <div class="col-md-10 col-9">
+          <div class="input-search icon-input">
+            <input type="text" class="search-input-table" placeholder="Buscar favorito" (keyup)="applyFilter($event.target.value)">
+            <i class="material-icons">search</i>
+          </div>
+        </div>
+        <div class="options-table-toolbar col-md-2 col-3">
+          <div class="btn-delete-table" matTooltip="Eliminar seleccionados" matTooltipShowDelay="300" matTooltipHideDelay="300">
+            <i class="material-icons" (click)='detailSelected("ELIMINAR")'>delete_forever</i>
+          </div>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="contenedor-tabla">
+      <table mat-table [dataSource]="dataSource" matSort *ngIf="records > 0">
+        <!-- SELECT -->
+        <ng-container matColumnDef="select"> 
+            <!-- <mat-header-cell *matHeaderCellDef >Selección</mat-header-cell> -->
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element" class="td-check-table">
+              <mat-checkbox class="check-table" [checked]="element.select" [(ngModel)]="element.select"></mat-checkbox>
+            </td>
+        </ng-container>
+        <!-- Cod Column -->
+        <ng-container matColumnDef="cod">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="codigointerno" class="text-center"> Cod </th>
+          <td mat-cell *matCellDef="let element" class="td-codigo-table">
+            <a routerLink="/clasificado/detalle/{{element.codEncriptado}}" class="codigo-table">{{element.codigointerno}}</a>
+          </td>
+        </ng-container>
+        <!-- Vehículo Column -->
+        <ng-container matColumnDef="vehiculo">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header="linea_nombre" class="text-center"> Vehículo </th>
+            <td mat-cell *matCellDef="let element" class="d-flex align-items-center table-vehiculo" (click)='optionRow(element.codEncriptado,"VER",element.tipo_favorito)'>
+              <!-- <a class="d-flex align-items-center" routerLink="/clasificado/detalle/{{element.codEncriptado}}"> -->
+                <img src="{{element.foto_url}}">
+                <b>{{element.linea_nombre}}</b>
+              <!-- </a> -->
+            </td>
+        </ng-container>
+        <!-- Fecha Column -->
+        <ng-container matColumnDef="fecha">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header='clifav_fecha_creacion'> Fecha creación </th>
+            <td mat-cell *matCellDef="let element" class="text-center"> {{element.clifav_fecha_creacion}} </td>
+        </ng-container>
+        <!-- Tipo Column -->
+        <ng-container matColumnDef="tipo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header='tipo_favorito'> Tipo </th>
+          <td mat-cell *matCellDef="let element" class="text-center"> {{element.tipo_favorito}} </td>
+        </ng-container>
+        <!-- Acciones Column -->
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef class="text-center"> Acciones </th>
+          <td mat-cell *matCellDef="let element" class="table-actions">
+            <button class="table-link-button" (click)='optionRow(element.codEncriptado,"VER",element.tipo_favorito)' matTooltip="Ver"  matTooltipShowDelay="300" matTooltipHideDelay="300"><i class="material-icons">visibility</i></button>
+            <button class="table-link-button" (click)='optionRow(element.codEncriptado,"ELIMINAR",element.tipo_favorito)' matTooltip="Eliminar"  matTooltipShowDelay="300" matTooltipHideDelay="300"><i class="material-icons">delete_forever</i></button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <h2 *ngIf="records == 0" class="no-register"> No hay favoritos...</h2>
+    </div>
+    <mat-paginator [length]="records" [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>  
+

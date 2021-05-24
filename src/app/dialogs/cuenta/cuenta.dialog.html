@@ -1,0 +1,122 @@
+<!-- CORREO -->
+<div *ngIf="viewCorreo">
+    <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+    <h1 mat-dialog-title class="title-modal-bold">Cambiar correo</h1>
+    <div mat-dialog-content> 
+        <form [formGroup]="formCorreo">
+            <div class="row">
+                <!-- Correo -->
+                <div class="col-12">
+                    <label class="label-mat-form">Correo electrónico <span class="required">*</span></label>
+                    <mat-form-field class="input-full-width col-md-12" appearance="outline" id="change_mail">
+                        <!-- <input  matInput placeholder="Correo electrónico"  formControlName="fcorreo" required (blur)="checkEmail($event)"> -->
+                        <input  matInput formControlName="fcorreo" required (blur)="checkEmail($event)">
+                    </mat-form-field>
+                </div>
+                <span class="error col-12 text-center">{{emailInvalid}}</span>
+                <!-- Confirmar correo -->
+                <div class="col-12">
+                    <label class="label-mat-form">Confirmar correo <span class="required">*</span></label>
+                    <mat-form-field class="input-full-width col-md-12" appearance="outline">
+                        <input  matInput formControlName="fccorreo" required>
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div mat-dialog-actions>
+        <div class="text-center col-12">
+            <button mat-button [mat-dialog-close]="" class="btn btn-danger">Cancelar</button>
+            <button mat-button (click)="doUpdate()" class="btn btn-primary">Confirmar</button>
+        </div>
+    </div>
+</div>
+<!-- PASSWORD -->
+<div *ngIf="viewPass">
+    <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+    <h1 mat-dialog-title class="title-modal-bold">Cambiar contraseña</h1>
+    <div mat-dialog-content> 
+        <form [formGroup]="formPassword">
+            <div class="row">
+                <!-- pass -->
+                <div class="col-12">
+                    <label class="label-mat-form">Contraseña <span class="required">*</span></label>
+                    <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
+                        <input matInput [type]="hide ? 'password' : 'text'" required formControlName="fpass" autocomplete="off" >
+                        <a class="material-icons" *ngIf="hide" (click)="hide = !hide">visibility</a>
+                        <a class="material-icons" *ngIf="!hide" (click)="hide = !hide">visibility_off</a>
+                    </mat-form-field>
+                </div>
+                <!-- confirm pass -->
+                <div class="col-12">
+                    <label class="label-mat-form">Confirmar contraseña <span class="required">*</span></label>
+                    <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
+                        <input matInput [type]="hideConfirm ? 'password': 'text'" required formControlName="fcpass" autocomplete="off" >
+                        <a class="material-icons" *ngIf="hideConfirm" (click)="hideConfirm = !hideConfirm">visibility</a>
+                        <a class="material-icons" *ngIf="!hideConfirm" (click)="hideConfirm = !hideConfirm">visibility_off</a>
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div mat-dialog-actions>
+        <div class="text-center col-12">
+            <button mat-button [mat-dialog-close]="" class="btn btn-danger">Cancelar</button>
+            <button mat-button (click)="doUpdate()" class="btn btn-primary">Confirmar</button>
+        </div>
+    </div>
+</div>
+<!-- PHONE -->
+<div *ngIf="viewPhone">
+    <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+    <h1 mat-dialog-title class="title-modal-bold">{{opt}} teléfono</h1>
+    <div mat-dialog-content> 
+        <form [formGroup]="formPhone">
+            <div class="row">
+                <!-- phone -->
+                <div class="col-12">
+                    <label class="label-mat-form label-left">Teléfono <span class="required">*</span></label>
+                    <mat-form-field class="input-full-width" appearance="outline">
+                        <input  matInput formControlName="fphone" required [mask]="maskPhone">
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div mat-dialog-actions>
+        <div class="text-center col-12">
+            <button mat-button [mat-dialog-close]="" class="btn btn-danger">Cancelar</button>
+            <button mat-button (click)="onSubmit()" [disabled]="!formPhone.valid" class="btn btn-primary">Confirmar</button>
+        </div>
+    </div>
+</div>
+<!-- ASESOR -->
+<div *ngIf="viewAsesor">
+    <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+    <h1 mat-dialog-title class="title-modal-bold">{{opt}} asesor</h1>
+    <div mat-dialog-content> 
+        <form [formGroup]="formAsesor">
+            <div class="row">
+                <!-- Asesor -->
+                <div class="col-12">
+                    <label class="label-mat-form label-left">Nombre asesor <span class="required">*</span></label>
+                    <mat-form-field class="input-full-width" appearance="outline">
+                        <input  matInput formControlName="fasesor" required>
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div mat-dialog-actions>
+        <div class="text-center col-12">
+            <button mat-button [mat-dialog-close]="" class="btn btn-danger">Cancelar</button>
+            <button mat-button (click)="onSubmit()" [disabled]="!formAsesor.valid" class="btn btn-primary">Confirmar</button>
+        </div>
+    </div>
+</div>
+<style>
+    button{
+        margin: 3px 3px;
+        font-size: 14px;
+    }
+</style>

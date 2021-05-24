@@ -1,0 +1,185 @@
+<div class="section-content-standard">
+    <div class="container-fluid">
+    <!-- CONTENT -->
+    <div class="global-content">
+        <div class="row padding-row">
+            <h3 class="titulo">Comparador</h3>
+            <div class="comparator">
+                <!-- Lista de campos -->
+                <div class="comparator-term">
+                    <div *ngFor="let term of terms" [ngClass]="{'term-group':term.section == true,'term':term.section == false}">{{term.descripcion}}</div>
+                    <!-- <div class="term">Marca Lore</div>
+                    <div class="term">Modelo</div>
+                    <div class="term">Año</div>
+                    <div class="term">Linea</div>
+                    <div class="term-group">grupo 1</div>
+                    <div class="term">Marca Lore</div>
+                    <div class="term">Modelo</div>
+                    <div class="term">Año</div>
+                    <div class="term">Linea</div>
+                    <div class="term-group">grupo 2</div>
+                    <div class="term">Marca Lore</div>
+                    <div class="term">Modelo</div>
+                    <div class="term">Año</div>
+                    <div class="term">Linea</div>
+                    <div class="term">Marca Lore</div>
+                    <div class="term">Modelo</div>
+                    <div class="term">Año</div>
+                    <div class="term">Linea</div>
+                    <div class="term">Marca Lore</div>
+                    <div class="term">Modelo</div>
+                    <div class="term">Año</div>
+                    <div class="term">Linea</div> -->
+                </div>
+                <div class="container-comparator">
+                    <!-- header vehiculos -->
+                    <div class="comparator-header">
+                        <div *ngFor="let vehiculo of vehiculos;let i = index" class="comparator-item" id="{{vehiculo.codigo}}">
+                            <div class="comparator-img">
+                                <img src="{{vehiculo.imagen}}" alt="{{vehiculo.linea}} - {{vehiculo.modelo}}">
+                                <span class="delete-vehicle" (click)="deleteItem(vehiculo.codigo)">&times;</span>
+                            </div>
+                            <div class="detail-vehiculo">
+                                <div class="vehicle-info">
+                                    <div class="description-vehicle">{{vehiculo.marca}} - {{vehiculo.modelo}}</div>
+                                    <div class="description-vehicle" title="{{vehiculo.linea_nombre}}">{{vehiculo.linea}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="comparator-item">
+                            <div class="comparator-img">
+                                <img src="https://d1wx0q0ct4xanw.cloudfront.net/CV_TARJETAS/4gmUoiiYV8-eGNKAqa1rIxerNudafebcKSB4JHvY5h8.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="comparator-item">
+                            <div class="comparator-img">
+                                <img src="https://d1wx0q0ct4xanw.cloudfront.net/CV_TARJETAS/4gmUoiiYV8-eGNKAqa1rIxerNudafebcKSB4JHvY5h8.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="comparator-item">
+                            <div class="comparator-img">
+                                <img src="https://d1wx0q0ct4xanw.cloudfront.net/CV_TARJETAS/4gmUoiiYV8-eGNKAqa1rIxerNudafebcKSB4JHvY5h8.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="comparator-item">
+                            <div class="comparator-img">
+                                <img src="https://d1wx0q0ct4xanw.cloudfront.net/CV_TARJETAS/4gmUoiiYV8-eGNKAqa1rIxerNudafebcKSB4JHvY5h8.jpg" alt="">
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="comparator-body">
+                        <!-- <div class="comparator-item"> -->
+                        <div *ngFor="let vehiculo of vehiculos; let i = index" class="comparator-item">
+                            <div *ngFor="let valor of vehiculo.valores"  [ngClass]="{'term-group':valor.section == true,'term':valor.section == false}">
+                                <span class="hasComponent" *ngIf="valor.descripcion == 1">&times;</span>
+                                <span *ngIf="valor.descripcion == 0"></span>
+                                <span *ngIf="valor.descripcion != 0 && valor.descripcion != 1">{{valor.descripcion}}</span>
+                            </div>
+                            <!-- <div class="term">Marca Lore aslkdma das sa dasld as lasdsa,m mm s </div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term-group"></div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term-group"></div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div> -->
+                        </div>
+                        <!-- <div class="comparator-item">
+                            <div class="term">Marca Lore askld msakldmasmd ammmmmma sdoijhasdug a</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term-group"></div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term-group"></div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                        </div>
+                        <div class="comparator-item">
+                            <div class="term">Marca Loresalkn jas as djasdkan kjanskaa</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term-group"></div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term-group"></div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                        </div>
+                        <div class="comparator-item">
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo  as,mdamsn d as las makld</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term-group"></div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term-group"></div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                            <div class="term">Marca Lore</div>
+                            <div class="term">Modelo</div>
+                            <div class="term">Año</div>
+                            <div class="term">Linea</div>
+                        </div> -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- loading -->
+<div class="load-content" *ngIf="loading">
+    <div class="content-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>

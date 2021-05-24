@@ -1,0 +1,40 @@
+
+.section-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.section-posts {
+    padding: 20px;
+    text-align: justify;
+    line-height: 25px;
+    color: #616161;
+}
+.section-img img {
+    padding: 0px 20px 15px 0px;
+    width: 100%;
+}
+
+.section-img {
+    width: 50%;
+    display: block;
+    float: left;
+    max-height: 450px;
+}
+
+.section-title h3.titulo{
+    padding:0px;
+    font-size: 30px;
+}
+.section-title hr{
+    margin: 0px auto;
+}
+
+@media screen and (max-width:768px){
+    .section-img{
+        width: 100%
+    }
+    .section-img img{
+        padding: 0px 15px;
+    }
+}

@@ -1,0 +1,88 @@
+
+<div class="global-content-full calcular-cuota">
+    <div class="section-content row">
+        <div class="content-form col-md-6 offset-md-1">
+            <form [formGroup]="formCalcularCuota">
+                <div class="section-header">
+                    <h1>Calcular cuota</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- valor vehiculo -->
+                        <label class="label-mat-form">Valor del vehículo <span class="required">*</span></label>
+                        <mat-form-field  class="input-full-width col-md-12" appearance="outline">
+                            <input matInput formControlName="fvalorvehiculo" placeholder="Valor del vehículo" (change)="valorFinanciamiento()" mask="separator.2" thousandSeparator="," prefix="$  " maxlength="15">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- cuota inicial -->
+                        <label class="label-mat-form">Cuota inicial <span class="required">*</span></label>
+                        <mat-form-field  class="input-full-width col-md-12" appearance="outline">
+                            <input matInput formControlName="fcuotainicial" placeholder="Cuota inicial" (change)="valorFinanciamiento()" mask="separator.2" thousandSeparator="," prefix="$  " maxlength="15">
+                            <!-- <span matPrefix>$&nbsp;</span> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- tipo de vehiculo -->
+                        <label class="label-mat-form">Tipo de vehículo <span class="required">*</span></label>
+                        <mat-form-field  class="input-full-width col-md-12" appearance="outline">
+                            <mat-select formControlName="ftipovehiculo" placeholder="Tipo de vehículo" >
+                                <mat-option value="NU">Nuevo</mat-option>
+                                <mat-option value="US">Usado</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- clase de vehiculo -->
+                        <label class="label-mat-form">Tipo de vehículo <span class="required">*</span></label>
+                        <mat-form-field  class="input-full-width col-md-12" appearance="outline">
+                            <mat-select formControlName="fclase" placeholder="Clase de vehículo" >
+                                <mat-option value="PA">Particular</mat-option>
+                                <mat-option value="PU">Público</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- plazo -->
+                        <label class="label-mat-form">Plazo en años <span class="required">*</span></label>
+                        <mat-form-field  class="input-full-width col-md-12" appearance="outline">
+                            <mat-select  placeholder="Plazo en años" formControlName="fplazo">
+                                <mat-option value="1">1 Año</mat-option>
+                                <mat-option value="2">2 Años</mat-option>
+                                <mat-option value="3">3 Años</mat-option>
+                                <mat-option value="4">4 Años</mat-option>
+                                <mat-option value="5">5 Años</mat-option>
+                                <mat-option value="6">6 Años</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- valor a financiar -->
+                        <div class="valorFinanciar">
+                            <label class="label-mat-form">Valor a financiar</label>
+                            <p>$ {{valorFinanciar | number : '1.0-1'}}</p>
+                        </div>  
+                    </div>
+                    <div class="col-12 text-center">
+                        <button mat-button class="btn btn-primary" (click)="onCalcular()">Calcular</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <div class="valor-cuota" *ngIf="cuotaCalculada">
+                <p>El valor aproximado de la cuota mensual es de:</p>
+                <h1>${{cuotaAFinanciar| number : '1.0-0'}}</h1>
+                <ul class="list-unstyled">
+                    <li>Valor a financiar de:$ {{valorFinanciarFijo | number : '1.0-1'}}</li>
+                    <li>Tasa de: {{tasa}}% M.V</li>
+                    <li>Plazo de: {{plazo}} años</li>
+                </ul>
+    
+                <label>Este valor es solo de financiación, no se tiene en cuenta valor de seguros entre otros. *Recuerde que este
+                valor es aproximado y de referencia</label>
+                <a mat-button class="btn btn-primary" routerLink="/financiamiento/solicitar-credito">Solicitar crédito</a>
+            </div>
+        </div>
+    </div>
+</div>

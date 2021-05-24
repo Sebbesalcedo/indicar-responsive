@@ -1,0 +1,43 @@
+#politica-tratamiento{
+    background: white;
+}
+
+.title-section{
+    font-size: 40px;
+    text-shadow: 0px 0px 1px #000;
+    text-align: center;
+    padding: 20px;
+}
+.content-text{
+    width:100%;
+    margin:0 auto;
+    text-align: justify;
+    line-height: 25px;
+    padding: 20px 68px;
+}
+button.btn-anchor {
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+    color: #397ae0;
+    font-weight: 600;
+}
+#politica-tratamiento ol {
+    margin-left: 0px;
+    padding-left: 15px;
+}
+#politica-tratamiento ol ol {
+    padding-left: 26px;
+}
+.title-section-pt{
+    font-weight: 900;
+}
+
+@media (min-width:300px) and (max-width: 768px){
+    .title-section{
+        font-size: 30px;
+    }
+    .content-text{
+        padding: 20px 30px;
+    }
+}

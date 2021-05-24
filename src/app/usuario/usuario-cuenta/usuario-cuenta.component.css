@@ -1,0 +1,54 @@
+span.correo-cuenta {
+    display: block;
+    font-size: 15px;
+    color: #848484;
+    position: absolute;
+    font-weight: 300;
+}
+mat-panel-title.mat-expansion-panel-header-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: #013b8f;
+}
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+    background: #013b8e;
+    transition: all 0.3s ease;
+}
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+    background: #013b8e;
+    transition: all 0.3s ease;
+}
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) mat-panel-title.mat-expansion-panel-header-title {
+    color: #fbfbfb !important;
+}
+.usuario button.btn.btn-blue {
+    margin-top: 5px;
+}
+.upload-foto {
+    display: flex;
+    justify-content: center;
+    width: 280px;
+    height: 250px;
+    border: 3px dashed #d6d6d6;
+    border-radius: 11px;
+    padding: 10px;
+    position: relative;
+}
+.btn-upload{
+    align-self: center;
+    margin:0px;
+}
+.upload-foto img{
+    width: 100%;
+    max-height: 200px;
+}
+.remove-logo{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #cc240d;
+    color: white;
+    border: 0px;
+    font-size: 20px;
+    border-radius: 5px;
+}

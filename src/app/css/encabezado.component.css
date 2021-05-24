@@ -1,0 +1,420 @@
+/**
+Author: Daniel Bolivar - debb94 github - daniel.bolivar.freelance@gmail.com
+version: 1.0.0
+since: 29-10-2019
+style: Estilos de cabecera de indicar
+*/
+
+
+/* ####################### DEFINITIVO ######################### */
+/* PRE ENCABEZADO */
+
+.preencabezado{
+    top: 0px;
+    position: fixed;
+    background: #013b8e;
+    z-index: 26;
+    width: 100%;
+    height: 30px;
+    display: block;
+}
+.preencabezado .login{
+    padding-right: 15px;
+}
+.preencabezado button{
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    height: 30px;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 0;
+    display: inline-flex;
+}
+.preencabezado button:hover{
+    background: #013b8e;
+}
+.preencabezado button > b {
+    top: 0px;
+    position: relative;
+    font-weight: 500;
+}
+.preencabezado i.material-icons {
+    font-size: 22px;
+    color: white;
+    padding-right: 5px;
+}
+.preencabezado .dropdown-menu.show {
+    left: calc(100% - 220px) !important;
+    width: 210px;
+}
+.preencabezado button.dropdown-item, .preencabezado .dropdown-item i{
+    color:#212529;  
+}
+.preencabezado .dropdown-item:hover, .preencabezado .dropdown-item:hover i{
+    color:white;  
+}
+/* logo para tabs. */
+img.tab-responsive {
+    height: 18px;
+    margin: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* logo for mobile */
+img.mobile-responsive{
+    height: 18px;
+    margin: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    z-index: 3;
+}
+img.mobile-responsive-sidebar{
+    height: 28px;
+    margin: 6px;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+    top: 30px;
+    z-index: 3;
+}
+
+.dropdown-toggle::after {
+    top: 10px;
+    position: relative;
+}
+
+.alerta_notificacion{
+    position: absolute;
+    font-size: 10px;
+    color: white;
+    top: 5px;
+}
+
+.opc-down {
+    position: relative;
+}
+.opc-down .alerta_notificacion {
+    color: white;
+    border-radius: 2px;
+    left: initial;
+    right: 10px;
+    background: #cc230e;
+    top: 7px;
+    border-radius: 50%;
+    font-size: 10px;
+    pointer-events: none;
+}
+
+/* header */
+header{
+    position: fixed;
+    top:30px;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0px 1px 13px rgba(0,0,0,0.2);
+    background: white;
+    z-index: 10;
+}
+header.mobile {
+    top: 0px;
+    background: #053a8e;
+    z-index: 20;
+}
+/* logo */
+header .logo {
+    position:relative;
+    top: 10px;
+    /* left: 20px; */
+    left: 10%;
+}
+header .logo  img{
+    height: auto;
+    width: 100%;
+    max-width: 140px;
+}
+.busqueda-contenido{
+    position: relative;
+    width: 60%;
+    max-width: 700px;
+    padding: 5px 0px 5px 10px;
+}
+.busqueda-contenido-tab {
+    margin-right: 15px;
+    min-width:330px;
+}
+.barra-busqueda > input{
+    color: #404040;
+    height: 36px;
+    font-size: 14px;
+    background: #eeeeee;
+    width: 100%;
+    border: 0px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    float: left;
+}
+.btn-encabezado{
+    right: 5px;
+    text-align: center;
+    color: #707070;
+    border: 0;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    z-index: 4;
+}
+
+/* busqueda en mobile */
+.mobile.busqueda-contenido{
+    position: relative;
+    width: 100%;
+    right: 10px;
+}
+.mobile.barra-busqueda {
+    width: 78%;
+    float: right;
+    transition:all 0.3s linear;
+    z-index: 3;
+    position:relative;
+}
+button.btn-encabezado.btn-white-mobile {
+    color: white;
+}
+.mobile.barra-busqueda.barra-hidden {
+    width: 0px;
+    transition:all 0.3s linear;
+}
+.barra-busqueda.barra-hidden input{
+    padding: 0px;
+}
+.btn-encabezado:focus{
+    outline: inherit;
+}
+.btn-filtros{
+    top: 6px;
+}
+
+
+/*  menu de navegacion escritorio */
+
+nav.menu button {
+    border: 0px;
+    background: transparent;
+    margin-top: 10px;
+    padding: 5px 8px;
+    color: #404040;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav .menu-desktop{
+    float: right;
+    padding-right:10px;
+}
+
+/* menu lateral */
+.sidebar{
+    left:-75%;
+    box-shadow: none;
+    opacity:0;
+    background: white;
+    bottom: 0;
+    top: 0;
+    position: fixed;
+    width: 75%;
+    height:100vh;
+    box-shadow: 1px 0px 30px black;
+    overflow:auto;
+    transition: all 0.3s linear;
+}
+.sidebar.show {
+    opacity:1;
+    left:0;
+    transition: all 0.3s linear;
+    z-index: 3;
+}
+
+.header-sidebar {
+    background: #053a8e;
+    min-height: 90px;
+}
+/* button open and close sidebar */
+.boton-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background: transparent;
+    border: 0;
+    z-index:50;
+}
+.boton-menu span {
+    background: #fff;
+    width: 28px;
+    height: 2px;
+    border-radius: 0;
+    position: absolute;
+    left: 11px;
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+}
+.boton-menu span.line1 {
+    top: 13px;
+}
+.boton-menu span.line2 {
+    top: 24px;
+    width: 20px;
+}
+.boton-menu span.line3 {
+    top: 35px;
+}
+.close-sidebar {
+    position: absolute;
+    right: 18px;
+    font-size: 38px;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-weight: 300;
+    cursor: pointer;
+}
+img.logo-sidebar{
+    height: 26px;
+    text-align: center;
+    width: 100%;
+    margin-top:20px;
+}
+.avatar {
+    text-align: center;
+    padding-top: 10px;
+}
+img.avatar-usuario {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0px 0px 7px black;
+}
+.avatar h4 {
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    text-shadow: 0px 0px 7px black;
+}
+/* content sidebar */
+.content-sidebar{
+    width: 100%;
+    position: relative;
+}
+
+
+/* menu mobile */
+ul.mobile-menu {
+    width: 100%;
+    display: block;
+    padding: 0px 10px;
+}
+ul.mobile-menu li{
+    list-style: none;
+}
+ul.mobile-menu > li.item-menu-mobile {
+    border-bottom: 1px solid #b3b3b359;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+ul.mobile-menu > li.item-menu-mobile i, ul.mobile-menu > li.item-menu-mobile a {
+    color: #676767;    
+    line-height: 48px;
+    display:block;
+}
+ul.mobile-menu > li.item-menu-mobile i{
+    padding: 0px 9px;
+    font-size: 20px;
+}
+ul.mobile-menu > li.item-menu-mobile a{
+    font-size: 15px;
+    width:100%;
+}
+
+/*  menu mobile material */
+.mobile-menu .mat-accordion, .mobile-menu .mat-expansion-panel{
+    border: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.mobile-menu .mat-expansion-panel-header{
+    padding: 0px 20px 0px 0px !important;
+    font-family: "Open Sans", sans-serif !important;
+}
+ul.mobile-menu-mat-expansion {
+    padding: 0px !important;
+}
+ul.mobile-menu-mat-expansion li.item-menu-mobil a, ul.mobile-menu-mat-expansion li.item-menu-mobil i {
+    line-height: 30px !important;
+}
+/* boton salir mobile */
+.logout-mobile{
+    border-top: 1px solid #b3b3b359;
+    padding: 0px 10px;
+    margin-top: 30px;
+}
+.logout-mobile a{
+    font-size: 16px;
+}
+.logout-mobile i{
+    font-size: 20px;
+    padding: 0px 10px;
+}
+.logout-mobile a, .logout-mobile i{
+    color: #676767;
+    line-height: 48px;
+    display: block;
+}
+/* .col.aside-filtros-resp {
+    background: #00000057;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    overflow-y: auto;
+    height: 100%;
+    top: 50px;
+    left: 0;
+}
+app-usados-clasificados-filtro.ng-star-inserted {
+    background: white;
+    position: absolute;
+    left: 0px;
+    width: 65%;
+} */
+
+/* tarjetas item-card responsive mobile */
+/* .item-card-header {
+    position: relative;
+    width: 40%;
+    float: left;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+} 
+.item-card-content {
+    position: relative;
+    width: 60%;
+    float: left;
+}
+button.tarjeta-favorito {
+    top: 78%;
+    right: 20px;
+}
+button.tarjeta-comparar {
+    top: 78%;
+    right: 60px;
+}
+
+*/

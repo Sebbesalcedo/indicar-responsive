@@ -1,0 +1,48 @@
+<div class="cont-buscafacil " >
+    <form [formGroup]="busquedaForm"  class="ui form row">
+        <mat-form-field class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 " appearance="outline">
+            <mat-select formControlName="fclase" placeholder="Clases" (selectionChange)="change()" >
+                <mat-option value="">Todas las clases</mat-option>
+                <mat-option  *ngFor="let data of clases" value="{{data.codigo}}">{{data.descripcion}}({{data.cantidad}})</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4" appearance="outline">
+            <mat-select formControlName="fmarca" placeholder="Marca" (selectionChange)="change()" >
+                <mat-option value="">Todas las marcas</mat-option>
+                <mat-option  *ngFor="let data of marcas" value="{{data.codigo}}">{{data.descripcion}}({{data.cantidad}})</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4" appearance="outline">
+            <mat-select formControlName="ffamilia" placeholder="Familia" (selectionChange)="change()" >
+                <mat-option value="">Todas las Familias</mat-option>
+                <mat-option  *ngFor="let data of familias" value="{{data.codigo}}">{{data.descripcion}}({{data.cantidad}})</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4" appearance="outline">
+            <mat-select formControlName="ftipo" placeholder="Clasificados" (selectionChange)="change()" >
+                <mat-option value="">Todos los Clasificados</mat-option>
+                <mat-option  *ngFor="let data of clasificados" value="{{data.codigo}}">{{data.descripcion}}({{data.cantidad}})</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4" appearance="outline">
+            <mat-select formControlName="fmodelo" placeholder="Modelos" (selectionChange)="change()" >
+                <mat-option value="">Todos los Modelos</mat-option>
+                <mat-option  *ngFor="let data of modelos" value="{{data.codigo}}">{{data.descripcion}}({{data.cantidad}})</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4" appearance="outline">
+            <mat-select formControlName="fdepartamento" placeholder="Ubicación">
+                <mat-option value="">Todos los Departamentos</mat-option>
+                <mat-option  *ngFor="let data of ubicacion" value="{{data.codigo}}">{{data.descripcion}}({{data.cantidad}})</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12  col-xl-12 text-center">
+            <button class="btn btn-red" type="button" (click)="sendSearch()" >Buscar</button>
+        </div>
+    </form>
+</div>

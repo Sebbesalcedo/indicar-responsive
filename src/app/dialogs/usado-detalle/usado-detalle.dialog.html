@@ -1,0 +1,117 @@
+<!-- VENDIDO -->
+<div [ngSwitch]="view">
+  <div *ngSwitchCase="'sold'">
+    <h1 class="title-modal-bold">Clasificado vendido</h1>
+    <div mat-dialog-content style="min-height: 210px;">
+      <form [formGroup]="formSold">
+        <div class="row post-dialog">
+          <label>Nos gustaría saber por que medio has vendido tu vehículo:</label>
+          <mat-radio-group
+            aria-labelledby="example-radio-group-label"
+            class="example-radio-group"
+            formControlName="fparametro">
+            <mat-radio-button class="example-radio-button" *ngFor="let option of saleOptions;let i = index" [value]="saleOptions[i].parametro_codigo" (change)="setOption($event)">
+                {{option.parametro_descripcion_detalle}}
+            </mat-radio-button>
+          </mat-radio-group>
+          <!-- otro medio -->
+          <div  *ngIf="viewAnotherWay" class="another-way">
+            <label class="label-mat-form">Especifique <span class="required">*</span></label>
+            <mat-form-field appearance="outline" class="col-12">
+              <input matInput (keyup)="setDetalle($event)">
+            </mat-form-field>
+          </div>
+        </div>
+        <div mat-dialog-actions>
+          <div class="text-center col-12">
+            <button mat-button *ngIf="back" class="btn-red" style="padding:8px 10px;" (click)="backOption()">Atras</button>
+            <button mat-button *ngIf="!back" class="btn-red" style="padding:8px 10px;" (click)="btnClose()">Cancelar</button>
+            <button mat-button class="btn-red" style="padding:8px 10px;" (click)="onSubmitSold()">Enviar</button><br>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- ELIMINAR -->
+  <div *ngSwitchCase="'delete'">
+    <h1 class="title-modal-bold">Eliminar clasificado</h1>
+    <div mat-dialog-content style="min-height: 180px;">
+      <form [formGroup]="formDelete">
+        <div class="row post-dialog">
+          <label>Nos gustaría saber sus motivos para eliminar:</label>
+          <mat-radio-group
+            aria-labelledby="example-radio-group-label"
+            class="example-radio-group"
+            formControlName="fparametro">
+            <mat-radio-button class="example-radio-button" *ngFor="let option of deleteOptions;let i = index" [value]="deleteOptions[i].parametro_codigo" (change)="setOption($event)">
+                {{option.parametro_descripcion_detalle}}
+            </mat-radio-button>
+          </mat-radio-group>
+          <!-- otro medio -->
+          <div  *ngIf="viewAnotherWay" class="another-way">
+            <label class="label-mat-form">Manifieste su inconformidad para mejorar nuestros servicios <span class="required">*</span></label>
+            <mat-form-field appearance="outline" class="col-12">
+              <textarea matInput (keyup)="setDetalle($event)"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <div mat-dialog-actions>
+          <div class="text-center col-12">
+            <button mat-button class="btn-red" style="padding:8px 10px;" (click)="btnClose()">Cancelar</button>
+            <button mat-button class="btn-red" style="padding:8px 10px;" (click)="onSubmitDelete()">Enviar</button><br>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- PREGUNTA AL VENDEDOR -->
+  <div *ngSwitchCase="'question'">
+    <h1 class="title-modal-bold">Pregunta al vendedor</h1>
+    <div mat-dialog-content>
+        <form [formGroup]="formQuestion">
+            <div class="row">
+                <!-- Correo -->
+                <label class="label-mat-form">Correo electrónico <span class="required">*</span></label>
+                <mat-form-field appearance="outline" class="col-12">
+                  <input matInput placeholder="" formControlName="fcorreo">
+                </mat-form-field>
+                <!-- Nombre -->
+                <label class="label-mat-form">Nombre <span class="required">*</span></label>
+                <mat-form-field appearance="outline" class="col-12">
+                  <input matInput placeholder="" formControlName="fname" required>
+                </mat-form-field>
+                <!-- telefono -->
+                <label class="label-mat-form">Teléfono de contacto <span class="required">*</span></label>
+                <mat-form-field appearance="outline" class="col-12">
+                  <input matInput placeholder="" formControlName="fphone" [mask]="maskPhone" required>
+                </mat-form-field>
+                <!-- mensaje -->
+                <label class="label-mat-form">Mensaje </label>
+                <mat-form-field appearance="outline" class="col-12">
+                    <textarea placeholder="Mensaje..." matInput formControlName="fmessage" required style="min-height:150px;"></textarea>
+                </mat-form-field>
+            </div>
+        </form>
+        <div mat-dialog-actions>
+            <div class="text-center col-12">
+                <button mat-button [mat-dialog-close]="" class="btn btn-danger">Cancelar</button>
+                <button mat-button (click)="onSubmit()" class="btn btn-primary">Confirmar</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<style>
+    button{
+        margin: 3px 2px;
+        font-size: 14px;
+    }
+    .post-dialog label {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #7b7b7b;
+    }
+</style> 

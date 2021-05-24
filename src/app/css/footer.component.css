@@ -1,0 +1,47 @@
+/**
+Author: Daniel Bolivar - debb94 github - daniel.bolivar.freelance@gmail.com
+version: 1.0.0
+since: 29-10-2019
+style: Estilos de footer de indicar
+*/
+
+.container-fluid.fix {
+    max-width: 1300px;
+    padding: 1%;
+    margin: 0 auto;
+}
+footer{
+    background: #013b8e;
+    padding: 0;
+    color: #eee;
+    font-size: 14px;
+}
+footer .logo {
+    max-width: 150px;
+}
+footer h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+footer a {
+    color: #8cc2f1;
+    display: block;
+}
+footer a:hover {
+    color: white;
+}
+footer .row.social {
+    display: inline-flex;
+}
+footer .social a {
+    opacity: 0.8;
+}
+footer .social a>img {
+    width: 32px;
+    margin: 10px;
+}
+footer .subfooter {
+    font-size: 12px;
+    padding: 0px;
+}
