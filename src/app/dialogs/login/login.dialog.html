@@ -14,7 +14,7 @@
           <div class="col-12">
             <label class="label-mat-form">Contraseña <span class="required">*</span></label>
             <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
-                <input matInput [type]="inputTypeLogin" formControlName="fpass" autocomplete="off">
+                <input matInput [type]="inputTypeLogin" formControlName="fpass" >
                 <a class="material-icons" *ngIf="inputTypeLogin == 'password'" (click)="viewPassLogin()">visibility</a>
                 <a class="material-icons" *ngIf="inputTypeLogin == 'text'" (click)="hidePassLogin()">visibility_off</a>
             </mat-form-field>
