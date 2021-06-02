@@ -88,8 +88,12 @@ export class EncabezadoComponent implements OnInit {
       // agrego timer y subscripcion
       this.subscriberApp();
     }
+    
+  
   }
  
+ 
+  
 
   // ############################################## registro, inicio de session y accesos seguros. ##############################################
   /**

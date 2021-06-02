@@ -1,142 +1,234 @@
 <div class="section-content-standard">
-    <div class="container-fluid">
-        <!-- SECTION FILTROS RESPONSIVES -->
-        <div class="col aside-filtros-responsive" 
-            [ngClass]="{'active':encabezado.sidebarShowFilters==true,'inactive':encabezado.sidebarShowFilters==false}" 
-            *ngIf="encabezado.responsive == 'mobile'">
-            <app-usados-clasificados-filtro 
-            [ftipoclasificado]      ="ftipoclasificado"
-            [fclase]                ="fclase"
-            [fmarca]                ="fmarca"
-            [ffamilia]              ="ffamilia"
-            [fdepartamento]         ="fdepartamento"
-            [fciudad]               ="fciudad"
-            [fprecio]               ="fprecio"
-            [fmodelo]               ="fmodelo"
-            [fkm]                   ="fkm"
-            [ftraccion]             ="ftraccion"
-            [fcaja]                 ="fcaja"
-            [ftipomotor]            ="ftipomotor"
-            [fcapacidadmotor]       ="fcapacidadmotor"
-            [funicoduenio]          ="funicoduenio"
-            [fplaca]                ="fplaca"
-            [fairbags]              ="fairbags"
-            [fcliente]              = "fcliente"
-            (reload)                ="reload($event)"
-            (filter)                ="closeFilter($event)"
-            ></app-usados-clasificados-filtro>
-        </div>
+  <div class="container-fluid">
+    <!-- SECTION FILTROS RESPONSIVES -->
+    <div
+      class="col aside-filtros-responsive"
+      [ngClass]="{
+        active: encabezado.sidebarShowFilters == true,
+        inactive: encabezado.sidebarShowFilters == false
+      }"
+      *ngIf="encabezado.responsive == 'mobile'"
+    >
+      <app-usados-clasificados-filtro
+        [ftipoclasificado]="ftipoclasificado"
+        [fclase]="fclase"
+        [fmarca]="fmarca"
+        [ffamilia]="ffamilia"
+        [fdepartamento]="fdepartamento"
+        [fciudad]="fciudad"
+        [fprecio]="fprecio"
+        [fmodelo]="fmodelo"
+        [fkm]="fkm"
+        [ftraccion]="ftraccion"
+        [fcaja]="fcaja"
+        [ftipomotor]="ftipomotor"
+        [fcapacidadmotor]="fcapacidadmotor"
+        [funicoduenio]="funicoduenio"
+        [fplaca]="fplaca"
+        [fairbags]="fairbags"
+        [fcliente]="fcliente"
+        (reload)="reload($event)"
+        (filter)="closeFilter($event)"
+      ></app-usados-clasificados-filtro>
+    </div>
     <!-- CONTENT -->
-    <app-usado-concesionario 
-        [data]="dataCliente"
-        *ngIf="isConcesionario"
+    <app-usado-concesionario
+      [data]="dataCliente"
+      *ngIf="isConcesionario"
     ></app-usado-concesionario>
     <div class="global-content">
-            <div class="row padding-row">
-                <!-- SECTION FILTROS -->
-                <div class="aside-filtros" *ngIf="encabezado.responsive == 'desktop' || encabezado.responsive == 'tab'">
-                    <app-usados-clasificados-filtro 
-                        [ftipoclasificado]      ="ftipoclasificado"
-                        [fclase]                ="fclase"
-                        [fmarca]                ="fmarca"
-                        [ffamilia]              ="ffamilia"
-                        [fdepartamento]         ="fdepartamento"
-                        [fciudad]               ="fciudad"
-                        [fprecio]               ="fprecio"
-                        [fmodelo]               ="fmodelo"
-                        [fkm]                   ="fkm"
-                        [ftraccion]             ="ftraccion"
-                        [fcaja]                 ="fcaja"
-                        [ftipomotor]            ="ftipomotor"
-                        [fcapacidadmotor]       ="fcapacidadmotor"
-                        [funicoduenio]          ="funicoduenio"
-                        [fplaca]                ="fplaca"
-                        [fairbags]              ="fairbags"
-                        [fcliente]             ="fcliente"
-                        (reload)="reload($event)"
-                    ></app-usados-clasificados-filtro>
-                </div>
-                <!-- SECTION RIGHT  -->
-                <!-- SECTION CLASIFICADOS  -->
-                <div class="section-right-content">
-                    <div class="col-12 titulo">
-                        <div class="row">
-                            <div class="col-lg-9 col-md-6 col-6 p-0">
-                                <div class="subtitulo responsive" (click)="clearFilter()" *ngIf="encabezado.responsive == 'mobile'">
-                                    <a (click)="clearFilter()">Clasificados</a><br>
-                                    <span style="color: red">{{registros}} </span>
-                                    <label>vehículos</label>
-                                </div>
-                                <div *ngIf="encabezado.responsive != 'mobile'">
-                                    <h3 class="titulo">
-                                        <a (click)="clearFilter()">Clasificados</a>
-                                    </h3>
-                                    <p class="subtitulo">
-                                        <span style="color: red">{{registros}}</span> opciones de clasificados</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-6 p-0 ordenar">
-                                <mat-form-field>
-                                  <mat-select placeholder="Ordenar por:" [(ngModel)]="p_filtros['p_orderby']" (selectionChange)="reloadFilterOrder()">
-                                    <mat-option value="PB">Precio Bajo</mat-option>
-                                    <mat-option value="PA">Precio Alto</mat-option>
-                                    <mat-option value="RE">Recientes</mat-option>
-                                    <mat-option value="CB">Costo Beneficio</mat-option>
-                                  </mat-select>
-                                </mat-form-field>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="contenedor-tarjeta row padding-row clasificado" *ngIf="registros>0">
-                        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4 padding-card" *ngFor="let item of items; let i = index;">
-                            <div class="item-card" [routerLink]="['/clasificado/detalle',item.venta_codigo]">
-                                <div class="item-card-header">
-                                    <img class="lazy" src="../../../assets/images/dots.png" data-src="../../../assets/images/dots.png"  data-srcset="{{item.foto_url}}">
-                                </div>
-                                <div class="item-card-content">
-                                    <h4 class="item-card-titulo">{{item.linea_nombrecorto}}</h4>
-                                    <div class="item-card-precio">
-                                        {{item.venta_valor | currency:'COP':'symbol-narrow':'2.0-1'}}
-                                    </div>
-                                    <div class="item-card-tags .info-box">
-                                        <span *ngIf="item.venta_kilometraje != ''">{{item.venta_kilometraje | number : '1.0-1'}} Km</span>
-                                        <span *ngIf="item.venta_modelo != ''">{{item.venta_modelo}}</span>
-                                        <span *ngIf="item.traccion_nombre != ''">{{item.traccion_nombre}}</span>
-                                        <span id="capacidad">{{item.capacidadmotor_nombre}}</span>
-                                        <p class="ciudad">{{item.ciudad_nombre}}</p>
-                                    </div>
-                                    <button class="tarjeta-comparar" *ngIf="encabezado.comparador" mat-raised-button #tooltip="matTooltip"
-                                        matTooltip="Comparador"
-                                        matTooltipClass="tooltip-red"
-                                        (click)="setCompare(item.venta_codigo,i,item.linea_nombrecorto) "  [ngClass]="listVehiculosComparar.indexOf(item.venta_codigo)>=0 ? 'active' : 'inactive'">
-                                        <i class="material-icons fav">compare_arrows</i>  
-                                    </button>
-                                    <button class="tarjeta-favorito" 
-                                        mat-raised-button #tooltip="matTooltip"
-                                        matTooltip="Favorito"
-                                        matTooltipClass="tooltip-red"
-                                        (click)="setFavorito(item.venta_codigo,i,item.linea_nombrecorto,item.isfavorito)" title="favorito" [ngClass]="item.isfavorito=='S' ? 'active' : 'inactive'" type="button" >
-                                        <i class="material-icons fav">favorite</i>
-                                        <i class="material-icons nofav">favorite_border</i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PAGINADOR -->
-                    <app-bold-paginator [items]="registros" (setPaginator)="setPage($event)"></app-bold-paginator>
-                </div>
-                <!-- /SECTION RIGHT -->
-            </div>
+      <div class="row padding-row">
+        <!-- SECTION FILTROS -->
+        <div
+          class="aside-filtros"
+          *ngIf="
+            encabezado.responsive == 'desktop' || encabezado.responsive == 'tab'
+          "
+        >
+          <app-usados-clasificados-filtro
+            [ftipoclasificado]="ftipoclasificado"
+            [fclase]="fclase"
+            [fmarca]="fmarca"
+            [ffamilia]="ffamilia"
+            [fdepartamento]="fdepartamento"
+            [fciudad]="fciudad"
+            [fprecio]="fprecio"
+            [fmodelo]="fmodelo"
+            [fkm]="fkm"
+            [ftraccion]="ftraccion"
+            [fcaja]="fcaja"
+            [ftipomotor]="ftipomotor"
+            [fcapacidadmotor]="fcapacidadmotor"
+            [funicoduenio]="funicoduenio"
+            [fplaca]="fplaca"
+            [fairbags]="fairbags"
+            [fcliente]="fcliente"
+            (reload)="reload($event)"
+          ></app-usados-clasificados-filtro>
         </div>
-        <!-- /CONTENT -->
+        <!-- SECTION RIGHT  -->
+        <!-- SECTION CLASIFICADOS  -->
+        <div class="section-right-content">
+          <div class="col-12 titulo">
+            <div class="row">
+              <div class="col-lg-9 col-md-6 col-6 p-0">
+                <div
+                  class="subtitulo responsive"
+                  (click)="clearFilter()"
+                  *ngIf="encabezado.responsive == 'mobile'"
+                >
+                  <a (click)="clearFilter()">Clasificados</a><br />
+                  <span style="color: red">{{ registros }} </span>
+                  <label>vehículos</label>
+                </div>
+                <div *ngIf="encabezado.responsive != 'mobile'">
+                  <h3 class="titulo">
+                    <a (click)="clearFilter()">Clasificados</a>
+                  </h3>
+                  <p class="subtitulo">
+                    <span style="color: red">{{ registros }}</span> opciones de
+                    clasificados
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-6 p-0 ordenar">
+                <mat-form-field>
+                  <mat-select
+                    placeholder="Ordenar por:"
+                    [(ngModel)]="p_filtros['p_orderby']"
+                    (selectionChange)="reloadFilterOrder()"
+                  >
+                    <mat-option value="PB">Precio Bajo</mat-option>
+                    <mat-option value="PA">Precio Alto</mat-option>
+                    <mat-option value="RE">Recientes</mat-option>
+                    <mat-option value="CB">Costo Beneficio</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div
+            class="contenedor-tarjeta row padding-row clasificado"
+            *ngIf="registros > 0"
+          >
+            <div
+              class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4 padding-card"
+              *ngFor="let item of items; let i = index"
+            >
+              <div
+                class="item-card"
+                [routerLink]="['/clasificado/detalle', item.venta_codigo]"
+              >
+                <div class="item-card-header">
+                  <img
+                    class="lazy"
+                    src="../../../assets/images/dots.png"
+                    data-src="../../../assets/images/dots.png"
+                    data-srcset="{{ item.foto_url }}"
+                  />
+              
+                </div>
+                <div class="item-card-content">
+                  <h4 class="item-card-titulo">    {{ item.linea_nombrecorto }}</h4>
+                  <div class="item-card-precio">
+                    {{
+                      item.venta_valor | currency: "COP":"symbol-narrow":"2.0-1"
+                    }}
+                  </div>
+                  <div class="item-card-tags .info-box">
+                    <span *ngIf="item.venta_kilometraje != ''"
+                      >{{ item.venta_kilometraje | number: "1.0-1" }} Km</span
+                    >
+                    <span *ngIf="item.venta_modelo != ''">{{
+                      item.venta_modelo
+                    }}</span>
+                    <span *ngIf="item.traccion_nombre != ''">{{
+                      item.traccion_nombre
+                    }}</span>
+                    <span id="capacidad">{{ item.capacidadmotor_nombre }}</span>
+                    <p class="ciudad">{{ item.ciudad_nombre }}</p>
+                  </div>
+                 
+                  
+                  
+                  
+                  
+                  
+                  
+                  <div class="tarjeta-button ">
+                        <button
+                        class="btn btn-financia"
+                        routerLink="/financiamiento/solicitar-credito"
+                        >
+                        ¡Financia ya!
+                      </button>
+                    </div>
+                      <button
+                      class="tarjeta-favorito"
+                      mat-flat-button
+                      #tooltip="matTooltip"
+                      matTooltip="Favorito"
+                      matTooltipClass="tooltip-red"
+                      (click)="
+                      setFavorito(
+                        item.venta_codigo,
+                        i,
+                        item.linea_nombrecorto,
+                        item.isfavorito
+                        )
+                        "
+                        title="favorito"
+                        [ngClass]="item.isfavorito == 'S' ? 'active' : 'inactive'"
+                        type="button"
+                        >
+                        <i class="material-icons fav">favorite</i>
+                       
+                    </button>  
+                    
+                       <!-- <div class="col-sm">
+                        <button
+                        class="tarjeta-comparar"
+                        *ngIf="encabezado.comparador"
+                        mat-raised-button
+                        #tooltip="matTooltip"
+                        matTooltip="Comparador"
+                        matTooltipClass="tooltip-red"
+                        (click)="
+                          setCompare(item.venta_codigo, i, item.linea_nombrecorto)
+                        "
+                        [ngClass]="
+                          listVehiculosComparar.indexOf(item.venta_codigo) >= 0
+                            ? 'active'
+                            : 'inactive'
+                        "
+                      >
+                        <i class="material-icons fav">compare_arrows</i>
+                      </button>
+                      </div> -->
+                     
+                      
+                  
+  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PAGINADOR -->
+          <app-bold-paginator
+            [items]="registros"
+            (setPaginator)="setPage($event)"
+          ></app-bold-paginator>
+        </div>
+        <!-- /SECTION RIGHT -->
+      </div>
     </div>
-</div>         
+    <!-- /CONTENT -->
+  </div>
+</div>
 <!-- loading -->
 <div class="load-content" *ngIf="loading">
-    <div class="content-spinner">
-        <mat-spinner></mat-spinner>
-    </div>
+  <div class="content-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
 </div>
-

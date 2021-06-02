@@ -1,137 +1,165 @@
 <div class="section-content-standard">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <button class="btn-back" *ngIf="encabezado.responsive != 'desktop'" (click)="backPage()">
-        <i class="material-icons">arrow_back</i></button>
-        <li class="breadcrumb-item"><a href="/inicio">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><a href='javascript:history.go(-1)'>Clasificados</a></li>
-      </ol>
-    </nav>
-    <div class="container-fluid">
-        <!-- content -->
-        <div class="global-content">
-            <div class="row">
-                <!-- detalle y fotos -->
-                <div class="col-md-7 vehiculo-detalle">
-                    <div class="title-post">
-                        <h1>{{datos.marca_nombre}} {{datos.linea_familia}} {{datos.linea_complemento}} {{datos.formavehiculo_nombre}}</h1>
-                        <div class="item-card-tags">
-                            <span>{{datos.capacidadmotor_nombre}}</span>
-                            <span>{{datos.clase_nombre}}</span>
-                            <span>{{datos.venta_modelo}}</span>
-                        </div>
-                    </div>
-                    <div class="post-ubicacion">
-                        <div class="ubicacion">
-                            <i class="material-icons">room</i>
-                            <span>Este vehículo se encuentra en {{datos.ciudad_nombre}}</span>
-                        </div>
-                        <div class="post-precio">
-                            <!-- {{datos.venta_valor | currency:'COP':'symbol-narrow':'2.0-1'}} -->
-                            <span class="precio-valor">{{datos.venta_valor | currency:'COP':'symbol-narrow':'2.0-1'}}</span>
-                            <span class="precio-negociable" *ngIf="datos.venta_negociable==1 || datos.venta_negociable == 'S'">Negociable</span></div>
-                    </div>
-                    <!-- GALERIA DE FOTOS -->
-                    <div class="gallery-detalle">
-                        <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
-                    </div>
-                    <!-- DETALLES DEL VEHICULO -->
-                    <div class="post-details mt-3">
-                        <mat-accordion>
-                            <!-- comentarios -->
-                            <mat-expansion-panel [expanded]="true" class="comentario-panel">
-                              <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                  Comentarios
-                                </mat-panel-title>
-                                <!-- <mat-panel-description>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <button
+        class="btn-back"
+        *ngIf="encabezado.responsive != 'desktop'"
+        (click)="backPage()"
+      >
+        <i class="material-icons">arrow_back</i>
+      </button>
+      <li class="breadcrumb-item"><a href="/inicio">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">
+        <a href="javascript:history.go(-1)">Clasificados</a>
+      </li>
+    </ol>
+  </nav>
+  <div class="container-fluid">
+    <!-- content -->
+    <div class="global-content">
+      <div class="row">
+        <!-- detalle y fotos -->
+        <div class="col-md-7 vehiculo-detalle">
+          <div class="title-post">
+            <h1>
+              {{ datos.marca_nombre }} {{ datos.linea_familia }}
+              {{ datos.linea_complemento }} {{ datos.formavehiculo_nombre }}
+            </h1>
+            <div class="item-card-tags">
+              <span>{{ datos.capacidadmotor_nombre }}</span>
+              <span>{{ datos.clase_nombre }}</span>
+              <span>{{ datos.venta_modelo }}</span>
+            </div>
+          </div>
+          <div class="post-ubicacion">
+            <div class="ubicacion">
+              <i class="material-icons">room</i>
+              <span
+                >Este vehículo se encuentra en {{ datos.ciudad_nombre }}</span
+              >
+            </div>
+            <div class="post-precio">
+              <!-- {{datos.venta_valor | currency:'COP':'symbol-narrow':'2.0-1'}} -->
+              <span class="precio-valor">{{
+                datos.venta_valor | currency: "COP":"symbol-narrow":"2.0-1"
+              }}</span>
+              <span
+                class="precio-negociable"
+                *ngIf="
+                  datos.venta_negociable == 1 || datos.venta_negociable == 'S'
+                "
+                >Negociable</span
+              >
+            </div>
+          </div>
+          <!-- GALERIA DE FOTOS -->
+          <div class="gallery-detalle">
+            <ngx-gallery
+              [options]="galleryOptions"
+              [images]="galleryImages"
+            ></ngx-gallery>
+          </div>
+          <!-- DETALLES DEL VEHICULO -->
+          <div class="post-details mt-3">
+            <mat-accordion>
+              <!-- comentarios -->
+              <mat-expansion-panel [expanded]="true" class="comentario-panel">
+                <mat-expansion-panel-header>
+                  <mat-panel-title> Comentarios </mat-panel-title>
+                  <!-- <mat-panel-description>
                                   Currently I am {{panelOpenState ? 'open' : 'closed'}}
                                 </mat-panel-description> -->
-                              </mat-expansion-panel-header>
-                              <!-- contenido -->
-                              <hr>
-                              <div id="comentarios_detalle"></div>
-                              <!-- /contenido -->
-                            </mat-expansion-panel>
-                            <!-- ficha técnica -->
-                            <mat-expansion-panel (opened)="panelOpenState = true"
-                                                 (closed)="panelOpenState = false">
-                              <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                  Ficha Técnica
-                                </mat-panel-title>
-                              </mat-expansion-panel-header>
-                              <!-- contenido -->
-                              <hr>
-                              <div class="row">
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Clase:</span>
-                                    <span>{{datos.clase_nombre}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Marca:</span>
-                                    <span>{{datos.marca_nombre}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Familia:</span>
-                                    <span>{{datos.linea_familia}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Modelo:</span>
-                                    <span>{{datos.venta_modelo}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Combustible:</span>
-                                    <span>{{datos.tipomotor_descripcion}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Motor:</span>
-                                    <span>{{datos.capacidadmotor_nombre}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Caja:</span>
-                                    <span>{{datos.cajacambios_descripcion}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Tracción:</span>
-                                    <span>{{datos.traccion_nombre}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Kilometraje:</span>
-                                    <span>{{datos.venta_kilometraje}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Placa:</span>
-                                    <span>{{datos.venta_placa_termina}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>Matriculado en:</span>
-                                    <span>{{datos.ciudad_matricula_d}}</span>
-                                </div>
-                                <div class="col-md-4 col-sm-6 list-item-detalle" *ngIf="datos.venta_unicopropietario!=''">
-                                    <span>Único dueño:</span>
-                                    <span>{{datos.venta_unicopropietario}}</span>
-                                </div>
-                              </div>
-                              <!-- /contenido -->
-                            </mat-expansion-panel>
-                            <!-- equipamiento -->
-                            <mat-expansion-panel (opened)="panelOpenState = true"
-                                                 (closed)="panelOpenState = false">
-                              <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                  Equipamiento
-                                </mat-panel-title>
-                              </mat-expansion-panel-header>
-                              <hr>
-                              <div class="row">
-                                <div *ngFor="let datos of accesorios" class="col-md-4 col-sm-6 list-item-detalle">
-                                    <span>{{datos.accesorio_nombre}}</span>
-                                    <span>{{datos.accref_nombre}}</span>
-                                </div>
-                              </div>
+                </mat-expansion-panel-header>
+                <!-- contenido -->
+                <hr />
+                <div id="comentarios_detalle"></div>
+                <!-- /contenido -->
+              </mat-expansion-panel>
+              <!-- ficha técnica -->
+              <mat-expansion-panel
+                (opened)="panelOpenState = true"
+                (closed)="panelOpenState = false"
+              >
+                <mat-expansion-panel-header>
+                  <mat-panel-title> Ficha Técnica </mat-panel-title>
+                </mat-expansion-panel-header>
+                <!-- contenido -->
+                <hr />
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Clase:</span>
+                    <span>{{ datos.clase_nombre }}</span>
+                  </div>
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Marca:</span>
+                    <span>{{ datos.marca_nombre }}</span>
+                  </div>
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Familia:</span>
+                    <span>{{ datos.linea_familia }}</span>
+                  </div>
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Modelo:</span>
+                    <span>{{ datos.venta_modelo }}</span>
+                  </div>
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Combustible:</span>
+                    <span>{{ datos.tipomotor_descripcion }}</span>
+                  </div>
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Motor:</span>
+                    <span>{{ datos.capacidadmotor_nombre }}</span>
+                  </div>
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Caja:</span>
+                    <span>{{ datos.cajacambios_descripcion }}</span>
+                  </div>
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Tracción:</span>
+                    <span>{{ datos.traccion_nombre }}</span>
+                  </div>
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Kilometraje:</span>
+                    <span>{{ datos.venta_kilometraje }}</span>
+                  </div>
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Placa:</span>
+                    <span>{{ datos.venta_placa_termina }}</span>
+                  </div>
+                  <div class="col-md-4 col-sm-6 list-item-detalle">
+                    <span>Matriculado en:</span>
+                    <span>{{ datos.ciudad_matricula_d }}</span>
+                  </div>
+                  <div
+                    class="col-md-4 col-sm-6 list-item-detalle"
+                    *ngIf="datos.venta_unicopropietario != ''"
+                  >
+                    <span>Único dueño:</span>
+                    <span>{{ datos.venta_unicopropietario }}</span>
+                  </div>
+                </div>
+                <!-- /contenido -->
+              </mat-expansion-panel>
+              <!-- equipamiento -->
+              <mat-expansion-panel
+                (opened)="panelOpenState = true"
+                (closed)="panelOpenState = false"
+              >
+                <mat-expansion-panel-header>
+                  <mat-panel-title> Equipamiento </mat-panel-title>
+                </mat-expansion-panel-header>
+                <hr />
+                <div class="row">
+                  <div
+                    *ngFor="let datos of accesorios"
+                    class="col-md-4 col-sm-6 list-item-detalle"
+                  >
+                    <span>{{ datos.accesorio_nombre }}</span>
+                    <span>{{ datos.accref_nombre }}</span>
+                  </div>
+                </div>
 
-                              <!-- <ngb-panel title="EQUIPAMIENTO" *ngIf="items_accesorio">
+                <!-- <ngb-panel title="EQUIPAMIENTO" *ngIf="items_accesorio">
                                     <ng-template ngbPanelContent>
                                         <div class="row contenido-ficha">
                                             <div *ngFor="let datos of items_accesorio"  class="col-md-6">
@@ -141,11 +169,10 @@
                                         </div>
                                     </ng-template>
                                 </ngb-panel> -->
-                              
-                            </mat-expansion-panel>
-                        </mat-accordion>
-                    </div>
-                    <!-- cajacambios_codigo: "74"
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+          <!-- cajacambios_codigo: "74"
 cajacambios_descripcion: "MECÁNICA"
 cajacambios_nombre: "MEC"
 capacidadmotor_codigo: "88"
@@ -219,118 +246,206 @@ venta_telefonocontacto3: ""
 venta_unicopropietario: "NO"
 venta_valor: "54534534"
 venta_valor_libroazul: "0" -->
-                </div>
-                <!-- Informacion de contacto -->
-                <div class="col-md-5 cliente-informacion">
-                    <span class="title-gray" *ngIf="datos.clasificado_publicar_autor == 'S'">Vendedor:</span>
-                    <div class="section-info-cliente-clasificado">
-                        <!-- codigo venta -->
-                        <!-- concesionario  -->
-                        <div class="info-cliente" *ngIf="datos.cliente_tipocliente == '02'">
-                            <div class="vendedor">
-                                <img src="{{datos.cliente_imagen}}" alt="" class="">
-                                <span>{{datos.cliente_nombre}}</span>
-                                <!-- ['/clasificados?p_cliente='+{{cliente_codigo}}] -->
-                                <a routerLink="/clasificados" [queryParams]="{p_cliente:datos.cliente_codigo}">Ver sus vehículos</a>
-                            </div>
-                        </div>
-                        <!-- natural -->
-                        <div class="info-cliente" *ngIf="datos.cliente_tipocliente =='01' && datos.clasificado_publicar_autor == 'S' ">
-                            <div class="vendedor">
-                                <span>{{datos.cliente_nombre}}</span>
-                            </div>
-                        </div>
-                        <div class="phones">
-                            <div class="view-phones" (click)="viewPhones()" *ngIf="!viewPhone">
-                                <img src="../../../assets/images/icon-phone-gris.svg" alt="view-phones">
-                                <span>Ver números de contacto</span>
-                            </div>
-                            <div *ngIf="viewPhone" class="view-phones-open">
-                                <div class="image-phone">
-                                    <img src="../../../assets/images/icon-phone-gris.svg" alt="view-phones">
-                                </div>
-                                <div class="phones-detail">
-                                    <span *ngIf="datos.venta_telefonocontacto1 != ''">{{datos.venta_telefonocontacto1}}</span>
-                                    <span *ngIf="datos.venta_telefonocontacto2 != ''">{{datos.venta_telefonocontacto2}}</span>
-                                    <span *ngIf="datos.venta_telefonocontacto3 != ''">{{datos.venta_telefonocontacto3}}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="seccion-codigo">
-                        <button *ngIf="viewFavorite" class="btn-favorite" title="Favorito" (click)="setFavorito(datos.venta_codigo,datos.isfavorito)" [ngClass]="datos.isfavorito=='S' ? 'active' : 'inactive'" type="button" >
-                            <i class="material-icons fav">favorite</i>
-                            <i class="material-icons nofav">favorite_border</i>
-                        </button>
-                        <span class="codigo-vehiculo">Código de vehículo: {{datos.venta_codigo}}</span>
-                    </div>
-                    <hr>
-                    <div class="section-question">
-                        <button class="btn-question" (click)="openDialog('question',datos.venta_codigo)">Pregunta al vendedor</button>
-                    </div>
-                    <hr>
-                    <div class="financiamiento-detalle">
-                        <div>Lleva este vehículo</div>
-                        <span>con cuotas mensuales desde</span>
-                        <div class="cuota">{{datos.cuota | currency:'COP':'symbol-narrow':'2.0-1'}}</div>
-                        <span>Envía tus datos a nuestra financiera aliada</span>
-                        <!-- imagen colpatria slider de financieras. -->
-                        <div class="section-financia">
-                            <button class="btn-financia" routerLink="/financiamiento/solicitar-credito">¡Financia ya!</button>
-                        </div>
-                        <div class="text-secundario">
-                            * La aprobación de financiamiento y valor de cuotas no es responsabilidad de indicar, sino de las póliticas de las financieras
-                        </div>
-                        <hr class="separator">
-                        <div class="consejos">
-                            <div class="consejo-title">Consejos para tu compra</div>
-                            <div class="consejo"><i class="material-icons">check</i>No pagues sin verificar personalmente la documentación y el estado del vehículo.</div>
-                            <div class="consejo"><i class="material-icons">check</i>Desconfia de ofertas debajo del precio de mercado.</div>
-                            <div class="consejo"><i class="material-icons">check</i>Hable directamente con el vendedor por teléfono</div>
-                            <div class="consejo"><i class="material-icons">check</i>Muestre el vehículo(o vea el auto de su interés) en un lugar seguro, por ejemplo en el parqueadero de un centro comercial, siempre esté acompañado por personas de confianza</div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
-        <!-- seccion de opciones si se es propietario del clasificado. -->
-        <div *ngIf="cuser!= null">
-            <div class="opt-detalle" *ngIf="datos.cliente_codigo == cuser.codigo">
-                <!-- EDITAR -->
-                <div class="opt-clasificado" [routerLink]="['/publicar',datos.link_codigo]">
-                    <i class="material-icons">edit</i>
-                    <span>Editar</span>
-                </div>
-                <!-- INACTIVAR -->
-                <div class="opt-clasificado" (click)="updateStatus('I',datos.venta_codigo)">
-                    <i class="material-icons">block</i>
-                    <span>Inactivar</span>
-                </div>
-                <!-- ELIMINAR-->
-                <div class="opt-clasificado" (click)="updateStatus('E',datos.venta_codigo)">
-                    <i class="material-icons">delete</i>
-                    <span>Eliminar</span>
-                </div>
-                <!-- VENDIDO -->
-                <div class="opt-clasificado" (click)="updateStatus('V',datos.venta_codigo)">
-                    <i class="material-icons">gavel</i>
-                    <span>Vendido</span>
-                </div>
-                
+        <!-- Informacion de contacto -->
+        <div class="col-md-5 cliente-informacion">
+          <span
+            class="title-gray"
+            *ngIf="datos.clasificado_publicar_autor == 'S'"
+            >Vendedor:</span
+          >
+          <div class="section-info-cliente-clasificado">
+            <!-- codigo venta -->
+            <!-- concesionario  -->
+            <div class="info-cliente" *ngIf="datos.cliente_tipocliente == '02'">
+              <div class="vendedor">
+                <img src="{{ datos.cliente_imagen }}" alt="" class="" />
+                <span>{{ datos.cliente_nombre }}</span>
+                <!-- ['/clasificados?p_cliente='+{{cliente_codigo}}] -->
+                <a
+                  routerLink="/clasificados"
+                  [queryParams]="{ p_cliente: datos.cliente_codigo }"
+                  >Ver sus vehículos</a
+                >
+              </div>
             </div>
+            <!-- natural -->
+            <div
+              class="info-cliente"
+              *ngIf="
+                datos.cliente_tipocliente == '01' &&
+                datos.clasificado_publicar_autor == 'S'
+              "
+            >
+              <div class="vendedor">
+                <span>{{ datos.cliente_nombre }}</span>
+              </div>
+            </div>
+            <div class="phones">
+              <div
+                class="view-phones"
+                (click)="viewPhones()"
+                *ngIf="!viewPhone"
+              >
+                <img
+                  src="../../../assets/images/icon-phone-gris.svg"
+                  alt="view-phones"
+                />
+                <span>Ver números de contacto</span>
+              </div>
+              <div *ngIf="viewPhone" class="view-phones-open">
+                <div class="image-phone">
+                  <img
+                    src="../../../assets/images/icon-phone-gris.svg"
+                    alt="view-phones"
+                  />
+                </div>
+                <div class="phones-detail">
+                  <span *ngIf="datos.venta_telefonocontacto1 != ''">{{
+                    datos.venta_telefonocontacto1
+                  }}</span>
+                  <span *ngIf="datos.venta_telefonocontacto2 != ''">{{
+                    datos.venta_telefonocontacto2
+                  }}</span>
+                  <span *ngIf="datos.venta_telefonocontacto3 != ''">{{
+                    datos.venta_telefonocontacto3
+                  }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="seccion-codigo">
+            <button
+              *ngIf="viewFavorite"
+              class="btn-favorite"
+              title="Favorito"
+              (click)="setFavorito(datos.venta_codigo, datos.isfavorito)"
+              [ngClass]="datos.isfavorito == 'S' ? 'active' : 'inactive'"
+              type="button"
+            >
+              <i class="material-icons fav">favorite</i>
+              <i class="material-icons nofav">favorite_border</i>
+            </button>
+            <span class="codigo-vehiculo"
+              >Código de vehículo: {{ datos.venta_codigo }}</span
+            >
+          </div>
+          <hr />
+          <div class="section-question">
+            <button
+              class="btn-question"
+              (click)="openDialog('question', datos.venta_codigo)"
+            >
+              Pregunta al vendedor
+            </button>
+          </div>
+          <hr />
+          <div class="financiamiento-detalle">
+            <div>Lleva este vehículo</div>
+            <span>con cuotas mensuales desde</span>
+            <div class="cuota">
+              {{ datos.cuota | currency: "COP":"symbol-narrow":"2.0-1" }}
+            </div>
+            <span>Envía tus datos a nuestra financiera aliada</span>
+            <!-- imagen colpatria slider de financieras. -->
+            <div class="section-financia">
+              <button
+                class="btn-financia"
+                routerLink="/financiamiento/solicitar-credito"
+              >
+                ¡Financia ya!
+              </button>
+            </div>
+            <div class="text-secundario">
+              * La aprobación de financiamiento y valor de cuotas no es
+              responsabilidad de indicar, sino de las póliticas de las
+              financieras
+            </div>
+            <hr class="separator" />
+            <div class="consejos">
+              <div class="consejo-title">Consejos para tu compra</div>
+              <div class="consejo">
+                <i class="material-icons">check</i>No pagues sin verificar
+                personalmente la documentación y el estado del vehículo.
+              </div>
+              <div class="consejo">
+                <i class="material-icons">check</i>Desconfia de ofertas debajo
+                del precio de mercado.
+              </div>
+              <div class="consejo">
+                <i class="material-icons">check</i>Hable directamente con el
+                vendedor por teléfono
+              </div>
+              <div class="consejo">
+                <i class="material-icons">check</i>Muestre el vehículo(o vea el
+                auto de su interés) en un lugar seguro, por ejemplo en el
+                parqueadero de un centro comercial, siempre esté acompañado por
+                personas de confianza
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <!-- /content -->
+      </div>
     </div>
+    <!-- seccion de opciones si se es propietario del clasificado. -->
+    <div *ngIf="cuser != null">
+      <div id="inner" class="opt-detalle" *ngIf="datos.cliente_codigo == cuser.codigo">
+        <section>
+          <button
+            mat-mini-fab
+            color="primary"
+            [routerLink]="['/publicar', datos.link_codigo]"
+            matTooltip="Editar"
+         
+          >
+            <i class="material-icons">edit</i>
+          </button>
+           <!-- INACTIVAR -->
+           <button
+           mat-mini-fab
+           color="primary"
+           (click)="updateStatus('I', datos.venta_codigo)"
+           matTooltip="Inactivar"
+           
+         >
+           <i class="material-icons">block</i>
+           <!-- <span>Inactivar</span> -->
+         </button>
+
+          <!-- ELIMINAR-->
+          <button
+            mat-mini-fab
+            color="primary"
+            (click)="updateStatus('E', datos.venta_codigo)"
+            matTooltip="Eliminar"
+         
+          >
+            <i class="material-icons">delete</i>
+            <!-- <span>Eliminar</span> -->
+             <!-- VENDIDO -->
+         
+          </button>
+          <button
+          mat-mini-fab
+          color="primary"
+          (click)="updateStatus('V', datos.venta_codigo)"
+          matTooltip="Vendido"
+         
+        >
+          <i class="material-icons">gavel</i>
+          <!-- <span>Vendido</span> -->
+        </button>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- /content -->
+  </div>
 </div>
 <!-- loading -->
 <div class="load-content" *ngIf="loading">
-    <div class="content-spinner">
-        <mat-spinner></mat-spinner>
-    </div>
+  <div class="content-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
 </div>
-    
-    
-    
-    

@@ -1081,10 +1081,10 @@ ngx-gallery-action i.ngx-gallery-icon-content.fa.fa-search-plus, ngx-gallery-act
 }
 /* OPCIONES DE CLASIFICADO */
 .opt-detalle {
-    position: fixed;
-    right: 2px;
-    z-index: 3;
-    top: 50%;
+    
+    position: absolute;
+    z-index: 5;
+    top: 22%;
 }
 .opt-clasificado span {
     display: block;
@@ -1232,18 +1232,42 @@ p.ciudad {
     background: transparent;
     top: 88%;
 }
+
+.tarjeta-button {
+    position: absolute;
+    left: -10px;
+    z-index: 1;
+    bottom: 35px;
+    width: 150px;
+    height: 34px;
+    text-align: center;
+    padding: 4px;
+    border: 0;
+    background: transparent;
+    top: 88%;
+}
+.btn-financia{
+    background: #158a31;
+    color: white;
+    border: 0px;
+ 
+  
+    color: white;
+    font-weight: 600;
+    
+}
 .tarjeta-favorito {
     position: absolute;
-    right: 13px;
+    float: right;
     z-index: 1;
     /* bottom: 35px; */
     width: 34px;
-    height: 34px;
+    height: 24px;
     padding: 0;
     text-align: center;
     background: transparent;
-    border: 0;
-    top: 88%;
+    border-radius: 50%;
+    top: 10%;
 }
 .tarjeta-favorito > i {
     /* color: #3f3f3f; */
@@ -1274,10 +1298,11 @@ p.ciudad {
 }
 .tarjeta-comparar.active:before {
     content: '';
-    transform: scale(1);
+    transform: scale(2);
     transition: ease all 200ms;
     background: #013b8e;
     top: 0;
+  
 }
 .tarjeta-comparar.active i {
     color: #fff;
@@ -2210,3 +2235,5 @@ mat-slider{
     }
 }
 /* ################################################# / MEDIA QUERYS  #################################################*/
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -65,6 +65,7 @@ export class UsadoDetalleComponent implements OnInit {
       this.p_filtros['p_admin']   = params.p_admin;
       this.p_filtros['p_codigo']  = this.encrypt.desencrypt(this.route.snapshot.paramMap.get('id'));
     })
+    //console.log(this.p_filtros);
     this.sendRequest();
     this.initGallery();
     window.scrollTo(0,0);
@@ -78,9 +79,11 @@ export class UsadoDetalleComponent implements OnInit {
         {
           _p_action: '_usadodetalle',
         })
+        
     ).subscribe(
       data=>{
         this.datos    = data.datos[0];
+    
         if(this.datos.hasOwnProperty('venta_descripcion')){
           if(this.datos.venta_descripcion != null && this.datos.venta_descripcion != undefined && this.datos.venta_descripcion != ''){
             document.getElementById('comentarios_detalle').innerHTML = this.datos.venta_descripcion;

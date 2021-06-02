@@ -65,7 +65,7 @@
                         </div> 
                     </div>
                     <button class="dropdown-item"  [routerLink]="['/usuario', { outlets: {'cuenta-opcion':['clasificado','A']} }]" >
-                        <img class="item-img" src="assets/template/icono-auto.svg" alt="Mis clasificados">
+                        <i class="material-icons">directions_car</i>
                         <span class="item-span">Mis clasificados</span>
                         <!-- <i class="material-icons">directions_car</i> Mis clasificados -->
                     </button>
@@ -85,7 +85,7 @@
                     <button class="dropdown-item" [routerLink]="['usuario',{ outlets: { 'cuenta-opcion': ['cuenta'] } }]">
                         <!-- <i class="material-icons">person</i> Mi cuenta -->
                         <img class="item-img" src="assets/template/icono-configurar.svg" alt="Configurar">
-                        <span class="item-span">Cuenta</span>
+                        <span class="item-span">Mi Cuenta</span>
                     </button>
                     <!-- <hr> -->
                     <button class="dropdown-item" (click)="logout();">
@@ -422,9 +422,14 @@
 <!-- SUB HEADER -->
 
 <!-- / SUB HEADER -->
+
+
+
+
 <div class="content-app" [ngClass]="{'mobile':responsive=='mobile'}">
     <router-outlet></router-outlet>
 </div>
+<!-- <img src="../../assets/669773.jpg"  style="width: 10%;"> -->
 <!-- AVISO DE COOKIES -->
 <div class="cookies-msg" *ngIf="cookies">
     <div (click)="closeCookies()" class="close-cookies"> &times;</div>

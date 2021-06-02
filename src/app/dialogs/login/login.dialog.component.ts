@@ -512,7 +512,7 @@ export class LoginDialog{
       swal.fire({
         title: '',
         icon: null,
-        text: 'Por favor, ingresa un correo valido.'
+        text: 'Por favor ingresa un correo valido.'
       });
     }
     
@@ -529,7 +529,7 @@ export class LoginDialog{
       swal.fire({
         title: '',
         icon: null,
-        text: 'Por favor, verifique sus contraseñas estas deben coincidir'
+        text: 'Por favor verifique sus contraseñas estas deben coincidir'
       });
     }else{
       this.loading.emit(true);

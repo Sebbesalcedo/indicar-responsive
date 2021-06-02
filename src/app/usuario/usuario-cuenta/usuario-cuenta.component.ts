@@ -757,7 +757,7 @@ export class UsuarioCuentaComponent implements OnInit {
         formulario : data,
         imagen:       this.logo
       }
-      // console.log(body);
+      console.log(body);
       this.WebApiService.putRequest(AppComponent.urlService,body,{
         _p_action:'_putCuentaConfigurar'
       })
@@ -767,7 +767,10 @@ export class UsuarioCuentaComponent implements OnInit {
             this.snackBar.open('Información actualizada', 'Aceptar', {
               duration: 3000
             });
+            
             this.encabezado.user = this.formUsuarioJuridico.get('frazonsocial').value;
+            var aValue = localStorage.getItem('currentUser');
+            console.log(aValue);
           }
           window.scrollTo(0,0);
         },

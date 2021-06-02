@@ -23,9 +23,13 @@ export class AppComponent {
   // entorno test
   // static urlService:string        = "http://54.213.16.254/server_indicar/servicios/serviceIndicar.php"; // TEST
   // static baseUrl:string           = "http://54.213.16.254";
+
+
+
+  //URL local                   = http://localhost/indicar-backend/servicios/serviceIndicar.php
   
-  // entorno produccion
-  static urlService:string        = "http://35.155.179.167/server_indicar/servicios/serviceIndicar.php"; // TEST
+  // entorno produccion            
+   static urlService:string        = " http://35.155.179.167/server_indicar/servicios/serviceIndicar.php"; // TEST
   // static baseUrl:string           = "http://35.155.179.167";
   static sizePage:number          = 35;
   static news_per_page:number     = 10;

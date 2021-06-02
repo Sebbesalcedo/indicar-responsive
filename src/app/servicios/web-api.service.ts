@@ -40,6 +40,7 @@ export class WebApiService{
   getRequest(url:string,params:any):Observable<any>{
     params = this.processParams(params)
     let headers = this.setHeaders();
+   
     return this._http.get<any>(url,{headers, params});
   }
 

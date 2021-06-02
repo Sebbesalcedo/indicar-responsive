@@ -7,7 +7,7 @@
             <div class="row">
                 <!-- Correo -->
                 <div class="col-12">
-                    <label class="label-mat-form">Correo electrónico <span class="required">*</span></label>
+                    <label class="label-mat-form">Nuevo correo electrónico <span class="required">*</span></label>
                     <mat-form-field class="input-full-width col-md-12" appearance="outline" id="change_mail">
                         <!-- <input  matInput placeholder="Correo electrónico"  formControlName="fcorreo" required (blur)="checkEmail($event)"> -->
                         <input  matInput formControlName="fcorreo" required (blur)="checkEmail($event)">
@@ -40,7 +40,7 @@
             <div class="row">
                 <!-- pass -->
                 <div class="col-12">
-                    <label class="label-mat-form">Contraseña <span class="required">*</span></label>
+                    <label class="label-mat-form">Nueva Contraseña <span class="required">*</span></label>
                     <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
                         <input matInput [type]="hide ? 'password' : 'text'" required formControlName="fpass" autocomplete="off" >
                         <a class="material-icons" *ngIf="hide" (click)="hide = !hide">visibility</a>
@@ -49,7 +49,7 @@
                 </div>
                 <!-- confirm pass -->
                 <div class="col-12">
-                    <label class="label-mat-form">Confirmar contraseña <span class="required">*</span></label>
+                    <label class="label-mat-form">Confirmar nueva contraseña <span class="required">*</span></label>
                     <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
                         <input matInput [type]="hideConfirm ? 'password': 'text'" required formControlName="fcpass" autocomplete="off" >
                         <a class="material-icons" *ngIf="hideConfirm" (click)="hideConfirm = !hideConfirm">visibility</a>

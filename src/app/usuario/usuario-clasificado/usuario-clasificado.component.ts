@@ -37,6 +37,7 @@ export class UsuarioClasificadoComponent implements OnInit {
   visible_reactivar :boolean    = false;
   visible_anular    :boolean    = false;
   visible_eliminar  :boolean    = false;
+  visible_imprimir  :boolean    = false;
   visible_vendido   :boolean    = false;
   sub;
   // motivo venta y eliminado
@@ -73,6 +74,7 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_ver       = true;
           this.visible_editar    = true;
           this.visible_reactivar = false;
+          this.visible_imprimir  = true;
           this.visible_anular    = true;
           this.visible_eliminar  = true;
           this.visible_vendido   = true;
@@ -82,6 +84,7 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_ver       = true;
           this.visible_editar    = true;
           this.visible_reactivar = false;
+          this.visible_imprimir  = false;
           this.visible_anular    = false;
           this.visible_eliminar  = true;
           this.visible_vendido   = false;
@@ -91,6 +94,7 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_ver       = true;
           this.visible_editar    = true;
           this.visible_reactivar = false;
+          this.visible_imprimir  = false;
           this.visible_anular    = false;
           this.visible_eliminar  = true;
           this.visible_vendido   = false;
@@ -100,6 +104,7 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_ver       = true;
           this.visible_editar    = true;
           this.visible_reactivar = true;
+          this.visible_imprimir  = false;
           this.visible_anular    = false;
           this.visible_eliminar  = true;
           this.visible_vendido   = true;
@@ -109,6 +114,7 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_ver       = true;
           this.visible_editar    = false;
           this.visible_reactivar = false;
+          this.visible_imprimir  = false;
           this.visible_anular    = false;
           this.visible_eliminar  = true;
           this.visible_vendido   = false;
@@ -188,6 +194,22 @@ export class UsuarioClasificadoComponent implements OnInit {
           }
         });
       break;
+
+      case "IMPRIMIR":
+        swal.fire({
+          text: "¿Desea Imprimir el Clasificado?",
+          icon: null,
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Confirmar',
+          cancelButtonText: 'Cancelar',
+        }).then((result) => {
+          if (result.value) {     
+            this.imprimirClasificado(cod);
+          }
+        });
+        break;
       case "VENDIDO":
         if(this.saleOptions == null){
           // consultar opciones de vendido.
@@ -448,6 +470,41 @@ export class UsuarioClasificadoComponent implements OnInit {
         });
       }
     )
+  }
+
+
+  imprimirClasificado(cod){
+
+
+    let CodigoVehiculo = this.Encrypt.desencrypt(cod);
+
+
+    let datos=[];
+
+    datos['p_admin']   = "true";
+    datos['p_codigo']  =CodigoVehiculo;
+    this.WebApiService.getRequest(AppComponent.urlService,
+      Object.assign(
+        datos,
+        {
+          _p_action: '_usadodetalle',
+        })).subscribe(
+
+
+          res=>{
+            datos=res.datos[0];
+            console.log(datos);
+
+          },err=>{
+
+            console.log(err);
+          }
+
+        );
+
+    console.log(datos);
+
+
   }
 
 }

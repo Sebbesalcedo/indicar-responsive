@@ -14,7 +14,7 @@
           <div class="col-12">
             <label class="label-mat-form">Contraseña <span class="required">*</span></label>
             <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
-                <input matInput [type]="inputTypeLogin" formControlName="fpass" autocomplete="off">
+                <input matInput [type]="inputTypeLogin" formControlName="fpass" >
                 <a class="material-icons" *ngIf="inputTypeLogin == 'password'" (click)="viewPassLogin()">visibility</a>
                 <a class="material-icons" *ngIf="inputTypeLogin == 'text'" (click)="hidePassLogin()">visibility_off</a>
             </mat-form-field>
@@ -60,7 +60,7 @@
             <label class="label-mat-form">Nombres <span class="required">*</span></label>
             <mat-form-field class="input-full-width" appearance="outline">
                 <!-- <input matInput placeholder="Nombres" formControlName="fname" autocomplete="off"> -->
-                <input matInput formControlName="fname" autocomplete="off">
+                <input matInput formControlName="fname" >
             </mat-form-field>
           </div>
           <div class="col-md-8 offset-md-2">
@@ -106,10 +106,11 @@
               <input matInput formControlName="frazonsocial" autocomplete="off">
             </mat-form-field>
           </div>
+          
           <div class="col-md-8 offset-md-2">
             <label class="label-mat-form">Nit <span class="required">*</span></label>
             <mat-form-field class="input-full-width" appearance="outline">
-              <input matInput formControlName="fnit" autocomplete="off">
+              <input type="text" matInput formControlName="fnit" pattern="[0-9]+" autocomplete="off" >
             </mat-form-field>
           </div>
           <div class="col-md-8 offset-md-2">
