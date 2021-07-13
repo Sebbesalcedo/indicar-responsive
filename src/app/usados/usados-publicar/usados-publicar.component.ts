@@ -6,11 +6,13 @@ import * as ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { MatStepper } from "@angular/material";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import swal from "sweetalert2";
+
 import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
 import { reject } from "q";
 import { ActivatedRoute, Router } from "@angular/router";
 import { EncryptService } from "src/app/servicios/encrypt.service";
 import { ChangeEvent, CKEditorComponent } from "@ckeditor/ckeditor5-angular";
+
 declare var EXIF: any;
 
 // interface
@@ -51,6 +53,8 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
   p_filtros: any = {}; // filtros de busqueda para consulta inicial y consultar cambios en formularios.
   isConcesionario: boolean = false;
   comentarios: string = "";
+  publicar: boolean = false;
+  cambio: boolean = false;
   // mask
 
   //selectores
@@ -85,15 +89,8 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
     // console.log( event.previousIndex);
     // console.log(event.currentIndex);
     moveItemInArray(this.fotos, event.previousIndex, event.currentIndex);
-    
-    console.log(event.previousIndex,event.currentIndex);
 
-   
-
-
- 
-   this.modifyPictures();
-  
+    this.modifyPictures();
   }
 
   constructor(
@@ -117,6 +114,7 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
     this.route.paramMap.subscribe((params) => {
       if (params.get("id") != null) {
         this.codigo_venta = this.encrypt.desencrypt(params.get("id"));
+
         this.sendRequest();
       } else {
         this.checkPostsInProcess(this.cuser.codigo);
@@ -442,13 +440,12 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
 
     if (datos.fp_fotosventa_ruta != undefined) {
       let picture_principal = JSON.parse(datos.fp_fotosventa_ruta);
-      console.log(datos.fp_fotosventa_ruta);
+
       this.fotos.push({
         filename: picture_principal[0].filename,
         src: picture_principal[0].url,
       });
 
-      console.log(this.fotos);
       this.activeOptions();
     }
     if (datos.fp_fotosventa_ruta != undefined) {
@@ -459,7 +456,6 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
           src: item.url,
         });
       });
-      console.log(this.fotos);
 
       this.activeOptions();
     }
@@ -1007,7 +1003,7 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
    */
   handleFile(e) {
     let images = e.target.files;
-    console.log(images);
+
     this.modifiedPhotos = true;
     this.editedForm = true;
     if (images.length > 0) {
@@ -1087,7 +1083,7 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
    */
   processImages(images) {
     // numero de imagenes a procesar.
-    var ult = images.length - 1;
+
     // loading
     this.loading = true;
     //procesador de imagenes
@@ -1191,7 +1187,7 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
       ) {
         swal.fire({
           title: "",
-          text: "Error al cargar, la extensión del archivo no es compatible. use extensiones: jpg, jpeg o png.",
+          text: "Error al cargar, la extensión del archivo no es compatible. use extensiones: jpg,jfif, jpeg o png.",
           icon: null,
         });
         resolve({
@@ -1223,35 +1219,36 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
       fr.onload = function () {
         pic.src = fr.result;
       };
+
       fr.readAsDataURL(image);
 
       pic.onload = function () {
         EXIF.getData(pic, function () {
           this.allMetaData = EXIF.getAllTags(this);
           orientation = this.allMetaData.Orientation;
-          console.log(orientation);
 
           if (orientation > 1) {
-            swal.fire({
-              title: "",
-              text: "Error al cargar. Todas las imagenes deben subirse en orientacion 'Horizontal'",
-              icon: null,
-            });
+            // swal.fire({
+            //   title: "",
+            //   text: "Error al cargar. Todas las imagenes deben subirse en orientacion 'Horizontal'",
+            //   icon: null,
+            // });
             resolve(false);
           } else if (
             this.allMetaData.PixelXDimension < this.allMetaData.PixelYDimension
           ) {
-            swal.fire({
-              title: "",
-              text: "Error al cargar. Todas las imagenes deben subirse en orientacion 'Horizontal'",
-              icon: null,
-            });
+            // swal.fire({
+            //   title: "",
+            //   text: "Error al cargar. Todas las imagenes deben subirse en orientacion 'Horizontal'",
+            //   icon: null,
+            // });
             resolve(false);
           } else {
             let obj = {
               pic,
               name,
             };
+
             resolve(obj);
           }
         });
@@ -1271,7 +1268,6 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
   cutImagePromise(image, result) {
     return new Promise((resolve, reject) => {
       if (!image) {
-        console.log("retorno falso");
         resolve(false);
       } else {
         // seccion del canvas
@@ -1292,80 +1288,53 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
         let w, h, tm, r, nw, nh, src, objImage, prev;
         w = image.width;
         h = image.height;
-        // validando orientacion nuevamente.
-        if (w < h) {
-          swal.fire({
-            title: "",
-            text: "Error al cargar. Todas las imagenes deben subirse en orientacion 'Horizontal'",
-            icon: null,
-          });
-          document.getElementById("foto");
-          resolve(false);
-        }
-
-        // nuevas dimensiones y razon.
-        if (w >= 1600) {
-          // tamaño mayor a 1600px reduzco el tamaño a 2000px
-          tm = 1600;
-        } else if (w >= 900 && w < 1600) {
-          // tamaño mayor a 1600px y menor o igual a 2000px
-          tm = 900;
-        } else {
-          // tamaño original
-          tm = w;
-        }
-        r = tm / w;
-        nw = r * w;
-        nh = r * h;
-        ctx.canvas.width = nw;
-        ctx.canvas.height = nh;
-        // nuevas dimensiones
-        ctx.drawImage(image, 0, 0, nw, nh);
-        src = ctx.canvas.toDataURL("image/jpeg", 0.8);
         let nombre;
-        nombre = result.name + ".jpg";
+        // validando orientacion nuevamente.
+
+        if (w < h) {
+          nw = 500;
+          nh = 900;
+
+          ctx.canvas.width = nw;
+          ctx.canvas.height = nh;
+
+          // nuevas dimensiones
+          ctx.drawImage(image, 0, 0, nw, nh);
+
+          src = ctx.canvas.toDataURL("image/jpeg", 0.5);
+
+          nombre = result.name + ".jpg";
+        } else {
+          // nuevas dimensiones y razon.
+          if (w >= 1600) {
+            // tamaño mayor a 1600px reduzco el tamaño a 2000px
+            tm = 1600;
+          } else if (w >= 900 && w < 1600) {
+            // tamaño mayor a 1600px y menor o igual a 2000px
+            tm = 900;
+          } else {
+            // tamaño original
+            tm = w;
+          }
+          r = tm / w;
+
+          nw = r * w;
+          nh = r * h;
+          ctx.canvas.width = nw;
+          ctx.canvas.height = nh;
+
+          // nuevas dimensiones
+          ctx.drawImage(image, 0, 0, nw, nh);
+          src = ctx.canvas.toDataURL("image/jpeg", 0.8);
+
+          nombre = result.name + ".jpg";
+        }
 
         objImage = {
           src,
           name: nombre,
         };
-        /*
-        let dragSection = document.createElement('div');
-        dragSection.className = 'foto-sortable';
-        dragSection.setAttribute('draggable','true');
-        let sectionPics = document.getElementById('uploadFilesBold');
-        prev = new Image();
-        prev.src = src;
-        prev.className = "item-foto-otras";
-        prev.setAttribute('draggable',false);
-        prev.onload = ()=>{
-          // contar imagenes
-          let list;
-          list = document.getElementsByClassName('foto-sortable');
-          let cantItemList = list.length+1;
-          // add btn delete
-          let btndelete = document.createElement('div');
-          btndelete.className = "btn-delete-pic";
-          btndelete.innerHTML = "&times;";
-          var removePic = this.removePic ;
-          var formularioPics = this.formFotos;
-          btndelete.addEventListener('click',function(e){
-            removePic(e, formularioPics);
-          });
-          // add labels.
-          let labels = document.createElement('div');
-          labels.className = "labels-pic";
-          if(cantItemList == 1){
-            labels.innerText = 'Principal'
-          }else{
-            labels.innerText = '' + (cantItemList-1);
-          }
-          dragSection.append(btndelete);
-          dragSection.append(labels);
-          dragSection.append(prev);
-          sectionPics.append(dragSection);
-          
-        }*/
+
         resolve(objImage);
       }
     });
@@ -1416,22 +1385,23 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
    * @description     Metodo usado para manejar Autoguardado y guardado de los clasificados.
    */
   submitBold(autoSave = null) {
+    this.publicar = true;
     this.loading = true;
+
     var allData = {};
     let status_completed = 0;
     let mensajeFinal = false;
-  
+
     if (this.editedForm) {
       // envio formularios. FUERON EDITADOS.
       // AUTOGUARDADO
-      console.log(autoSave);
+
       if (autoSave == null) {
-        
         // autoguardado.
         this.modifiedPhotos = true; // indica que las fotos inicialmente deben tomarse en cuenta.
         // LINEA O VEHICULO
         let publicarNombre = false;
-        
+
         if (this.isConcesionario) {
           publicarNombre = true;
         } else {
@@ -1456,7 +1426,7 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
           // vehiculo_comentario:             (this.formDetalle.get('fcomentarios').value!= undefined)? this.formDetalle.get('fcomentarios').value.slice(3,-4):"",
           // vehiculo_comentario:             (this.comentarios != undefined)? this.comentarios.slice(3,-4):"",
           vehiculo_comentario:
-          this.comentarios != undefined ? this.comentarios : "",
+            this.comentarios != undefined ? this.comentarios : "",
           vehiculo_unicopropietario: this.formDetalle.get("funicoduenio").value,
           telefono_principal: this.formDetalle.get("fnumeroprincipal").value,
           // telefono_otro:                   this.formDetalle.get('fnumeroadicional').value,
@@ -1491,49 +1461,40 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
         if (this.modifiedPhotos) {
           // SI IMAGENES FUERON MODIFICADAS.  agrego las imagenes al formulario de envio.
           // IMAGEN PRINCIPAL
-          let principal=[];
-          let secundaria=[];
+          let principal = [];
+          let secundaria = [];
 
           for (let index = 0; index < this.fotos.length; index++) {
             const element = this.fotos[index];
 
-            
-            if (element.filename=='1-PRINCIPAL') {
+            if (element.filename == "1-PRINCIPAL") {
               principal.push(element);
             } else {
-              
               secundaria.push(element);
             }
-            
+          }
+          if (this.fotos[0] != undefined) {
+            imagen_principal.push(this.fotos[0]);
           }
 
-          console.log(principal);
-          console.log(secundaria);
-  
-            if (this.fotos[0] != undefined) {
-            imagen_principal.push(this.fotos[0]);
-            
-          }
-         
           // OTRAS IMAGENES
           this.fotos.forEach((photo, index) => {
             if (index > 0) {
-             
               imagenes_otras.push(photo);
             }
           });
 
           allData["imagen_principal"] = principal;
           allData["imagenes_otras"] = secundaria;
-         
+
           this.modifiedPhotos = true;
         }
-      }
-      else {
-        console.log("Else del primer if");
+      } else {
         // GUARDADO FINAL
+
         status_completed = 1;
         mensajeFinal = true;
+        this.cambio = true;
         // console.log(this.formPrecio.valid);
         if (!this.formPrecio.valid) {
           swal.fire({
@@ -1604,7 +1565,7 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
         if (this.modifiedPhotos) {
           // SI IMAGENES FUERON MODIFICADAS.  agrego las imagenes al formulario de envio.
           // IMAGEN PRINCIPAL
-          console.log(this.fotos[0]);
+
           if (this.fotos[0] != undefined) {
             imagen_principal.push(this.fotos[0]);
           }
@@ -1615,35 +1576,58 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
             }
           });
 
-         
           allData["imagen_principal"] = imagen_principal;
           allData["imagenes_otras"] = imagenes_otras;
           this.modifiedPhotos = false;
         }
       }
-      console.log("datos",allData);
+
       this.loading = false;
-      this.WebApiService.postRequest(AppComponent.urlService, allData, {
-        _p_action: "_publicar",
-      }).subscribe(
-        (data) => {
-          if (mensajeFinal) {
-            this.snackBar.open("¡Información cargada!", "Aceptar", {
-              duration: 3000,
-            });
-            this.router.navigate([
-              "/usuario",
-              { outlets: { "cuenta-opcion": ["clasificado", "P"] } },
-            ]);
+      if (this.cambio) {
+        this.mensajeFinal();
+      }
+
+      if (this.codigo_venta == null) {
+        this.WebApiService.postRequest(AppComponent.urlService, allData, {
+          _p_action: "_publicar",
+        }).subscribe(
+          (data) => {
+            if (mensajeFinal) {
+              this.cambio = false;
+              this.snackBar.open("¡Información cargada!", "Aceptar", {
+                duration: 3000,
+              });
+              this.router.navigate([
+                "/usuario",
+                { outlets: { "cuenta-opcion": ["clasificado", "P"] } },
+              ]);
+            }
+          },
+          (error) => {
+            this.loading = false;
           }
-        },
-        (error) => {
-          this.loading = false;
-          console.log(error);
-        }
-      );
-      this.loading = false;
-      this.editedForm = false;
+        );
+      } else {
+        this.WebApiService.postRequest(AppComponent.urlService, allData, {
+          _p_action: "_publicarUpdate",
+        }).subscribe(
+          (data) => {
+            if (mensajeFinal) {
+              this.cambio = false;
+              this.snackBar.open("¡Información cargada!", "Aceptar", {
+                duration: 3000,
+              });
+              this.router.navigate([
+                "/usuario",
+                { outlets: { "cuenta-opcion": ["clasificado", "P"] } },
+              ]);
+            }
+          },
+          (error) => {
+            this.loading = false;
+          }
+        );
+      }
     } else {
       this.loading = false;
       if (autoSave != null) {
@@ -1653,5 +1637,23 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
       }
       return;
     }
+  }
+
+  mensajeFinal() {
+   swal.fire({
+      title: "Guardando publicación!",
+      imageUrl:
+        "https://grupoceleritas.com/soporte.gif",
+        imageHeight: 200,
+
+      timer: 2000,
+      timerProgressBar: true,
+      showConfirmButton: false,
+    });
+    this.router.navigate([
+      "/usuario",
+      { outlets: { "cuenta-opcion": ["clasificado", "P"] } },
+    ]);
+    
   }
 }

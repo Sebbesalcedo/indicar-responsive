@@ -83,7 +83,7 @@ export class UsuarioFavoritoComponent implements OnInit {
     })
     .subscribe(
       data=>{
-        console.log(data);
+        // console.log(data);
         this.snackBar.open('¡Datos eliminados correctamente!', null, {
           duration: 3000
         });

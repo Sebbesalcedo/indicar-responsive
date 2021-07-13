@@ -129,14 +129,14 @@ export class ClasificadosComponent implements OnInit {
 
 
            
-            console.log(this.vehiculos);
+            //console.log(this.vehiculos);
             
 
             // this.vehiculo;
             // this.termsValues;
 
             // this.viewComparator = true;
-            console.log(data);
+            //console.log(data);
             this.loading=false;
 
 

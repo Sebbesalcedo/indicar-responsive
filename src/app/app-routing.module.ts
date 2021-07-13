@@ -11,6 +11,7 @@ import { AvisoPrivacidadComponent } from './paginas/aviso-privacidad/aviso-priva
 import { PoliticasPublicacionComponent } from './paginas/politicas-publicacion/politicas-publicacion.component';
 import { PoliticasTratamientoComponent } from './paginas/politicas-tratamiento/politicas-tratamiento.component';
 import { PqrsComponent } from './paginas/pqrs/pqrs.component';
+import {IntegradorComponent } from './integrador/integrador.component'
 
 const routes: Routes = [
   {
@@ -77,6 +78,11 @@ const routes: Routes = [
   {
     path: 'noticias',
     loadChildren: './noticias/noticias.module#NoticiasModule'
+  },
+  {
+
+    path: 'authorization', component: IntegradorComponent 
+
   }
 ];
 

@@ -5,7 +5,7 @@
 <div class="row padding-row usuario">
     <div class="col-md-12 mb-3">
         <div class="text-center">
-            <button class="btn btn-blue" (click)="openDialog('correo')">Cambiar correo</button>
+            <button class="btn btn-blue" (click)="openDialog('correo')">Cambiar Correo electronico</button>
             <button class="btn btn-blue" (click)="openDialog('contraseña')">Cambiar contraseña</button>
         </div>
     </div>
@@ -178,8 +178,8 @@
                         <ng-container matColumnDef="accion">
                             <th mat-header-cell *matHeaderCellDef> Acción </th>
                             <td mat-cell *matCellDef="let element" class="actions-table">
-                              <i class="material-icons" (click)="openDialog('phone',element.codigo,element.numero)">edit</i>
-                              <i class="material-icons" (click)="deleteRow('phone',element.codigo,element.numero)">delete</i>
+                              <i class="material-icons" matTooltip="Editar teléfono" matTooltipShowDelay="300" matTooltipHideDelay="300" (click)="openDialog('phone',element.codigo,element.numero)">edit</i>
+                              <i class="material-icons" matTooltip="Eliminar teléfono" matTooltipShowDelay="300" matTooltipHideDelay="300" (click)="deleteRow('phone',element.codigo,element.numero)">delete</i>
                             </td>
                           </ng-container>
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsPhone"></tr>
@@ -246,8 +246,8 @@
                         <ng-container matColumnDef="accion">
                             <th mat-header-cell *matHeaderCellDef> Acción </th>
                             <td mat-cell *matCellDef="let element" class="actions-table">
-                              <i class="material-icons" (click)="openDialog('asesor',element.codigo,element.asesor)">edit</i>
-                              <i class="material-icons" (click)="deleteRow('asesor',element.codigo)">delete</i>
+                              <i class="material-icons" matTooltip="Editar asesor" (click)="openDialog('asesor',element.codigo,element.asesor)">edit</i>
+                              <i class="material-icons" matTooltip="Edliminar asesor" (click)="deleteRow('asesor',element.codigo)">delete</i>
                             </td>
                         </ng-container>
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsAsesor"></tr>

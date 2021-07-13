@@ -341,7 +341,7 @@ export class CuentaDialog{
         })
         .subscribe(
           data=>{
-            console.log(data);
+            //console.log(data);
             this.snackBar.open(
               'Información actualizada',
               'Aceptar',

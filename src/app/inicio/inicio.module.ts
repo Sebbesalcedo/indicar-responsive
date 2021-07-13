@@ -12,7 +12,7 @@ import { InicioFiltroComponent } from './inicio-filtro/inicio-filtro.component';
 import { InicioGangasComponent } from './inicio-gangas/inicio-gangas.component';
 import { InicioUnicoDuenioComponent } from './inicio-unico-duenio/inicio-unico-duenio.component';
 
-
+import { AdsenseModule } from 'ng2-adsense';
 @NgModule({
   declarations: [
     InicioComponent,
@@ -26,7 +26,11 @@ import { InicioUnicoDuenioComponent } from './inicio-unico-duenio/inicio-unico-d
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-7159056057507747',
+      adSlot: 6534226710,
+    }),
   ]
 })
 export class InicioModule { }

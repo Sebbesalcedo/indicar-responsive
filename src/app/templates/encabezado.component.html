@@ -74,11 +74,11 @@
                         <img class="item-img" src="assets/template/icono-favoritos.svg" alt="Favoritos">
                         <span class="item-span">Favoritos</span>
                     </button>                        
-                    <button class="dropdown-item"  [routerLink]="['/comparador']" *ngIf="comparador">
+                    <!-- <button class="dropdown-item"  [routerLink]="['/comparador']" *ngIf="comparador">
                         <i class="material-icons">compare</i> Comparador
+                    </button> -->
                         <!-- <img class="item-img" src="assets/template/icono-favoritos.svg" alt="Comparador">
                         <span class="item-span">Comparador</span> -->
-                    </button>
                     <button class="dropdown-item"  [routerLink]="['/clasificados']" [queryParams]="{p_cliente: cuser.codigo}"  *ngIf="cuser.tipocliente=='02'">
                         <i class="material-icons">web</i> Mi micrositio
                     </button>
@@ -107,7 +107,7 @@
           <button [routerLink]="['/financiamiento/calcular-cuota']" mat-menu-item>Calcula tu cuota</button>
           <button [routerLink]="['/financiamiento/solicitar-credito']" mat-menu-item>Solicitar crédito</button>
         </mat-menu>
-        <button class="menu-item" mat-button [routerLink]="['/comparador']">Comparador</button>
+        <!-- <button class="menu-item" mat-button [routerLink]="['/comparador']">Comparador</button> -->
     </div>
 </nav>
 
@@ -422,23 +422,18 @@
 <!-- SUB HEADER -->
 
 <!-- / SUB HEADER -->
-
-
-
-
 <div class="content-app" [ngClass]="{'mobile':responsive=='mobile'}">
     <router-outlet></router-outlet>
 </div>
-<!-- <img src="../../assets/669773.jpg"  style="width: 10%;"> -->
 <!-- AVISO DE COOKIES -->
 <div class="cookies-msg" *ngIf="cookies">
     <div (click)="closeCookies()" class="close-cookies"> &times;</div>
     <span>Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación de nuestros usuarios y mejorar nuestros servicios. Si continúa navegando, consideramos que acepta su uso.</span>
 </div>
 <!-- RECOMENDADOR -->
-<div class="btn-recomendador">
+<!-- <div class="btn-recomendador">
     <img src='assets/images/recomendador.png' (click)="openRecomendador()" alt='Recomendador Indicar' title='Recomendador de indicar'>
-</div>
+</div> -->
 <!-- loading -->
 <div class="load-content" *ngIf="loading">
     <div class="content-spinner">

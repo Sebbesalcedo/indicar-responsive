@@ -57,18 +57,6 @@
   text-align: right;
 }
 
-#inner {
-  margin: 0 0;
-  padding: 0 0;
-  width: 50%;
-  left: 38%;
-}
-@media screen and (max-width: 480px) {
-  #inner {
-    width: calc(100% - 80px);
-  }
-}
-
 div#comentarios_detalle {
   text-align: justify;
 }
@@ -124,6 +112,25 @@ div#comentarios_detalle {
   background: #158a30;
   width: 40%;
 }
+.list-t {
+  list-style: none;
+  color: #013b8e;
+}
+
+
+.prueba {
+  position: relative;
+  width: 5%;
+  left: 590px;
+  bottom: 710px;
+   cursor: pointer;
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 1297px) {
+    .prueba {
+        left: 570px;
+    }
+  }
 
 /* contactos telefonicos. */
 span.codigo-vehiculo {
@@ -131,6 +138,32 @@ span.codigo-vehiculo {
   font-size: 13px;
   padding: 0px 14px;
   text-align: center;
+}
+.view-whatsapp {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 28px;
+  font-size: 15px;
+  width: 100%;
+  max-width: 190px;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.view-whatsapp span {
+  color: #9c9c9c;
+  text-align: center;
+  display: block;
+  font-weight: 600;
+  width: 70%;
+  float: right;
+  padding-right: 5px;
+}
+.view-whatsapp img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 25px;
 }
 .view-phones {
   border: 2px solid rgba(0, 0, 0, 0.1);

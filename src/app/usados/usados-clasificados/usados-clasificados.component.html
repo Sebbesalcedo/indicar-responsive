@@ -31,13 +31,26 @@
         (filter)="closeFilter($event)"
       ></app-usados-clasificados-filtro>
     </div>
+
     <!-- CONTENT -->
     <app-usado-concesionario
       [data]="dataCliente"
       *ngIf="isConcesionario"
     ></app-usado-concesionario>
+
+    <div class="imeg">
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-7159056057507747"
+        data-ad-slot="5223120834"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+    </div>
+
     <div class="global-content">
-      <div class="row padding-row">
+      <div class="row">
         <!-- SECTION FILTROS -->
         <div
           class="aside-filtros"
@@ -127,10 +140,9 @@
                     data-src="../../../assets/images/dots.png"
                     data-srcset="{{ item.foto_url }}"
                   />
-              
                 </div>
                 <div class="item-card-content">
-                  <h4 class="item-card-titulo">    {{ item.linea_nombrecorto }}</h4>
+                  <h4 class="item-card-titulo">{{ item.linea_nombrecorto }}</h4>
                   <div class="item-card-precio">
                     {{
                       item.venta_valor | currency: "COP":"symbol-narrow":"2.0-1"
@@ -149,67 +161,54 @@
                     <span id="capacidad">{{ item.capacidadmotor_nombre }}</span>
                     <p class="ciudad">{{ item.ciudad_nombre }}</p>
                   </div>
-                 
-                  
-                  
-                  
-                  
-                  
-                  
-                  <div class="tarjeta-button ">
-                        <button
-                        class="btn btn-financia"
-                        routerLink="/financiamiento/solicitar-credito"
-                        >
-                        ¡Financia ya!
-                      </button>
-                    </div>
-                      <button
-                      class="tarjeta-favorito"
-                      mat-flat-button
-                      #tooltip="matTooltip"
-                      matTooltip="Favorito"
-                      matTooltipClass="tooltip-red"
-                      (click)="
+                  <!-- <button
+                    class="tarjeta-comparar"
+                    *ngIf="encabezado.comparador"
+                    mat-raised-button
+                    #tooltip="matTooltip"
+                    matTooltip="Comparador"
+                    matTooltipClass="tooltip-red"
+                    (click)="
+                      setCompare(item.venta_codigo, i, item.linea_nombrecorto)
+                    "
+                    [ngClass]="
+                      listVehiculosComparar.indexOf(item.venta_codigo) >= 0
+                        ? 'active'
+                        : 'inactive'
+                    "
+                  >
+                    <i class="material-icons fav">compare_arrows</i>
+                  </button> -->
+                  <br />
+                  <div class="tarjeta-button">
+                    <button
+                      class="btn btn-financia"
+                      routerLink="/financiamiento/solicitar-credito"
+                    >
+                      ¡Financia ya!
+                    </button>
+                  </div>
+                  <button
+                    class="tarjeta-favorito"
+                    mat-raised-button
+                    #tooltip="matTooltip"
+                    matTooltip="Favorito"
+                    matTooltipClass="tooltip-red"
+                    (click)="
                       setFavorito(
                         item.venta_codigo,
                         i,
                         item.linea_nombrecorto,
                         item.isfavorito
-                        )
-                        "
-                        title="favorito"
-                        [ngClass]="item.isfavorito == 'S' ? 'active' : 'inactive'"
-                        type="button"
-                        >
-                        <i class="material-icons fav">favorite</i>
-                       
-                    </button>  
-                    
-                       <!-- <div class="col-sm">
-                        <button
-                        class="tarjeta-comparar"
-                        *ngIf="encabezado.comparador"
-                        mat-raised-button
-                        #tooltip="matTooltip"
-                        matTooltip="Comparador"
-                        matTooltipClass="tooltip-red"
-                        (click)="
-                          setCompare(item.venta_codigo, i, item.linea_nombrecorto)
-                        "
-                        [ngClass]="
-                          listVehiculosComparar.indexOf(item.venta_codigo) >= 0
-                            ? 'active'
-                            : 'inactive'
-                        "
-                      >
-                        <i class="material-icons fav">compare_arrows</i>
-                      </button>
-                      </div> -->
-                     
-                      
-                  
-  
+                      )
+                    "
+                    title="favorito"
+                    [ngClass]="item.isfavorito == 'S' ? 'active' : 'inactive'"
+                    type="button"
+                  >
+                    <i class="material-icons fav">favorite</i>
+                    <i class="material-icons nofav">favorite_border</i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -222,7 +221,20 @@
         </div>
         <!-- /SECTION RIGHT -->
       </div>
+      <div class="row padding-row imeg">
+        <ng-adsense
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-client="ca-pub-7159056057507747"
+          data-ad-slot="5223120834"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ng-adsense>
+      </div>
     </div>
+
+    <div></div>
+
     <!-- /CONTENT -->
   </div>
 </div>

@@ -69,7 +69,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
             vehiculo.linea = vehiculo.linea_nombre.substr(0,45)+"...";
             // ------------------------ INFORMACION DEL VEHICULO RATING  ------------------------
             let info = JSON.parse(vehiculo.vehicle_information);
-            console.log(info);
+            // console.log(info);
             let rating = [];
             
             info.forEach(i=>{
@@ -194,7 +194,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
           })
           .catch(error=>{
             this.loading = false;
-            console.log('falso');
+            // console.log('falso');
           })
         }
         // console.log(this.vehiculos );

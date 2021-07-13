@@ -80,9 +80,11 @@ export class UsuarioConversacionesComponent implements OnInit {
     })
     .subscribe(
       data=>{
+        
         this.datos = data.datos;
         this.datos_respaldo = data.datos;
         this.records = data.registros;
+      
         for(let item of this.datos){
           item.select = false;
         }
@@ -289,7 +291,7 @@ export class UsuarioConversacionesComponent implements OnInit {
               })
               .subscribe(
                 data=>{
-                  console.log(data);
+                  
                   this.sendRequest();   
                   this.snackBar.open(msg,null,{
                     duration:3000

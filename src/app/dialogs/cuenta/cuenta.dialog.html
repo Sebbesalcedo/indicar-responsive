@@ -1,7 +1,7 @@
 <!-- CORREO -->
 <div *ngIf="viewCorreo">
-    <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
-    <h1 mat-dialog-title class="title-modal-bold">Cambiar correo</h1>
+ 
+    <h1 mat-dialog-title class="title-modal-bold">Cambiar correo electronico</h1>
     <div mat-dialog-content> 
         <form [formGroup]="formCorreo">
             <div class="row">
@@ -16,7 +16,7 @@
                 <span class="error col-12 text-center">{{emailInvalid}}</span>
                 <!-- Confirmar correo -->
                 <div class="col-12">
-                    <label class="label-mat-form">Confirmar correo <span class="required">*</span></label>
+                    <label class="label-mat-form">Confirmar correo electrónico<span class="required">*</span></label>
                     <mat-form-field class="input-full-width col-md-12" appearance="outline">
                         <input  matInput formControlName="fccorreo" required>
                     </mat-form-field>
@@ -40,7 +40,7 @@
             <div class="row">
                 <!-- pass -->
                 <div class="col-12">
-                    <label class="label-mat-form">Nueva Contraseña <span class="required">*</span></label>
+                    <label class="label-mat-form">Nueva contraseña <span class="required">*</span></label>
                     <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
                         <input matInput [type]="hide ? 'password' : 'text'" required formControlName="fpass" autocomplete="off" >
                         <a class="material-icons" *ngIf="hide" (click)="hide = !hide">visibility</a>
@@ -49,7 +49,7 @@
                 </div>
                 <!-- confirm pass -->
                 <div class="col-12">
-                    <label class="label-mat-form">Confirmar nueva contraseña <span class="required">*</span></label>
+                    <label class="label-mat-form">Confirmar  contraseña  <span class="required">*</span></label>
                     <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
                         <input matInput [type]="hideConfirm ? 'password': 'text'" required formControlName="fcpass" autocomplete="off" >
                         <a class="material-icons" *ngIf="hideConfirm" (click)="hideConfirm = !hideConfirm">visibility</a>

@@ -14,8 +14,14 @@ import swal from 'sweetalert2';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { UsadoDetalleDialog } from 'src/app/dialogs/usado-detalle/usado-detalle.dialog.component';
-
-
+import Swal from "sweetalert2";
+import { ThemePalette } from "@angular/material/core";
+export interface Task {
+  name: string;
+  completed: boolean;
+  color: ThemePalette;
+  subtasks?: Task[];
+}
 @Component({
   selector: 'app-usuario-clasificado',
   templateUrl: './usuario-clasificado.component.html',
@@ -37,15 +43,26 @@ export class UsuarioClasificadoComponent implements OnInit {
   visible_reactivar :boolean    = false;
   visible_anular    :boolean    = false;
   visible_eliminar  :boolean    = false;
-  visible_imprimir  :boolean    = false;
   visible_vendido   :boolean    = false;
+ 
   sub;
   // motivo venta y eliminado
   saleOptions:any               = null;
   deleteOptions:any             = null;
   from:string                   = null;
 
-  
+  list_select: any = [];
+  list_add: any = [];
+  task: Task = {
+    name: "Indeterminate",
+    completed: false,
+    color: "primary",
+    subtasks: [],
+  };
+
+  allComplete: boolean = false;
+
+
   // TABLA
   dataSource:any          = [];
   @ViewChildren(MatSort) sort = new QueryList<MatSort>();
@@ -74,7 +91,6 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_ver       = true;
           this.visible_editar    = true;
           this.visible_reactivar = false;
-          this.visible_imprimir  = true;
           this.visible_anular    = true;
           this.visible_eliminar  = true;
           this.visible_vendido   = true;
@@ -84,7 +100,6 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_ver       = true;
           this.visible_editar    = true;
           this.visible_reactivar = false;
-          this.visible_imprimir  = false;
           this.visible_anular    = false;
           this.visible_eliminar  = true;
           this.visible_vendido   = false;
@@ -94,7 +109,6 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_ver       = true;
           this.visible_editar    = true;
           this.visible_reactivar = false;
-          this.visible_imprimir  = false;
           this.visible_anular    = false;
           this.visible_eliminar  = true;
           this.visible_vendido   = false;
@@ -104,7 +118,6 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_ver       = true;
           this.visible_editar    = true;
           this.visible_reactivar = true;
-          this.visible_imprimir  = false;
           this.visible_anular    = false;
           this.visible_eliminar  = true;
           this.visible_vendido   = true;
@@ -114,7 +127,6 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_ver       = true;
           this.visible_editar    = false;
           this.visible_reactivar = false;
-          this.visible_imprimir  = false;
           this.visible_anular    = false;
           this.visible_eliminar  = true;
           this.visible_vendido   = false;
@@ -194,22 +206,6 @@ export class UsuarioClasificadoComponent implements OnInit {
           }
         });
       break;
-
-      case "IMPRIMIR":
-        swal.fire({
-          text: "¿Desea Imprimir el Clasificado?",
-          icon: null,
-          showCancelButton: true,
-          confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'Confirmar',
-          cancelButtonText: 'Cancelar',
-        }).then((result) => {
-          if (result.value) {     
-            this.imprimirClasificado(cod);
-          }
-        });
-        break;
       case "VENDIDO":
         if(this.saleOptions == null){
           // consultar opciones de vendido.
@@ -472,39 +468,137 @@ export class UsuarioClasificadoComponent implements OnInit {
     )
   }
 
-
-  imprimirClasificado(cod){
-
-
-    let CodigoVehiculo = this.Encrypt.desencrypt(cod);
-
-
-    let datos=[];
-
-    datos['p_admin']   = "true";
-    datos['p_codigo']  =CodigoVehiculo;
-    this.WebApiService.getRequest(AppComponent.urlService,
-      Object.assign(
-        datos,
-        {
-          _p_action: '_usadodetalle',
-        })).subscribe(
-
-
-          res=>{
-            datos=res.datos[0];
-            console.log(datos);
-
-          },err=>{
-
-            console.log(err);
-          }
-
-        );
-
-    console.log(datos);
-
-
+  updateAllComplete() {
+    this.allComplete =
+      this.task.subtasks != null &&
+      this.task.subtasks.every((t) => t.completed);
   }
+
+  someComplete(): boolean {
+    if (this.task.subtasks == null) {
+      return false;
+    }
+
+    return (
+      this.task.subtasks.filter((t) => t.completed).length > 0 &&
+      !this.allComplete
+    );
+  }
+
+  /**
+   * Validación de los elementos seleccionados se guardaran en la lista list_select
+   * @param completed, true si fue seleccionado, false si fue deseleccionado.
+   * @param data , data del elemento de la lista que fue selecionado
+   */
+
+  setAll(completed: boolean, data) {
+    if (completed) {
+      this.list_select.push(data.venta_codigo);
+     // console.log(this.list_select);
+      this.allComplete = completed;
+    } else {
+      for (let index = 0; index < this.list_select.length; index++) {
+        const element = this.list_select[index];
+
+        if (data.venta_codigo == element) {
+          this.list_select.splice(index);
+        }
+        //console.log(this.list_select);
+      }
+    }
+  }
+
+  cambiarEstado() { 
+
+    if(this.dataSource.length==0){
+
+      swal.fire({
+        title:'',
+        text:'No hay clasificados en la lista.',
+        icon:null
+      });
+
+    }else{
+
+
+      if(this.list_select.length==0){
+
+        swal.fire({
+          title:'',
+          text:'Debes seleccionar al menos un clasificado',
+          icon:null
+        });
+  
+  
+      }else{
+        if(this.list_select.length==1){
+  
+          swal.fire({
+            text: "¿Marcar como vendido?",
+            icon: null,
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Confirmar',
+            cancelButtonText: 'Cancelar',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              for (let index = 0; index < this.list_select.length; index++) {
+                const element = parseInt(this.list_select[index]);
+      
+                this.updateEstado(element, "V");
+              }
+      
+              this.snackBar.open('Información actualizada', 'Aceptar', {
+                duration: 3000
+              });
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+            }
+          });
+        }else{
+          swal.fire({
+            text: "¿Marcar como vendidos?",
+            icon: null,
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Confirmar',
+            cancelButtonText: 'Cancelar',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              for (let index = 0; index < this.list_select.length; index++) {
+                const element = parseInt(this.list_select[index]);
+      
+                this.updateEstado(element, "V");
+              }
+      
+              this.snackBar.open('Información actualizada', 'Aceptar', {
+                duration: 3000
+              });
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+            }
+          });
+        }
+  
+       
+  
+      }
+  
+
+    }
+   
+
+
+    
+
+ 
+  }
+  
 
 }

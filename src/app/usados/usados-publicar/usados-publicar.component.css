@@ -1,62 +1,111 @@
-.upload-file-bold{
-    /* display:block; */
-    border-radius: 5px;
-    border:3px dashed rgba(154, 154, 154, 0.2);
-    min-height: 300px;
-    width:100%;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    background: white;
-    overflow-x:auto;
-    padding: 20px;
+.upload-file-bold {
+  /* display:block; */
+  border-radius: 5px;
+  border: 3px dashed rgba(154, 154, 154, 0.2);
+  min-height: 300px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  overflow-x: auto;
+  padding: 20px;
 }
 .upload-file-bold::-webkit-scrollbar {
- height:8px;
+  height: 8px;
 }
 .upload-file-bold::-webkit-scrollbar-thumb {
-  background:#a0a0a0; 
+  background: #a0a0a0;
 }
 .upload-file-bold::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-
 .sec-middle {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    color: #013b8e;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #013b8e;
 }
 .labels-pic {
-    line-height: 30px;
-    display: inline-block;
-    background: #013b8e;
-    padding: 0px 10px;
-    border-radius: 9px;
-    color: white;
-    font-weight: 600;
-    font-size: 14px;
-    box-shadow: 1px 1px 5px 0px black;
+  line-height: 30px;
+  display: inline-block;
+  background: #013b8e;
+  padding: 0px 10px;
+  border-radius: 9px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 1px 1px 5px 0px black;
 }
 .labels {
-    display: block;
-    width: 100%;
-    height: 30px;
-    position: absolute;
-    bottom: 4px;
-    line-height: 0;
+  display: block;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 4px;
+  line-height: 0;
 }
 
-@media screen and (max-width:768px){
-    .upload-file-bold{
-        min-height: 360px;
-    }
-    .text-alert{
-        margin-top: 0px;
-        font-size: 14px;
-    }
+@media screen and (max-width: 768px) {
+  .upload-file-bold {
+    min-height: 360px;
+  }
+  .text-alert {
+    margin-top: 0px;
+    font-size: 14px;
+  }
 }
 
+/* spinner */
 
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.inner-addon {
+  position: relative;
+}
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.left-addon .glyphicon {
+  left: 0px;
+}
+.right-addon .glyphicon {
+  right: 0px;
+}
+.left-addon input {
+  padding-left: 30px;
+}
+.right-addon input {
+  padding-right: 30px;
+}
+
+.whatsapp {
+
+}

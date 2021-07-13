@@ -60,7 +60,7 @@
             <label class="label-mat-form">Nombres <span class="required">*</span></label>
             <mat-form-field class="input-full-width" appearance="outline">
                 <!-- <input matInput placeholder="Nombres" formControlName="fname" autocomplete="off"> -->
-                <input matInput formControlName="fname" >
+                <input matInput formControlName="fname" autocomplete="off">
             </mat-form-field>
           </div>
           <div class="col-md-8 offset-md-2">
@@ -106,11 +106,10 @@
               <input matInput formControlName="frazonsocial" autocomplete="off">
             </mat-form-field>
           </div>
-          
           <div class="col-md-8 offset-md-2">
             <label class="label-mat-form">Nit <span class="required">*</span></label>
             <mat-form-field class="input-full-width" appearance="outline">
-              <input type="text" matInput formControlName="fnit" pattern="[0-9]+" autocomplete="off" >
+              <input matInput formControlName="fnit" autocomplete="off">
             </mat-form-field>
           </div>
           <div class="col-md-8 offset-md-2">
@@ -183,7 +182,7 @@
     <form [formGroup]="formRecoveryPassword" (submit)="onSubmitRecovery()">
       <div class="row">
         <div class="col-12">
-          <label class="label-mat-form">Contraseña <span class="required">*</span></label>
+          <label class="label-mat-form">Nueva Contraseña <span class="required">*</span></label>
           <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
               <input matInput [type]="passRecoveryType" formControlName="fpass" autocomplete="off">
               <a class="material-icons" *ngIf="passRecoveryType == 'password'" (click)="passRecoveryType='text'">visibility</a>

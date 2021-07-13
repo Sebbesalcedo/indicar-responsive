@@ -114,7 +114,7 @@ export class UsadoDetalleDialog{
                 mensaje:    this.formQuestion.get('fmessage').value
             }
         }
-        console.log(body);
+        // console.log(body);
         this.WebApiService.putRequest(AppComponent.urlService,body,{
             _p_action: '_usadodetalle'
         })

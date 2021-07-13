@@ -35,7 +35,7 @@ export class NoticiasDetalleComponent implements OnInit {
         this.content  = data.content.rendered;
         this.image    = data._embedded['wp:featuredmedia'][0].source_url;
         this.post = data;
-        console.log(this.post);
+        //console.log(this.post);
       },
       error=>{
         console.log(error);

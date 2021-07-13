@@ -97,7 +97,7 @@ export class RecomendadorDialog{
           action: 'getBeneficios'
       }).subscribe(
           data=>{
-              console.log(data);
+             // console.log(data);
               if(data.success){
                   this.categoriaBeneficios = data.datos;
               }

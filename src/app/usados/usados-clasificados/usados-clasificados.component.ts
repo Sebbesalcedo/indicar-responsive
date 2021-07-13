@@ -447,7 +447,7 @@ export class UsadosClasificadosComponent implements OnInit {
     }else{ // agrego al storage ya existente.
       if(compare.indexOf(cod) == -1){ // si no existe lo agrego
         if(compare.length > 3){
-          console.log('No se pueden comparar más de 4 vehiículos');
+          // console.log('No se pueden comparar más de 4 vehiículos');
           snack = this.snackBar.open('¡No se pueden comparar más de 4 vehículos!', "Ir al comparador", {
             duration: 5000
           });

@@ -5,6 +5,8 @@ import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation,NgxGalleryImage
 import 'hammerjs';
 
 // servicios
+
+
 import { WebApiService } from 'src/app/servicios/web-api.service';
 import { EncryptService } from 'src/app/servicios/encrypt.service';
 import { EncabezadoComponent } from 'src/app/components/encabezado.component';
@@ -13,6 +15,7 @@ import swal from 'sweetalert2';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { UsadoDetalleDialog } from 'src/app/dialogs/usado-detalle/usado-detalle.dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-usado-detalle',
@@ -47,6 +50,9 @@ export class UsadoDetalleComponent implements OnInit {
   panelOpenState;
   viewComentario;
 
+  numero=0;
+  clasificado;
+  
   constructor(
     private WebApiService:WebApiService,
     private route:ActivatedRoute,
@@ -54,7 +60,9 @@ export class UsadoDetalleComponent implements OnInit {
     private router:Router,
     private snackBar:MatSnackBar,
     private dialog:MatDialog,
-    @Inject(EncabezadoComponent) public encabezado:EncabezadoComponent
+    private location: Location,
+    @Inject(EncabezadoComponent) public encabezado:EncabezadoComponent,
+    
   ){ }
   
   ngOnInit() {
@@ -65,10 +73,13 @@ export class UsadoDetalleComponent implements OnInit {
       this.p_filtros['p_admin']   = params.p_admin;
       this.p_filtros['p_codigo']  = this.encrypt.desencrypt(this.route.snapshot.paramMap.get('id'));
     })
-    //console.log(this.p_filtros);
     this.sendRequest();
     this.initGallery();
     window.scrollTo(0,0);
+    this.clasificado=window.location.href;
+    
+   
+   
   }
   // request
   sendRequest(){
@@ -79,11 +90,18 @@ export class UsadoDetalleComponent implements OnInit {
         {
           _p_action: '_usadodetalle',
         })
-        
     ).subscribe(
       data=>{
+        
         this.datos    = data.datos[0];
-    
+        if(this.datos.venta_telefonocontacto3==""){
+          this.numero=this.datos.venta_telefonocontacto1;
+         
+        }else{
+          this.numero=this.datos.venta_telefonocontacto3;
+          
+        }
+     
         if(this.datos.hasOwnProperty('venta_descripcion')){
           if(this.datos.venta_descripcion != null && this.datos.venta_descripcion != undefined && this.datos.venta_descripcion != ''){
             document.getElementById('comentarios_detalle').innerHTML = this.datos.venta_descripcion;
@@ -128,6 +146,7 @@ export class UsadoDetalleComponent implements OnInit {
     )
     .subscribe(
       data=>{
+      
         this.imagenes = data.datos;
         this.imagenes.map((image,i)=>{
           this.galleryImages[i] = {
