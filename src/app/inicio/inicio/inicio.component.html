@@ -2,66 +2,85 @@
 <section class="header-principal">
   <div class="cuadro-negro"></div>
   <div class="container-fluid fix buscador">
-    <div class="titulo-pagina-inicio">
-      <h2 class="col-12">Encuentra tu vehículo ideal</h2>
-    </div>
-    <div class="buscafacil">
-      <app-inicio-filtro></app-inicio-filtro>
-    </div>
+      <div class="titulo-pagina-inicio">
+          <h2 class="col-12 ">
+              Encuentra tu vehículo ideal
+          </h2>
+       </div>
+      <div class="buscafacil">
+          <app-inicio-filtro></app-inicio-filtro>
+      </div>
   </div>
 </section>
-<section class="herramientas2">
-  <div class="tools-section">
-    <div class="tools-item">
-      <img
-        src="assets/template/icono-calcular-cuota.svg"
-        alt="Clacular cuota"
-        title="Calcula tu cuota - indicar"
-      />
-      <span>Calcula tu cuota</span>
-    </div>
-    <div class="tools-item">
-      <img
-        src="assets/template/icono-solicitar-credito.svg"
-        alt="Clacular cuota"
-        title="Calcula tu cuota - indicar"
-      />
-      <span>Solicita crédito</span>
-    </div>
-    <div class="tools-item">
-      <img
-        src="assets/template/icono-concesionario.svg"
-        alt="Clacular cuota"
-        title="Calcula tu cuota - indicar"
-      />
-      <span>Concesionarios</span>
-    </div>
+<br>
+<section class="herramientas" style="padding:0px !important">
+  <div class="container-fluid fix">
+      <div class="row" style="margin:0px !important">
+          <div class="col-md-4 col-sm-4 col-4 herramientas">
+          <img src="assets/template/icono-calcular-cuota.svg" alt="Clacular cuota" title="Calcula tu cuota - indicar">
+          <span>Calcula tu cuota</span>
+      </div>
+      <div class="col-md-4 col-sm-4 col-4 herramientas">
+          <img src="assets/template/icono-solicitar-credito.svg" alt="Clacular cuota" title="Calcula tu cuota - indicar">
+          <span>Solicita crédito</span>
+      </div>
+      <div class="col-md-4 col-sm-4 col-4 herramientas">
+          <img src="assets/template/icono-concesionario.svg" alt="Clacular cuota" title="Calcula tu cuota - indicar">
+          <span>Concesionarios</span>
+      </div>
+      </div>
   </div>
 </section>
 <!-- NOTICIAS -->
 <!-- <a routerLink="/noticias">Enlace noticias</a> -->
 <!-- SECTION GANGAS DEL MOMENTO -->
 <app-inicio-gangas></app-inicio-gangas>
-<br>
-
-<div style="text-align: center">
+<div class="row padding-row imeg">
   <ng-adsense
     class="adsbygoogle"
     style="display: block"
     data-ad-client="ca-pub-7159056057507747"
-    data-ad-slot="5223120834"
+    data-ad-slot="6534226710"
     data-ad-format="auto"
     data-full-width-responsive="true"
   ></ng-adsense>
 </div>
 <!-- SECTION UNICO DUENIO -->
 <app-inicio-unico-duenio></app-inicio-unico-duenio>
+<!-- HERRAMIENTAS
+<section class="herramientas" style="padding:0px !important">
+  <div class="container-fluid fix">
+      <div class="col-12 titulo-seccion">
+          <h3 class="titulo">Herramientas<span id="region"></span></h3>
+          <p class="subtitulo">Te ayudamos a encontrar el vehículo ideal</p>
+      </div>
+      <div class="row" style="margin:0px !important">
+          <div class="col-md-4 col-sm-4 col-4 herramientas">
 
-<!-- HERRAMIENTAS -->
+                  <img src="assets/template/icono-calcular-cuota.svg" alt="Clacular cuota" title="Calcula tu cuota - indicar">
+                  <span>Calcula tu cuota</span>
 
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-4 herramientas">
+
+                  <img src="assets/template/icono-solicitar-credito.svg" alt="Clacular cuota" title="Calcula tu cuota - indicar">
+                  <span>Solicita crédito</span>
+
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-4 herramientas" >
+
+                  <img src="assets/template/icono-concesionario.svg" alt="Clacular cuota" title="Calcula tu cuota - indicar">
+          <span>Concesionarios</span>
+
+          </div>
+      </div>
+  </div>
+</section>-->
 <!-- loading -->
 <div class="load-content" *ngIf="loading">
   <div class="content-spinner">
-    <mat-spinner></mat-spinner>
+      <mat-spinner></mat-spinner>
   </div>
 </div>

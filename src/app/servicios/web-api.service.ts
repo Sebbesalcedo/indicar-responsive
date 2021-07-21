@@ -18,17 +18,17 @@ export class WebApiService{
 
   constructor(
     private _http:HttpClient,
-   
-    ){ 
-    
+
+    ){
+
   }
 
   setHeaders(){
     let headers = new HttpHeaders()
     .append('Authorization', this.token)
-    return headers;    
+    return headers;
   }
-  
+
 //  authenticationService(token:string):Observable<any>{
 
 //    params =this.setHeaders();
@@ -44,7 +44,7 @@ export class WebApiService{
     return this._http.get<any>(url,{headers, params});
   }
 
-  
+
 
   postRequest(url:string,body:any,params:any):Observable<any>{
     // header
@@ -57,7 +57,7 @@ export class WebApiService{
   //   console.log(body);
   //   return this._http.post<any>(url,body,{params});
   // }
-  
+
   putRequest(url:string,body:any,params:any):Observable<any>{
     // header
     let headers = this.setHeaders();
@@ -85,6 +85,6 @@ export class WebApiService{
   }
 
 
- 
+
 
 }

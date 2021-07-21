@@ -423,15 +423,15 @@ export class EncabezadoComponent implements OnInit {
     }).subscribe(
       (data) => {
         let datos = data.datos[0];
-        
+
         this.totalMensajes =datos.cant_comentarios-1;
-        
+
         this.aprobados = datos.cant_clasificadosaprobados;
         this.pendientes = datos.cant_clasificadosrevision;
         this.rechazados = datos.cant_clasificadosrechazados;
         this.vendidos = datos.cant_clasificadosvendidos;
         this.inactivos = datos.cant_clasificadosfinalizados;
-       
+
       },
       (error) => {
         console.log(error);
@@ -439,7 +439,7 @@ export class EncabezadoComponent implements OnInit {
     );
   }
 
-  
+
 
   /**
    * @description   Metodo Usado para el cierre de session.
@@ -611,7 +611,7 @@ export class EncabezadoComponent implements OnInit {
     } else {
       inputSearch = document.querySelector("#buscador-mobile");
     }
-    inputSearch.value = "";
+    inputSearch.value = "inicio";
   }
 
   openRecomendador() {

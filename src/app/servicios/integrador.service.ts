@@ -17,18 +17,26 @@ export class IntegradorService {
 
   constructor(private _http: HttpClient) {}
 
-  setHeaders() {
-    let headers = new HttpHeaders().append("Authorization", this.token);
-    return headers;
-  }
-
   postIntegrador(url: string, body: any, params: any): Observable<any> {
-    let headers = this.setHeaders();
 
-    
+      console.log(body);
+
+
+
+    let headers: HttpHeaders = new HttpHeaders();
+
+
 
     let urlPost = this.urlIntegrador + url;
-    
-    return this._http.post<any>(urlPost,body , { headers, params });
+    return this._http.post<any>(urlPost, body, { headers, params });
   }
+
+  // postsIntegrador(url: string, body: any, params: any): Observable<any> {
+  //   // let headers = this.setHeaders();
+
+  //   let headers = new HttpHeaders().append("Authorization", body.res.data.token, "user",89);
+  //   let urlPost = this.urlIntegrador + url;
+
+  //   return this._http.post<any>(urlPost,body , { headers, params });
+  // }
 }
