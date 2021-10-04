@@ -14,7 +14,7 @@ import { EncryptService } from "src/app/servicios/encrypt.service";
 import { ChangeEvent, CKEditorComponent } from "@ckeditor/ckeditor5-angular";
 
 declare var EXIF: any;
-
+declare var gtag;
 // interface
 export interface lovCiudades {
   ciudad_codigo: number;
@@ -1594,6 +1594,9 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
           (data) => {
             if (mensajeFinal) {
               this.cambio = false;
+
+                this.eventGoogle() ;
+
               this.snackBar.open("¡Información cargada!", "Aceptar", {
                 duration: 3000,
               });
@@ -1654,6 +1657,15 @@ export class UsadosPublicarComponent implements OnInit, AfterViewInit {
       "/usuario",
       { outlets: { "cuenta-opcion": ["clasificado", "P"] } },
     ]);
-    
+
+  }
+  eventGoogle() {
+
+
+
+
+     gtag('event', 'Publicar Clasificado', { 'event_category': ' clasificado', 'event_action': 'publicar',
+
+                         'event_label': 'publicar_clasificado', 'value': '0'});
   }
 }

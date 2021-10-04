@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-// MODULOS 
+// MODULOS
 import { InicioModule } from './inicio/inicio.module';
 import { UsadosModule } from './usados/usados.module';
 import { UsuarioModule} from './usuario/usuario.module';
@@ -11,20 +11,41 @@ import { AvisoPrivacidadComponent } from './paginas/aviso-privacidad/aviso-priva
 import { PoliticasPublicacionComponent } from './paginas/politicas-publicacion/politicas-publicacion.component';
 import { PoliticasTratamientoComponent } from './paginas/politicas-tratamiento/politicas-tratamiento.component';
 import { PqrsComponent } from './paginas/pqrs/pqrs.component';
-import {IntegradorComponent } from './integrador/integrador.component'
+import {IntegradorComponent } from './integrador/integrador.component';
+import {LoginDialog } from '../app/dialogs/login/login.dialog.component';
+
+import {WompiFormsComponent} from './wompi-forms/wompi-forms.component';
+import {ResumenPagoComponent} from './wompi-forms/resumen-pago/resumen-pago.component';
+import {ValoradorComponent} from './valorador/valorador.component';
 
 const routes: Routes = [
+
+
+  {
+
+    path: 'ValoraTuVehiculo',
+    component:ValoradorComponent,
+
+    data: {preload:true}
+
+  },
+
   {
     path: '',
     redirectTo: 'inicio',
     pathMatch: 'full'
   },
-  // { path: '**', 
+  // { path: '**',
   //   redirectTo: 'inicio'
   // },
   {
     path: 'inicio',
     loadChildren: './inicio/inicio.module#InicioModule',
+    data: {preload:true}
+  },
+  {
+    path: 'login',
+    component: LoginDialog,
     data: {preload:true}
   },
   {
@@ -40,7 +61,7 @@ const routes: Routes = [
   {
     path: 'financiamiento',
     loadChildren: './financiamiento/financiamiento.module#FinanciamientoModule',
-    data: {preload:true}  
+    data: {preload:true}
   },
   {
     path: 'concesionarios',
@@ -81,9 +102,21 @@ const routes: Routes = [
   },
   {
 
-    path: 'authorization', component: IntegradorComponent 
+    path: 'authorization', component: IntegradorComponent
+
+  },{
+
+    path: 'pagos/:id',
+    component:WompiFormsComponent
+
+  },
+  {
+
+    path: 'resumen_pago',
+    component:ResumenPagoComponent
 
   }
+
 ];
 
 @NgModule({

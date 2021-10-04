@@ -1,6 +1,6 @@
 <h3 class="titulo mb-0">Conversaciones</h3>
 <div class="row padding-row">
-  <mat-toolbar> 
+  <mat-toolbar>
     <mat-toolbar-row class="row-toolbar">
       <div class="col-md-10 col-8">
         <div class="input-search icon-input">
@@ -22,20 +22,20 @@
   <mat-accordion class="conversacion" *ngIf="records > 0" >
       <!-- vehiculo -->
       <mat-expansion-panel class="producto"   *ngFor='let detail of datos;let i = index' (opened)="sendVisto(detail,i)"   >
-        
+
         <!-- Nombre del vehiculo -->
         <mat-expansion-panel-header>
             <div class="alerta_notificacion" *ngIf="detail.pendientes > 0" >
                 <span>{{detail.pendientes}}</span>
                 <div class="nueva_alerta"></div>
-            </div>  
+            </div>
             <mat-panel-title>
               <mat-panel-description class="no-space">
                 <mat-checkbox (click)="$event.stopPropagation();" [checked]="datos[i].select" [(ngModel)]="datos[i].select"></mat-checkbox>
               </mat-panel-description>
               <div class="foto-conversacion content-pic">
                 <img src="{{detail.fotosventa_ruta}}">
-              </div>    
+              </div>
             </mat-panel-title>
             <mat-panel-description>
              {{detail.conv_nombre}}
@@ -52,8 +52,8 @@
             <mat-panel-description class="nv-m">
              {{detail.venta_matricula_placa}}
             </mat-panel-description>
-           
-        </mat-expansion-panel-header>    
+
+        </mat-expansion-panel-header>
         <!--comentarios--->
         <div class="titulo-comentarios producto-usuario" *ngFor='let detail_c of  detail.ldetalle ;let j = index' >
           <div class="dialogo">
@@ -62,7 +62,7 @@
                   <p class="comentario">
                     <!-- <span>{{detail_c.fechahora_p | amTimeAgo}}</span> -->
                     {{detail_c.detaveco_mensaje }}
-                  <p> 
+                  <p>
               </div>
             </div>
             <div class="respuesta" id="dialogo"  *ngIf="detail_c.tmensaje=='1'" >
@@ -70,7 +70,7 @@
                     <p class="comentario">
                       <!-- <span>{{detail_c.fechahora_p | amTimeAgo}}</span> -->
                       {{detail_c.detaveco_mensaje}}
-                    </p> 
+                    </p>
                 </div>
               </div>
              <!-- respuesta-->
@@ -78,14 +78,14 @@
         </div>
         <div class="row mt-4 mb-2">
           <div class="responder">
-            <input class="chat" placeholder="Escribe tu mensaje" [(ngModel)]="datos[i].repuesta">                
-            <button ng-class="myVar='my-class'"  class="btn btn-primary"  (click)="sendMensajeRespuesta(detail,i)">Enviar</button>           
-          </div>        
+            <input class="chat" placeholder="Escribe tu mensaje" [(ngModel)]="datos[i].repuesta">
+            <button ng-class="myVar='my-class'"  class="btn btn-primary"  (click)="sendMensajeRespuesta(detail,i)">Enviar</button>
+          </div>
         </div>
       </mat-expansion-panel>
   </mat-accordion>
   <h2 *ngIf="records == 0" class="no-register"> No hay conversaciones...</h2>
-</div>                      
+</div>
 <!-- loading -->
 <div class="load-content" *ngIf="loading">
     <div class="content-spinner">

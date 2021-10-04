@@ -31,12 +31,5 @@ export class IntegradorService {
     return this._http.post<any>(urlPost, body, { headers, params });
   }
 
-  // postsIntegrador(url: string, body: any, params: any): Observable<any> {
-  //   // let headers = this.setHeaders();
 
-  //   let headers = new HttpHeaders().append("Authorization", body.res.data.token, "user",89);
-  //   let urlPost = this.urlIntegrador + url;
-
-  //   return this._http.post<any>(urlPost,body , { headers, params });
-  // }
 }

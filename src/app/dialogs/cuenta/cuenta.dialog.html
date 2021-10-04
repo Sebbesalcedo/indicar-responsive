@@ -33,8 +33,7 @@
 </div>
 <!-- PASSWORD -->
 <div *ngIf="viewPass">
-    <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
-    <h1 mat-dialog-title class="title-modal-bold">Cambiar contraseña</h1>
+    <!--  <span class="material-icons close-dialog" (click)="closeDialog()">close</span>-->
     <div mat-dialog-content> 
         <form [formGroup]="formPassword">
             <div class="row">
@@ -43,8 +42,8 @@
                     <label class="label-mat-form">Nueva contraseña <span class="required">*</span></label>
                     <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
                         <input matInput [type]="hide ? 'password' : 'text'" required formControlName="fpass" autocomplete="off" >
-                        <a class="material-icons" *ngIf="hide" (click)="hide = !hide">visibility</a>
-                        <a class="material-icons" *ngIf="!hide" (click)="hide = !hide">visibility_off</a>
+                         <a class="material-icons" *ngIf="hide" (click)="hide = !hide">visibility</a>
+                       <a class="material-icons" *ngIf="!hide" (click)="hide = !hide">visibility_off</a>npm
                     </mat-form-field>
                 </div>
                 <!-- confirm pass -->
@@ -68,7 +67,7 @@
 </div>
 <!-- PHONE -->
 <div *ngIf="viewPhone">
-    <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+   <!--   <span class="material-icons close-dialog" (click)="closeDialog()">close</span>-->
     <h1 mat-dialog-title class="title-modal-bold">{{opt}} teléfono</h1>
     <div mat-dialog-content> 
         <form [formGroup]="formPhone">
@@ -92,7 +91,7 @@
 </div>
 <!-- ASESOR -->
 <div *ngIf="viewAsesor">
-    <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+  <!--  <span class="material-icons close-dialog" (click)="closeDialog()">close</span>-->
     <h1 mat-dialog-title class="title-modal-bold">{{opt}} asesor</h1>
     <div mat-dialog-content> 
         <form [formGroup]="formAsesor">

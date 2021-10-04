@@ -11,7 +11,7 @@
             class="example-radio-group"
             formControlName="fparametro">
             <mat-radio-button class="example-radio-button" *ngFor="let option of saleOptions;let i = index" [value]="saleOptions[i].parametro_codigo" (change)="setOption($event)">
-                {{option.parametro_descripcion_detalle}}
+              <label class="post-dialog">{{option.parametro_descripcion}}</label>
             </mat-radio-button>
           </mat-radio-group>
           <!-- otro medio -->
@@ -44,7 +44,7 @@
             class="example-radio-group"
             formControlName="fparametro">
             <mat-radio-button class="example-radio-button" *ngFor="let option of deleteOptions;let i = index" [value]="deleteOptions[i].parametro_codigo" (change)="setOption($event)">
-                {{option.parametro_descripcion_detalle}}
+              <label class="post-dialog">{{option.parametro_descripcion}}</label>
             </mat-radio-button>
           </mat-radio-group>
           <!-- otro medio -->
@@ -95,7 +95,7 @@
         <div mat-dialog-actions>
             <div class="text-center col-12">
                 <button mat-button [mat-dialog-close]="" class="btn btn-danger">Cancelar</button>
-                <button mat-button (click)="onSubmit()" class="btn btn-primary">Confirmar</button>
+                <button mat-button (click)="onSubmit()" [disabled]="formQuestion.invalid" class="btn btn-primary">Confirmar</button>
             </div>
         </div>
     </div>
@@ -114,4 +114,4 @@
         text-align: center;
         color: #7b7b7b;
     }
-</style> 
+</style>

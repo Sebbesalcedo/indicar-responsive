@@ -1,0 +1,533 @@
+<div class="global-content-full solicitar-credito">
+  <div class="section-content">
+    <div class="centrado">¡Conoce el precio de tu carro en 3 pasos!</div>
+    <div class="content-form col-md-6 offset-md-1">
+      <mat-horizontal-stepper
+        labelPosition="bottom"
+        class="step"
+        #stepper
+        [linear]="isLinear"
+      >
+        <!-- datos del vehículo y del usuario -->
+        <mat-step [stepControl]="formVehiculo">
+          <form [formGroup]="formVehiculo" *ngIf="!validacion">
+            <ng-template matStepLabel>Información Básica</ng-template>
+
+            <br />
+            <!-- Clases -->
+            <label class="label-mat-form"
+              >1.Clase<span class="required">*</span></label
+            >
+            <mat-form-field appearance="outline" class="col-12" id="fclase">
+              <mat-select
+                formControlName="fclase"
+                placeholder="Seleccione..."
+                (selectionChange)="onChange(1)"
+                required
+              >
+                <mat-option value="">Seleccione...</mat-option>
+                <mat-option
+                  *ngFor="let ltC of listClase"
+                  value="{{ ltC.id }}"
+                  >{{ ltC.nombre }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+            <!-- Marcas -->
+            <label class="label-mat-form"
+              >2.Marca<span class="required">*</span></label
+            >
+            <mat-form-field appearance="outline" class="col-12" id="fmarca">
+              <mat-select
+                formControlName="fmarca"
+                placeholder="Seleccione..."
+                (selectionChange)="onChange(2)"
+                required
+              >
+                <mat-option value="">Seleccione...</mat-option>
+                <mat-option
+                  *ngFor="let data of ListMarcas"
+                  value="{{ data.id }}"
+                  >{{ data.nombre }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+            <!-- Familia -->
+            <label class="label-mat-form"
+              >3.Modelo<span class="required">*</span></label
+            >
+            <mat-form-field appearance="outline" class="col-12" id="fmodelo">
+              <mat-select
+                formControlName="fmodelo"
+                placeholder="Seleccione..."
+                (selectionChange)="onChange(3)"
+                required
+              >
+                <mat-option value="">Seleccione...</mat-option>
+                <mat-option
+                  *ngFor="let fm of ListModelos"
+                  value="{{ fm.id }}"
+                  >{{ fm.nombre }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+            <!-- Modelo -->
+            <label class="label-mat-form"
+              >3.Familia<span class="required">*</span></label
+            >
+            <mat-form-field appearance="outline" class="col-12" id="ffamilia">
+              <mat-select
+                formControlName="ffamilia"
+                placeholder="Seleccione..."
+                (selectionChange)="onChange(4)"
+                required
+              >
+                <mat-option value="">Seleccione...</mat-option>
+                <mat-option
+                  *ngFor="let mo of ListFamilia"
+                  value="{{ mo.id }}"
+                  >{{ mo.nombre }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+            <!-- Version -->
+            <label class="label-mat-form"
+              >4.Linea<span class="required">*</span></label
+            >
+            <mat-form-field appearance="outline" class="col-12" id="flinea">
+              <mat-select
+                formControlName="flinea"
+                placeholder="Seleccione..."
+                (selectionChange)="onChange(5)"
+                required
+              >
+                <mat-option value="">Seleccione...</mat-option>
+                <mat-option
+                  *ngFor="let fv of ListVersiones"
+                  value="{{ fv.id }}"
+                  >{{ fv.nombre }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+            <!-- ciudad -->
+            <label class="label-mat-form"
+              >5.Ciudad<span class="required">*</span></label
+            >
+            <mat-form-field appearance="outline" class="col-12" id="ciudad">
+              <mat-select
+                formControlName="ciudad"
+                placeholder="Seleccione..."
+                (selectionChange)="onChange($event, 3)"
+                required
+              >
+                <mat-option value="">Seleccione...</mat-option>
+                <mat-option
+                  *ngFor="let ciu of listCiudades"
+                  value="{{ ciu.id }}"
+                  >{{ ciu.ciudad }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+
+            <!-- datos del usuario -->
+            <p class="lineal">Datos personales propietario</p>
+
+            <label class="label-mat-form"
+              >Nombre completo <span class="required">*</span></label
+            >
+
+            <mat-form-field class="col-12" appearance="outline">
+              <input
+                matInput
+                autocomplete="off"
+                formControlName="nombre"
+                [value]="cliente.name"
+              />
+            </mat-form-field>
+            <label class="label-mat-form"
+              >Celular <span class="required">*</span></label
+            >
+
+            <mat-form-field class="col-12" appearance="outline">
+              <input
+                matInput
+                autocomplete="off"
+                formControlName="telefono"
+                [value]="cliente.telefono"
+              />
+            </mat-form-field>
+
+            <label class="label-mat-form"
+              >Email <span class="required">*</span></label
+            >
+
+            <mat-form-field class="col-12" appearance="outline">
+              <input
+                matInput
+                autocomplete="off"
+                formControlName="email"
+                [value]="cliente.username"
+              />
+            </mat-form-field>
+
+            <hr />
+            <div class="col-12 text-center">
+              <!-- <button mat-button matStepperNext class="btn-next">Siguiente</button> -->
+              <button mat-button (click)="onSubmit(1)" class="btn-next">
+                Siguiente
+              </button>
+            </div>
+          </form>
+
+          <div *ngIf="validacion">
+            <h3 style="justify-content: center">
+              Este es el precio del mercado para un carro como el tuyo:
+            </h3>
+
+            <ng-container *ngIf="validacion; else elseTemplate">
+              <div class="cuadro">
+                <strong style="align-items: center; padding: 10px 50px 20px">{{
+                  valorVehiculo | currency
+                }}</strong>
+              </div>
+              <br />
+
+              <div style="justify-content: center">
+                <label class="label-mat-form"
+                  >Continua si quieres saber el precio especifico de tu
+                  carro</label
+                >
+              </div>
+            </ng-container>
+            <ng-template #elseTemplate>
+              <label>{{ valorVehiculo }}</label>
+            </ng-template>
+
+            <div class="col-15 text-center pt-5">
+              <button mat-button class="btn-red" (click)="validacion = false">
+                Atrás
+              </button>
+              <button mat-button class="btn-next" matStepperNext>
+                Saber precio especifico
+              </button>
+            </div>
+          </div>
+        </mat-step>
+
+        <!-- preguntas -->
+
+        <mat-step
+          [stepControl]="formularioFormGroup"
+          label="Información Adicional"
+        >
+          <form [formGroup]="formularioFormGroup">
+            <!-- ───────────────────────────────────────────────────────────────── -->
+
+            <!-- Recorrido de todas las preguntas -->
+            <!-- ───────────────────────────────────────────────────────────────── -->
+
+            <span *ngFor="let question of listPreguntas">
+              <!-- primera seccion de preguntas -->
+
+              <!-- tipo de pregunta tipo 5 -->
+              <section>
+                <div *ngIf="question.vainpreg_tipopregunta == 5">
+                  <label class="label-mat-form">
+                    {{ question.vainpreg_pregunta }}
+                    <span class="required">*</span>
+                  </label>
+                  <mat-form-field class="col-4" appearance="outline">
+                    <input
+                      matInput
+                      autocomplete="off"
+                      maxlength="8"
+                      autocomplete="off"
+                      mask="separator.2"
+                      thousandSeparator="."
+                      pattern="[0-9]+"
+                      (blur)="tipoQuestion(question, $event)"
+                    />
+                  </mat-form-field>
+                </div>
+              </section>
+
+              <!-- tipo de pregunta tipo 1 -->
+
+              <section>
+                <div *ngIf="question.vainpreg_tipopregunta == 1">
+                  <label class="label-mat-form"
+                    >{{ question.vainpreg_pregunta }}
+                    <span class="required">*</span></label
+                  >
+
+                  <ng-container
+                    *ngIf="question.vainpreg_codigo == 20; else elseTemplate"
+                  >
+                    <br />
+                    <mat-radio-group class="container">
+                      <span
+                        *ngFor="let item of question.respuestas; let i = index"
+                      >
+                        <mat-radio-button
+                          name="name{{ i }}"
+                          [value]="item.vainresp_codigo"
+                          (change)="tipoQuestion(question, $event)"
+                          ><label class="label-mat-form">{{
+                            item.vainresp_respuesta
+                          }}</label></mat-radio-button
+                        >
+                      </span>
+                    </mat-radio-group>
+                  </ng-container>
+                  <ng-template #elseTemplate>
+                    <mat-radio-group class="wrapper container">
+                      <span
+                        *ngFor="let item of question.respuestas; let i = index"
+                      >
+                        <mat-radio-button
+                          name="name{{ i }}"
+                          [value]="item.vainresp_codigo"
+                          (change)="tipoQuestion(question, $event)"
+                          ><label class="label-mat-form">{{
+                            item.vainresp_respuesta
+                          }}</label></mat-radio-button
+                        >
+                      </span>
+                    </mat-radio-group>
+                  </ng-template>
+                </div>
+              </section>
+
+              <!-- tipo de pregunta tipo 2 -->
+              <section>
+                <div *ngIf="question.vainpreg_tipopregunta == 2">
+                  <label class="label-mat-form">
+                    {{ question.vainpreg_pregunta }}
+                    <span class="required">*</span>
+                  </label>
+
+                  <span *ngIf="question.vainpreg_codigo == 13">
+                    <div *ngFor="let request of question.respuestas">
+                      <label
+                        class="label-mat-form"
+                        [for]="request.vainresp_respuest"
+                        >{{ request.vainresp_respuesta }}:
+                        <span class="required">*</span>
+                        <mat-form-field appearance="outline" class="col-md-3">
+                          <mat-select
+                            placeholder="Seleccione"
+                            (selectionChange)="
+                              tipoQuestion(question, request, $event.value)
+                            "
+                            required
+                          >
+                            <mat-option>Seleccione...</mat-option>
+                            <mat-option
+                              [for]="request.vainresp_respuest"
+                              *ngFor="let can of cantidad"
+                              [value]="can.value"
+                            >
+                              {{ can.value }}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </label>
+                    </div>
+                  </span>
+
+                  <span *ngIf="question.vainpreg_codigo == 14">
+                    <div class="grid-container">
+                      <div
+                        *ngFor="
+                          let request of question.respuestas;
+                          let in = index
+                        "
+                      >
+                        <div class="item{{ in }}">
+                          <label
+                            required
+                            class="label-mat-form"
+                            [for]="request.vainresp_respuest"
+                            >{{ request.vainresp_respuesta }}:
+                          </label>
+
+                          <mat-form-field
+                            appearance="outline"
+                            class="col-12"
+                            style="align-items: center"
+                          >
+                            <mat-select
+                              placeholder="seleccione"
+                              (selectionChange)="
+                                tipoQuestion(question, request, $event.value)
+                              "
+                              required
+                            >
+                              <mat-option>Seleccione...</mat-option>
+                              <mat-option
+                                [for]="request.vainresp_respuest"
+                                *ngFor="let llan of llantas"
+                                [value]="llan.value"
+                              >
+                                {{ llan.value }}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                  </span>
+                  <span *ngIf="question.vainpreg_codigo == 17">
+                    <div *ngFor="let request of question.respuestas">
+                      <label
+                        class="label-mat-form"
+                        [for]="request.vainresp_respuest"
+                        >{{ request.vainresp_respuesta }}:
+                        <span class="required">*</span>
+
+                        <mat-form-field appearance="outline" class="col-3">
+                          <mat-select
+                            placeholder="seleccione"
+                            (selectionChange)="
+                              tipoQuestion(question, request, $event.value)
+                            "
+                            required
+                          >
+                            <mat-option>Seleccione...</mat-option>
+                            <mat-option
+                              [for]="request.vainresp_respuest"
+                              *ngFor="let llan of cantidad"
+                              [value]="llan.value"
+                            >
+                              {{ llan.value }}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </label>
+                    </div>
+                  </span>
+                </div>
+              </section>
+
+              <!-- tipo de pregunta tipo 3 -->
+
+              <section>
+                <div *ngIf="question.vainpreg_tipopregunta == 3">
+                  <label class="label-mat-form">
+                    {{ question.vainpreg_pregunta }}
+                    <span
+                      *ngIf="question.vainpreg_codigo != 15"
+                      class="required"
+                      >*</span
+                    >
+                  </label>
+
+                  <mat-selection-list class="publicar_accesorios">
+                    <div class="row">
+                      <mat-list-option
+                        checkboxPosition="before"
+                        *ngFor="let request of question.respuestas"
+                        class="col-md-6"
+                        style="border-radius: 10px"
+                        [value]="request.vainresp_codigo"
+                        (click)="tipoQuestion(question, request)"
+                        ><label class="label-mat-form">{{
+                          request.vainresp_respuesta
+                        }}</label></mat-list-option
+                      >
+                    </div>
+                  </mat-selection-list>
+                </div>
+              </section>
+              <!-- tipo de pregunta tipo 4 -->
+
+              <section>
+                <div *ngIf="question.vainpreg_tipopregunta == 4">
+                  <label class="label-mat-form">
+                    {{ question.vainpreg_pregunta }}
+                    <span class="required">*</span>
+                  </label>
+
+                  <br />
+
+                  <mat-radio-group class="wrapperTipo3 text container">
+                    <span *ngFor="let item of tipoPersona; let i = index">
+                      <mat-radio-button
+                        name="name{{ i }}"
+                        [value]="item.id"
+                        (change)="tipoQuestion(question, $event)"
+                        ><label class="label-mat-form"
+                          ><font size="3">{{ item.name }}</font></label
+                        ></mat-radio-button
+                      >
+                    </span>
+                  </mat-radio-group>
+                  <p class="lineal">¿Que deseas hacer ?</p>
+                  <mat-radio-group class="wrapperTipo3 text container">
+                    <span *ngFor="let accion of tipoAccon; let i = index">
+                      <mat-radio-button
+                        name="name{{ i }}"
+                        [value]="accion.id"
+                        (change)="tipoQuestion(question, $event)"
+                        ><label class="label-mat-form"
+                          ><font size="3">{{ accion.name }}</font></label
+                        ></mat-radio-button
+                      >
+                    </span>
+                  </mat-radio-group>
+                </div>
+              </section>
+              <hr />
+            </span>
+            <div class="col-12 text-center pt-3">
+              <!-- <button mat-button matStepperPrevious class="btn-next">Atras</button> -->
+              <button mat-button class="btn-red">Regresar</button>
+              <!-- <button mat-button matStepperNext class="btn-next">Siguiente</button> -->
+              <button
+                mat-button
+                matStepperNext
+                class="btn-next"
+                (click)="onSubmit(2)"
+              >
+                Siguiente
+              </button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step label="Información Final" [optional]="isOptional">
+          <div *ngIf="validacion">
+            <h3 style="align-items: center; text-align: justify">
+              El precio especifico de tu carro es:
+            </h3>
+
+            <ng-container *ngIf="validacion; else elseTemplate">
+              <div class="cuadro">
+                <strong style="align-items: center; padding: 10px 50px 20px">{{
+                  valorGlobal | currency
+                }}</strong>
+              </div>
+              <br />
+            </ng-container>
+            <ng-template #elseTemplate>
+              <label>{{ valorVehiculo }}</label>
+            </ng-template>
+
+            <div class="col-15 text-center pt-5">
+              <button
+                mat-button
+                matStepperPrevious
+                class="btn-next"
+                (click)="LimpiarData()"
+              >
+                Valorar de nuevo
+              </button>
+            </div>
+          </div>
+
+          <!-- this. -->
+        </mat-step>
+      </mat-horizontal-stepper>
+    </div>
+  </div>
+</div>

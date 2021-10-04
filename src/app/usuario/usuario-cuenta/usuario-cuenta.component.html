@@ -96,7 +96,7 @@
                         <div class="col-md-6">
                             <label class="label-mat-form">¿En dónde está la empresa?</label>
                             <mat-form-field class="input-full-width" appearance="outline">
-                              <input type="text" placeholder="Busque y seleccione..." matInput formControlName="fubicacion" [matAutocomplete]="ubicacion" (keyup)="filterOptions($event)" (change)="validateUbicacion($event)">
+                              <input type="text" placeholder="Busque y seleccione..." matInput formControlName="fubicacion" [matAutocomplete]="ubicacion" (keyup)="filterOptions($event)">
                               <mat-autocomplete #ubicacion="matAutocomplete" [displayWith]="displayFn">
                                 <mat-option *ngFor="let option of ciudadesEmpresa" [value]="option">
                                   {{option.ciudad_nombre}}

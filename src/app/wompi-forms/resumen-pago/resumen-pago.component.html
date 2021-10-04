@@ -1,0 +1,39 @@
+<div class="global-content-full calcular-cuota">
+  <div class="section-content row">
+    <div class="content-form col-md-4 offset-md-1">
+
+
+      <div class="container">
+        <label class="lineal">
+          este es el resumen de la transaccion, en breves momentos podras
+          descargar tu información</label>
+        <mat-label class="label-mat-form">Número de transaccion:</mat-label>
+        <mat-form-field appearance="outline" class="col-12">
+          <input matInput [value]="idReferencia" disabled />
+        </mat-form-field>
+
+        <mat-label class="label-mat-form">Referencia de pago:</mat-label>
+        <mat-form-field appearance="outline" class="col-12">
+          <input matInput [value]="resultadoConsulta.reference" disabled />
+        </mat-form-field>
+
+
+        <mat-label class="label-mat-form">Fecha de Pago:</mat-label>
+        <mat-form-field appearance="outline" class="col-12">
+          <input matInput [value]="resultadoConsulta.created_at | date: 'medium' "  disabled />
+        </mat-form-field>
+
+
+        <mat-label class="label-mat-form">Estado de la transacción:</mat-label>
+        <mat-form-field appearance="outline" class="col-12">
+          <input matInput [value]="estado" disabled />
+        </mat-form-field>
+        <hr>
+        <button *ngIf="this.estado == 'APROBADA' && !loading" class="myButton" (click)="generarReporte()">Enviar Reporte</button>
+        <span *ngIf="loading">
+          <mat-spinner></mat-spinner>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

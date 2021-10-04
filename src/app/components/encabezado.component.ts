@@ -422,9 +422,10 @@ export class EncabezadoComponent implements OnInit {
       _p_action: "_getCuentaInicio",
     }).subscribe(
       (data) => {
+
         let datos = data.datos[0];
 
-        this.totalMensajes =datos.cant_comentarios-1;
+        // this.totalMensajes =datos.cant_comentarios;
 
         this.aprobados = datos.cant_clasificadosaprobados;
         this.pendientes = datos.cant_clasificadosrevision;
@@ -611,7 +612,7 @@ export class EncabezadoComponent implements OnInit {
     } else {
       inputSearch = document.querySelector("#buscador-mobile");
     }
-    inputSearch.value = "inicio";
+    //inputSearch.value = "inicio";
   }
 
   openRecomendador() {

@@ -1,0 +1,28 @@
+{
+  "nombre": "Autos León",
+  "telefono": "1111111111",
+  "email": "leonsandra2045@gmail.com",
+  "fmarca": "22",
+  "fmodelo": "2020",
+  "ffamilia": "22021",
+  "flinea": "11105",
+  "ciudad": "2",
+  "respuesta": [
+    { "idPregunta": 11, "valor": 23523 },
+    { "idPregunta": 12, "valor": 167 },
+    { "idPregunta": 16, "valor": 179 },
+    { "idPregunta": 18, "valor": 131 },
+    { "idPregunta": 19, "valor": 133 },
+    { "idPregunta": 20, "valor": 139 },
+    { "idPregunta": 13, "respuesta": { "idRespuesta": 170, "valor": 0 } },
+    { "idPregunta": 17, "respuesta": { "idRespuesta": 127, "valor": 0 } },
+    {
+      "idPregunta": 14,
+      "respuesta": [
+        { "idRespuesta": 171, "valor": 0 },
+        { "idRespuesta": 172, "valor": 0 },
+        { "idRespuesta": 173, "valor": 0 }
+      ]
+    }
+  ]
+}

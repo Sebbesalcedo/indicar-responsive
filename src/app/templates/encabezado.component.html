@@ -13,7 +13,7 @@
     <div class="busqueda-contenido busqueda-contenido-desktop">
         <div class="input-icon-end">
             <div class="barra-busqueda" [ngClass]="toggleSearch ? 'active' : 'inactive'">
-                <input type="text"  #buscador id="buscador" [(ngModel)]="palabra" placeholder="Busca tu vehículo ideal" (keyup)="searchData($event)">
+                <input type="text"  #buscador id="buscador" [(ngModel)]="palabra" placeholder="Busca tu vehículo" (keyup)="searchData($event)">
             </div>
             <button class="input-icon btn-encabezado">
                 <i class="material-icons">search</i>
@@ -62,7 +62,7 @@
                         <div class="alerta_notificacion" *ngIf="totalMensajes>0">
                             <span>{{totalMensajes}}</span>
                             <div class="nueva_alerta"></div>
-                        </div> 
+                        </div>
                     </div>
                     <button class="dropdown-item"  [routerLink]="['/usuario', { outlets: {'cuenta-opcion':['clasificado','A']} }]" >
                         <i class="material-icons">directions_car</i>
@@ -73,7 +73,7 @@
                         <!-- <i class="material-icons">favorite</i> Mis favoritos -->
                         <img class="item-img" src="assets/template/icono-favoritos.svg" alt="Favoritos">
                         <span class="item-span">Favoritos</span>
-                    </button>                        
+                    </button>
                     <!-- <button class="dropdown-item"  [routerLink]="['/comparador']" *ngIf="comparador">
                         <i class="material-icons">compare</i> Comparador
                     </button> -->
@@ -103,6 +103,8 @@
         <button class="menu-item" mat-button [routerLink]="['/inicio']">Inicio</button>
         <button class="menu-item" mat-button [routerLink]="['/clasificados']">Clasificados</button>
         <button class="menu-item" mat-button [matMenuTriggerFor]="Financiamiento">Financiamiento</button>
+        <button class="menu-item" mat-button [routerLink]="['/ValoraTuVehiculo']">Valorador</button>
+
         <mat-menu #Financiamiento="matMenu" yPosition="below">
           <button [routerLink]="['/financiamiento/calcular-cuota']" mat-menu-item>Calcula tu cuota</button>
           <button [routerLink]="['/financiamiento/solicitar-credito']" mat-menu-item>Solicitar crédito</button>
@@ -112,311 +114,6 @@
 </nav>
 
 
-<div *ngIf="responsive=='tab1'">
-    <div class="preencabezado text-right nv-m">
-        <!-- logo tablets. -->
-        <a routerLink="/" *ngIf="responsive=='tab'">
-            <img class="logo_blanco tab-responsive" src="assets/images/indicar.svg" alt="Indicar Logo">
-        </a>
-        <!-- NO LOGUEADO ESCRITORIO-->
-        <div *ngIf="!isLogged else logged" class="login">
-            <button mat-button class="login" (click)="login()">
-                    <!-- [routerLink]="['/login']"  -->
-                <i class="material-icons">input</i>
-                <b>Ingresar</b>
-            </button>
-            <button mat-button class="login" (click)="register()">
-                <i class="material-icons">person_add</i>
-                <b>Regístrate</b>
-            </button>
-        </div>
-        <!-- ./ NO LOGUEADO ESCRITORIO-->
-        <!-- LOGUEADO ESCRITORIO -->
-        <ng-template #logged>
-            <div ngbDropdown class="d-inline-block" id="cuentaDown">
-                <!-- <button class="logueado" id="logueado" ngbDropdownToggle> -->
-                <button id="logueado" ngbDropdownToggle>
-                    <i class="material-icons">person</i>
-                    <b>{{user}}</b>
-                </button>
-                <div class="alerta_notificacion" *ngIf="totalMensajes > 0">
-                    <span>!</span>
-                </div>
-                <div ngbDropdownMenu aria-labelledby="logueado"  id="cuenta-opc">
-                    <button class="dropdown-item" [routerLink]="['usuario',{ outlets: { 'cuenta-opcion': ['cuenta'] } }]">
-                        <i class="material-icons">person</i> Mi cuenta
-                    </button>
-                    <div class="opc-down">
-                        <button class="dropdown-item" [routerLink]="['/usuario',{ outlets: { 'cuenta-opcion': ['conversaciones'] } }]" >
-                            <i class="material-icons">message</i> Mensajes</button>      
-                        <div class="alerta_notificacion" *ngIf="totalMensajes>0">
-                            <span>{{totalMensajes}}</span>
-                            <div class="nueva_alerta"></div>
-                        </div> 
-                    </div>
-                    <button class="dropdown-item"  [routerLink]="['/usuario', { outlets: {'cuenta-opcion':['clasificado','A']} }]" >
-                        <i class="material-icons">directions_car</i> Mis clasificados
-                    </button>
-                    <button class="dropdown-item"  [routerLink]="['/usuario',{ outlets: { 'cuenta-opcion': ['favoritos'] } }]" >
-                        <i class="material-icons">favorite</i> Mis favoritos
-                    </button>                        
-                    <button class="dropdown-item"  [routerLink]="['/comparador']" *ngIf="comparador">
-                        <i class="material-icons">compare</i> Comparador
-                    </button>
-                    <button class="dropdown-item"  [routerLink]="['/clasificados']" [queryParams]="{p_cliente: cuser.codigo}"  *ngIf="cuser.tipocliente=='02'">
-                        <i class="material-icons">web</i> Mi micrositio
-                    </button>
-                    <hr>
-                    <button class="dropdown-item" (click)="logout();">
-                        <i class="material-icons">exit_to_app</i>Salir
-                    </button>
-                </div>
-            </div>
-        </ng-template>
-    </div>
-    <header [ngClass]="{'mobile':responsive=='mobile'}">
-        <!-- SEE IN DESKTOP -->
-        <div *ngIf="responsive=='desktop'">
-            <!-- <div class="container-fluid"> -->
-            <div>
-                <div class="row">
-                    <!-- LOGO INDICAR SUB HEADER INFERIOR -->
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" [ngClass]="{'nv-m-t':responsive!='desktop'}">
-                        <div class="logo">
-                            <a routerLink="/">
-                                <img class="img-responsive logo_color" src="assets/images/indicar-color.svg" alt="Indicar Logo">
-                            </a>
-                        </div>
-                    </div>
-                    <!-- BARRA DE BUSQUEDA -->
-                    <!-- {{responsive}} -->
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 busqueda-contenido busqueda-contenido-desktop">
-                    <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 busqueda-contenido busqueda-contenido-desktop" [ngClass]="{'busqueda-contenido-mobile':responsive=='mobile','busqueda-contenido-tab':responsive=='tab','busqueda-contenido-desktop':responsive=='desktop'}"> -->
-                        <div class="barra-busqueda" [ngClass]="toggleSearch ? 'active' : 'inactive'">
-                            <!-- <input type="text"  #buscador [(ngModel)]="palabra" placeholder="Busca tu vehículo ideal"> -->
-                            <input type="text"  #buscador id="buscador" [(ngModel)]="palabra" placeholder="Busca tu vehículo ideal" (keyup)="searchData($event)">
-                        </div>
-                        <button class="btn-encabezado">
-                            <i class="material-icons">search</i>
-                        </button>
-                    </div>
-                    <!-- MENU -->
-                    <nav class="col menu">
-                        <div class="menu-desktop">
-                            <button mat-button [routerLink]="['/clasificados']">Clasificados</button>
-                        
-                            <button mat-button [matMenuTriggerFor]="Financiamiento">Financiamiento</button>
-                            <mat-menu #Financiamiento="matMenu" yPosition="below">
-                              <button [routerLink]="['/financiamiento/calcular-cuota']" mat-menu-item>Calcula tu cuota</button>
-                              <button [routerLink]="['/financiamiento/solicitar-credito']" mat-menu-item>Solicitar crédito</button>
-                            </mat-menu>
-                            
-                            <button mat-button class="btn-red" [routerLink]="['/publicar']">Publica Gratis</button>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <!-- SEE IN TABLETS-->
-        <div *ngIf="responsive=='tab'">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- MENU -->
-                    <nav class="col menu">
-                        <div class="menu-tab">
-                                <button mat-button [routerLink]="['/clasificados']">Clasificados</button>
-                        
-                                <button mat-button [matMenuTriggerFor]="Financiamiento">Financiamiento</button>
-                                <mat-menu #Financiamiento="matMenu" yPosition="below">
-                                    <button [routerLink]="['/financiamiento/calcular-cuota']" mat-menu-item>Calcula tu cuota</button>
-                                    <button [routerLink]="['/financiamiento/solicitar-credito']" mat-menu-item>Solicitar crédito</button>
-                                </mat-menu>
-                                
-                                <button mat-button class="btn-red" [routerLink]="['/publicar']">Publica Gratis</button>
-                        </div>
-                    </nav>
-                    <!-- BARRA DE BUSQUEDA -->
-                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 busqueda-contenido busqueda-contenido-tab">
-                        <div class="barra-busqueda" [ngClass]="toggleSearch ? 'active' : 'inactive'">
-                            <!-- <input type="text"  #buscador [(ngModel)]="palabra" placeholder="Busca tu vehículo ideal"> -->
-                            <input type="text"  #buscador id="buscador-tablet" [(ngModel)]="palabra" placeholder="Busca tu vehículo ideal" (keyup)="searchData($event)">
-                        </div>
-                        <button class="btn-encabezado">
-                            <i class="material-icons">search</i>
-                        </button>
-                    </div>        
-                </div>
-            </div>
-        </div>
-        <!-- SEE IN MOBILE-->
-        <div *ngIf="responsive=='mobile'">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- open menu -->
-                    <button class="boton-menu" (click)="sidebarShow=!sidebarShow" type="button" *ngIf="!sidebarShow">
-                        <span class="line1"></span>
-                        <span class="line2"></span>
-                        <span class="line3"></span>
-                    </button>
-                    <!-- logo header -->
-                    <a routerLink="/" *ngIf="responsive=='mobile'">
-                        <img class="mobile-responsive" src="assets/images/indicar.svg" alt="Indicar Logo">
-                    </a>
-                    <!-- BARRA DE BUSQUEDA -->
-                    <div class="mobile busqueda-contenido">
-                        <div class="mobile barra-busqueda" [ngClass]="{'barra-hidden':searchActiveMobile==false}">
-                                <input type="text"  #buscador id="buscador-mobile" [(ngModel)]="palabra" placeholder="Busca tu vehículo ideal" (keyup)="searchData($event)">
-                                <!-- <input type="text"  #buscador [(ngModel)]="palabra" placeholder="Busca tu vehículo ideal"> -->
-                        </div>
-                        <!-- despliega la barra -->
-                        <button class="btn-encabezado" [ngClass]="{'btn-white-mobile':searchActiveMobile==false}" (click)="focusSearch()" *ngIf="!searchActiveMobile">
-                            <i class="material-icons">search</i>
-                        </button>
-                        <!-- realiza busqueda -->
-                        <!-- <button class="btn-encabezado" (click)="searchData($event)" *ngIf="searchActiveMobile"> -->
-                        <button class="btn-encabezado" (click)="searchActiveMobile = !searchActiveMobile" *ngIf="searchActiveMobile">
-                            <i class="material-icons">search</i>
-                        </button>
-                    </div>
-                    <button class="btn-encabezado btn-white-mobile btn-filtros noview" id="btn-filtros" (click)="sidebarShowFilters = !sidebarShowFilters">
-                        <i class="material-icons">tune</i>
-                    </button>
-                    <!-- responsive --> 
-                    <!-- <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 busqueda-contenido" [ngClass]="{'busqueda-contenido-mobile':responsive=='mobile','busqueda-contenido-tab':responsive=='tab','busqueda-contenido-desktop':responsive=='desktop'}">
-                        <div class="barra-busqueda" [ngClass]="toggleSearch ? 'active' : 'inactive'">
-                            <input type="text"  #buscador [(ngModel)]="palabra" placeholder="Busca tu vehículo ideal" (keyup)="keyupFunction($event)">
-                        </div>
-                        <button class="btn-encabezado">
-                            <i class="material-icons">search</i>
-                        </button>
-                    </div>         -->
-                </div>
-            </div>
-            <!-- SECTION SIDE NAV -->
-            <aside class="sidebar" [class.show]="sidebarShow">
-                <div class="close-sidebar" (click)="sidebarShow= !sidebarShow">&times;</div>
-                <div class="header-sidebar">
-                    <!-- if you are logged in, show avatar -->
-                    <div class="avatar" *ngIf="isLogged && cuser.tipocliente == '02'">
-                        <img class="avatar-usuario" src="{{avatar}}" alt="avatar-usuario">
-                        <h4>{{user}}</h4>
-                    </div>
-                    <!-- if you are logged in and you are not concessionaire, show indicar logo  -->
-                    <div class="avatar" *ngIf="isLogged && cuser.tipocliente == '01'">
-                        <a routerLink="/">
-                            <img class="logo_blanco mobile-responsive-sidebar" src="assets/images/indicar.svg" alt="Indicar Logo">
-                        </a>
-                        <!-- <img class="logo-sidebar" src="./assets/images/indicar.svg" alt="Indicar Logo"> -->
-                    </div>
-                    <!-- if you are not logged in, show indicar logo -->
-                    <div class="avatar" *ngIf="!isLogged">
-                        <a routerLink="/">
-                            <img class="logo_blanco mobile-responsive-sidebar" src="assets/images/indicar.svg" alt="Indicar Logo">
-                        </a>
-                        <!-- <img class="logo-sidebar" src="./assets/images/indicar.svg" alt="Indicar Logo"> -->
-                    </div>
-                </div>
-                <!-- MENU LATERAL MOBILE -->
-                <div class="content-sidebar">
-                    <ul class="mobile-menu">
-                        <li class="item-menu-mobile">
-                            <mat-accordion *ngIf="isLogged">
-                                <mat-expansion-panel>
-                                  <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <i class="material-icons">account_circle</i>
-                                        <a>Mi Cuenta</a>
-                                    </mat-panel-title>
-                                  </mat-expansion-panel-header>
-                                    <ul class="mobile-menu-mat-expansion">
-                                        <li class="item-menu-mobile">
-                                            <i class="material-icons">message</i>
-                                            <a (click)="sidebarShow = !sidebarShow" [routerLink]="['usuario', { outlets: {'cuenta-opcion':['conversaciones','A']} }]" routerLinkActive="active-link">Mensajes ({{totalMensajes}})</a>
-                                        </li>
-                                        <li class="item-menu-mobile">
-                                            <i class="material-icons">directions_car</i>
-                                            <a (click)="sidebarShow = !sidebarShow" [routerLink]="['usuario', { outlets: {'cuenta-opcion':['clasificado','A']} }]" routerLinkActive="active-link">Mis clasificados</a>
-                                        </li>
-                                        <li class="item-menu-mobile">
-                                            <i class="material-icons">favorite</i>
-                                            <a (click)="sidebarShow = !sidebarShow" [routerLink]="['usuario', { outlets: {'cuenta-opcion':['favoritos']} }]" routerLinkActive="active-link">Favoritos</a>
-                                        </li>
-                                        <li class="item-menu-mobile">
-                                            <i class="material-icons">settings_applications</i>
-                                            <a (click)="sidebarShow = !sidebarShow" [routerLink]="['usuario', { outlets: {'cuenta-opcion':['cuenta']} }]" routerLinkActive="active-link">Configuración</a>
-                                        </li>   
-                                    </ul>
-                                </mat-expansion-panel>
-                            </mat-accordion>
-                        </li>
-                        <li class="item-menu-mobile">
-                            <mat-panel-title *ngIf="!isLogged">
-                                <i class="material-icons">input</i>
-                                <a (click)="login()">Ingresar</a>
-                            </mat-panel-title>
-                        </li>
-                        <li class="item-menu-mobile">
-                            <mat-panel-title *ngIf="!isLogged">
-                                <i class="material-icons">account_box</i>
-                                <a (click)="register()">Registrar</a>
-                            </mat-panel-title>
-                        </li>
-                        <li class="item-menu-mobile">
-                            <mat-panel-title *ngIf="isLogged">
-                                <i class="material-icons">home</i>
-                                <a (click)="sidebarShow = !sidebarShow" [routerLink]="['/inicio']" routerLinkActive="active-link">Inicio</a>
-                            </mat-panel-title>
-                        </li>
-                        <li class="item-menu-mobile" *ngIf="isLogged && cuser.tipocliente == '02'">
-                            <i class="material-icons">web</i>
-                            <a (click)="sidebarShow = !sidebarShow" [routerLink]="['/clasificados']" [queryParams]="{p_cliente: cuser.codigo}" routerLinkActive="active-link">Mi micrositio</a>
-                        </li>
-                        <li class="item-menu-mobile">
-                            <i class="material-icons">directions_car</i>
-                            <a (click)="sidebarShow = !sidebarShow" routerLink="/clasificados" routerLinkActive="active-link">Clasificados</a>
-                        </li>
-                        <li class="item-menu-mobile">
-                            <i class="material-icons">emoji_transportation</i>
-                            <a (click)="sidebarShow = !sidebarShow" routerLink="/concesionarios" routerLinkActive="active-link">Concesionarios</a>
-                        </li>
-                        <li class="item-menu-mobile" *ngIf="comparador">
-                            <i class="material-icons">compare</i>
-                            <a (click)="sidebarShow = !sidebarShow" routerLink="/comparador" routerLinkActive="active-link">Comparador</a>
-                        </li>
-                        <li class="item-menu-mobile">
-                            <mat-accordion>
-                                <mat-expansion-panel>
-                                  <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <i class="material-icons">attach_money</i>
-                                        <a>Financiamiento</a>
-                                    </mat-panel-title>
-                                  </mat-expansion-panel-header>
-                                    <ul class="mobile-menu-mat-expansion">
-                                        <li class="item-menu-mobile">
-                                            <i class="material-icons">equalizer</i>
-                                            <a (click)="sidebarShow = !sidebarShow" [routerLink]="['financiamiento/calcular-cuota']" routerLinkActive="active-link">Calcula tu cuota</a>
-                                        </li>
-                                        <li class="item-menu-mobile">
-                                            <i class="material-icons">local_atm</i>
-                                            <a (click)="sidebarShow = !sidebarShow" [routerLink]="['financiamiento/solicitar-credito']" routerLinkActive="active-link">Solicitar crédito</a>
-                                        </li>
-                                    </ul>
-                                </mat-expansion-panel>
-                            </mat-accordion>
-                        </li>
-                    </ul>
-                    <a class="btn-red btn-red-mobile-menu" (click)="sidebarShow= !sidebarShow" [routerLink]="['/publicar']">Publica Gratis</a>
-                    <div class="logout-mobile" *ngIf="isLogged">
-                        <i (click)="logoutMobile()" class="material-icons">input</i>
-                        <a (click)="logoutMobile()">Salir</a>
-                    </div>
-                </div>
-            </aside>
-        </div>
-    </header>
-
-</div>
 
 <!-- / ENCABEZADO -->
 <!-- SUB HEADER -->

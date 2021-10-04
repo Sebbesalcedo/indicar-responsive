@@ -1,0 +1,300 @@
+<div class="global-content-full calcular-cuota">
+  <div class="section-content row">
+    <div class="content-form col-md-4 offset-md-1">
+      <ng-container *ngIf="existente; else elseTemplate">
+        <p class="lineal">Validando placas del vehiculo</p>
+        <hr />
+        <div style="align-items: center" *ngIf="spinner">
+          <mat-spinner></mat-spinner>
+        </div>
+        <div *ngIf="!spinner">
+          {{ mensaje }}
+        </div>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <p class="lineal">
+          Completa el siguiente formulario para que puedas recibir la consulta
+        </p>
+        <hr />
+        <form
+          [formGroup]="personaNatural"
+          #form
+          action="https://checkout.wompi.co/p/"
+          method="GET"
+        >
+          <!-- Tipo de persona -->
+
+          <mat-label class="label-mat-form"
+            >Seleccione un tipo de persona
+            <span class="required">*</span></mat-label
+          >
+          <mat-form-field appearance="outline" class="col-12">
+            <mat-select
+              placeholder="Selecciona un tipo de persona"
+              formControlName="tPersona"
+              [value]="personaNatural.value.tPersona"
+              required
+            >
+              <mat-option disabled>Selecciona</mat-option>
+              <mat-option
+                *ngFor="let tPersona of tipoPersona"
+                [value]="tPersona.tabllist_codigo"
+              >
+                {{ tPersona.tabllist_descripcion }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- tipo de identificación -->
+
+          <mat-label class="label-mat-form"
+            >Tipo de identificación <span class="required">*</span></mat-label
+          >
+          <mat-form-field appearance="outline" class="col-12">
+            <mat-select
+              placeholder="Selecciona un tipo de identificación"
+              formControlName="tpIdentificacion"
+              [value]="personaNatural.value.tpIdentificacion"
+              required
+            >
+              <mat-option disabled>Selecciona</mat-option>
+              <mat-option
+                *ngFor="let identi of tipoIdentificacion"
+                [value]="identi.tabllist_codigo"
+              >
+                {{ identi.tabllist_descripcion }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- número de tipoIdentificacion -->
+
+          <mat-label class="label-mat-form"
+            >Número de identificación <span class="required">*</span></mat-label
+          >
+          <mat-form-field appearance="outline" class="col-12">
+            <input
+              matInput
+              id="numero_identificacion"
+              autocomplete="off"
+              formControlName="numero_identificacion"
+              (blur)="buscarInformacion($event)"
+            />
+          </mat-form-field>
+
+          <!-- primer nombre -->
+
+          <mat-label class="label-mat-form"
+            >Primer Nombre <span class="required">*</span></mat-label
+          >
+          <mat-form-field appearance="outline" class="col-12" id="pNombre">
+            <input
+              matInput
+              [value]="personaNatural.value.pNombre"
+              formControlName="pNombre"
+            />
+          </mat-form-field>
+          <!-- segundo nombre -->
+
+          <mat-label class="label-mat-form">Segundo Nombre </mat-label>
+          <mat-form-field appearance="outline" class="col-12" id="sNombre">
+            <input
+              matInput
+              [value]="personaNatural.value.sNombre"
+              formControlName="sNombre"
+            />
+          </mat-form-field>
+          <!-- primer apellido -->
+
+          <mat-label class="label-mat-form"
+            >Primer Apellido<span class="required">*</span></mat-label
+          >
+          <mat-form-field appearance="outline" class="col-12" id="pApellido">
+            <input
+              matInput
+              [value]="personaNatural.value.pApellido"
+              formControlName="pApellido"
+            />
+          </mat-form-field>
+
+          <!-- segundo apellido -->
+
+          <mat-label class="label-mat-form">Segundo Apellido </mat-label>
+          <mat-form-field appearance="outline" class="col-12" id="sApellido">
+            <input
+              matInput
+              [value]="personaNatural.value.sApellido"
+              formControlName="sApellido"
+            />
+          </mat-form-field>
+
+          <!-- departamento -->
+
+          <mat-label class="label-mat-form"
+            >Seleccione un Departamento<span class="required"
+              >*</span
+            ></mat-label
+          >
+          <mat-form-field appearance="outline" class="col-12">
+            <mat-select
+              placeholder="Selecciona un departamento"
+              (selectionChange)="getCiudades($event.value)"
+              formControlName="departamento"
+              [value]="personaNatural.value.departamento"
+            >
+              <mat-option disabled>Selecciona</mat-option>
+              <mat-option
+                *ngFor="let departamento of departamentos"
+                [value]="departamento.departamento_codigo"
+              >
+                {{ departamento.departamento_nombre }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- Ciudad -->
+
+
+          <span *ngIf="encontrado">
+            <mat-label class="label-mat-form">Ciudad</mat-label>
+            <mat-form-field appearance="outline" class="col-12">
+              <input matInput [value]="ciudad" disabled />
+            </mat-form-field>
+          </span>
+          <span *ngIf="!encontrado">
+
+          <mat-label class="label-mat-form"
+          >Seleccione una ciudad<span class="required">*</span></mat-label
+        >
+        <mat-form-field appearance="outline" class="col-12">
+          <mat-select
+            placeholder="Selecciona una Ciudad"
+            [value]="personaNatural.value.ciudad"
+            formControlName="ciudad"
+            ciudad
+          >
+            <mat-option disabled>Selecciona</mat-option>
+            <mat-option
+              *ngFor="let ciudad of ciudades"
+              [value]="ciudad.ciudad_codigo"
+            >
+              {{ ciudad.ciudad_nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+          </span>
+
+
+          <!-- direccion -->
+          <mat-label class="label-mat-form"
+            >Dirección <span class="required">*</span></mat-label
+          >
+          <mat-form-field appearance="outline" class="col-12" id="dDireccion">
+            <input
+              matInput
+              [value]="personaNatural.value.dDireccion"
+              formControlName="dDireccion"
+            />
+          </mat-form-field>
+          <!-- celular -->
+
+          <mat-label class="label-mat-form"
+            >Celular <span class="required">*</span></mat-label
+          >
+          <mat-form-field appearance="outline" class="col-12" id="dCelular">
+            <input
+              matInput
+              [value]="personaNatural.value.dCelular"
+              formControlName="dCelular"
+              [mask]="maskphone"
+            />
+          </mat-form-field>
+
+          <mat-label class="label-mat-form"
+            >Telefono <span class="required">*</span></mat-label
+          >
+          <mat-form-field appearance="outline" class="col-12" id="dTelefono">
+            <input
+              matInput
+              [value]="personaNatural.value.dTelefono"
+              formControlName="dTelefono"
+            />
+          </mat-form-field>
+          <!-- email -->
+          <mat-label class="label-mat-form"
+            >Correo Electronico <span class="required">*</span></mat-label
+          >
+          <mat-form-field appearance="outline" class="col-12" id="dEmail">
+            <input
+              matInput
+              [value]="personaNatural.value.dEmail"
+              formControlName="dEmail"
+            />
+          </mat-form-field>
+
+          <mat-checkbox
+            class="example-margin"
+            style="align-items: center"
+            id="acceptTerms"
+            (change)="checkValue($event)"
+            >Acepto haber leído los
+            <a [href]="terminos_condiciones" style="color: #004195"
+              >términos y condiciones y la politica de privacidad</a
+            >
+            para hacer esta compra
+          </mat-checkbox>
+          <hr />
+          <input type="hidden" name="public-key" [value]="publicKey" />
+          <input type="hidden" name="currency" [value]="currency" />
+          <input
+            type="hidden"
+            name="amount-in-cents"
+            [value]="valorTransaccion"
+          />
+          <input type="hidden" name="reference" [value]="reference" />
+          <input type="hidden" name="redirect-url" [value]="redirectUrl" />
+
+          <input
+            type="hidden"
+            name="customer-data:email"
+            [value]="personaNatural.value.dEmail"
+          />
+          <input
+            type="hidden"
+            name="customer-data:full-name"
+            [value]="personaNatural.value.pNombre"
+          />
+          <input
+            type="hidden"
+            name="customer-data:phone-number"
+            [value]="personaNatural.value.dCelular"
+          />
+
+          <div style="justify-content: center; align-items: center">
+            <!-- -->
+
+            <ng-container *ngIf="loading; else elseTemplate">
+              <button
+                type="submit"
+                class="myButton"
+                (click)="guardarDatos(form)"
+              >
+                COP Pagar
+              </button>
+            </ng-container>
+            <ng-template #elseTemplate>
+              <span>
+                <mat-spinner></mat-spinner>
+              </span>
+            </ng-template>
+          </div>
+        </form>
+      </ng-template>
+    </div>
+  </div>
+</div>
+<div class="load-content" *ngIf="buscar">
+  <div class="content-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

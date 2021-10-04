@@ -64,6 +64,7 @@ export class UsadosClasificadosComponent implements OnInit {
   ){}
 
   ngOnInit() {
+
     this.viewFiltros(true);
     this.listVehiculosComparar = JSON.parse(localStorage.getItem('setCompare'));
     this.cuser = JSON.parse(localStorage.getItem('currentUser'));
@@ -71,10 +72,12 @@ export class UsadosClasificadosComponent implements OnInit {
       this.listVehiculosComparar = [];
     }
     this.route.queryParams.subscribe(params=>{
+
       this.p_filtros['p_tipoclasificado']     = params['p_tipoclasificado'];
       this.p_filtros['p_clase']               = params['p_clase'];
       this.p_filtros['p_marca']               = params['p_marca'];
       this.p_filtros['p_familia']             = params['p_familia'];
+      this.p_filtros['p_precio']              = params['fprecio'];
       this.p_filtros['p_departamento']        = params['p_departamento'];
       this.p_filtros['p_ciudad']              = params['p_ciudad'];
       this.p_filtros['p_unico']               = params['p_unico'];
@@ -85,6 +88,8 @@ export class UsadosClasificadosComponent implements OnInit {
       this.p_filtros['p_cliente']             = params['p_cliente'];
       this.p_filtros['currentPage']           = params['currentPage'];
       this.p_filtros['p_cliente']             = params['p_cliente'];
+      this.p_filtros['p_cliente']             = params['p_cliente'];
+
       if(params['p_cliente'] != null && params['p_cliente'] != undefined && params['p_cliente'] != '' ){
         this.isConcesionario = true;
         this.fcliente = params['p_cliente'];
@@ -134,7 +139,7 @@ export class UsadosClasificadosComponent implements OnInit {
     //   //  this.sendRequest(this.p_filtros['currentPage']);
     //    window.scrollTo(0, 0);
 
-    //   // ejecutar consulta 
+    //   // ejecutar consulta
     //   console.log(this.filtros);
 
     // })
@@ -143,14 +148,18 @@ export class UsadosClasificadosComponent implements OnInit {
   }
 
   sendRequest(){
+
     this.loading = true;
     this.WebApiService.getRequest(AppComponent.urlService+'?_p_action=_getItemsUsado2019',
       this.p_filtros
     )
     .subscribe(
+
       data=>{
+
         this.datos            = data;
         this.items            = data.datos;
+
         this.registros        = data.registros;
         this.ftipoclasificado = data.ftipoclasificado;
         this.fclase           = data.fclase;
@@ -159,6 +168,7 @@ export class UsadosClasificadosComponent implements OnInit {
         this.fdepartamento    = data.fdepartamento;
         this.fciudad          = data.fciudad;
         this.fprecio          = data.fprecio;
+
         this.fmodelo          = data.fmodelo;
         this.fkm              = data.fkm;
         this.ftraccion        = data.ftraccion;
@@ -168,6 +178,7 @@ export class UsadosClasificadosComponent implements OnInit {
         this.funicoduenio     = data.funicoduenio;
         this.fplaca           = data.fplaca;
         this.fairbags         = data.fairbags;
+
         // telefonos concesionario o cliente
         let auxTelefonos        = [];
         if(data.cliente.data != undefined){
@@ -196,7 +207,7 @@ export class UsadosClasificadosComponent implements OnInit {
             item.venta_codigo = this.encrypt.encrypt(item.venta_codigo);
           });
         }
-        
+
       },
       error=>{
         this.loading = false;
@@ -206,14 +217,18 @@ export class UsadosClasificadosComponent implements OnInit {
   }
 
   reload(filtros=null){
+
     if(filtros != null){
       this.p_filtros = filtros;
+
     }
     if(this.isConcesionario){
       if(this.fcliente != null){
         this.p_filtros['p_cliente']= this.fcliente;
       }
     }
+
+    console.log(filtros);
     this.encabezado.sidebarShowFilters = false;
     this.router.navigate(['clasificados'], { queryParams: this.p_filtros });
     this.sendRequest();
@@ -233,6 +248,7 @@ export class UsadosClasificadosComponent implements OnInit {
   }
 
   reloadFilterOrder(){
+
     this.p_filtros['currentPage'] = 1;
     // this.reload();
     this.setPage(1)
@@ -340,93 +356,8 @@ export class UsadosClasificadosComponent implements OnInit {
         );
       }
     }
-    /*
-    
-    setFavorito(pcodigo:string, index: number, nombre: string,status:string = null): void {   
-      var setFavorite = JSON.parse(localStorage.getItem('setFavorite'));
-      if(JSON.parse(localStorage.getItem('currentUser')) == null){ // no logueado
-        /*establezco el codigo en memoria,una vez sea logueado se redirije a clasificado con un mensaje
-        de que su clasificado fue agregado a favorito*
-        var logged = false;
-        var objData = {pcodigo,index,nombre,status,logged};
-        var stringData = JSON.stringify(objData);
-        localStorage.setItem('setFavorite',stringData);
-        this.router.navigate(['/login']);
-      }else{// logueado
-        // si vengo de loguearme.
-        if(setFavorite != null){
-          if(setFavorite.logged == false){ // viene de iniciar session
-            // NO CONOZCO EL ID DEL CLASIFICADO.
-            let cod = this.Encrypt.desencrypt(setFavorite.pcodigo);
-            if(status == 'N'){ // clasificado 
-              // console.log('entra4');
-              this.promiseService.createService(
-                AppComponent.urlservicio + '?_p_action=_clientefavorito',
-                {
-                  venta_codigo: cod
-                }
-              )
-              .then(result => {         
-                swal(
-                  "",
-                  'Vehículo agregado a favoritos',
-                  null
-                );
-              })
-              .catch(error => {
-                swal(
-                  "",
-                  'Vehículo no pudo ser agregado a favoritos',
-                  null
-                );
-              });  
-            }
-            localStorage.setItem('setFavorite',JSON.stringify(null));
-          }
-        }else{ // estoy en la pagina de clasificado agregando un favorito con la session iniciada.
-          let cod = this.Encrypt.desencrypt(pcodigo);
-          if(this.item[index].isfavorito=='S'){        
-            this.promiseService.deleteService(
-              AppComponent.urlservicio + '?_p_action=_clientefavorito',
-              {
-                venta_codigo: cod
-              }
-            )
-              .then(result => {       
-                  this.item[index].isfavorito = 'N';
-              })
-              .catch(error => {
-                  this.item[index].isfavorito = 'S';
-                  alert(error._body);             
-              });
-    
-            this.snackBar.open('Removido de favoritos', null, {
-              duration: 3000
-            });
-          }else{
-            this.promiseService.createService(
-              AppComponent.urlservicio + '?_p_action=_clientefavorito',
-              {
-                venta_codigo: cod
-              }
-            )
-              .then(result => {       
-                  this.item[index].isfavorito = 'S';
-              })
-              .catch(error => {
-                  this.item[index].isfavorito = 'N';
-                  alert(error._body)            
-              });        
-            this.snackBar.open('¡Agregado a favoritos!', null, {
-              duration: 3000
-            });
-    
-          } 
-        }
-      }
-    }
-    
-    */
+
+
   }
   // ######################################### /FAVORITOS #########################################
 
@@ -475,7 +406,7 @@ export class UsadosClasificadosComponent implements OnInit {
 
 
 
-    
+
     /*let setFavorite = JSON.parse(localStorage.getItem('setFavorite'));
     this.cuser = JSON.parse(localStorage.getItem('currentUser'));
     if(this.cuser == null){ // debe iniciar sesion
@@ -556,8 +487,9 @@ export class UsadosClasificadosComponent implements OnInit {
     this.viewFiltros(false);
     this.encabezado.clearSearch();
   }
-  
+
   closeFilter($event){
+
     if($event == 'close'){
       this.encabezado.sidebarShowFilters = false;
     }

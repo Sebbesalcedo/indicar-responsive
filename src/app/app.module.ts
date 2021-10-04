@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -19,7 +19,7 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { NgxMaskModule} from "ngx-mask";
 import { DragDropModule } from "@angular/cdk/drag-drop";
-
+import {MatStepperModule} from '@angular/material/stepper';
 /* COMPONENTES */
 import { EncabezadoComponent } from "./components/encabezado.component";
 import { FooterComponent } from "./components/footer.component";
@@ -33,7 +33,11 @@ import { PoliticasPublicacionComponent } from "./paginas/politicas-publicacion/p
 import { UsadoDetalleDialog } from "./dialogs/usado-detalle/usado-detalle.dialog.component";
 import { PqrsComponent } from "./paginas/pqrs/pqrs.component";
 import { IntegradorComponent } from './integrador/integrador.component';
-
+import {ResumenPagoComponent} from './wompi-forms/resumen-pago/resumen-pago.component';
+import {WompiFormsComponent} from './wompi-forms/wompi-forms.component';
+import {ValoradorComponent}  from './valorador/valorador.component';
+import {MatListModule} from '@angular/material/list';
+import {MaterialModule} from './material.module';
 // export  var options: Partial<IConfig> | (() => Partial<IConfig>);
 
 @NgModule({
@@ -42,6 +46,7 @@ import { IntegradorComponent } from './integrador/integrador.component';
     EncabezadoComponent,
     FooterComponent,
     LoginDialog,
+    ValoradorComponent,
     RecomendadorDialog,
     CuentaDialog,
     UsadoDetalleDialog,
@@ -51,6 +56,10 @@ import { IntegradorComponent } from './integrador/integrador.component';
     PoliticasPublicacionComponent,
     PqrsComponent,
     IntegradorComponent,
+    ResumenPagoComponent,
+    WompiFormsComponent,
+
+
   ],
   entryComponents: [
     LoginDialog,
@@ -66,8 +75,10 @@ import { IntegradorComponent } from './integrador/integrador.component';
     NgbModule,
     HttpClientModule,
     MatMenuModule,
+    MatListModule,
     MatExpansionModule,
     MatDialogModule,
+    MatStepperModule,
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
@@ -82,5 +93,6 @@ import { IntegradorComponent } from './integrador/integrador.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
+   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}

@@ -39,7 +39,7 @@ export class UsadoDetalleDialog{
   // OUTPUT
   @Output() loading = new EventEmitter();
   @Output() closeDialog = new EventEmitter();
-  
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data:any,
     private WebApiService:WebApiService,
@@ -58,6 +58,7 @@ export class UsadoDetalleDialog{
     this.view = this.data.window;
     switch(this.view){
       case 'delete':  // formulario de vendido
+     console.log(this.data);
         this.deleteOptions = this.data.deleteOptions;
         this.formDelete = new FormGroup({
           fparametro: new FormControl('',Validators.required)
@@ -65,6 +66,7 @@ export class UsadoDetalleDialog{
       break;
       case 'sold':  // formulario de vendido
         this.saleOptions   = this.data.saleOptions;
+        console.log(this.saleOptions );
         this.back          = this.data.from;
         this.formSold = new FormGroup({
           fparametro: new FormControl('',Validators.required)
@@ -138,7 +140,7 @@ export class UsadoDetalleDialog{
             this.loading.emit(false);
             this.closeDialog.emit();
           }
-        ); 
+        );
       break;
     }
   }
@@ -266,7 +268,7 @@ export class UsadoDetalleDialog{
     event.preventDefault();
     this.closeDialog.emit('delete');
   }
-  
+
   btnClose(){
     event.stopPropagation();
     event.preventDefault();

@@ -6,6 +6,8 @@ import { AuthGuardPublicarService } from './../servicios/auth-guard-publicar.ser
 import { UsadosPublicarComponent } from './usados-publicar/usados-publicar.component';
 import { UsadosClasificadosComponent } from './usados-clasificados/usados-clasificados.component';
 import { UsadoDetalleComponent } from './usado-detalle/usado-detalle.component';
+import { LoginDialog } from '../dialogs/login/login.dialog.component';
+
 
 
 const routes: Routes = [
@@ -25,6 +27,9 @@ const routes: Routes = [
   },{
     path:'clasificado/detalle/:id',
     component: UsadoDetalleComponent,
+  },{
+    path:'logindialog',
+    component: LoginDialog ,
   }
 ];
 

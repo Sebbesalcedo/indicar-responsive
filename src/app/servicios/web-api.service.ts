@@ -41,8 +41,19 @@ export class WebApiService{
   getRequest(url:string,params:any):Observable<any>{
     params = this.processParams(params)
     let headers = this.setHeaders();
+
     return this._http.get<any>(url,{headers, params});
   }
+
+  /**Metodo get para consumir api de facturación */
+   getDt(url:string,params:any):Observable<any>{
+    params = this.processParams(params)
+
+    return this._http.get<any>(url,{params});
+  }
+
+
+
 
 
 
