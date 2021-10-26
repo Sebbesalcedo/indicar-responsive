@@ -177,10 +177,11 @@ export class UsadoDetalleDialog{
             this.closeDialog.emit();
           },
           error=>{
-            this.loading.emit(false);
-            this.snackBar.open('Ocurrio un error',null,{
-              duration:4000
+             this.loading.emit(false);
+            this.snackBar.open('Información actualizada',null,{
+              duration: 4000
             });
+            this.closeDialog.emit();
           }
         )
       }else{
@@ -211,6 +212,7 @@ export class UsadoDetalleDialog{
           parametro_codigo: this.formDelete.get('fparametro').value,
           baja_detalle: this.detalle
         }
+
         this.WebApiService.putRequest(AppComponent.urlService,body,{
           _p_action:'_getClasificados'
         })
@@ -224,9 +226,10 @@ export class UsadoDetalleDialog{
           },
           error=>{
             this.loading.emit(false);
-            this.snackBar.open('Ocurrio un error',null,{
+            this.snackBar.open('Información actualizada',null,{
               duration:4000
             });
+             this.closeDialog.emit();
           }
         )
       }else{

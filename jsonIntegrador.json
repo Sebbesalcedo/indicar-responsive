@@ -1,0 +1,7037 @@
+[
+  {
+    "ciudad_codigo": 263,
+    "departamento_codigo": 91,
+    "ciudad_nombre": "EL ENCANTO",
+    "ciudad_codigoml": "TUNPQ0VMWjQ2MDg",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 405,
+    "departamento_codigo": 91,
+    "ciudad_nombre": "LA CHORRERA",
+    "ciudad_codigoml": "TUNPQ0xBWmE3NDI0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 407,
+    "departamento_codigo": 91,
+    "ciudad_nombre": "LA PEDRERA",
+    "ciudad_codigoml": "TUNPQ0xBWjJkYWNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 430,
+    "departamento_codigo": 91,
+    "ciudad_nombre": "LA VICTORIA",
+    "ciudad_codigoml": "TUNPQ0xBWjU2MWM2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 91,
+    "ciudad_nombre": "LETICIA",
+    "ciudad_codigoml": "TUNPQ0xFVDdiMjY0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 460,
+    "departamento_codigo": 91,
+    "ciudad_nombre": "MIRITI - PARANA",
+    "ciudad_codigoml": "TUNPQ01JUjljNTM3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 530,
+    "departamento_codigo": 91,
+    "ciudad_nombre": "PUERTO ALEGRIA",
+    "ciudad_codigoml": "TUNPQ1BBMjQ4Mw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 536,
+    "departamento_codigo": 91,
+    "ciudad_nombre": "PUERTO ARICA",
+    "ciudad_codigoml": "TUNPQ1BBMjQ4NA",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 540,
+    "departamento_codigo": 91,
+    "ciudad_nombre": "PUERTO NARIÃ‘O",
+    "ciudad_codigoml": "TUNPQ1BOMjQ4NQ",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 669,
+    "departamento_codigo": 91,
+    "ciudad_nombre": "PUERTO SANTANDER",
+    "ciudad_codigoml": "TUNPQ0FNQVBTVEQ",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 798,
+    "departamento_codigo": 91,
+    "ciudad_nombre": "TARAPACA",
+    "ciudad_codigoml": "TUNPQ1RBMjQ4Ng",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "002",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ABEJORRAL",
+    "ciudad_codigoml": "TUNPQ0FCRTg3MTJl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "004",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ABRIAQUI",
+    "ciudad_codigoml": "TUNPQ0FCUjM3NWRl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "021",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ALEJANDRIA",
+    "ciudad_codigoml": "TUNPQ0FMRWVhNzNk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "030",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "AMAGA",
+    "ciudad_codigoml": "TUNPQ0FNQTdmYWFk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "031",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "AMALFI",
+    "ciudad_codigoml": "TUNPQ0FNQTE4M2Q4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "034",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ANDES",
+    "ciudad_codigoml": "TUNPQ0FORDE2YzYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "036",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ANGELOPOLIS",
+    "ciudad_codigoml": "TUNPQ0FORzRlNzdk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "038",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ANGOSTURA",
+    "ciudad_codigoml": "TUNPQ0FORzVmMGFj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "040",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ANORI",
+    "ciudad_codigoml": "TUNPQ0FOTzZiZDA1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "044",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ANZA",
+    "ciudad_codigoml": "TUNPQ0FOWjVkNTky",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "045",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "APARTADO",
+    "ciudad_codigoml": "TUNPQ0FQQWQzYWE2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "051",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ARBOLETES",
+    "ciudad_codigoml": "TUNPQ0FSQjM1ZGU5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "055",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ARGELIA",
+    "ciudad_codigoml": "TUNPQ0FSRzc4YTMz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "059",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ARMENIA",
+    "ciudad_codigoml": "TUNPQ0FSTWFlMWJi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "079",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "BARBOSA",
+    "ciudad_codigoml": "TUNPQ0JBUmYzNzU0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "088",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "BELLO",
+    "ciudad_codigoml": "TUNPQ0JFTDg0Y2E",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "086",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "BELMIRA",
+    "ciudad_codigoml": "TUNPQ0JFTDU3MDUy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "091",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "BETANIA",
+    "ciudad_codigoml": "TUNPQ0JFVGQ3ODE0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "093",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "BETULIA",
+    "ciudad_codigoml": "TUNPQ0JFVGM5YmMy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 107,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "BRICEÃ‘O",
+    "ciudad_codigoml": "TUNPQ0JSSTVmMGI3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 113,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "BURITICA",
+    "ciudad_codigoml": "TUNPQ0JVUjdkMDU",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 120,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CACERES",
+    "ciudad_codigoml": "TUNPQ0NBQ2FkNmRl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 125,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CAICEDO",
+    "ciudad_codigoml": "TUNPQ0NBSTgzNThh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 138,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CAÃ‘ASGORDAS",
+    "ciudad_codigoml": "TUNPQ0NBTjUyYzkx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 142,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CARACOLI",
+    "ciudad_codigoml": "TUNPQ0NBTDQxNGJj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 147,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CAREPA",
+    "ciudad_codigoml": "TUNPQ0NBUmI0ZmMw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 150,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CAROLINA",
+    "ciudad_codigoml": "TUNPQ0NBUjQ3NGQ3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 154,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CAUCASIA",
+    "ciudad_codigoml": "TUNPQ0NBUjM0NjZi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 172,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CHIGORODO",
+    "ciudad_codigoml": "TUNPQ0NISTJiZTE2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 190,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CISNEROS",
+    "ciudad_codigoml": "TUNPQ0NJUzcyMWYw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 101,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CIUDAD BOLIVAR",
+    "ciudad_codigoml": "TUNPQ0JPTDM0NzUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 206,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CONCEPCION",
+    "ciudad_codigoml": "TUNPQ0NPTDE3YQ",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 209,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "CONCORDIA",
+    "ciudad_codigoml": "TUNPQ0NPTmJjZjU1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 212,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "COPACABANA",
+    "ciudad_codigoml": "TUNPQ0NPUjE0ZGMw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 234,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "DABEIBA",
+    "ciudad_codigoml": "TUNPQ0RBQjVhOTY2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 237,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "DON MATIAS",
+    "ciudad_codigoml": "TUNPQ0RPTmFhOWVh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 240,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "EBEJICO",
+    "ciudad_codigoml": "TUNPQ0VCRTc0ZmY1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 250,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "EL BAGRE",
+    "ciudad_codigoml": "TUNPQ0VMWjc2MzIw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 148,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "EL CARMEN DE VIBORAL",
+    "ciudad_codigoml": "TUNPQ0VMQzY3MDg2Nw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 264,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ENTRERRIOS",
+    "ciudad_codigoml": "TUNPQ0VOQzFmOTI0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 266,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ENVIGADO",
+    "ciudad_codigoml": "TUNPQ0VOQzNkYTE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 306,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "GIRALDO",
+    "ciudad_codigoml": "TUNPQ0dJRzVjZWYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 310,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "GOMEZ PLATA",
+    "ciudad_codigoml": "TUNPQ0dPTWM5Njdh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 313,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "GRANADA",
+    "ciudad_codigoml": "TUNPQ0dSQWU3MDMy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 315,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "GUADALUPE",
+    "ciudad_codigoml": "TUNPQ1NBQzFlN2Qz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 318,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "GUARNE",
+    "ciudad_codigoml": "TUNPQ0dVQWMzNWFj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 347,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "HELICONIA",
+    "ciudad_codigoml": "TUNPQ0hFUmE0YmRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 361,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ITUANGO",
+    "ciudad_codigoml": "TUNPQ0lTVDRmOWJj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 364,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "JARDIN",
+    "ciudad_codigoml": "TUNPQ0pBTTNkYWM0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 368,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "JERICO",
+    "ciudad_codigoml": "TUNPQ0pFUjlhOTMy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 380,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "LA ESTRELLA",
+    "ciudad_codigoml": "TUNPQ0xBWjFiMjUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 390,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "LA PINTADA",
+    "ciudad_codigoml": "TUNPQ0xBWjZkYjc2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 400,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "LA UNION",
+    "ciudad_codigoml": "TUNPQ1RBTTJhZGRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 411,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "LIBORINA",
+    "ciudad_codigoml": "TUNPQ0xJTjg3MDgx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 425,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "MACEO",
+    "ciudad_codigoml": "TUNPQ01BQzVjZmU5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 440,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "MARINILLA",
+    "ciudad_codigoml": "TUNPQ01BUjdjNWY5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 480,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "MUTATA",
+    "ciudad_codigoml": "TUNPQ01VWjQxYTMz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 483,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "NARIÃ‘O",
+    "ciudad_codigoml": "TUNPQ05BUmFiYjYw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 495,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "NECHI",
+    "ciudad_codigoml": "TUNPQ05PUjNjNmQw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 490,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "NECOCLI",
+    "ciudad_codigoml": "TUNPQ09MQWJkMzhm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 541,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "PEÃ‘OL",
+    "ciudad_codigoml": "TUNPQ1BFTjIwYjU3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 585,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "PUERTO NARE",
+    "ciudad_codigoml": "TUNPQ1BVUmM3N2E0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 591,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "PUERTO TRIUNFO",
+    "ciudad_codigoml": "TUNPQ1BVRWMzMmI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 615,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "RIONEGRO",
+    "ciudad_codigoml": "TUNPQ1JJTzVlMzBl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 647,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SAN ANDRES",
+    "ciudad_codigoml": "TUNPQ1NBTmNjNzZm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 649,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SAN CARLOS",
+    "ciudad_codigoml": "TUNPQ1NBTmYxZWFk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 658,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SAN JOSE DE LA MONTAÃ‘A",
+    "ciudad_codigoml": "TUNPQ1NBTmIzNGU4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 660,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SAN LUIS",
+    "ciudad_codigoml": "TUNPQ1NBTmY3ZTI",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 664,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SAN PEDRO",
+    "ciudad_codigoml": "TUNPQ1NBTjNjMjg4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 665,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SAN PEDRO DE URABA",
+    "ciudad_codigoml": "TUNPQ1NBTjhmOTUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 667,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SAN RAFAEL",
+    "ciudad_codigoml": "TUNPQ1NBTmJjOTBm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 670,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SAN ROQUE",
+    "ciudad_codigoml": "TUNPQ1NBTmFlZGQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 679,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SANTA BARBARA",
+    "ciudad_codigoml": "TUNPQ1NBTmQzNWNj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "042",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SANTAFE DE ANTIOQUIA",
+    "ciudad_codigoml": "TUNPQ1NBTmQyMzQ3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 686,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SANTA ROSA DE OSOS",
+    "ciudad_codigoml": "TUNPQ1NBTmNiYjYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 690,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SANTO DOMINGO",
+    "ciudad_codigoml": "TUNPQ1NBTmM0YTI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 736,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SEGOVIA",
+    "ciudad_codigoml": "TUNPQ1NFRzNkYWVl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 756,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SONSON",
+    "ciudad_codigoml": "TUNPQ1NPTjY2NTdh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 761,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "SOPETRAN",
+    "ciudad_codigoml": "TUNPQ1NPUDM1NDg2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 789,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "TAMESIS",
+    "ciudad_codigoml": "TUNPQ1RBTTQwNmI2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 790,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "TARAZA",
+    "ciudad_codigoml": "TUNPQ1RBU2U0MmRl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 809,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "TITIRIBI",
+    "ciudad_codigoml": "TUNPQ1RJTWUzN2Yy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 837,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "TURBO",
+    "ciudad_codigoml": "TUNPQ1RVVDg3ZjNl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 842,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "URAMITA",
+    "ciudad_codigoml": "TUNPQ1VSQWYyMzBi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 847,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "URRAO",
+    "ciudad_codigoml": "TUNPQ1VSUjFhMWZm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 854,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "VALDIVIA",
+    "ciudad_codigoml": "TUNPQ1ZBTDRjNzFh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 856,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "VALPARAISO",
+    "ciudad_codigoml": "TUNPQ1ZBTDVhMTIy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 858,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "VEGACHI",
+    "ciudad_codigoml": "TUNPQ1ZFRzkxNjgyNA",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 861,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "VENECIA",
+    "ciudad_codigoml": "TUNPQ1ZFTjI4NjRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 873,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "VIGIA DEL FUERTE",
+    "ciudad_codigoml": "TUNPQ1ZJR2NjNDE0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 885,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "YALI",
+    "ciudad_codigoml": "TUNPQ1lBTDFlOTE5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 887,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "YARUMAL",
+    "ciudad_codigoml": "TUNPQ1lBUjcwZWY1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 890,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "YOLOMBO",
+    "ciudad_codigoml": "TUNPQ1lPTDRkNWEz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 893,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "YONDO",
+    "ciudad_codigoml": "TUNPQ1lPTjZiZGM5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 895,
+    "departamento_codigo": "05",
+    "ciudad_nombre": "ZARAGOZA",
+    "ciudad_codigoml": "TUNPQ1pBUjdiNzAz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 81,
+    "ciudad_nombre": "ARAUCA",
+    "ciudad_codigoml": "TUNPQ0FSQWE5ODA",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "065",
+    "departamento_codigo": 81,
+    "ciudad_nombre": "ARAUQUITA",
+    "ciudad_codigoml": "TUNPQ0FSQTQwMDJh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 220,
+    "departamento_codigo": 81,
+    "ciudad_nombre": "CRAVO NORTE",
+    "ciudad_codigoml": "TUNPQ0NSQTRjMDBh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 300,
+    "departamento_codigo": 81,
+    "ciudad_nombre": "FORTUL",
+    "ciudad_codigoml": "TUNPQ0ZPUmFiMjIx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 591,
+    "departamento_codigo": 81,
+    "ciudad_nombre": "PUERTO RONDON",
+    "ciudad_codigoml": "TUNPQ1BVRWQzOTNl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 736,
+    "departamento_codigo": 81,
+    "ciudad_nombre": "SARAVENA",
+    "ciudad_codigoml": "TUNPQ1NBUmYzYTVj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 794,
+    "departamento_codigo": 81,
+    "ciudad_nombre": "TAME",
+    "ciudad_codigoml": "TUNPQ1RBTWRiMzdl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 88,
+    "ciudad_nombre": "SAN ANDRES",
+    "ciudad_codigoml": "TUNPQ0JBUjkzOTg0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "078",
+    "departamento_codigo": "08",
+    "ciudad_nombre": "BARANOA",
+    "ciudad_codigoml": "TUNPQ0JBUjU5M2Y4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": "08",
+    "ciudad_nombre": "BARRANQUILLA",
+    "ciudad_codigoml": "TUNPQ0NBUjcwNTYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 137,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "CAMPO DE LA CRUZ",
+    "ciudad_codigoml": "TUNPQ0NBTTkyMDAy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 296,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "GALAPA",
+    "ciudad_codigoml": "TUNPQ0dBTTVhZDg5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 372,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "JUAN DE ACOSTA",
+    "ciudad_codigoml": "TUNPQ0pVQTdkZDU2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 433,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "MALAMBO",
+    "ciudad_codigoml": "TUNPQ01BTGRlYzgz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 436,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "MANATI",
+    "ciudad_codigoml": "TUNPQ01BTjI2NDgx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 520,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "PALMAR DE VARELA",
+    "ciudad_codigoml": "TUNPQ1BBTDk3OTdm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 549,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "PIOJO",
+    "ciudad_codigoml": "TUNPQ1BJTmRiODM0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 560,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "PONEDERA",
+    "ciudad_codigoml": "TUNPQ01BTmJmZjYw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 573,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "PUERTO COLOMBIA",
+    "ciudad_codigoml": "TUNPQ1BVRTdkNDAw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 606,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "REPELON",
+    "ciudad_codigoml": "TUNPQ1JFUGQ1ZThi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 638,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "SABANALARGA",
+    "ciudad_codigoml": "TUNPQ1NBQmRkYjk1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 675,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "SANTA LUCIA",
+    "ciudad_codigoml": "TUNPQ1NBTmQ4Yzc",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 685,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "SANTO TOMAS",
+    "ciudad_codigoml": "TUNPQ1NBTmM5Zjhh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 758,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "SOLEDAD",
+    "ciudad_codigoml": "TUNPQ1NPUGRhMDI5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 770,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "SUAN",
+    "ciudad_codigoml": "TUNPQ1NBTjczYzA5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 832,
+    "departamento_codigo": "08",
+    "ciudad_nombre": "TUBARA",
+    "ciudad_codigoml": "TUNPQ1RVQjhjODVi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 11,
+    "ciudad_nombre": "BOGOTA",
+    "ciudad_codigoml": "TUNPQ0NBUjcwNTYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "006",
+    "departamento_codigo": 13,
+    "ciudad_nombre": "ACHI",
+    "ciudad_codigoml": "TUNPQ0FDSDc3OTg1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "030",
+    "departamento_codigo": 13,
+    "ciudad_nombre": "ALTOS DEL ROSARIO",
+    "ciudad_codigoml": "TUNPQ0FMVDZkZTU5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "042",
+    "departamento_codigo": 13,
+    "ciudad_nombre": "ARENAL",
+    "ciudad_codigoml": "TUNPQ0FSRTdhNDI3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "052",
+    "departamento_codigo": 13,
+    "ciudad_nombre": "ARJONA",
+    "ciudad_codigoml": "TUNPQ0FSSmE3NzAz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "062",
+    "departamento_codigo": 13,
+    "ciudad_nombre": "ARROYOHONDO",
+    "ciudad_codigoml": "TUNPQ0FSUjg2MDdl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "074",
+    "departamento_codigo": 13,
+    "ciudad_nombre": "BARRANCO DE LOBA",
+    "ciudad_codigoml": "TUNPQ0JBUjEzNjhk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 140,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "CALAMAR",
+    "ciudad_codigoml": "TUNPQ0NBTDQ5Mjgx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 160,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "CANTAGALLO",
+    "ciudad_codigoml": "TUNPQ0NBTmYwNGQ0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 13,
+    "ciudad_nombre": "CARTAGENA",
+    "ciudad_codigoml": "TUNPQ0NBUjcwNTYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 188,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "CICUCO",
+    "ciudad_codigoml": "TUNPQ0NJQzk0MTQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 222,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "CLEMENCIA",
+    "ciudad_codigoml": "TUNPQ0NMRTI1ZDU1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 212,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "CORDOBA",
+    "ciudad_codigoml": "TUNPQ0NPUjE0ZGMw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 244,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "EL CARMEN DE BOLIVAR",
+    "ciudad_codigoml": "TUNPQ0VMWjMxZDM",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 248,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "EL GUAMO",
+    "ciudad_codigoml": "TUNPQ0VMWjk3YTcw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 268,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "EL PEÃ‘ON",
+    "ciudad_codigoml": "TUNPQ0VMWmEyYWU",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 300,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "HATILLO DE LOBA",
+    "ciudad_codigoml": "TUNPQ0hBVGM5MWFh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 430,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "MAGANGUE",
+    "ciudad_codigoml": "TUNPQ01BWjJmOGE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 433,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "MAHATES",
+    "ciudad_codigoml": "TUNPQ01BSDk1YTQ5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 440,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "MARGARITA",
+    "ciudad_codigoml": "TUNPQ01BUmEwMTMw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 442,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "MARIA LA BAJA",
+    "ciudad_codigoml": "TUNPQ01BUjRiYTk5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 468,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "MOMPOS",
+    "ciudad_codigoml": "TUNPQ01PTTk2Yjc5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 458,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "MONTECRISTO",
+    "ciudad_codigoml": "TUNPQ01PTjM4OGU1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 473,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "MORALES",
+    "ciudad_codigoml": "TUNPQ01PUmVhZmMz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 549,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "PINILLOS",
+    "ciudad_codigoml": "TUNPQ1BJTmRiODM0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 580,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "REGIDOR",
+    "ciudad_codigoml": "TUNPQ1JFRzJmZjQ2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 600,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "RIO VIEJO",
+    "ciudad_codigoml": "TUNPQ1JJT2E3NjEz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 620,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SAN CRISTOBAL",
+    "ciudad_codigoml": "TUNPQ1NBTjlhMTM",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 647,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SAN ESTANISLAO",
+    "ciudad_codigoml": "TUNPQ1NBTmNjNzZm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 650,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SAN FERNANDO",
+    "ciudad_codigoml": "TUNPQ1NBTjg3YjI3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 654,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SAN JACINTO",
+    "ciudad_codigoml": "TUNPQ1NBTmU5MDgw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 655,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SAN JACINTO DEL CAUCA",
+    "ciudad_codigoml": "TUNPQ1NBTjVjODAw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 657,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SAN JUAN NEPOMUCENO",
+    "ciudad_codigoml": "TUNPQ1NBTjk5YTgz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 667,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SAN MARTIN DE LOBA",
+    "ciudad_codigoml": "TUNPQ1NBTjQ5ZTJj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 670,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SAN PABLO",
+    "ciudad_codigoml": "TUNPQ1NBTmFlZGQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 673,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SANTA CATALINA",
+    "ciudad_codigoml": "TUNPQ1NBTjg3YmU",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 683,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SANTA ROSA",
+    "ciudad_codigoml": "TUNPQ1NBTmM0YWU",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 688,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SANTA ROSA DEL SUR",
+    "ciudad_codigoml": "TUNPQ1NBTjE5ZWYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 744,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SIMITI",
+    "ciudad_codigoml": "TUNPQ1NJTTQzN2Mx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 760,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "SOPLAVIENTO",
+    "ciudad_codigoml": "TUNPQ1NPUGMwODk0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 780,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "TALAIGUA NUEVO",
+    "ciudad_codigoml": "TUNPQ1RBTDMzYzE3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 810,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "TIQUISIO",
+    "ciudad_codigoml": "TUNPQ1RJUTgzMjg",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 836,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "TURBACO",
+    "ciudad_codigoml": "TUNPQ1RVUjNiNjkw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 838,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "TURBANA",
+    "ciudad_codigoml": "TUNPQ1RVUmNjNDI5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 873,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "VILLANUEVA",
+    "ciudad_codigoml": "TUNPQ1ZJTGQxZmQx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 894,
+    "departamento_codigo": 13,
+    "ciudad_nombre": "ZAMBRANO",
+    "ciudad_codigoml": "TUNPQ1pBTTgxYTIw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "022",
+    "departamento_codigo": 15,
+    "ciudad_nombre": "ALMEIDA",
+    "ciudad_codigoml": "TUNPQ0FMTTgwMDRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "047",
+    "departamento_codigo": 15,
+    "ciudad_nombre": "AQUITANIA",
+    "ciudad_codigoml": "TUNPQ0FRVTE5MTVi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "051",
+    "departamento_codigo": 15,
+    "ciudad_nombre": "ARCABUCO",
+    "ciudad_codigoml": "TUNPQ0FSQzU4MjFl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "087",
+    "departamento_codigo": 15,
+    "ciudad_nombre": "BELEN",
+    "ciudad_codigoml": "TUNPQ0JFTGZhYzI",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "090",
+    "departamento_codigo": 15,
+    "ciudad_nombre": "BERBEO",
+    "ciudad_codigoml": "TUNPQ0JFUjRkY2Yz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "092",
+    "departamento_codigo": 15,
+    "ciudad_nombre": "BETEITIVA",
+    "ciudad_codigoml": "TUNPQ0JFVGYxMjNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "097",
+    "departamento_codigo": 15,
+    "ciudad_nombre": "BOAVITA",
+    "ciudad_codigoml": "TUNPQ0JPQWQ4OWU0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 104,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "BOYACA",
+    "ciudad_codigoml": "TUNPQ0JPWWYzMTFk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 106,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "BRICEÃ‘O",
+    "ciudad_codigoml": "TUNPQ0JSSWM3MmY3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 109,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "BUENAVISTA",
+    "ciudad_codigoml": "TUNPQ0JVRTM5NzI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 114,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "BUSBANZA",
+    "ciudad_codigoml": "TUNPQ0JVUzVkNjQ2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 131,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CALDAS",
+    "ciudad_codigoml": "TUNPQ0NBTDcwYzk4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 135,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CAMPOHERMOSO",
+    "ciudad_codigoml": "TUNPQ0NBTTI5NjBi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 162,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CERINZA",
+    "ciudad_codigoml": "TUNPQ0NFUmFmZWFj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 172,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CHINAVITA",
+    "ciudad_codigoml": "TUNPQ0NISTc1ODE5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 176,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CHIQUINQUIRA",
+    "ciudad_codigoml": "TUNPQ0NISWIwNmU5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 232,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CHIQUIZA",
+    "ciudad_codigoml": "TUNPQ0NISWE1ZmVj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 180,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CHISCAS",
+    "ciudad_codigoml": "TUNPQ0NISTEyYzM2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 183,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CHITA",
+    "ciudad_codigoml": "TUNPQ0NISTliMjNm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 185,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CHITARAQUE",
+    "ciudad_codigoml": "TUNPQ0NISWNkZmIx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 187,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CHIVATA",
+    "ciudad_codigoml": "TUNPQ0NISTgxNDM0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 236,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CHIVOR",
+    "ciudad_codigoml": "TUNPQ0NISTRmMTFi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 189,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CIENEGA",
+    "ciudad_codigoml": "TUNPQ0NJRWNjNTI0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 204,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "COMBITA",
+    "ciudad_codigoml": "TUNPQ0NPTTQzZjVm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 212,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "COPER",
+    "ciudad_codigoml": "TUNPQ0NPUDE3ZGRm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 215,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CORRALES",
+    "ciudad_codigoml": "TUNPQ0NPUjg4NjM1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 218,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "COVARACHIA",
+    "ciudad_codigoml": "TUNPQ0NPVmMzNjUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 223,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CUBARA",
+    "ciudad_codigoml": "TUNPQ0NVQjc4ZDA",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 224,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CUCAITA",
+    "ciudad_codigoml": "TUNPQ0NVQzUxNjZh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 226,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "CUITIVA",
+    "ciudad_codigoml": "TUNPQ0NVSWRkMDhi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 238,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "DUITAMA",
+    "ciudad_codigoml": "TUNPQ0RVSTJiYmU5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 244,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "EL COCUY",
+    "ciudad_codigoml": "TUNPQ0VMWmVjMWVl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 248,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "EL ESPINO",
+    "ciudad_codigoml": "TUNPQ0VMWmEyM2Fm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 272,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "FIRAVITOBA",
+    "ciudad_codigoml": "TUNPQ0ZJUjI0NmYx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 276,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "FLORESTA",
+    "ciudad_codigoml": "TUNPQ0ZMT2VlNmM",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 293,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "GACHANTIVA",
+    "ciudad_codigoml": "TUNPQ0dBQzVlYjY0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 296,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "GAMEZA",
+    "ciudad_codigoml": "TUNPQ0dBTTVhZDg5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 299,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "GARAGOA",
+    "ciudad_codigoml": "TUNPQ0dBUmQxMTYw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 317,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "GUACAMAYAS",
+    "ciudad_codigoml": "TUNPQ0dVQTU2Yzhh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 322,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "GUATEQUE",
+    "ciudad_codigoml": "TVhYR3VhdGVxdWVUVU5QVUVKUFdXRTRZek16",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 325,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "GUAYATA",
+    "ciudad_codigoml": "TUNPQ0dVQWYxYTQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 332,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "GUICAN",
+    "ciudad_codigoml": "TUNPQ0dVSTQyYmU1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 362,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "IZA",
+    "ciudad_codigoml": "TUNPQ0laQWYwZTIw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 367,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "JENESANO",
+    "ciudad_codigoml": "TUNPQ0pFTjQxN2Nm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 368,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "JERICO",
+    "ciudad_codigoml": "TUNPQ0pFUjlhOTMy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 377,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "LABRANZAGRANDE",
+    "ciudad_codigoml": "TUNPQ0xBQjkxZTdl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 380,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "LA CAPILLA",
+    "ciudad_codigoml": "TUNPQ0xBWjk3OGIx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 403,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "LA UVITA",
+    "ciudad_codigoml": "TUNPQ0xBWmYzMDVh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 401,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "LA VICTORIA",
+    "ciudad_codigoml": "TUNPQ0xBWjY0ODFh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 425,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "MACANAL",
+    "ciudad_codigoml": "TUNPQ01BQ2JhNmU5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 442,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "MARIPI",
+    "ciudad_codigoml": "TUNPQ01BUmNjZWE4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 455,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "MIRAFLORES",
+    "ciudad_codigoml": "TUNPQ01JUjM0MDBl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 464,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "MONGUA",
+    "ciudad_codigoml": "TUNPQ01PTmFhMzY5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 466,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "MONGUI",
+    "ciudad_codigoml": "TUNPQ01PTjVmMjYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 469,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "MONIQUIRA",
+    "ciudad_codigoml": "TUNPQ01PTjI2ZjI3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 476,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "MOTAVITA",
+    "ciudad_codigoml": "TUNPQ01PVDlhNzlm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 480,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "MUZO",
+    "ciudad_codigoml": "TUNPQ01VWjQxYTMz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 491,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "NOBSA",
+    "ciudad_codigoml": "TUNPQ05PQmYxZTdm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 494,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "NUEVO COLON",
+    "ciudad_codigoml": "TUNPQ05VRTQ0MzVl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 500,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "OICATA",
+    "ciudad_codigoml": "TUNPQ09JQ2JmZTk1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 507,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "OTANCHE",
+    "ciudad_codigoml": "TUNPQ09UQTJjMzIy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 511,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PACHAVITA",
+    "ciudad_codigoml": "TUNPQ1BBQzk0ZTU",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 514,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PAEZ",
+    "ciudad_codigoml": "TUNPQ1BBRTQ1NWI2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 516,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PAIPA",
+    "ciudad_codigoml": "TUNPQ1BBSWVjMzM5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 518,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PAJARITO",
+    "ciudad_codigoml": "TUNPQ1BBSjk1Zjk2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 522,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PANQUEBA",
+    "ciudad_codigoml": "TUNPQ1BBTjEzZDMz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 531,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PAUNA",
+    "ciudad_codigoml": "TUNPQ1BBVWVhODM5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 533,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PAYA",
+    "ciudad_codigoml": "TUNPQ1BBWTg1NDU3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 537,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PAZ DE RIO",
+    "ciudad_codigoml": "TUNPQ1BBWmFjNTYw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 542,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PESCA",
+    "ciudad_codigoml": "TUNPQ1BFU2JlMjc0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 550,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PISBA",
+    "ciudad_codigoml": "TUNPQ1BJU2NhN2Ni",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 572,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "PUERTO BOYACA",
+    "ciudad_codigoml": "TUNPQ1BVRTZhYTRh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 580,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "QUIPAMA",
+    "ciudad_codigoml": "TUNPQ1FVSWM0YzFl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 599,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "RAMIRIQUI",
+    "ciudad_codigoml": "TUNPQ1JBTTVhYTQ5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 600,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "RAQUIRA",
+    "ciudad_codigoml": "TUNPQ1JBUWMyZWI",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 621,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "RONDON",
+    "ciudad_codigoml": "TUNPQ1JPTjE5ZGU",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 632,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SABOYA",
+    "ciudad_codigoml": "TUNPQ1NBQmE5OGFk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 638,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SACHICA",
+    "ciudad_codigoml": "TUNPQ1NBQ2QxZTQ0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 646,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SAMACA",
+    "ciudad_codigoml": "TUNPQ1NBTWE0MmQw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 660,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SAN EDUARDO",
+    "ciudad_codigoml": "TUNPQ1NBTmY3ZTI",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 664,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SAN JOSE DE PARE",
+    "ciudad_codigoml": "TUNPQ1NBTjNjMjg4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 667,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SAN LUIS DE GACENO",
+    "ciudad_codigoml": "TUNPQ1NBTmMzMTlm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 673,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SAN MATEO",
+    "ciudad_codigoml": "TUNPQ1NBTmFlNWZh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 676,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SAN MIGUEL DE SEMA",
+    "ciudad_codigoml": "TUNPQ1NBTmU1NDVh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 681,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SAN PABLO DE BORBUR",
+    "ciudad_codigoml": "TUNPQ1NBTmIyY2Uz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 690,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SANTA MARIA",
+    "ciudad_codigoml": "TUNPQ1NBTmZiMmY",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 686,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SANTANA",
+    "ciudad_codigoml": "TUNPQ1NBTjQ5MjEw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 693,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SANTA ROSA DE VITERBO",
+    "ciudad_codigoml": "TUNPQ1NBTmE5Mzcy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 696,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SANTA SOFIA",
+    "ciudad_codigoml": "TUNPQ1NBTjFjNWRi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 720,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SATIVANORTE",
+    "ciudad_codigoml": "TUNPQ1NBVDQzODY0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 723,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SATIVASUR",
+    "ciudad_codigoml": "TUNPQ1NBVDk5OGU",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 740,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SIACHOQUE",
+    "ciudad_codigoml": "TUNPQ1NJQTJhYjhl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 753,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SOATA",
+    "ciudad_codigoml": "TUNPQ1NPQWJkNWMy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 757,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SOCHA",
+    "ciudad_codigoml": "TUNPQ1NPQzE5YzEw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 755,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SOCOTA",
+    "ciudad_codigoml": "TUNPQ1NPQ2I0OWU1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 759,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SOGAMOSO",
+    "ciudad_codigoml": "TUNPQ1NPR2NjZjNj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 761,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SOMONDOCO",
+    "ciudad_codigoml": "TUNPQ1NPTTZmYjE3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 762,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SORA",
+    "ciudad_codigoml": "TUNPQ1NPUmFlN2Zi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 764,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SORACA",
+    "ciudad_codigoml": "TUNPQ1NPUjhjMGQ5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 763,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SOTAQUIRA",
+    "ciudad_codigoml": "TUNPQ1NPVDViZjdi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 774,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SUSACON",
+    "ciudad_codigoml": "TUNPQ1NVU2U5YjYy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 776,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SUTAMARCHAN",
+    "ciudad_codigoml": "TUNPQ1NVVDkxY2Ix",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 778,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "SUTATENZA",
+    "ciudad_codigoml": "TUNPQ1NVVGU3OTdi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 790,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TASCO",
+    "ciudad_codigoml": "TUNPQ1RBU2U0MmRl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 798,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TENZA",
+    "ciudad_codigoml": "TUNPQ1RFTmUxMzZj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 804,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TIBANA",
+    "ciudad_codigoml": "TUNPQ1RJQjM0N2E5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 806,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TIBASOSA",
+    "ciudad_codigoml": "TUNPQ1RJQjlhYmFl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 808,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TINJACA",
+    "ciudad_codigoml": "TUNPQ1RJTjhmNmJl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 810,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TIPACOQUE",
+    "ciudad_codigoml": "TUNPQ1RJUDQ1Y2Rm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 814,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TOCA",
+    "ciudad_codigoml": "TUNPQ1RPQzllZjg5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 816,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TOGUI",
+    "ciudad_codigoml": "TUNPQ1RPR2FmNjEz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 820,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TOPAGA",
+    "ciudad_codigoml": "TUNPQ1RPUDVmNmRh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 822,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TOTA",
+    "ciudad_codigoml": "TUNPQ1RPVGNmYjg",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TUNJA",
+    "ciudad_codigoml": "TUNPQ1RVTjFhNDk0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 832,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TUNUNGUA",
+    "ciudad_codigoml": "TUNPQ1RVTjEwZDdk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 835,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TURMEQUE",
+    "ciudad_codigoml": "TUNPQ1RVUmU3OGNj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 837,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TUTA",
+    "ciudad_codigoml": "TUNPQ1RVVDg3ZjNl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 839,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "TUTAZA",
+    "ciudad_codigoml": "TUNPQ1VCQWVhOTVm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 842,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "UMBITA",
+    "ciudad_codigoml": "TUNPQ1VNQjNhYWE5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 861,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "VENTAQUEMADA",
+    "ciudad_codigoml": "TUNPQ1ZFTmFkN2Q2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 407,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "VILLA DE LEYVA",
+    "ciudad_codigoml": "TUNPQ1ZJTGRiYjdl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 879,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "VIRACACHA",
+    "ciudad_codigoml": "TUNPQ1ZJUjRlOTZj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 897,
+    "departamento_codigo": 15,
+    "ciudad_nombre": "ZETAQUIRA",
+    "ciudad_codigoml": "TUNPQ1pFVDM1NmFj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "013",
+    "departamento_codigo": 17,
+    "ciudad_nombre": "AGUADAS",
+    "ciudad_codigoml": "TUNPQ0FHVThlMWI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "042",
+    "departamento_codigo": 17,
+    "ciudad_nombre": "ANSERMA",
+    "ciudad_codigoml": "TUNPQ0FOU2FjMmU1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "050",
+    "departamento_codigo": 17,
+    "ciudad_nombre": "ARANZAZU",
+    "ciudad_codigoml": "TUNPQ0FSQTFmNjE0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "088",
+    "departamento_codigo": 17,
+    "ciudad_nombre": "BELALCAZAR",
+    "ciudad_codigoml": "TUNPQ0JFTDYyNGIz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 174,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "CHINCHINA",
+    "ciudad_codigoml": "TUNPQ0NISWIzNjgx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 272,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "FILADELFIA",
+    "ciudad_codigoml": "TUNPQ0ZJTDY5MzQx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 380,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "LA DORADA",
+    "ciudad_codigoml": "TUNPQ0xBWjM2MGE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 388,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "LA MERCED",
+    "ciudad_codigoml": "TUNPQ0xBWjVhODM5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 17,
+    "ciudad_nombre": "MANIZALES",
+    "ciudad_codigoml": "TUNPQ01BTmMwNDc4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 433,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "MANZANARES",
+    "ciudad_codigoml": "TUNPQ01BTjMzOTAw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 442,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "MARMATO",
+    "ciudad_codigoml": "TUNPQ01BUjFlYWUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 444,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "MARQUETALIA",
+    "ciudad_codigoml": "TUNPQ01BUjQzZjg",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 446,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "MARULANDA",
+    "ciudad_codigoml": "TUNPQ01BUjEyMjJk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 486,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "NEIRA",
+    "ciudad_codigoml": "TUNPQ05FSWU3NDBi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 495,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "NORCASIA",
+    "ciudad_codigoml": "TUNPQ05PUjNjNmQw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 513,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "PACORA",
+    "ciudad_codigoml": "TUNPQ1BBQzUwZGEw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 524,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "PALESTINA",
+    "ciudad_codigoml": "TUNPQ1BBTDU0ODVi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 541,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "PENSILVANIA",
+    "ciudad_codigoml": "TUNPQ1BFTmU3Y2Qy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 614,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "RIOSUCIO",
+    "ciudad_codigoml": "TUNPQ1JJT2RiOTNk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 616,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "RISARALDA",
+    "ciudad_codigoml": "TUNPQ1JJUzE2ZGU5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 653,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "SALAMINA",
+    "ciudad_codigoml": "TUNPQ1NBTGRiYTI2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 662,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "SAMANA",
+    "ciudad_codigoml": "TUNPQ1NBTWFiYjc",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 665,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "SAN JOSE",
+    "ciudad_codigoml": "TUNPQ1NBTjhmOTUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 777,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "SUPIA",
+    "ciudad_codigoml": "TUNPQ1NVUGQ1N2E",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 867,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "VICTORIA",
+    "ciudad_codigoml": "TUNPQ1ZJQzM3Njkz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 873,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "VILLAMARIA",
+    "ciudad_codigoml": "TUNPQ1ZJTDIyZGM0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 877,
+    "departamento_codigo": 17,
+    "ciudad_nombre": "VITERBO",
+    "ciudad_codigoml": "TUNPQ1ZJVDg3NTBm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "029",
+    "departamento_codigo": 18,
+    "ciudad_nombre": "ALBANIA",
+    "ciudad_codigoml": "TUNPQ0FMQmJmMDli",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "094",
+    "departamento_codigo": 18,
+    "ciudad_nombre": "BELEN DE LOS ANDAQUIES",
+    "ciudad_codigoml": "TUNPQ0JFTGE4ZWY5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 150,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "CARTAGENA DEL CHAIRA",
+    "ciudad_codigoml": "TUNPQ0NBUmUyY2Y4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 205,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "CURILLO",
+    "ciudad_codigoml": "TUNPQ0NVUmU2NmY",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 247,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "EL DONCELLO",
+    "ciudad_codigoml": "TUNPQ0VMWmU0ZWVj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 256,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "EL PAUJIL",
+    "ciudad_codigoml": "TUNPQ0VMWmIyMGQ1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 18,
+    "ciudad_nombre": "FLORENCIA",
+    "ciudad_codigoml": "TUNPQ0ZMTzhkMTBl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 410,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "LA MONTAÃ‘ITA",
+    "ciudad_codigoml": "TUNPQ01PTmVkZjQ3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 460,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "MILAN",
+    "ciudad_codigoml": "TUNPQ01JTDdhYmJh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 479,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "MORELIA",
+    "ciudad_codigoml": "TUNPQ01PUmYyODk4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 592,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "PUERTO RICO",
+    "ciudad_codigoml": "TUNPQ1BVRWM5NmUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 610,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "SAN JOSE DEL FRAGUA",
+    "ciudad_codigoml": "TUNPQ1NBTmYwMDE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 753,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "SAN VICENTE DEL CAGUAN",
+    "ciudad_codigoml": "TUNPQ1NBTjk0OTcz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 756,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "SOLANO",
+    "ciudad_codigoml": "TUNPQ1NPTGM3OTI1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 785,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "SOLITA",
+    "ciudad_codigoml": "TUNPQ1NPTGU0ZDhm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 860,
+    "departamento_codigo": 18,
+    "ciudad_nombre": "VALPARAISO",
+    "ciudad_codigoml": "TUNPQ1ZBTDlkNzUz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "010",
+    "departamento_codigo": 85,
+    "ciudad_nombre": "AGUAZUL",
+    "ciudad_codigoml": "TUNPQ0FHVWE2MDE0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "015",
+    "departamento_codigo": 85,
+    "ciudad_nombre": "CHAMEZA",
+    "ciudad_codigoml": "TUNPQ0NIQTUzMDY4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 125,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "HATO COROZAL",
+    "ciudad_codigoml": "TUNPQ0hBVDY5YmMz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 136,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "LA SALINA",
+    "ciudad_codigoml": "TUNPQ0xBWmQ1ZjY",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 139,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "MANI",
+    "ciudad_codigoml": "TUNPQ01BTmJkZTYw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 162,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "MONTERREY",
+    "ciudad_codigoml": "TUNPQ01PTjU0MDgy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 225,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "NUNCHIA",
+    "ciudad_codigoml": "TUNPQ05VTmUwOTM",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 230,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "OROCUE",
+    "ciudad_codigoml": "TUNPQ09STzFmMzE4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 250,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "PAZ DE ARIPORO",
+    "ciudad_codigoml": "TUNPQ1BBWmQ2OTM5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 263,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "PORE",
+    "ciudad_codigoml": "TUNPQ1BPUmUxMDIx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 279,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "RECETOR",
+    "ciudad_codigoml": "TUNPQ1JFQ2QzM2Nm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 300,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "SABANALARGA",
+    "ciudad_codigoml": "TUNPQ1NBQjJlMjA0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 315,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "SACAMA",
+    "ciudad_codigoml": "TUNPQ1NBQzFlN2Qz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 325,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "SAN LUIS DE PALENQUE",
+    "ciudad_codigoml": "TUNPQ1NBTmRjYTQ0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 400,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "TAMARA",
+    "ciudad_codigoml": "TUNPQ1RBTTJhZGRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 410,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "TAURAMENA",
+    "ciudad_codigoml": "TUNPQ1RBVTQxNzcx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 430,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "TRINIDAD",
+    "ciudad_codigoml": "TUNPQ1RSSTk0MDUy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 440,
+    "departamento_codigo": 85,
+    "ciudad_nombre": "VILLANUEVA",
+    "ciudad_codigoml": "TUNPQ1ZJTDJjYTg",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 85,
+    "ciudad_nombre": "YOPAL",
+    "ciudad_codigoml": "TUNPQ1lPUDJhZWVl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "022",
+    "departamento_codigo": 19,
+    "ciudad_nombre": "ALMAGUER",
+    "ciudad_codigoml": "TUNPQ0FMTTQ1Y2Jl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "050",
+    "departamento_codigo": 19,
+    "ciudad_nombre": "ARGELIA",
+    "ciudad_codigoml": "TUNPQ0FSRzU0ZmJk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "075",
+    "departamento_codigo": 19,
+    "ciudad_nombre": "BALBOA",
+    "ciudad_codigoml": "TUNPQ0JBTDk0NGVm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 100,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "BOLIVAR",
+    "ciudad_codigoml": "TUNPQ0JPTDdiNWZm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 110,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "BUENOS AIRES",
+    "ciudad_codigoml": "TUNPQ0JVRTIwODgw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 130,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "CAJIBIO",
+    "ciudad_codigoml": "TUNPQ0NBSjFjMTcz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 137,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "CALDONO",
+    "ciudad_codigoml": "TUNPQ0NBTGJlYWJl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 142,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "CALOTO",
+    "ciudad_codigoml": "TUNPQ0NBTDQxNGJj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 212,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "CORINTO",
+    "ciudad_codigoml": "TUNPQ0NPUmNkYWIy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 256,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "EL TAMBO",
+    "ciudad_codigoml": "TUNPQ0VMWmI5YmJj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 290,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "FLORENCIA",
+    "ciudad_codigoml": "TUNPQ0ZMTzhiZDJm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 318,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "GUAPI",
+    "ciudad_codigoml": "TUNPQ0dVQWMzNWFj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 355,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "INZA",
+    "ciudad_codigoml": "TUNPQ0lOWmFiZGI0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 364,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "JAMBALO",
+    "ciudad_codigoml": "TUNPQ0pBTTNkYWM0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 392,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "LA SIERRA",
+    "ciudad_codigoml": "TUNPQ0xBWjI5NDdi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 397,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "LA VEGA",
+    "ciudad_codigoml": "TUNPQ0xBWmQyZGE0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 418,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "LOPEZ",
+    "ciudad_codigoml": "TUNPQ0xPUGIwZTI2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 450,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "MERCADERES",
+    "ciudad_codigoml": "TUNPQ01FUjY3MTZm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 455,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "MIRANDA",
+    "ciudad_codigoml": "TUNPQ01JUjNkNTI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 473,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "MORALES",
+    "ciudad_codigoml": "TUNPQ01PUjZlMmFm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 513,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "PADILLA",
+    "ciudad_codigoml": "TUNPQ1BBRDkxOTUz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 517,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "PAEZ",
+    "ciudad_codigoml": "TUNPQ1BBRTM0OGE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 532,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "PATIA",
+    "ciudad_codigoml": "TUNPQ1BBVDZkZjQ1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 533,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "PIAMONTE",
+    "ciudad_codigoml": "TUNPQ1BJQTEzNGEz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 548,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "PIENDAMO",
+    "ciudad_codigoml": "TUNPQ1BJRTgxM2E5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 19,
+    "ciudad_nombre": "POPAYAN",
+    "ciudad_codigoml": "TUNPQ1BPUDRjNTFl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 573,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "PUERTO TEJADA",
+    "ciudad_codigoml": "TUNPQ1BVRTdkNDAw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 585,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "PURACE",
+    "ciudad_codigoml": "TUNPQ1BVUmM3N2E0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 622,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "ROSAS",
+    "ciudad_codigoml": "TUNPQ1JPUzg1YWYw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 693,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "SAN SEBASTIAN",
+    "ciudad_codigoml": "TUNPQ1NBTjE4YjE0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 698,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "SANTANDER DE QUILICHAO",
+    "ciudad_codigoml": "TUNPQ1NBTjQ0Yjhl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 701,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "SANTA ROSA",
+    "ciudad_codigoml": "TUNPQ1NBTjQyNzA2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 743,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "SILVIA",
+    "ciudad_codigoml": "TUNPQ1NJTDk2NDYw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 760,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "SOTARA",
+    "ciudad_codigoml": "TUNPQ1NPVGIxM2Vm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 780,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "SUAREZ",
+    "ciudad_codigoml": "TUNPQ1NVQTdjNzkw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 785,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "SUCRE",
+    "ciudad_codigoml": "TUNPQ1NVQ2M3OGU0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 807,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "TIMBIO",
+    "ciudad_codigoml": "TUNPQ1RJTTFmZWE4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 809,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "TIMBIQUI",
+    "ciudad_codigoml": "TUNPQ1RJTWUzN2Yy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 821,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "TORIBIO",
+    "ciudad_codigoml": "TUNPQ1RPUjZmMjAy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 824,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "TOTORO",
+    "ciudad_codigoml": "TUNPQ1RPVDYwZWRm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 845,
+    "departamento_codigo": 19,
+    "ciudad_nombre": "VILLA RICA",
+    "ciudad_codigoml": "TUNPQ1ZJTDlmZmVm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "011",
+    "departamento_codigo": 20,
+    "ciudad_nombre": "AGUACHICA",
+    "ciudad_codigoml": "TUNPQ0FHVTlkYzQy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "013",
+    "departamento_codigo": 20,
+    "ciudad_nombre": "AGUSTIN CODAZZI",
+    "ciudad_codigoml": "TUNPQ0FHVWM0ZmEz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "032",
+    "departamento_codigo": 20,
+    "ciudad_nombre": "ASTREA",
+    "ciudad_codigoml": "TUNPQ0FTVDZjYjQy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "045",
+    "departamento_codigo": 20,
+    "ciudad_nombre": "BECERRIL",
+    "ciudad_codigoml": "TUNPQ0JFQzNkYjdh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "060",
+    "departamento_codigo": 20,
+    "ciudad_nombre": "BOSCONIA",
+    "ciudad_codigoml": "TUNPQ0JPUzU1ZDdh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 175,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "CHIMICHAGUA",
+    "ciudad_codigoml": "TUNPQ0NISTJjMWY0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 178,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "CHIRIGUANA",
+    "ciudad_codigoml": "TUNPQ0NISWI0NGUz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 228,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "CURUMANI",
+    "ciudad_codigoml": "TUNPQ0NVUjFkYzA2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 238,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "EL COPEY",
+    "ciudad_codigoml": "TUNPQ0VMWmI4MDEx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 250,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "EL PASO",
+    "ciudad_codigoml": "TUNPQ0VMWjgxNGI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 295,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "GAMARRA",
+    "ciudad_codigoml": "TUNPQ0dBTTg2NzFi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 310,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "GONZALEZ",
+    "ciudad_codigoml": "TUNPQ0dPTjE4YWM2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 383,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "LA GLORIA",
+    "ciudad_codigoml": "TUNPQ0xBWjUzMTAz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 400,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "LA JAGUA DE IBIRICO",
+    "ciudad_codigoml": "TUNPQ0xBWjE3ZTI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 621,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "LA PAZ",
+    "ciudad_codigoml": "TUNPQ0xBWmU1MDcw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 443,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "MANAURE",
+    "ciudad_codigoml": "TUNPQ01BTjFkMDZm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 517,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "PAILITAS",
+    "ciudad_codigoml": "TUNPQ1BBSTYwOGUz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 550,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "PELAYA",
+    "ciudad_codigoml": "TUNPQ1BFTDUyZTVj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 570,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "PUEBLO BELLO",
+    "ciudad_codigoml": "TUNPQ1BVRTYwZDVk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 614,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "RIO DE ORO",
+    "ciudad_codigoml": "TUNPQ1JJTzU2Mjg3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 710,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "SAN ALBERTO",
+    "ciudad_codigoml": "TUNPQ1NBTjljY2Qx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 750,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "SAN DIEGO",
+    "ciudad_codigoml": "TUNPQ1NBTmE0OWZh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 770,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "SAN MARTIN",
+    "ciudad_codigoml": "TUNPQ1NBTjczYzA5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 787,
+    "departamento_codigo": 20,
+    "ciudad_nombre": "TAMALAMEQUE",
+    "ciudad_codigoml": "TUNPQ1RBTTQ1Y2E1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 20,
+    "ciudad_nombre": "VALLEDUPAR",
+    "ciudad_codigoml": "TUNPQ1ZBTDViYjc4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "006",
+    "departamento_codigo": 27,
+    "ciudad_nombre": "ACANDI",
+    "ciudad_codigoml": "TUNPQ0FDQTEwYWJi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "025",
+    "departamento_codigo": 27,
+    "ciudad_nombre": "ALTO BAUDO",
+    "ciudad_codigoml": "TUNPQ0FMVGM4ODc4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "050",
+    "departamento_codigo": 27,
+    "ciudad_nombre": "ATRATO",
+    "ciudad_codigoml": "TUNPQ0FUUjEzY2Yw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "073",
+    "departamento_codigo": 27,
+    "ciudad_nombre": "BAGADO",
+    "ciudad_codigoml": "TUNPQ0JBRzdjZTRi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "075",
+    "departamento_codigo": 27,
+    "ciudad_nombre": "BAHIA SOLANO",
+    "ciudad_codigoml": "TUNPQ0JBSGNiYTUz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "077",
+    "departamento_codigo": 27,
+    "ciudad_nombre": "BAJO BAUDO",
+    "ciudad_codigoml": "TUNPQ0JBSmM1YzZl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "086",
+    "departamento_codigo": 27,
+    "ciudad_nombre": "BELEN DE BAJIRA",
+    "ciudad_codigoml": "TUNPQ0JFTDIxMjBj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "099",
+    "departamento_codigo": 27,
+    "ciudad_nombre": "BOJAYA",
+    "ciudad_codigoml": "TUNPQ0JPSjljYzY5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 150,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "CARMEN DEL DARIEN",
+    "ciudad_codigoml": "TUNPQ0NBUzc1OWQx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 160,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "CERTEGUI",
+    "ciudad_codigoml": "TUNPQ0NFUmQ4NzAx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 205,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "CONDOTO",
+    "ciudad_codigoml": "TUNPQ0NPTjJjMzE1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 135,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "EL CANTON DEL SAN PABLO",
+    "ciudad_codigoml": "TUNPQ0VMWjU5YjVk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 245,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "EL CARMEN DE ATRATO",
+    "ciudad_codigoml": "TUNPQ0VMWmViN2Rl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 250,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "EL LITORAL DEL SAN JUAN",
+    "ciudad_codigoml": "TUNPQ0VMWjIwYjEx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 361,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "ISTMINA",
+    "ciudad_codigoml": "TUNPQ0lTVDRmOWJj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 372,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "JURADO",
+    "ciudad_codigoml": "TUNPQ0pVUmFjOWQ0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 413,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "LLORO",
+    "ciudad_codigoml": "TUNPQ0xMTzE3ZTZk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 425,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "MEDIO ATRATO",
+    "ciudad_codigoml": "TUNPQ01FRGJmMjhl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 430,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "MEDIO BAUDO",
+    "ciudad_codigoml": "TUNPQ01FRDU4ODE5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 450,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "MEDIO SAN JUAN",
+    "ciudad_codigoml": "TUNPQ1BVRTkxNTZk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 491,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "NOVITA",
+    "ciudad_codigoml": "TUNPQ05PVmNmMzg4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 495,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "NUQUI",
+    "ciudad_codigoml": "TUNPQ05VUWM0ZDNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 27,
+    "ciudad_nombre": "QUIBDO",
+    "ciudad_codigoml": "TUNPQ1FVSTJiOGFm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 580,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "RIO IRO",
+    "ciudad_codigoml": "TUNPQ1JJT2QyMTFh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 600,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "RIO QUITO",
+    "ciudad_codigoml": "TUNPQ1JJTzI3ZmI1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 615,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "RIOSUCIO",
+    "ciudad_codigoml": "TUNPQ1JJTzVlMzBl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 660,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "SAN JOSE DEL PALMAR",
+    "ciudad_codigoml": "TUNPQ1NBTmRkZTQw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 745,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "SIPI",
+    "ciudad_codigoml": "TUNPQ1NJUGMyNDhh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 787,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "TADO",
+    "ciudad_codigoml": "TUNPQ1RBRDExNDVm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 800,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "UNGUIA",
+    "ciudad_codigoml": "TUNPQ1VOR2QzMmJl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 810,
+    "departamento_codigo": 27,
+    "ciudad_nombre": "UNION PANAMERICANA",
+    "ciudad_codigoml": "TUNPQ1VOSWM2ODFh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "068",
+    "departamento_codigo": 23,
+    "ciudad_nombre": "AYAPEL",
+    "ciudad_codigoml": "TUNPQ0FZQTIxNGQ1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "079",
+    "departamento_codigo": 23,
+    "ciudad_nombre": "BUENAVISTA",
+    "ciudad_codigoml": "TUNPQ0JVRWU5MWIx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "090",
+    "departamento_codigo": 23,
+    "ciudad_nombre": "CANALETE",
+    "ciudad_codigoml": "TUNPQ0NBTjQ4MjYy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 162,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "CERETE",
+    "ciudad_codigoml": "TUNPQ0NFUjg4ZDJm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 168,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "CHIMA",
+    "ciudad_codigoml": "TUNPQ0NIQTIzZjEy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 182,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "CHINU",
+    "ciudad_codigoml": "TUNPQ0NISTU5NWM5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 189,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "CIENAGA DE ORO",
+    "ciudad_codigoml": "TUNPQ0NJRWRkYzNj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 300,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "COTORRA",
+    "ciudad_codigoml": "TUNPQ0NPVDFkMzlm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 350,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "LA APARTADA",
+    "ciudad_codigoml": "TUNPQ0xBWjJkMzY0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 417,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "LORICA",
+    "ciudad_codigoml": "TUNPQ0xPUjJmYzFm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 419,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "LOS CORDOBAS",
+    "ciudad_codigoml": "TUNPQ0xPUzM3ZGZl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 464,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "MOMIL",
+    "ciudad_codigoml": "TUNPQ01PTTJmMjBi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 500,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "MOÃ‘ITOS",
+    "ciudad_codigoml": "TUNPQ01PTjlmOTli",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 466,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "MONTELIBANO",
+    "ciudad_codigoml": "TUNPQ01PTjE5NDdi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 23,
+    "ciudad_nombre": "MONTERIA",
+    "ciudad_codigoml": "TUNPQ0FHVTFhNWQy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 555,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "PLANETA RICA",
+    "ciudad_codigoml": "TUNPQ1BMQThiNTRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 570,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "PUEBLO NUEVO",
+    "ciudad_codigoml": "TUNPQ1BVRTg5NDFk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 574,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "PUERTO ESCONDIDO",
+    "ciudad_codigoml": "TUNPQ1BVRTgzOTc4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 170,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "CHIBOLO",
+    "ciudad_codigoml": "TUNPQ0NISTI5ZGU",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 580,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "PUERTO LIBERTADOR",
+    "ciudad_codigoml": "TUNPQ1BVTDY1ZDVl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 586,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "PURISIMA",
+    "ciudad_codigoml": "TUNPQ1BVUmRlNDBm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 660,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "SAHAGUN",
+    "ciudad_codigoml": "TUNPQ1NBSDJmYTg1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 670,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "SAN ANDRES SOTAVENTO",
+    "ciudad_codigoml": "TUNPQ1NBTjJlMmNj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 672,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "SAN ANTERO",
+    "ciudad_codigoml": "TUNPQ1NaTjJiYjIx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 675,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "SAN BERNARDO DEL VIENTO",
+    "ciudad_codigoml": "TUNPQ0FOWjdmMDdi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 678,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "SAN CARLOS",
+    "ciudad_codigoml": "TUNPQ1NBTjdkNzFk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 686,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "SAN PELAYO",
+    "ciudad_codigoml": "TUNPQ1NBTjdhNjk5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 807,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "TIERRALTA",
+    "ciudad_codigoml": "TUNPQ1RJQmE5MjQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 855,
+    "departamento_codigo": 23,
+    "ciudad_nombre": "VALENCIA",
+    "ciudad_codigoml": "TUNPQ1ZBTDE2OTI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 25,
+    "ciudad_nombre": "AGUA DE DIOS",
+    "ciudad_codigoml": "TUNPQ01PTmQ2Mjcw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "019",
+    "departamento_codigo": 25,
+    "ciudad_nombre": "ALBAN",
+    "ciudad_codigoml": "TUNPQ0FMQmI1OWNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "035",
+    "departamento_codigo": 25,
+    "ciudad_nombre": "ANAPOIMA",
+    "ciudad_codigoml": "TUNPQ0FMQmI5ZWE1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 599,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "APULO",
+    "ciudad_codigoml": "TUNPQ0FQVWNmYTE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "099",
+    "departamento_codigo": 25,
+    "ciudad_nombre": "BOJACA",
+    "ciudad_codigoml": "TUNPQ0JPQzY2ZWNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 126,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "CAJICA",
+    "ciudad_codigoml": "TUNPQ0NBTDVlZGNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 148,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "CAPARRAPI",
+    "ciudad_codigoml": "TUNPQ0NBUDJjZjU5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 168,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "CHAGUANI",
+    "ciudad_codigoml": "TUNPQ0NISWJlNTNm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 200,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "COGUA",
+    "ciudad_codigoml": "TUNPQ01JUjI1ODEy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 224,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "CUCUNUBA",
+    "ciudad_codigoml": "TUNPQ0NVQWNjZTgy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 245,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "EL COLEGIO",
+    "ciudad_codigoml": "TUNPQ0VMWjc3NGEw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 258,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "EL PEÃ‘ON",
+    "ciudad_codigoml": "TUNPQ0VMWjE4MmQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 260,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "EL ROSAL",
+    "ciudad_codigoml": "TUNPQ0VMUjQ2OTM0Mw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 279,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "FOMEQUE",
+    "ciudad_codigoml": "TUNPQ0ZPTmI3OWVj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 288,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "FUQUENE",
+    "ciudad_codigoml": "TUNPQ0ZVTjU1YzI1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 307,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "GIRARDOT",
+    "ciudad_codigoml": "TUNPQ0dJUjRkOWMw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 317,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "GUACHETA",
+    "ciudad_codigoml": "TUNPQ0dVQTQ5Mzky",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 320,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "GUADUAS",
+    "ciudad_codigoml": "TUNPQ0dVQWU0NGNl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 322,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "GUASCA",
+    "ciudad_codigoml": "TUNPQ0dVQTdiZGQ2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 324,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "GUATAQUI",
+    "ciudad_codigoml": "TUNPQ0dVQTFlZTAx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 368,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "JERUSALEN",
+    "ciudad_codigoml": "TUNPQ0pFUmVlOWMz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 377,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "LA CALERA",
+    "ciudad_codigoml": "TUNPQ0xBWjFhZDU3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 398,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "LA PEÃ‘A",
+    "ciudad_codigoml": "TUNPQ0xBWjExODFi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 430,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "MADRID",
+    "ciudad_codigoml": "TUNPQ01BSWM1OTVi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 473,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "MOSQUERA",
+    "ciudad_codigoml": "TUNPQ01PU2NkN2Qy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 483,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "NARIÃ‘O",
+    "ciudad_codigoml": "TUNPQ05BVDc1YTI0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 518,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "PAIME",
+    "ciudad_codigoml": "TUNPQ1BBSTNkOTJl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 524,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "PANDI",
+    "ciudad_codigoml": "TUNPQ1BBTmMxMTQ2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 530,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "PARATEBUENO",
+    "ciudad_codigoml": "TUNPQ1BBTDY4NWI",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 572,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "PUERTO SALGAR",
+    "ciudad_codigoml": "TUNPQ1BVRTU3OTli",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 580,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "PULI",
+    "ciudad_codigoml": "TUNPQ1BVRTFlYjIy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 594,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "QUETAME",
+    "ciudad_codigoml": "TUNPQ1FVRTE5MTVl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 612,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "RICAURTE",
+    "ciudad_codigoml": "TUNPQ1JJQzNiMzUy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 736,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "SESQUILE",
+    "ciudad_codigoml": "TUNPQ1NFVjIzNjlk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 743,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "SILVANIA",
+    "ciudad_codigoml": "TUNPQ1NJTGU4YjBk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 745,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "SIMIJACA",
+    "ciudad_codigoml": "TUNPQ1NJVDkwOWVm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 777,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "SUPATA",
+    "ciudad_codigoml": "TUNPQ1NVUDRkZDY4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 797,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "TENA",
+    "ciudad_codigoml": "TUNPQ1RFUzhhOTMx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 799,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "TENJO",
+    "ciudad_codigoml": "TUNPQ1RFTGRlOTg4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 807,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "TIBIRITA",
+    "ciudad_codigoml": "TUNPQ1RJRWJjZTUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 823,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "TOPAIPI",
+    "ciudad_codigoml": "TUNPQ1RPTDI3ODll",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 845,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "UNE",
+    "ciudad_codigoml": "TUNPQ1VMTGRjY2E4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 851,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "ÃšTICA",
+    "ciudad_codigoml": "TUNPQ1VUSTIwOGJi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 506,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "VENECIA",
+    "ciudad_codigoml": "TUNPQ09TUGI0MzYx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 867,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "VIANI",
+    "ciudad_codigoml": "TUNPQ1ZJQTZlMWJi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 871,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "VILLAGOMEZ",
+    "ciudad_codigoml": "TUNPQ1ZJTDU5NmZh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 873,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "VILLAPINZON",
+    "ciudad_codigoml": "TUNPQ1ZJTDIwYjU0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 885,
+    "departamento_codigo": 25,
+    "ciudad_nombre": "YACOPI",
+    "ciudad_codigoml": "TUNPQ0xBWmIzMzJi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "006",
+    "departamento_codigo": "00",
+    "ciudad_nombre": "BRASIL",
+    "ciudad_codigoml": "TUNPQ0FDRTk5MWE3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": "00",
+    "ciudad_nombre": "KYUNGGI-DO",
+    "ciudad_codigoml": "TUNPQ0lOSTg2MDcy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "016",
+    "departamento_codigo": "00",
+    "ciudad_nombre": "LIMA",
+    "ciudad_codigoml": "TUNPQ0FJUGUzMWY5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "003",
+    "departamento_codigo": "00",
+    "ciudad_nombre": "NANCHANG",
+    "ciudad_codigoml": "TUNPQ0FCUjczYzc1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 343,
+    "departamento_codigo": 94,
+    "ciudad_nombre": "BARRANCO MINAS",
+    "ciudad_codigoml": "TUNPQ0JBUjMxZWU5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 886,
+    "departamento_codigo": 94,
+    "ciudad_nombre": "CACAHUAL",
+    "ciudad_codigoml": "TUNPQ0NBQzQxMDlh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 94,
+    "ciudad_nombre": "INIRIDA",
+    "ciudad_codigoml": "TUNPQ0lOSTg2MDcy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 885,
+    "departamento_codigo": 94,
+    "ciudad_nombre": "LA GUADALUPE",
+    "ciudad_codigoml": "TUNPQ0xBWmIzMzJi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 663,
+    "departamento_codigo": 94,
+    "ciudad_nombre": "MAPIRIPANA",
+    "ciudad_codigoml": "TUNPQ01BUGEyMWE2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 888,
+    "departamento_codigo": 94,
+    "ciudad_nombre": "MORICHAL",
+    "ciudad_codigoml": "TUNPQ01PUmUzZjY",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 887,
+    "departamento_codigo": 94,
+    "ciudad_nombre": "PANA PANA",
+    "ciudad_codigoml": "TUNPQ1BBTmIzMTk0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 884,
+    "departamento_codigo": 94,
+    "ciudad_nombre": "PUERTO COLOMBIA",
+    "ciudad_codigoml": "TUNPQ1BVRTQ3NzAx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 883,
+    "departamento_codigo": 94,
+    "ciudad_nombre": "SAN FELIPE",
+    "ciudad_codigoml": "TUNPQ1NBTjE2ODdk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "015",
+    "departamento_codigo": 95,
+    "ciudad_nombre": "CALAMAR",
+    "ciudad_codigoml": "TUNPQ0NBTGQwYTY5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "025",
+    "departamento_codigo": 95,
+    "ciudad_nombre": "EL RETORNO",
+    "ciudad_codigoml": "TUNPQ0VMWmQ3ZTQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 200,
+    "departamento_codigo": 95,
+    "ciudad_nombre": "MIRAFLORES",
+    "ciudad_codigoml": "TUNPQ01JUjI1ODEy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 95,
+    "ciudad_nombre": "SAN JOSE DEL GUAVIARE",
+    "ciudad_codigoml": "TUNPQ1NBTjNkZDRj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "006",
+    "departamento_codigo": 41,
+    "ciudad_nombre": "ACEVEDO",
+    "ciudad_codigoml": "TUNPQ0FDRTk5MWE3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "013",
+    "departamento_codigo": 41,
+    "ciudad_nombre": "AGRADO",
+    "ciudad_codigoml": "TUNPQ0FHUjFjZThh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "016",
+    "departamento_codigo": 41,
+    "ciudad_nombre": "AIPE",
+    "ciudad_codigoml": "TUNPQ0FJUGUzMWY5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "020",
+    "departamento_codigo": 41,
+    "ciudad_nombre": "ALGECIRAS",
+    "ciudad_codigoml": "TUNPQ0FMR2MxNDNm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "026",
+    "departamento_codigo": 41,
+    "ciudad_nombre": "ALTAMIRA",
+    "ciudad_codigoml": "TUNPQ0FMVGRlNjhk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "078",
+    "departamento_codigo": 41,
+    "ciudad_nombre": "BARAYA",
+    "ciudad_codigoml": "TUNPQ0JBUjU5M2Y4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 132,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "CAMPOALEGRE",
+    "ciudad_codigoml": "TUNPQ0NBTWI5MTQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 206,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "COLOMBIA",
+    "ciudad_codigoml": "TUNPQ0NPTDE3YQ",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 244,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "ELIAS",
+    "ciudad_codigoml": "TUNPQ0VMSTcxODgy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 298,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "GARZON",
+    "ciudad_codigoml": "TUNPQ0dBUjRiMTI3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 306,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "GIGANTE",
+    "ciudad_codigoml": "TUNPQ0dJRzVjZWYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 319,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "GUADALUPE",
+    "ciudad_codigoml": "TUNPQ0dVQTg3ZGQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 349,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "HOBO",
+    "ciudad_codigoml": "TUNPQ0hPQjFlZTgy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 357,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "IQUIRA",
+    "ciudad_codigoml": "TUNPQ0lRVTI4ZDUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 359,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "ISNOS",
+    "ciudad_codigoml": "TUNPQ0lTTjY4YjUy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 378,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "LA ARGENTINA",
+    "ciudad_codigoml": "TUNPQ0xBWjQ2ZDNh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 396,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "LA PLATA",
+    "ciudad_codigoml": "TUNPQ0xBWjFiZDMx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 483,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "NATAGA",
+    "ciudad_codigoml": "TUNPQ05BVDc1YTI0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 41,
+    "ciudad_nombre": "NEIVA",
+    "ciudad_codigoml": "TUNPQ1JJTzIzOThh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 503,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "OPORAPA",
+    "ciudad_codigoml": "TUNPQ09QT2NlZGM4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 518,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "PAICOL",
+    "ciudad_codigoml": "TUNPQ1BBSTNkOTJl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 524,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "PALERMO",
+    "ciudad_codigoml": "TUNPQ1BBTDdhMGQ0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 530,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "PALESTINA",
+    "ciudad_codigoml": "TUNPQ1BBTDY4NWI",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 548,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "PITAL",
+    "ciudad_codigoml": "TUNPQ1BJVGNkYjUw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 551,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "PITALITO",
+    "ciudad_codigoml": "TUNPQ1BJVGVkZjA4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 615,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "RIVERA",
+    "ciudad_codigoml": "TUNPQ1JJVmRjNGZm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 660,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "SALADOBLANCO",
+    "ciudad_codigoml": "TUNPQ1NBTDhmY2U1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 668,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "SAN AGUSTIN",
+    "ciudad_codigoml": "TUNPQ1NBTjVhYTFi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 676,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "SANTA MARIA",
+    "ciudad_codigoml": "TUNPQ1NBTmU1ZjU3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 770,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "SUAZA",
+    "ciudad_codigoml": "TUNPQ1NVQTc5MDEw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 791,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "TARQUI",
+    "ciudad_codigoml": "TUNPQ1RBUmI0ZTU2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 799,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "TELLO",
+    "ciudad_codigoml": "TUNPQ1RFTGRlOTg4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 801,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "TERUEL",
+    "ciudad_codigoml": "TUNPQ1RFUjlkMzg1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 797,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "TESALIA",
+    "ciudad_codigoml": "TUNPQ1RFUzhhOTMx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 807,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "TIMANA",
+    "ciudad_codigoml": "TUNPQ1RJTTUwZmRh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 872,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "VILLAVIEJA",
+    "ciudad_codigoml": "TUNPQ1ZJTDk4M2Ri",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 885,
+    "departamento_codigo": 41,
+    "ciudad_nombre": "YAGUARA",
+    "ciudad_codigoml": "TUNPQ1lBRzIxN2Jj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 110,
+    "departamento_codigo": 44,
+    "ciudad_nombre": "EL MOLINO",
+    "ciudad_codigoml": "TUNPQ0VMWmQ2Yzg4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 378,
+    "departamento_codigo": 44,
+    "ciudad_nombre": "HATONUEVO",
+    "ciudad_codigoml": "TUNPQ0xBWmU3YzJl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 560,
+    "departamento_codigo": 44,
+    "ciudad_nombre": "MANAURE",
+    "ciudad_codigoml": "TUNPQ1BPVDc5Zjlk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 44,
+    "ciudad_nombre": "RIOHACHA",
+    "ciudad_codigoml": "TUNPQ1JJTzIzOThh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 855,
+    "departamento_codigo": 44,
+    "ciudad_nombre": "URUMITA",
+    "ciudad_codigoml": "TUNPQ1VSVWMyZmUw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 874,
+    "departamento_codigo": 44,
+    "ciudad_nombre": "VILLANUEVA",
+    "ciudad_codigoml": "TUNPQ1ZJTDQ4YmM2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "030",
+    "departamento_codigo": 47,
+    "ciudad_nombre": "ALGARROBO",
+    "ciudad_codigoml": "TUNPQ0FMRzM3ZjBi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "058",
+    "departamento_codigo": 47,
+    "ciudad_nombre": "ARIGUANI",
+    "ciudad_codigoml": "TUNPQ0FSSTNkY2Uw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 161,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "CERRO SAN ANTONIO",
+    "ciudad_codigoml": "TUNPQ0NFUjYwYjYy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 189,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "CIENAGA",
+    "ciudad_codigoml": "TUNPQ0NJRTUzZGNl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 205,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "CONCORDIA",
+    "ciudad_codigoml": "TUNPQ0NPTjk0NzBh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 245,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "EL BANCO",
+    "ciudad_codigoml": "TUNPQ0VMWjc3NGEw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 258,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "EL PIÃ‘ON",
+    "ciudad_codigoml": "TUNPQ0VMWjE4MmQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 268,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "EL RETEN",
+    "ciudad_codigoml": "TUNPQ0VMWjhiMDc1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 288,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "FUNDACION",
+    "ciudad_codigoml": "TUNPQ0ZVTjU1YzI1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 318,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "GUAMAL",
+    "ciudad_codigoml": "TUNPQ0dVQWMyZGUz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 460,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "NUEVA GRANADA",
+    "ciudad_codigoml": "TUNPQ05VRTEzN2Yz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 541,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "PEDRAZA",
+    "ciudad_codigoml": "TUNPQ1BFRDNiZDNk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 545,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "PIJIÃ‘O DEL CARMEN",
+    "ciudad_codigoml": "TUNPQ1BJSjgwZGY",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 551,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "PIVIJAY",
+    "ciudad_codigoml": "TUNPQ1BJVjZjODc0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 555,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "PLATO",
+    "ciudad_codigoml": "TUNPQ1BMQWEzNmEy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 570,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "PUEBLOVIEJO",
+    "ciudad_codigoml": "TUNPQ1BVRWU4NDUw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 605,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "REMOLINO",
+    "ciudad_codigoml": "TUNPQ1JFTWVmNTBm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 660,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "SABANAS DE SAN ANGEL",
+    "ciudad_codigoml": "TUNPQ1NBQjdjZDZk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 675,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "SALAMINA",
+    "ciudad_codigoml": "TUNPQ1NBTDY2OTkw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 707,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "SANTA ANA",
+    "ciudad_codigoml": "TUNPQ1NBTmJkN2Mx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 720,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "SANTA BARBARA DE PINTO",
+    "ciudad_codigoml": "TUNPQ1NBTjlkY2Ux",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 47,
+    "ciudad_nombre": "SANTA MARTA",
+    "ciudad_codigoml": "TUNPQ1NBTjJlNzY0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 703,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "SAN ZENON",
+    "ciudad_codigoml": "TUNPQ1NBTmIwNjhm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 745,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "SITIONUEVO",
+    "ciudad_codigoml": "TUNPQ1NJVDkwOWVm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 798,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "TENERIFE",
+    "ciudad_codigoml": "TUNPQ1RFTmI0Mzlj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 960,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "ZAPAYAN",
+    "ciudad_codigoml": "TUNPQ1pBUDRiNDRj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 980,
+    "departamento_codigo": 47,
+    "ciudad_nombre": "ZONA BANANERA",
+    "ciudad_codigoml": "TUNPQ1pPTjU4ZGQy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "006",
+    "departamento_codigo": 50,
+    "ciudad_nombre": "ACACIAS",
+    "ciudad_codigoml": "TUNPQ0FDQTczNWEx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 110,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "BARRANCA DE UPIA",
+    "ciudad_codigoml": "TUNPQ0JBUjQ2Y2Rj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 124,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "CABUYARO",
+    "ciudad_codigoml": "TUNPQ0NBQjUyY2Zl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 150,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "CASTILLA LA NUEVA",
+    "ciudad_codigoml": "TUNPQ0NBUzc1OWQx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 223,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "CUBARRAL",
+    "ciudad_codigoml": "TUNPQ0NVQmZlNA",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 226,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "CUMARAL",
+    "ciudad_codigoml": "TUNPQ0NVTTgyMzYx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 245,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "EL CALVARIO",
+    "ciudad_codigoml": "TUNPQ0VMWmU0NDQw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 251,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "EL CASTILLO",
+    "ciudad_codigoml": "TUNPQ0VMWjlkYjlh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 270,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "EL DORADO",
+    "ciudad_codigoml": "TUNPQ0VMWjJlOTNh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 287,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "FUENTE DE ORO",
+    "ciudad_codigoml": "TUNPQ0ZVRWU4OTRh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 313,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "GRANADA",
+    "ciudad_codigoml": "TUNPQ0dSQWU3MDMy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 318,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "GUAMAL",
+    "ciudad_codigoml": "TUNPQ0dVQTQ3YTRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 350,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "LA MACARENA",
+    "ciudad_codigoml": "TUNPQ0xBWjdiOWY1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 400,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "LEJANIAS",
+    "ciudad_codigoml": "TUNPQ0xFSjdjMGE5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 325,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "MAPIRIPAN",
+    "ciudad_codigoml": "TUNPQ01BUDU0OTVm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 330,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "MESETAS",
+    "ciudad_codigoml": "TUNPQ01FUzI0MWJj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 450,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "PUERTO CONCORDIA",
+    "ciudad_codigoml": "TUNPQ1BVRTkxNTZk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 568,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "PUERTO GAITAN",
+    "ciudad_codigoml": "TUNPQ1BVRTI4OGVk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 577,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "PUERTO LLERAS",
+    "ciudad_codigoml": "TUNPQ1BVRTJmYjVh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 573,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "PUERTO LOPEZ",
+    "ciudad_codigoml": "TUNPQ1BVRTUxMWIz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 590,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "PUERTO RICO",
+    "ciudad_codigoml": "TUNPQ1BVRTlmOGEy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 606,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "RESTREPO",
+    "ciudad_codigoml": "TUNPQ1JFU2QyNzBl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 680,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "SAN CARLOS DE GUAROA",
+    "ciudad_codigoml": "TUNPQ1NBTmExMDBj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 683,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "SAN JUAN DE ARAMA",
+    "ciudad_codigoml": "TUNPQ1NBTjEwZTU1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 686,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "SAN JUANITO",
+    "ciudad_codigoml": "TUNPQ1NBTmM1MjE0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 689,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "SAN MARTIN",
+    "ciudad_codigoml": "TUNPQ1NBTjhkNmRm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 370,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "URIBE",
+    "ciudad_codigoml": "TUNPQ1VSSTk1YTQ5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 50,
+    "ciudad_nombre": "VILLAVICENCIO",
+    "ciudad_codigoml": "TUNPQ1ZJTDNiNzQ2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 711,
+    "departamento_codigo": 50,
+    "ciudad_nombre": "VISTAHERMOSA",
+    "ciudad_codigoml": "TUNPQ1ZJU2JiNGUw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "019",
+    "departamento_codigo": 52,
+    "ciudad_nombre": "ALBAN",
+    "ciudad_codigoml": "TUNPQ0FMQmI1OWNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "022",
+    "departamento_codigo": 52,
+    "ciudad_nombre": "ALDANA",
+    "ciudad_codigoml": "TUNPQ0FMRDI0YQ",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "036",
+    "departamento_codigo": 52,
+    "ciudad_nombre": "ANCUYA",
+    "ciudad_codigoml": "TUNPQ0FOQ2EwMzU2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "051",
+    "departamento_codigo": 52,
+    "ciudad_nombre": "ARBOLEDA",
+    "ciudad_codigoml": "TUNPQ0FSQmI4NjYw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "079",
+    "departamento_codigo": 52,
+    "ciudad_nombre": "BARBACOAS",
+    "ciudad_codigoml": "TUNPQ0JBUjc1YzE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "083",
+    "departamento_codigo": 52,
+    "ciudad_nombre": "BELEN",
+    "ciudad_codigoml": "TUNPQ0JFTDFkMGMz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 110,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "BUESACO",
+    "ciudad_codigoml": "TUNPQ0JVRWViMjdi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 240,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "CHACHAGUI",
+    "ciudad_codigoml": "TUNPQ0NIQTI0ZWU",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 203,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "COLON",
+    "ciudad_codigoml": "TUNPQ0NPTDk0YjA3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 207,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "CONSACA",
+    "ciudad_codigoml": "TUNPQ0NPTjUwYTAz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 210,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "CONTADERO",
+    "ciudad_codigoml": "TUNPQ0NPTjIzM2U0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 215,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "CORDOBA",
+    "ciudad_codigoml": "TUNPQ0NPUjY1YTFi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 224,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "CUASPUD",
+    "ciudad_codigoml": "TUNPQ0NVQWNjZTgy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 227,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "CUMBAL",
+    "ciudad_codigoml": "TUNPQ0NVTTk3MjAx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 233,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "CUMBITARA",
+    "ciudad_codigoml": "TUNPQ0NVTTU1MzUz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 250,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "EL CHARCO",
+    "ciudad_codigoml": "TUNPQ0VMWmI4OTJh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 254,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "EL PEÃ‘OL",
+    "ciudad_codigoml": "TUNPQ0VMWmNmZGFm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 256,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "EL ROSARIO",
+    "ciudad_codigoml": "TUNPQ0VMWjQ4ODIz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 258,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "EL TABLON DE GOMEZ",
+    "ciudad_codigoml": "TUNPQ0VMWjVlYTA2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 260,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "EL TAMBO",
+    "ciudad_codigoml": "TUNPQ0VMWjgyMWEz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 520,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "FRANCISCO PIZARRO",
+    "ciudad_codigoml": "TUNPQ0ZSQTNlZWVl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 287,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "FUNES",
+    "ciudad_codigoml": "TUNPQ0ZVTjk3NzFj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 317,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "GUACHUCAL",
+    "ciudad_codigoml": "TUNPQ0dVQWQ0YjQw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 320,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "GUAITARILLA",
+    "ciudad_codigoml": "TUNPQ0dVQTJlNmVh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 323,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "GUALMATAN",
+    "ciudad_codigoml": "TUNPQ0dVQTliMTIz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 352,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "ILES",
+    "ciudad_codigoml": "TUNPQ0lMRTkwMDgw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 354,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "IMUES",
+    "ciudad_codigoml": "TUNPQ0lNVWQ0YjJh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 356,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "IPIALES",
+    "ciudad_codigoml": "TUNPQ0lQSTY0ZTE2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 378,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "LA CRUZ",
+    "ciudad_codigoml": "TUNPQ0xBWmU3YzJl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 381,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "LA FLORIDA",
+    "ciudad_codigoml": "TUNPQ0xBWjlhYTFm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 385,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "LA LLANADA",
+    "ciudad_codigoml": "TUNPQ0xBWjM4YTZi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 390,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "LA TOLA",
+    "ciudad_codigoml": "TUNPQ0xBWjZkYjc2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 399,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "LA UNION",
+    "ciudad_codigoml": "TUNPQ0xBWmU3NzRm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 405,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "LEIVA",
+    "ciudad_codigoml": "TUNPQ0xFSWRjOTU2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 411,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "LINARES",
+    "ciudad_codigoml": "TUNPQ0xJTjg3MDgx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 418,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "LOS ANDES",
+    "ciudad_codigoml": "TUNPQ0xPUzJlNTVj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 427,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "MAGUI",
+    "ciudad_codigoml": "TUNPQ01BRzUzNzZm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 435,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "MALLAMA",
+    "ciudad_codigoml": "TUNPQ01BTDg4MzI2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 473,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "MOSQUERA",
+    "ciudad_codigoml": "TUNPQ01PU2NkN2Qy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 480,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "NARIÃ‘O",
+    "ciudad_codigoml": "TUNPQ01VVGMzMDRl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 490,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "OLAYA HERRERA",
+    "ciudad_codigoml": "TUNPQ09MQWJkMzhm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 506,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "OSPINA",
+    "ciudad_codigoml": "TUNPQ09TUGI0MzYx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 52,
+    "ciudad_nombre": "PASTO",
+    "ciudad_codigoml": "TUNPQ1BBUzIzODBj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 540,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "POLICARPA",
+    "ciudad_codigoml": "TUNPQ1BPTDQ4YTg4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 560,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "POTOSI",
+    "ciudad_codigoml": "TUNPQ1BPVDc5Zjlk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 573,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "PUERRES",
+    "ciudad_codigoml": "TUNPQ1BVRTlmY2Zk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 585,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "PUPIALES",
+    "ciudad_codigoml": "TUNPQ1BVUDUyZDNh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 612,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "RICAURTE",
+    "ciudad_codigoml": "TUNPQ1JJQzNiMzUy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 621,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "ROBERTO PAYAN",
+    "ciudad_codigoml": "TUNPQ1JPQmQ5N2M5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 678,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "SAMANIEGO",
+    "ciudad_codigoml": "TUNPQ1NBTTc5MWUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 685,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "SAN BERNARDO",
+    "ciudad_codigoml": "TUNPQ1NBTmM5Zjhh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 683,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "SANDONA",
+    "ciudad_codigoml": "TUNPQ1NBTjcyOTEz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 687,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "SAN LORENZO",
+    "ciudad_codigoml": "TUNPQ1NBTmRhYzg0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 693,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "SAN PABLO",
+    "ciudad_codigoml": "TUNPQ1NBTjVlMTdk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 694,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "SAN PEDRO DE CARTAGO",
+    "ciudad_codigoml": "TUNPQ1NBTjQ2Yjk1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 696,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "SANTA BARBARA",
+    "ciudad_codigoml": "TUNPQ1NBTmRhM2Q4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 699,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "SANTACRUZ",
+    "ciudad_codigoml": "TUNPQ1NBTjU5ZjQ",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 720,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "SAPUYES",
+    "ciudad_codigoml": "TUNPQ1NBUDliYTNk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 786,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "TAMINANGO",
+    "ciudad_codigoml": "TUNPQ1RBTWYzZTk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 788,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "TANGUA",
+    "ciudad_codigoml": "TUNPQ1RBTjhhM2Jm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 835,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "TUMACO",
+    "ciudad_codigoml": "TUNPQ1RVTTkyYTcw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 838,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "TUQUERRES",
+    "ciudad_codigoml": "TUNPQ1RVUWQyYWE4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 885,
+    "departamento_codigo": 52,
+    "ciudad_nombre": "YACUANQUER",
+    "ciudad_codigoml": "TUNPQ1lBQzU3ZDg3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "003",
+    "departamento_codigo": 54,
+    "ciudad_nombre": "ABREGO",
+    "ciudad_codigoml": "TUNPQ0FCUjczYzc1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "051",
+    "departamento_codigo": 54,
+    "ciudad_nombre": "ARBOLEDAS",
+    "ciudad_codigoml": "TUNPQ0FSQjFiOTg4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "099",
+    "departamento_codigo": 54,
+    "ciudad_nombre": "BOCHALEMA",
+    "ciudad_codigoml": "TUNPQ0JPQzY2ZWNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 109,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "BUCARASICA",
+    "ciudad_codigoml": "TUNPQ0JVQ2Q3ZTcz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 128,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "CACHIRA",
+    "ciudad_codigoml": "TUNPQ0NBQzI3YTUy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 125,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "CACOTA",
+    "ciudad_codigoml": "TUNPQ0NBQzExMWQw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 172,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "CHINACOTA",
+    "ciudad_codigoml": "TUNPQ0NISWU5NjE3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 174,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "CHITAGA",
+    "ciudad_codigoml": "TUNPQ0NISTk3ZTVj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 206,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "CONVENCION",
+    "ciudad_codigoml": "TUNPQ0NPTjJiNTI5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 54,
+    "ciudad_nombre": "CUCUTA",
+    "ciudad_codigoml": "TUNPQ0NVQzhhZDhm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 223,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "CUCUTILLA",
+    "ciudad_codigoml": "TUNPQ0NVQ2RmZjFm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 239,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "DURANIA",
+    "ciudad_codigoml": "TUNPQ0RVUmQwYzNm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 245,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "EL CARMEN",
+    "ciudad_codigoml": "TUNPQ0VMWmYzMDRj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 250,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "EL TARRA",
+    "ciudad_codigoml": "TUNPQ0VMWmQzMDBj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 261,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "EL ZULIA",
+    "ciudad_codigoml": "TUNPQ0VMWmNjNzc",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 313,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "GRAMALOTE",
+    "ciudad_codigoml": "TUNPQ0dSQTNmM2Q3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 344,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "HACARI",
+    "ciudad_codigoml": "TUNPQ0hBQzZlZmY1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 347,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "HERRAN",
+    "ciudad_codigoml": "TUNPQ0hFUmE0YmRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 377,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "LABATECA",
+    "ciudad_codigoml": "TUNPQ0xBQjI4NGZj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 385,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "LA ESPERANZA",
+    "ciudad_codigoml": "TUNPQ0xBWmFhYjE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 398,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "LA PLAYA",
+    "ciudad_codigoml": "TUNPQ0xBWjExODFi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 405,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "LOS PATIOS",
+    "ciudad_codigoml": "TUNPQ0xPU2YyZGNk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 418,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "LOURDES",
+    "ciudad_codigoml": "TUNPQ0xPVWQxZDk1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 480,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "MUTISCUA",
+    "ciudad_codigoml": "TUNPQ01VVGMzMDRl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 498,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "OCAÃ‘A",
+    "ciudad_codigoml": "TUNPQ09DQWQyN2Q2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 518,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "PAMPLONA",
+    "ciudad_codigoml": "TUNPQ1BBTWI4YjQz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 520,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "PAMPLONITA",
+    "ciudad_codigoml": "TUNPQ1BBTTY3ZDc4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 553,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "PUERTO SANTANDER",
+    "ciudad_codigoml": "TUNPQ1BVRTE2MWVh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 599,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "RAGONVALIA",
+    "ciudad_codigoml": "TUNPQ1JBR2YzOTI1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 660,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "SALAZAR",
+    "ciudad_codigoml": "TUNPQ1NBTDE5NzAx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 670,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "SAN CALIXTO",
+    "ciudad_codigoml": "TUNPQ1NBTjk4NTEx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 673,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "SAN CAYETANO",
+    "ciudad_codigoml": "TUNPQ1NBTjNlOThm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 680,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "SANTIAGO",
+    "ciudad_codigoml": "TUNPQ1NBTjc5YWIz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 720,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "SARDINATA",
+    "ciudad_codigoml": "TUNPQ1NBUmRiNTNl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 743,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "SILOS",
+    "ciudad_codigoml": "TUNPQ1NJTGU4YjBk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 800,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "TEORAMA",
+    "ciudad_codigoml": "TUNPQ1RFT2U1MjFh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 810,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "TIBU",
+    "ciudad_codigoml": "TUNPQ1RJQjhkZmE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 820,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "TOLEDO",
+    "ciudad_codigoml": "TUNPQ1RPTGFhZWI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 871,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "VILLA CARO",
+    "ciudad_codigoml": "TUNPQ1ZJTDU5NmZh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 874,
+    "departamento_codigo": 54,
+    "ciudad_nombre": "VILLA DEL ROSARIO",
+    "ciudad_codigoml": "TUNPQ1ZJTDhjYzAx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 219,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "COLON",
+    "ciudad_codigoml": "TUNPQ0NPTDMyMjJi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 573,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "LEGUIZAMO",
+    "ciudad_codigoml": "TUNPQ1BVRTQ1YjE2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 86,
+    "ciudad_nombre": "MOCOA",
+    "ciudad_codigoml": "TUNPQ01PQzg2Yzhk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 320,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "ORITO",
+    "ciudad_codigoml": "TUNPQ09SSTcwNTVi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 568,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "PUERTO ASIS",
+    "ciudad_codigoml": "TUNPQ1BVRWNkNzNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 569,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "PUERTO CAICEDO",
+    "ciudad_codigoml": "TUNPQ1BVRTk3MWUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 571,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "PUERTO GUZMAN",
+    "ciudad_codigoml": "TUNPQ1BVRTUwMDNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 755,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "SAN FRANCISCO",
+    "ciudad_codigoml": "TUNPQ1NBTmNjOTQ2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 757,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "SAN MIGUEL",
+    "ciudad_codigoml": "TUNPQ1NBTmQwZmZh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 760,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "SANTIAGO",
+    "ciudad_codigoml": "TUNPQ1NBTjNiZjcy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 749,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "SIBUNDOY",
+    "ciudad_codigoml": "TUNPQ1NJQjRiMDAz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 865,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "VALLE DEL GUAMUEZ",
+    "ciudad_codigoml": "TUNPQ1ZBTGJlYzBj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 885,
+    "departamento_codigo": 86,
+    "ciudad_nombre": "VILLAGARZON",
+    "ciudad_codigoml": "TUNPQ1ZJTDE2OTA1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 63,
+    "ciudad_nombre": "ARMENIA",
+    "ciudad_codigoml": "TUNPQ0FSTWRhN2E1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 111,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "BUENAVISTA",
+    "ciudad_codigoml": "TUNPQ0JVRWM3MjUw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 130,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "CALARCA",
+    "ciudad_codigoml": "TUNPQ0NBTDI2NjY1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 190,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "CIRCASIA",
+    "ciudad_codigoml": "TUNPQ0NJUjRjMWE5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 212,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "CORDOBA",
+    "ciudad_codigoml": "TUNPQ0NPUjFhYjBj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 272,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "FILANDIA",
+    "ciudad_codigoml": "TUNPQ0ZJTGNlN2Qy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 302,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "GENOVA",
+    "ciudad_codigoml": "TUNPQ0dFTmYzYmY2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 401,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "LA TEBAIDA",
+    "ciudad_codigoml": "TUNPQ0xBWmRiNTRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 470,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "MONTENEGRO",
+    "ciudad_codigoml": "TUNPQ01PTmJlY2U4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 548,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "PIJAO",
+    "ciudad_codigoml": "TUNPQ1BJSmFlZTc5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 594,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "QUIMBAYA",
+    "ciudad_codigoml": "TUNPQ1FVSTlmODI5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 690,
+    "departamento_codigo": 63,
+    "ciudad_nombre": "SALENTO",
+    "ciudad_codigoml": "TUNPQ1NBTDY0NmVh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "045",
+    "departamento_codigo": 66,
+    "ciudad_nombre": "APIA",
+    "ciudad_codigoml": "TUNPQ0FQSTQwMDA",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "075",
+    "departamento_codigo": 66,
+    "ciudad_nombre": "BALBOA",
+    "ciudad_codigoml": "TUNPQ0JBTGRhMzdj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "088",
+    "departamento_codigo": 66,
+    "ciudad_nombre": "BELEN DE UMBRIA",
+    "ciudad_codigoml": "TUNPQ0JFTDZlZWZh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 170,
+    "departamento_codigo": 66,
+    "ciudad_nombre": "DOSQUEBRADAS",
+    "ciudad_codigoml": "TUNPQ0RPU2E2OGE1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 318,
+    "departamento_codigo": 66,
+    "ciudad_nombre": "GUATICA",
+    "ciudad_codigoml": "TUNPQ0dVQTFmYzAz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 383,
+    "departamento_codigo": 66,
+    "ciudad_nombre": "LA CELIA",
+    "ciudad_codigoml": "TUNPQ0xBWmNjMTU0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 400,
+    "departamento_codigo": 66,
+    "ciudad_nombre": "LA VIRGINIA",
+    "ciudad_codigoml": "TUNPQ0xBWmY0NzM",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 440,
+    "departamento_codigo": 66,
+    "ciudad_nombre": "MARSELLA",
+    "ciudad_codigoml": "TUNPQ01BUmUxZDJl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 456,
+    "departamento_codigo": 66,
+    "ciudad_nombre": "MISTRATO",
+    "ciudad_codigoml": "TUNPQ01JUzY3YmU4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 66,
+    "ciudad_nombre": "PEREIRA",
+    "ciudad_codigoml": "TUNPQ1BFUmMwMjJk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 572,
+    "departamento_codigo": 66,
+    "ciudad_nombre": "PUEBLO RICO",
+    "ciudad_codigoml": "TUNPQ1BVRTU3OTli",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 594,
+    "departamento_codigo": 66,
+    "ciudad_nombre": "QUINCHIA",
+    "ciudad_codigoml": "TUNPQ1FVSThiYmZm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 682,
+    "departamento_codigo": 66,
+    "ciudad_nombre": "SANTA ROSA DE CABAL",
+    "ciudad_codigoml": "TUNPQ1NBTmQ3ZGIx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 687,
+    "departamento_codigo": 66,
+    "ciudad_nombre": "SANTUARIO",
+    "ciudad_codigoml": "TUNPQ1NBTjE3ODBi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "013",
+    "departamento_codigo": 68,
+    "ciudad_nombre": "AGUADA",
+    "ciudad_codigoml": "TUNPQ0FHVTY4MDFk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "020",
+    "departamento_codigo": 68,
+    "ciudad_nombre": "ALBANIA",
+    "ciudad_codigoml": "TUNPQ0FMQjIwYzcw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "051",
+    "departamento_codigo": 68,
+    "ciudad_nombre": "ARATOCA",
+    "ciudad_codigoml": "TUNPQ0FSQWVjMWEz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "077",
+    "departamento_codigo": 68,
+    "ciudad_nombre": "BARBOSA",
+    "ciudad_codigoml": "TUNPQ0JBUmNjNjgy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "079",
+    "departamento_codigo": 68,
+    "ciudad_nombre": "BARICHARA",
+    "ciudad_codigoml": "TUNPQ0JBUjhlZjA5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "081",
+    "departamento_codigo": 68,
+    "ciudad_nombre": "BARRANCABERMEJA",
+    "ciudad_codigoml": "TUNPQ0JBUjY3YjE4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "092",
+    "departamento_codigo": 68,
+    "ciudad_nombre": "BETULIA",
+    "ciudad_codigoml": "TUNPQ0JFVDFmZDQ",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 101,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "BOLIVAR",
+    "ciudad_codigoml": "TUNPQ0JPTDM0NzUx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 68,
+    "ciudad_nombre": "BUCARAMANGA",
+    "ciudad_codigoml": "TUNPQ1NBTjUyNDc4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 121,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CABRERA",
+    "ciudad_codigoml": "TUNPQ0NBQmIwZWJh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 132,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CALIFORNIA",
+    "ciudad_codigoml": "TUNPQ0NBTDczMWNj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 147,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CAPITANEJO",
+    "ciudad_codigoml": "TUNPQ0NBUDM5Y2Fj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 152,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CARCASI",
+    "ciudad_codigoml": "TUNPQ0NBUmNiYTA",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 160,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CEPITA",
+    "ciudad_codigoml": "TUNPQ0NFUDJkOTMx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 162,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CERRITO",
+    "ciudad_codigoml": "TUNPQ0NFUjQ0Yzk2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 167,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CHARALA",
+    "ciudad_codigoml": "TUNPQ0NIQWE3ZDU0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 169,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CHARTA",
+    "ciudad_codigoml": "TUNPQ0NIQTE0YjQ5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 176,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CHIMA",
+    "ciudad_codigoml": "TUNPQ0NISTRlNGY0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 179,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CHIPATA",
+    "ciudad_codigoml": "TUNPQ0NISTE2N2Q2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 190,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CIMITARRA",
+    "ciudad_codigoml": "TUNPQ0NJTTNlMDFh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 207,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CONCEPCION",
+    "ciudad_codigoml": "TUNPQ0NPTmZiMDE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 209,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CONFINES",
+    "ciudad_codigoml": "TUNPQ0NPTmJjZjU1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 211,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CONTRATACION",
+    "ciudad_codigoml": "TUNPQ0NPTmYyNDAz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 217,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "COROMORO",
+    "ciudad_codigoml": "TUNPQ0NPUmNlOWM",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 229,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "CURITI",
+    "ciudad_codigoml": "TUNPQ0NVUmU5ZGY2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 235,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "EL CARMEN DE CHUCURI",
+    "ciudad_codigoml": "TUNPQ0VMWjRiMmQx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 245,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "EL GUACAMAYO",
+    "ciudad_codigoml": "TUNPQ0VMWjYyMzY",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 250,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "EL PEÃ‘ON",
+    "ciudad_codigoml": "TUNPQ0VMWjhlODBl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 255,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "EL PLAYON",
+    "ciudad_codigoml": "TUNPQ0VMWmE1YjFj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 264,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "ENCINO",
+    "ciudad_codigoml": "TUNPQ0VOQzFmOTI0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 266,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "ENCISO",
+    "ciudad_codigoml": "TUNPQ0VOQzNkYTE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 271,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "FLORIAN",
+    "ciudad_codigoml": "TUNPQ0ZMT2U0YWMx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 276,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "FLORIDABLANCA",
+    "ciudad_codigoml": "TUNPQ0ZMTzcwZTNh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 296,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "GALAN",
+    "ciudad_codigoml": "TUNPQ0dBTDdlZTRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 298,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "GAMBITA",
+    "ciudad_codigoml": "TUNPQ0dBTWRkYTQ1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 307,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "GIRON",
+    "ciudad_codigoml": "TUNPQ0dJUjYzMWEx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 318,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "GUACA",
+    "ciudad_codigoml": "TUNPQ0dVQTMxODg1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 320,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "GUADALUPE",
+    "ciudad_codigoml": "TUNPQ0dVQWJjYzNl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 322,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "GUAPOTA",
+    "ciudad_codigoml": "TUNPQ0dVQWIzODJk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 324,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "GUAVATA",
+    "ciudad_codigoml": "TUNPQ0dVQTFlZTAx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 327,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "GUEPSA",
+    "ciudad_codigoml": "TUNPQ0fcRTQwZmJl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 344,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "HATO",
+    "ciudad_codigoml": "TUNPQ0hBVDUwYmY4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 368,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "JESUS MARIA",
+    "ciudad_codigoml": ""TUNPQ0pFU2M1NGY3,
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 370,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "JORDAN",
+    "ciudad_codigoml": "TUNPQ0pPUmNmOGY4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 377,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "LA BELLEZA",
+    "ciudad_codigoml": "TUNPQ0xBWmFlMzcy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 385,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "LANDAZURI",
+    "ciudad_codigoml": "TUNPQ0xBTjRlMjI0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 397,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "LA PAZ",
+    "ciudad_codigoml": "TUNPQ0xBWjllNGU",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 406,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "LEBRIJA",
+    "ciudad_codigoml": "TUNPQ0xFQmFlODU1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 418,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "LOS SANTOS",
+    "ciudad_codigoml": "TUNPQ0xPUzIyNDdj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 425,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "MACARAVITA",
+    "ciudad_codigoml": "TUNPQ01BQ2NmOTc1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 432,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "MALAGA",
+    "ciudad_codigoml": "TUNPQ01BTGEwYzk3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 444,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "MATANZA",
+    "ciudad_codigoml": "TUNPQ01BVGEyY2I4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 464,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "MOGOTES",
+    "ciudad_codigoml": "TUNPQ01PR2FiNTU0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 468,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "MOLAGAVITA",
+    "ciudad_codigoml": "TUNPQ01PTGE4OWJi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 498,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "OCAMONTE",
+    "ciudad_codigoml": "TUNPQ09DQWQ2OWE0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 500,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "OIBA",
+    "ciudad_codigoml": "TUNPQ09JQmI2NDcz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 502,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "ONZAGA",
+    "ciudad_codigoml": "TUNPQ09OWjgxNjc0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 522,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "PALMAR",
+    "ciudad_codigoml": "TUNPQ1BBTGU1NTE3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 524,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "PALMAS DEL SOCORRO",
+    "ciudad_codigoml": "TUNPQ1BBTDNjZDJh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 533,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "PARAMO",
+    "ciudad_codigoml": "TUNPQ1BBUjhlNzJh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 547,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "PIEDECUESTA",
+    "ciudad_codigoml": "TUNPQ1BJRTY3YjUy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 549,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "PINCHOTE",
+    "ciudad_codigoml": "TUNPQ1BJTmRmNGJh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 572,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "PUENTE NACIONAL",
+    "ciudad_codigoml": "TUNPQ1BVRTk4Yzg4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 573,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "PUERTO PARRA",
+    "ciudad_codigoml": "TUNPQ1BVRTI5MjBm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 575,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "PUERTO WILCHES",
+    "ciudad_codigoml": "TUNPQ1BVRTRlN2Vl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 615,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "RIONEGRO",
+    "ciudad_codigoml": "TUNPQ1JJTzhiZmE5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 655,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SABANA DE TORRES",
+    "ciudad_codigoml": "TUNPQ1NBQjYzNDY0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 669,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SAN ANDRES",
+    "ciudad_codigoml": "TUNPQ1NBTjQyNTc5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 673,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SAN BENITO",
+    "ciudad_codigoml": "TUNPQ1NBTjc5YmYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 679,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SAN GIL",
+    "ciudad_codigoml": "TUNPQ1NBTjlhZTgy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 682,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SAN JOAQUIN",
+    "ciudad_codigoml": "TUNPQ1NBTjRlMmQ1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 684,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SAN JOSE DE MIRANDA",
+    "ciudad_codigoml": "TUNPQ1NBTmVlM2E",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 686,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SAN MIGUEL",
+    "ciudad_codigoml": "TUNPQ1NBTmE2Njg1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 705,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SANTA BARBARA",
+    "ciudad_codigoml": "TUNPQ1NBTjQxMzVl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 720,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SANTA HELENA DEL OPON",
+    "ciudad_codigoml": "TUNPQ1NBTmFhOGY3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 689,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SAN VICENTE DE CHUCURI",
+    "ciudad_codigoml": "TUNPQ1NBTjUzMDk4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 745,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SIMACOTA",
+    "ciudad_codigoml": "TUNPQ1NJTWE3YzA5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 755,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SOCORRO",
+    "ciudad_codigoml": "TUNPQ1NPQ2RlODFi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 770,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SUAITA",
+    "ciudad_codigoml": "TUNPQ1NVQWVhZGVi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 773,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SUCRE",
+    "ciudad_codigoml": "TUNPQ1NVQzRmZDQ4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 780,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "SURATA",
+    "ciudad_codigoml": "TUNPQ1NVUjY5OTUy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 820,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "TONA",
+    "ciudad_codigoml": "TUNPQ1RPTjllMzdl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 855,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "VALLE DE SAN JOSE",
+    "ciudad_codigoml": "TUNPQ1ZBTGI3Y2I4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 861,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "VELEZ",
+    "ciudad_codigoml": "TUNPQ1ZFTDZjZTVl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 867,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "VETAS",
+    "ciudad_codigoml": "TUNPQ1ZFVGRjNmNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 872,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "VILLANUEVA",
+    "ciudad_codigoml": "TUNPQ1ZJTDYyMmYx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 895,
+    "departamento_codigo": 68,
+    "ciudad_nombre": "ZAPATOCA",
+    "ciudad_codigoml": "TUNPQ1pBUDY4NTli",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 110,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "BUENAVISTA",
+    "ciudad_codigoml": "TUNPQ0JVRTI0ZDg5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 124,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "CAIMITO",
+    "ciudad_codigoml": "TUNPQ0NBSTZmZTkx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 230,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "CHALAN",
+    "ciudad_codigoml": "TUNPQ0NIQTQ5YTRj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 204,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "COLOSO",
+    "ciudad_codigoml": "TUNPQ0NPTDMwOWUy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 215,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "COROZAL",
+    "ciudad_codigoml": "TUNPQ0NPUmNmMWI1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 221,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "COVEÃ‘AS",
+    "ciudad_codigoml": "TUNPQ0NPVjMwOTQ1Mg",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 233,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "EL ROBLE",
+    "ciudad_codigoml": "TUNPQ0VMWjU1Yjhj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 235,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "GALERAS",
+    "ciudad_codigoml": "TUNPQ0dBTDRhNDA",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 265,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "GUARANDA",
+    "ciudad_codigoml": "TUNPQ0dVQWI5Yzk4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 400,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "LA UNION",
+    "ciudad_codigoml": "TUNPQ0xBWjE1NGFm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 418,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "LOS PALMITOS",
+    "ciudad_codigoml": "TUNPQ0xPUzZiMjY5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 429,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "MAJAGUAL",
+    "ciudad_codigoml": "TUNPQ01BSmY1NTM",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 473,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "MORROA",
+    "ciudad_codigoml": "TUNPQ01PUjY2MjZl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 508,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "OVEJAS",
+    "ciudad_codigoml": "TUNPQ09WRWIxN2Qz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 670,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "SAMPUES",
+    "ciudad_codigoml": "TUNPQ1NBTTc2ZTdk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 678,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "SAN BENITO ABAD",
+    "ciudad_codigoml": "TUNPQ1NBTjE3ZGU2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 702,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "SAN JUAN DE BETULIA",
+    "ciudad_codigoml": "TUNPQ1NBTmUzZmM4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 708,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "SAN MARCOS",
+    "ciudad_codigoml": "TUNPQ1NBTjhlMDI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 713,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "SAN ONOFRE",
+    "ciudad_codigoml": "TUNPQ1NBTjJjOTY4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 717,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "SAN PEDRO",
+    "ciudad_codigoml": "TUNPQ1NBTmYyODY1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 820,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "SANTIAGO DE TOLU",
+    "ciudad_codigoml": "TUNPQ1RPTGJkODI4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 70,
+    "ciudad_nombre": "SINCELEJO",
+    "ciudad_codigoml": "TUNPQ1NJTjgyM2E3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 771,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "SUCRE",
+    "ciudad_codigoml": "TUNPQ1NVQzUyYzYz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 823,
+    "departamento_codigo": 70,
+    "ciudad_nombre": "TOLU VIEJO",
+    "ciudad_codigoml": "TUNPQ1RPTDI3ODll",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "024",
+    "departamento_codigo": 73,
+    "ciudad_nombre": "ALPUJARRA",
+    "ciudad_codigoml": "TUNPQ0FMUGEyY2Iz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "026",
+    "departamento_codigo": 73,
+    "ciudad_nombre": "ALVARADO",
+    "ciudad_codigoml": "TUNPQ0FMVjVlNDNk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "030",
+    "departamento_codigo": 73,
+    "ciudad_nombre": "AMBALEMA",
+    "ciudad_codigoml": "TUNPQ0FNQmFjMGFi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "043",
+    "departamento_codigo": 73,
+    "ciudad_nombre": "ANZOATEGUI",
+    "ciudad_codigoml": "TUNPQ0FOWjI0NzAy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "055",
+    "departamento_codigo": 73,
+    "ciudad_nombre": "ARMERO",
+    "ciudad_codigoml": "TUNPQ0FSTTg5OTQ0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "067",
+    "departamento_codigo": 73,
+    "ciudad_nombre": "ATACO",
+    "ciudad_codigoml": "TUNPQ0FUQTc3NGFk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 124,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "CAJAMARCA",
+    "ciudad_codigoml": "TUNPQ0FKQWQxYmU5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 148,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "CARMEN DE APICALA",
+    "ciudad_codigoml": "TUNPQ0NBUjY0Yzlm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 152,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "CASABIANCA",
+    "ciudad_codigoml": "TUNPQ0NBUzNhMzcx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 168,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "CHAPARRAL",
+    "ciudad_codigoml": "TUNPQ0NIQTE1NjU1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 200,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "COELLO",
+    "ciudad_codigoml": "TUNPQ0NPRWRiYzc3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 217,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "COYAIMA",
+    "ciudad_codigoml": "TUNPQ0NPWTZiOTQ0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 226,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "CUNDAY",
+    "ciudad_codigoml": "TUNPQ0NVTjE0ZGQz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 236,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "DOLORES",
+    "ciudad_codigoml": "TUNPQ0RPTGYzM2Zi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 268,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "ESPINAL",
+    "ciudad_codigoml": "TUNPQ0VTUDI3MWJi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 270,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "FALAN",
+    "ciudad_codigoml": "TUNPQ0ZBTDU0NDcx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 275,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "FLANDES",
+    "ciudad_codigoml": "TUNPQ0ZMQWFkMThl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 283,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "FRESNO",
+    "ciudad_codigoml": "TUNPQ0ZSRTc5NWFl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 319,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "GUAMO",
+    "ciudad_codigoml": "TUNPQ0dVQWNiOTM4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 347,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "HERVEO",
+    "ciudad_codigoml": "TUNPQ0hFUmM1ZTll",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 349,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "HONDA",
+    "ciudad_codigoml": "TUNPQ0hPTjYxNTA5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 73,
+    "ciudad_nombre": "IBAGUE",
+    "ciudad_codigoml": "TUNPQ0lCQTI0NzNh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 352,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "ICONONZO",
+    "ciudad_codigoml": "TUNPQ0lDTzg2NTAw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 408,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "LERIDA",
+    "ciudad_codigoml": "TUNPQ0xFUjQ0MDFj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 411,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "LIBANO",
+    "ciudad_codigoml": "TUNPQ0xJQjgyM2Y0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 443,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "MARIQUITA",
+    "ciudad_codigoml": "TUNPQ01BUmUxNWM2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 449,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "MELGAR",
+    "ciudad_codigoml": "TUNPQ01FTDU1ZGI3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 461,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "MURILLO",
+    "ciudad_codigoml": "TUNPQ01VUmFmY2Rk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 483,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "NATAGAIMA",
+    "ciudad_codigoml": "TUNPQ05BVDY4MzBh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 504,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "ORTEGA",
+    "ciudad_codigoml": "TUNPQ09SVDJiMzVm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 520,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "PALOCABILDO",
+    "ciudad_codigoml": "TUNPQ1BBTDJkODRm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 547,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "PIEDRAS",
+    "ciudad_codigoml": "TUNPQ1BJRTYzODE",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 555,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "PLANADAS",
+    "ciudad_codigoml": "TUNPQ1BMQTNkODMx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 563,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "PRADO",
+    "ciudad_codigoml": "TUNPQ1BSQTI3ODlk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 585,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "PURIFICACION",
+    "ciudad_codigoml": "TUNPQ1BVUmYxMWFm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 616,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "RIOBLANCO",
+    "ciudad_codigoml": "TUNPQ1JJT2E0MjEy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 622,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "RONCESVALLES",
+    "ciudad_codigoml": "TUNPQ1JPTmYyODE0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 624,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "ROVIRA",
+    "ciudad_codigoml": "TUNPQ1JPVmE2MTUy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 671,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "SALDAÃ‘O",
+    "ciudad_codigoml": "TUNPQ1NBTDc1ZGRl",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 675,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "SAN ANTONIO",
+    "ciudad_codigoml": "TUNPQ1NBTmFkZjdm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 678,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "SAN LUIS",
+    "ciudad_codigoml": "TUNPQ1NBTmNhNzNh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 686,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "SANTA ISABEL",
+    "ciudad_codigoml": "TUNPQ1NBTjRkNDg",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 770,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "SUAREZ",
+    "ciudad_codigoml": "TUNPQ1NVQTc0YmZi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 854,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "VALLE DE SAN JUAN",
+    "ciudad_codigoml": "TUNPQ1ZBTDQ1MGZj",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 861,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "VENADILLO",
+    "ciudad_codigoml": "TUNPQ1ZFTjc3YjVi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 870,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "VILLAHERMOSA",
+    "ciudad_codigoml": "TUNPQ1ZJTGJiYTU2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 873,
+    "departamento_codigo": 73,
+    "ciudad_nombre": "VILLARRICA",
+    "ciudad_codigoml": "TUNPQ1ZJTDIwYjU0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "020",
+    "departamento_codigo": 76,
+    "ciudad_nombre": "ALCALA",
+    "ciudad_codigoml": "TUNPQ0FMQzU2YTIx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "036",
+    "departamento_codigo": 76,
+    "ciudad_nombre": "ANDALUCIA",
+    "ciudad_codigoml": "TUNPQ0FORGRlZjA1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "041",
+    "departamento_codigo": 76,
+    "ciudad_nombre": "ANSERMANUEVO",
+    "ciudad_codigoml": "TUNPQ0FOUzEzNTkx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "054",
+    "departamento_codigo": 76,
+    "ciudad_nombre": "ARGELIA",
+    "ciudad_codigoml": "TUNPQ0FSR2U2Mzc2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 100,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "BOLIVAR",
+    "ciudad_codigoml": "TUNPQ0JPTGRlNDg2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 109,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "BUENAVENTURA",
+    "ciudad_codigoml": "TUNPQ0JVRWQ5MjE1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 113,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "BUGALAGRANDE",
+    "ciudad_codigoml": "TUNPQ0JVRzlkMWYy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 122,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "CAICEDONIA",
+    "ciudad_codigoml": "TUNPQ0NBSTcyOWVm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 76,
+    "ciudad_nombre": "CALI",
+    "ciudad_codigoml": "TUNPQ0NBTDYyZDA0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 126,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "CALIMA",
+    "ciudad_codigoml": "TUNPQ0NBTDVlZGNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 130,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "CANDELARIA",
+    "ciudad_codigoml": "TUNPQ0NBTmNhNDli",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 147,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "CARTAGO",
+    "ciudad_codigoml": "TUNPQ0NBUmFmMmI2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 233,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "DAGUA",
+    "ciudad_codigoml": "TUNPQ0RBR2JmNzc",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 243,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "EL ÃGUILA",
+    "ciudad_codigoml": "TUNPQ0VMWmFjODg5",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 246,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "EL CAIRO",
+    "ciudad_codigoml": "TUNPQ0VMWmI2NTkw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 248,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "EL CERRITO",
+    "ciudad_codigoml": "TUNPQ0VMWmMwNjhh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 250,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "EL DOVIO",
+    "ciudad_codigoml": "TUNPQ0VMWjJiYjE4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 275,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "FLORIDA",
+    "ciudad_codigoml": "TUNPQ0ZMTzM2ZTgy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 306,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "GINEBRA",
+    "ciudad_codigoml": "TUNPQ0dJTjgwMzQ3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 318,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "GUACARI",
+    "ciudad_codigoml": "TUNPQ0dVQTE3NGVk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 364,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "JAMUNDI",
+    "ciudad_codigoml": "TUNPQ0pBTTIwMTk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 377,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "LA CUMBRE",
+    "ciudad_codigoml": "TUNPQ0xBWmRiNzA2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 400,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "LA UNION",
+    "ciudad_codigoml": "TUNPQ0xBWmI1NWRm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 403,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "LA VICTORIA",
+    "ciudad_codigoml": "TUNPQ0xBWjg1YmQ1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 497,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "OBANDO",
+    "ciudad_codigoml": "TUNPQ09CQTRhZDU0",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 520,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "PALMIRA",
+    "ciudad_codigoml": "TUNPQ1BBTDJhYTA3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 563,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "PRADERA",
+    "ciudad_codigoml": "TUNPQ1BSQTcyMjEw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 606,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "RESTREPO",
+    "ciudad_codigoml": "TUNPQ1JFUzQ2ZTI3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 616,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "RIOFRIO",
+    "ciudad_codigoml": "TUNPQ1JJTzM4YjZi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 622,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "ROLDANILLO",
+    "ciudad_codigoml": "TUNPQ1JPTGNhNzU3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 670,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "SAN PEDRO",
+    "ciudad_codigoml": "TUNPQ1NBTjgzZjRk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 736,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "SEVILLA",
+    "ciudad_codigoml": "TUNPQ1NFVjIzNjlk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 823,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "TORO",
+    "ciudad_codigoml": "TUNPQ1RPUmJkNTk",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 828,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "TRUJILLO",
+    "ciudad_codigoml": "TUNPQ1RSVTdiOWU2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 834,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "TULUA",
+    "ciudad_codigoml": "TUNPQ1RVTGFmNzg4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 845,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "ULLOA",
+    "ciudad_codigoml": "TUNPQ1VMTGRjY2E4",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 863,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "VERSALLES",
+    "ciudad_codigoml": "TUNPQ1ZFUjFlYjgw",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 869,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "VIJES",
+    "ciudad_codigoml": "TUNPQ1ZJSmI4ZWU2",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 890,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "YOTOCO",
+    "ciudad_codigoml": "TUNPQ1lPVDg0M2Uy",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 892,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "YUMBO",
+    "ciudad_codigoml": "TUNPQ1lVTTE2MGZm",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 895,
+    "departamento_codigo": 76,
+    "ciudad_nombre": "ZARZAL",
+    "ciudad_codigoml": "TUNPQ1pBUjYzYTNi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 161,
+    "departamento_codigo": 97,
+    "ciudad_nombre": "CARURU",
+    "ciudad_codigoml": "TUNPQ0NBUjFhMDA",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 97,
+    "ciudad_nombre": "MITU",
+    "ciudad_codigoml": "TUNPQ01JVGFkZWM3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 511,
+    "departamento_codigo": 97,
+    "ciudad_nombre": "PACOA",
+    "ciudad_codigoml": "TUNPQ1BBQzczMmVh",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 777,
+    "departamento_codigo": 97,
+    "ciudad_nombre": "PAPUNAUA",
+    "ciudad_codigoml": "TUNPQ1BBUDg2ZWRi",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 666,
+    "departamento_codigo": 97,
+    "ciudad_nombre": "TARAIRA",
+    "ciudad_codigoml": "TUNPQ1RBUjYzNTUz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 889,
+    "departamento_codigo": 97,
+    "ciudad_nombre": "YAVARATE",
+    "ciudad_codigoml": "TUNPQ1lBVmVlMWMz",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 773,
+    "departamento_codigo": 99,
+    "ciudad_nombre": "CUMARIBO",
+    "ciudad_codigoml": "TUNPQ0NVTWEzM2Yx",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 524,
+    "departamento_codigo": 99,
+    "ciudad_nombre": "LA PRIMAVERA",
+    "ciudad_codigoml": "TUNPQ0xBWmU3ZWQ",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": 99,
+    "ciudad_nombre": "PUERTO CARREÃ‘O",
+    "ciudad_codigoml": "TUNPQ01JVGFkZWM3",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": 624,
+    "departamento_codigo": 99,
+    "ciudad_nombre": "SANTA ROSALIA",
+    "ciudad_codigoml": "TUNPQ1NBTmQ5ZTE1",
+    "ciudad_estado": "A"
+  },
+  {
+    "ciudad_codigo": "001",
+    "departamento_codigo": "05",
+    "ciudad_nombre": "MEDELLIN",
+    "ciudad_codigoml": "TUNPQ01FRGRjNjc4",
+    "ciudad_estado": "A"
+  }
+]

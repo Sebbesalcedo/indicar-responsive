@@ -17,6 +17,7 @@ import {LoginDialog } from '../app/dialogs/login/login.dialog.component';
 import {WompiFormsComponent} from './wompi-forms/wompi-forms.component';
 import {ResumenPagoComponent} from './wompi-forms/resumen-pago/resumen-pago.component';
 import {ValoradorComponent} from './valorador/valorador.component';
+import { GuiaPrecioComponent } from './guia-precio/guia-precio.component';
 
 const routes: Routes = [
 
@@ -115,7 +116,13 @@ const routes: Routes = [
     path: 'resumen_pago',
     component:ResumenPagoComponent
 
-  }
+  },
+{
+
+    path: 'guiaPrecio',
+    component:GuiaPrecioComponent
+
+  },
 
 ];
 

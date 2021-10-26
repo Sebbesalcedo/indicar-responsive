@@ -9,6 +9,7 @@ const routes: Routes = [
     path:'calcular-cuota',
     component: CalcularCuotaComponent
   },
+
   {
     path:'solicitar-credito',
     component: SolicitarCreditoComponent

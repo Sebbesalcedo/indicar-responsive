@@ -72,7 +72,7 @@ export class PqrsComponent implements OnInit {
       this.formPqrs.controls['ftexto'].setErrors({'incorrect': true});
       this.setFieldError('ftexto');
     }
-    
+
     if(!this.formPqrs.valid){
       swal.fire({
         title:'',
@@ -86,14 +86,14 @@ export class PqrsComponent implements OnInit {
         text: 'Complete la información correctamente'
       });
     }else{
-      console.log('envio');
+      //console.log('envio');
       this.snackBar.open('Enviando su solicitud...',null,{
         duration: 10000
       });
 
       let inputFile;
       inputFile = document.querySelector('#attach_file');
-      
+
       this.formPqrs.controls['fname'].setValue('');
       this.formPqrs.controls['fcorreo'].setValue('');
       this.formPqrs.controls['ftipo'].setValue('');

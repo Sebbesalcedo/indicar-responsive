@@ -76,8 +76,8 @@ export class UsadosClasificadosFiltroComponent implements OnChanges {
     p_departamento: "",
     p_ciudad: "",
     p_precio: "",
-    fmodelo: "",
-    fkm: "",
+    p_modelo: "",
+    p_km: "",
     ftraccion: "",
     fcaja: "",
     ftipomotor: "",
@@ -168,10 +168,9 @@ export class UsadosClasificadosFiltroComponent implements OnChanges {
     this.p_filtros.p_familia = "";
     this.p_filtros.p_departamento = "";
     this.p_filtros.p_ciudad = "";
-    this.p_filtros.fprecio = "";
-
-    this.p_filtros.fmodelo = "";
-    this.p_filtros.fkm = "";
+    this.p_filtros.p_precio = "";
+    this.p_filtros.p_modelo = "";
+    this.p_filtros.p_km = "";
     // this.p_filtros.ftraccion          = "";
     // this.p_filtros.fcaja              = "";
     // this.p_filtros.ftipomotor         = "";
@@ -266,21 +265,39 @@ export class UsadosClasificadosFiltroComponent implements OnChanges {
         }
       }
     });
-    // mapeo de airbags
+    // mapeo de PRECIO
     this.filtro.fprecio.map((item) => {
       if (item.selected) {
-        if (this.p_filtros.fprecio == "") {
-          this.p_filtros.fprecio += item.codigo;
+        if (this.p_filtros.p_precio == "") {
+          this.p_filtros.p_precio += item.codigo;
         } else {
-          this.p_filtros.fprecio += "," + item.codigo;
+          this.p_filtros.p_precio += "," + item.codigo;
         }
       }
     });
 
-    console.log(this.p_filtros);
-    console.log(this.filtro);
+    this.filtro.fmodelo.map((item) => {
+      if (item.selected) {
+       // console.log(item);
+        if (this.p_filtros.p_modelo == "") {
+          this.p_filtros.p_modelo += item.codigo;
+        } else {
+          this.p_filtros.p_modelo += "," + item.codigo;
+        }
+      }
+    });
 
-    this.router.navigate(["/clasificados"], { queryParams: this.p_filtros });
+    this.filtro.fkm.map((item) => {
+      if (item.selected) {
+        if (this.p_filtros.p_km == "") {
+          this.p_filtros.p_km += item.codigo;
+        } else {
+          this.p_filtros.p_km += "," + item.codigo;
+        }
+      }
+    });
+ // console.log(this.p_filtros);
+    // this.router.navigate(["/clasificados"], { queryParams: this.p_filtros });
     this.reload.emit(this.p_filtros);
   }
 

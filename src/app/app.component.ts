@@ -54,4 +54,8 @@ export class AppComponent {
       });
     });
   }
+
+    page_size: number = 5 // CANTIDAD DE ELEMENTOS POR PAGINA
+  page_number: number = 1
+  pageSizeOptions = [5, 10, 20, 50, 100]
 }

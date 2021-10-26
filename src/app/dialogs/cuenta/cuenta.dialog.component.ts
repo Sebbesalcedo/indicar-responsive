@@ -40,7 +40,7 @@ export class CuentaDialog{
   // OUTPUT
   @Output() loading = new EventEmitter();
   @Output() closeDialog = new EventEmitter();
-  
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data:any,
     private WebApiService:WebApiService,
@@ -330,7 +330,7 @@ export class CuentaDialog{
             )
             this.closeDialog.emit();
           }
-        );   
+        );
       }else{  // EDICION DE TELEFONO
         let body = {
           telefono_numero: this.formPhone.get('fphone').value,
@@ -398,7 +398,7 @@ export class CuentaDialog{
         })
         .subscribe(
           data=>{
-            console.log(data);
+           // console.log(data);
             this.snackBar.open(
               'Información actualizada',
               'Aceptar',

@@ -146,7 +146,7 @@
       </ng-template>
       <div mat-dialog-actions>
         <div class="text-center col-12">
-          <button mat-button class="btn-red" style="padding: 8px 10px;" (click)="onSubmitRegister()">Registrate</button>
+          <button  [disabled]="formRegister1.invalid"  mat-button class="btn-red" style="padding: 8px 10px;" (click)="onSubmitRegister()">Registrate</button>
         </div>
       </div>
     </form>

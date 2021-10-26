@@ -93,97 +93,97 @@
       </button>
       <hr />
     </div>
-    <!-- Precio -->
+<!-- Precio -->
 
-    <div class="form-group col">
-      <label
-        (click)="filpreci = !filpreci"
-        [ngClass]="filpreci ? 'active' : 'inactive'"
-        class="mas-opciones"
-        >Precio</label
-      >
-      <div
-        class="check-filtro filtro-busqueda"
-        [ngClass]="filpreci ? 'active' : 'inactive'"
-      >
-        <mat-checkbox
-          *ngFor="let data of filtro.fprecio; let i = index"
-          value="{{ data.codigo }}"
-          [(ngModel)]="filtro.fprecio[i].selected"
-          (change)="changes()"
-          >{{ data.descripcion | currency }} ({{ data.cantidad }})
-        </mat-checkbox>
-      </div>
-      <button
-        (click)="filpreci = !filpreci"
-        [ngClass]="filpreci ? 'active' : 'inactive'"
-        class="boton-ver-mas"
-      >
-        <span>Ver más</span> <span>Ver menos</span>
-      </button>
-      <hr />
-    </div>
+<div class="form-group col">
+  <label
+    (click)="filpreci = !filpreci"
+    [ngClass]="filpreci ? 'active' : 'inactive'"
+    class="mas-opciones"
+    >Precio</label
+  >
+  <div
+    class="check-filtro filtro-busqueda"
+    [ngClass]="filpreci ? 'active' : 'inactive'"
+  >
+    <mat-checkbox
+      *ngFor="let data of filtro.fprecio; let i = index"
+      value="{{ data.codigo }}"
+      [(ngModel)]="filtro.fprecio[i].selected"
+      (change)="changes()"
+      >{{ data.descripcion | currency }}
+    </mat-checkbox>
+  </div>
+  <button
+    (click)="filpreci = !filpreci"
+    [ngClass]="filpreci ? 'active' : 'inactive'"
+    class="boton-ver-mas"
+  >
+    <span>Ver más</span> <span>Ver menos</span>
+  </button>
+  <hr />
+</div>
 
-    <!-- Modelo -->
+<!-- Modelo -->
 
-    <div class="form-group col">
-      <label
-        (click)="filmod = !filmod"
-        [ngClass]="filmod ? 'active' : 'inactive'"
-        class="mas-opciones"
-        >Modelo</label
-      >
-      <div
-        class="check-filtro filtro-busqueda"
-        [ngClass]="filmod ? 'active' : 'inactive'"
-      >
-        <mat-checkbox
-          *ngFor="let data of filtro.fmodelo; let i = index"
-          value="{{ data.codigo }}"
-          (change)="changes()"
-          [(ngModel)]="filtro.fmodelo[i].selected"
-          >{{ data.descripcion }} ({{ data.cantidad }})
-        </mat-checkbox>
-      </div>
-      <button
-        (click)="filmod = !filmod"
-        [ngClass]="filmod ? 'active' : 'inactive'"
-        class="boton-ver-mas"
-      >
-        <span>Ver más</span> <span>Ver menos</span>
-      </button>
-      <hr />
-    </div>
-    <!-- Kilometraje -->
+<div class="form-group col">
+  <label
+    (click)="filmod = !filmod"
+    [ngClass]="filmod ? 'active' : 'inactive'"
+    class="mas-opciones"
+    >Modelo</label
+  >
+  <div
+    class="check-filtro filtro-busqueda"
+    [ngClass]="filmod ? 'active' : 'inactive'"
+  >
+    <mat-checkbox
+      *ngFor="let data of filtro.fmodelo; let i = index"
+      value="{{ data.codigo }}"
+      (change)="changes()"
+      [(ngModel)]="filtro.fmodelo[i].selected"
+      >{{ data.descripcion }} ({{ data.cantidad }})
+    </mat-checkbox>
+  </div>
+  <button
+    (click)="filmod = !filmod"
+    [ngClass]="filmod ? 'active' : 'inactive'"
+    class="boton-ver-mas"
+  >
+    <span>Ver más</span> <span>Ver menos</span>
+  </button>
+  <hr />
+</div>
+<!-- Kilometraje -->
 
-    <div class="form-group col">
-      <label
-        (click)="filkilo = !filkilo"
-        [ngClass]="filkilo ? 'active' : 'inactive'"
-        class="mas-opciones"
-        >Kilometraje</label
-      >
-      <div
-        class="check-filtro filtro-busqueda"
-        [ngClass]="filkilo ? 'active' : 'inactive'"
-      >
-        <mat-checkbox
-          *ngFor="let data of filtro.fkm; let i = index"
-          value="{{ data.codigo }}"
-          (change)="changes()"
-          [(ngModel)]="filtro.fkm[i].selected"
-          >{{ data.descripcion | number }} ({{ data.cantidad }})
-        </mat-checkbox>
-      </div>
-      <button
-        (click)="filkilo = !filkilo"
-        [ngClass]="filkilo ? 'active' : 'inactive'"
-        class="boton-ver-mas"
-      >
-        <span>Ver más</span> <span>Ver menos</span>
-      </button>
-      <hr />
-    </div>
+<div class="form-group col">
+  <label
+    (click)="filkilo = !filkilo"
+    [ngClass]="filkilo ? 'active' : 'inactive'"
+    class="mas-opciones"
+    >Kilometraje</label
+  >
+  <div
+    class="check-filtro filtro-busqueda"
+    [ngClass]="filkilo ? 'active' : 'inactive'"
+  >
+    <mat-checkbox
+      *ngFor="let data of filtro.fkm; let i = index"
+      value="{{ data.codigo }}"
+      (change)="changes()"
+      [(ngModel)]="filtro.fkm[i].selected"
+      >{{ data.descripcion | number }} ({{ data.cantidad }})
+    </mat-checkbox>
+  </div>
+  <button
+    (click)="filkilo = !filkilo"
+    [ngClass]="filkilo ? 'active' : 'inactive'"
+    class="boton-ver-mas"
+  >
+    <span>Ver más</span> <span>Ver menos</span>
+  </button>
+  <hr />
+</div>
     <!-- DEPARTAMENTOS -->
     <div class="form-group col">
       <label

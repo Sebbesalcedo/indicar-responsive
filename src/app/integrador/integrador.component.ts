@@ -39,7 +39,7 @@ export class IntegradorComponent implements OnInit {
           var redirect = urlParams.get("redirect");
           var anuncioParam = urlParams.get("state");
           var user = urlParams.get("codigo");
-          console.log(queryString);
+          //console.log(queryString);
           //Mostramos los valores en consola:
 
           let dt = {
@@ -50,7 +50,7 @@ export class IntegradorComponent implements OnInit {
 
             // username: user,
           };
-          console.log(dt);
+          //console.log(dt);
 
           this._data
             .postRequest(AppComponent.urlService, dt, { _p_action: "get_code" })

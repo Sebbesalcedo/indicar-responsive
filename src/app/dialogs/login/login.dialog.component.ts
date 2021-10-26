@@ -52,6 +52,7 @@ export class LoginDialog {
   ) {
     //login or register
     this.view = this.data.window;
+
     switch (this.view) {
       case "login":
         //  LOGIN
@@ -237,11 +238,16 @@ export class LoginDialog {
    * @since         28-11-2019
    */
   onSubmitLogin(register: boolean = null) {
-    let username = this.formLogin.get("fcorreo").value;
-    let password = this.formLogin.get("fpass").value;
+
+    console.log(this.formLogin);
+    let username = this.formLogin.value.fcorreo;
+    let password = this.formLogin.value.fpass;
     this.loading.emit(true);
+
+
     this.AutheticationService.login(username, password).subscribe(
       (data) => {
+        console.log(data);
         let datos;
         datos = data;
         if (datos.hasOwnProperty("success")) {
@@ -266,6 +272,8 @@ export class LoginDialog {
         }
       },
       (error) => {
+        console.log(error);
+
         swal.fire({
           title: "",
           text: "Usuario o password incorrectos",
@@ -454,6 +462,10 @@ export class LoginDialog {
               this.AutheticationService.setToken(datos.token);
               this.setearLocalStorage(response);
               this.updateLoggedStatus.emit(response);
+              this.formLogin.value.fcorreo = data.email;
+              this.formLogin.value.fpass = data.password;
+              this.onSubmitLogin();
+              this.router.navigate(['/usuario/(cuenta-opcion:cuenta)']);
             }
           );
         },
@@ -590,6 +602,7 @@ export class LoginDialog {
    * @since         31-01-2020
    */
   onSubmitRecovery() {
+    console.log("object");
     if (
       this.formRecoveryPassword.get("fpass").value !=
       this.formRecoveryPassword.get("fcpass").value
@@ -610,6 +623,4 @@ export class LoginDialog {
   }
 
   // ############################################## /Metodo de Google Analytics ##############################################
-
-
 }

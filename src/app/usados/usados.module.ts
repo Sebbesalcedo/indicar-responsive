@@ -69,10 +69,13 @@ export class CustomHammerConfig extends HammerGestureConfig {
     FormsModule,
     NgxGalleryModule,
     UtilModule,
-   
+
       // shown passing global defaults (optional)
       AdsenseModule
     // MaterialModule
+  ],
+  exports:[
+UsadosClasificadosFiltroComponent
   ],
 
   providers: [

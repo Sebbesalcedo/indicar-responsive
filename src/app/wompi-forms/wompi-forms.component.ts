@@ -176,7 +176,7 @@ checkValue(event: any){
       }
     ).subscribe(
       (res) => {
-        console.log(res);
+        //console.log(res);
         this.tipoIdentificacion = res.datos.retorno;
       },
       (err) => {
@@ -337,7 +337,7 @@ checkValue(event: any){
   }
 
   validarTipoPersona(event) {
-    console.log(event);
+    //console.log(event);
     this.personaNatural.value.tpIdentificacion = event.value;
   }
 

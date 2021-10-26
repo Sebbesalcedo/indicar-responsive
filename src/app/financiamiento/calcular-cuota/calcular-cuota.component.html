@@ -34,9 +34,9 @@
                     </div>
                     <div class="col-md-6">
                         <!-- clase de vehiculo -->
-                        <label class="label-mat-form">Tipo de vehículo <span class="required">*</span></label>
+                        <label class="label-mat-form">Tipo de Servicio<span class="required">*</span></label>
                         <mat-form-field  class="input-full-width col-md-12" appearance="outline">
-                            <mat-select formControlName="fclase" placeholder="Clase de vehículo" >
+                            <mat-select formControlName="fclase" placeholder="tipo de Servicio" >
                                 <mat-option value="PA">Particular</mat-option>
                                 <mat-option value="PU">Público</mat-option>
                             </mat-select>
@@ -61,7 +61,7 @@
                         <div class="valorFinanciar">
                             <label class="label-mat-form">Valor a financiar</label>
                             <p>$ {{valorFinanciar | number : '1.0-1'}}</p>
-                        </div>  
+                        </div>
                     </div>
                     <div class="col-12 text-center">
                         <button mat-button class="btn btn-primary" (click)="onCalcular()">Calcular</button>
@@ -78,7 +78,7 @@
                     <li>Tasa de: {{tasa}}% M.V</li>
                     <li>Plazo de: {{plazo}} años</li>
                 </ul>
-    
+
                 <label>Este valor es solo de financiación, no se tiene en cuenta valor de seguros entre otros. *Recuerde que este
                 valor es aproximado y de referencia</label>
                 <a mat-button class="btn btn-primary" routerLink="/financiamiento/solicitar-credito">Solicitar crédito</a>

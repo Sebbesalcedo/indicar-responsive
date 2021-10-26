@@ -77,10 +77,16 @@ export class UsadosClasificadosComponent implements OnInit {
       this.p_filtros['p_clase']               = params['p_clase'];
       this.p_filtros['p_marca']               = params['p_marca'];
       this.p_filtros['p_familia']             = params['p_familia'];
-      this.p_filtros['p_precio']              = params['fprecio'];
+      this.p_filtros['p_precio']              = params['p_precio'];
       this.p_filtros['p_departamento']        = params['p_departamento'];
       this.p_filtros['p_ciudad']              = params['p_ciudad'];
       this.p_filtros['p_unico']               = params['p_unico'];
+
+
+      this.p_filtros['p_km']                    = params['p_km'];
+      this.p_filtros['p_modelo']               = params['p_modelo'];
+
+
       this.p_filtros['p_placatermina']        = params['p_placatermina'];
       this.p_filtros['p_airbags']             = params['p_airbags'];
       this.p_filtros['p_orderby']             = params['p_orderby'];
@@ -148,7 +154,7 @@ export class UsadosClasificadosComponent implements OnInit {
   }
 
   sendRequest(){
-
+    //console.log(this.p_filtros);
     this.loading = true;
     this.WebApiService.getRequest(AppComponent.urlService+'?_p_action=_getItemsUsado2019',
       this.p_filtros
@@ -159,7 +165,6 @@ export class UsadosClasificadosComponent implements OnInit {
 
         this.datos            = data;
         this.items            = data.datos;
-
         this.registros        = data.registros;
         this.ftipoclasificado = data.ftipoclasificado;
         this.fclase           = data.fclase;
@@ -228,7 +233,7 @@ export class UsadosClasificadosComponent implements OnInit {
       }
     }
 
-    console.log(filtros);
+
     this.encabezado.sidebarShowFilters = false;
     this.router.navigate(['clasificados'], { queryParams: this.p_filtros });
     this.sendRequest();

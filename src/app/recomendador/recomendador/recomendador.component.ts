@@ -28,7 +28,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
     if(this.ls != null){
       this.sendrequest();
     }else{
-      console.log('debe configurar los parametros para que indicar le recomiende algun vehiculo');
+      //console.log('debe configurar los parametros para que indicar le recomiende algun vehiculo');
     }
     this.setEventScroll();
   }
@@ -54,7 +54,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
         if(data.success){
           let campos;
           let valores;
-          
+
           // console.log(data);
           this.terms = data.campos;
           this.vehiculos = data.datos;
@@ -71,9 +71,9 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
             let info = JSON.parse(vehiculo.vehicle_information);
             // console.log(info);
             let rating = [];
-            
+
             info.forEach(i=>{
-              //registro rating 
+              //registro rating
               rating.push({
                 beneficio: i.catbeneficio_descripcion,
                 valor: i.valor
@@ -96,7 +96,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
                 });
               })
             }
-            
+
             vehiculo.rating = rating;
             //  ---------------------------- VALORES DE CAMPOS DE LA LINEA ---------------------------
             valores = [];
@@ -157,7 +157,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
               //   console.log(2);
               //   orderBeneficio[index].push(2);
               // }
-              
+
             });
             this.vehiculos[index].rating = orderBeneficio[index];
           });
@@ -172,7 +172,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
             comparatorTerm  = document.querySelector('.comparator-term');
             sec = document.querySelector('.global-content');
             headerSizeY     = header.offsetHeight;
-            
+
             let interval = setInterval(function(loading){
               let height = comparatorTerm.style.paddingTop;
               height = height.substring(0,height.length-2);
@@ -198,7 +198,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
           })
         }
         // console.log(this.vehiculos );
-        
+
         // this.loading = false;
         // console.log(this.terms);
       },
@@ -214,7 +214,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
     let top;
     let maxTop;
     let dim;
-    let comparator 
+    let comparator
     let comparatorBody;
     let comparatorTerm;
     let headerSizeY;
@@ -226,7 +226,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
     headerSizeY     = header.offsetHeight;
     termSizeX       = comparatorTerm.offsetWidth + comparatorTerm.offsetLeft;
     comparatorTerm.style.paddingTop = headerSizeY+"px";
-    window.addEventListener('scroll',function(){ 
+    window.addEventListener('scroll',function(){
       headerSizeY     = header.offsetHeight;
       termSizeX       = comparatorTerm.offsetWidth + comparatorTerm.offsetLeft;
       dim = comparator.getBoundingClientRect();
@@ -266,7 +266,7 @@ export class RecomendadorComponent implements OnInit{ //,AfterViewInit {
         }
       }
     });
-    
+
   }
 
 }

@@ -104,6 +104,8 @@
         <button class="menu-item" mat-button [routerLink]="['/clasificados']">Clasificados</button>
         <button class="menu-item" mat-button [matMenuTriggerFor]="Financiamiento">Financiamiento</button>
         <button class="menu-item" mat-button [routerLink]="['/ValoraTuVehiculo']">Valorador</button>
+        <button class="menu-item" mat-button [routerLink]="['/guiaPrecio']">Guia de precio</button>
+
 
         <mat-menu #Financiamiento="matMenu" yPosition="below">
           <button [routerLink]="['/financiamiento/calcular-cuota']" mat-menu-item>Calcula tu cuota</button>

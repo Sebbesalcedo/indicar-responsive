@@ -210,8 +210,8 @@ export class ResumenPagoComponent implements OnInit {
 
 
 
-    console.log(fechaInicio);
-    console.log(fechaFinal);
+   // console.log(fechaInicio);
+   // console.log(fechaFinal);
     let data = {
       costo_pago: this.valorTransaccion,
       referencia: this.idReferencia,
@@ -242,11 +242,12 @@ export class ResumenPagoComponent implements OnInit {
   generarReporte() {
     this.loading = true;
     let ruta = this.UrlWompi + "generarReporte";
-
+    console.log(this.dataTransaccion);
     let data = { email: this.dataTransaccion[0].email };
 
     this.global.postData(ruta, data).subscribe(
       (res) => {
+        console.log(res);
         this.loading = false;
         swal.fire(
           "",

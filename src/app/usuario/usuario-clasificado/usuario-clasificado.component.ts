@@ -44,7 +44,7 @@ export class UsuarioClasificadoComponent implements OnInit {
   visible_anular    :boolean    = false;
   visible_eliminar  :boolean    = false;
   visible_vendido   :boolean    = false;
- 
+
   sub;
   // motivo venta y eliminado
   saleOptions:any               = null;
@@ -132,7 +132,7 @@ export class UsuarioClasificadoComponent implements OnInit {
           this.visible_vendido   = false;
         break;
       }
-      this.sendRequest();        
+      this.sendRequest();
       window.scrollTo(0, 0)
     });
   }
@@ -171,17 +171,17 @@ export class UsuarioClasificadoComponent implements OnInit {
   }
 
 
-  
-  
+
+
   applyFilter(filterValue: string) {
     let data = filterValue.trim().toLowerCase();
     this.dataSource.filter = data;
   }
-  
+
   optionRow(cod,action:string,admin:boolean=null){
     switch (action) {
       case "VER":
-        this.router.navigate(['/clasificado/detalle',cod], { queryParams: { p_admin: true } });    
+        this.router.navigate(['/clasificado/detalle',cod], { queryParams: { p_admin: true } });
       break;
       case "EDITAR":
         this.router.navigate(['/publicar', cod]);
@@ -200,8 +200,8 @@ export class UsuarioClasificadoComponent implements OnInit {
           confirmButtonText: 'Confirmar',
           cancelButtonText: 'Cancelar',
         }).then((result) => {
-          if (result.value) {     
-            cod = this.Encrypt.desencrypt(cod);      
+          if (result.value) {
+            cod = this.Encrypt.desencrypt(cod);
             this.updateEstado(cod,'A');
           }
         });
@@ -239,8 +239,8 @@ export class UsuarioClasificadoComponent implements OnInit {
         //   confirmButtonText: 'Confirmar',
         //   cancelButtonText: 'Cancelar',
         // }).then((result) => {
-        //   if (result.value) {     
-        //     cod = this.Encrypt.desencrypt(cod);      
+        //   if (result.value) {
+        //     cod = this.Encrypt.desencrypt(cod);
         //     this.updateEstado(cod,'V');
         //   }
         // });
@@ -248,9 +248,15 @@ export class UsuarioClasificadoComponent implements OnInit {
       break;
       case "ELIMINAR":
         // motivo de venta.
+         this.loading = true;
         if(this.deleteOptions == null){
           // consultar opciones de vendido.
-          this.loading = true;
+
+
+
+       cod = this.Encrypt.desencrypt(cod);
+        this.updateEstado(cod,'E');
+
           this.WebApiService.getRequest(AppComponent.urlService,{
             _p_action: '_usadodetalle',
             _p_operacion: 'getDeleteParameters'
@@ -259,7 +265,6 @@ export class UsuarioClasificadoComponent implements OnInit {
             data=>{
               this.deleteOptions = data.datos;
               this.loading = false;
-              this.openDialog('delete',cod);
             },
             error=>{
               this.loading = false;
@@ -281,8 +286,8 @@ export class UsuarioClasificadoComponent implements OnInit {
         //   confirmButtonText: 'Confirmar',
         //   cancelButtonText: 'Cancelar',
         // }).then((result) => {
-        //   if (result.value) {      
-        //     cod = this.Encrypt.desencrypt(cod);     
+        //   if (result.value) {
+        //     cod = this.Encrypt.desencrypt(cod);
         //     this.updateEstado(cod,'E');
         //   }
         // });
@@ -293,7 +298,7 @@ export class UsuarioClasificadoComponent implements OnInit {
     }
   }
 
-  detailSelected( action: string):void {  
+  detailSelected( action: string):void {
     let operacionMsg='';
     switch (action) {
       case "ANULAR":
@@ -308,8 +313,8 @@ export class UsuarioClasificadoComponent implements OnInit {
       case "ELIMINAR":
         operacionMsg='Eliminar';
       break;
-    } 
-    let cantidad = 0; 
+    }
+    let cantidad = 0;
     let msgEnd = "clasificado";
     for (let item of this.dataSource.data) {
       if(item.select){
@@ -343,7 +348,7 @@ export class UsuarioClasificadoComponent implements OnInit {
       })
       .then((result) => {
         if (result.value) {
-          for (let item of this.dataSource.data) { 
+          for (let item of this.dataSource.data) {
             switch (action) {
               case "ANULAR":
                 if(item.select){
@@ -360,13 +365,13 @@ export class UsuarioClasificadoComponent implements OnInit {
                   this.updateEstado(item.venta_codigo,'V');
                 }
               break;
-              case "ELIMINAR":             
+              case "ELIMINAR":
                 if(item.select){
                   this.updateEstado(item.venta_codigo,'E');
                 }
               break;
-            }       
-          }  
+            }
+          }
         }
       });
     }
@@ -508,7 +513,7 @@ export class UsuarioClasificadoComponent implements OnInit {
     }
   }
 
-  cambiarEstado() { 
+  cambiarEstado() {
 
     if(this.dataSource.length==0){
 
@@ -528,11 +533,11 @@ export class UsuarioClasificadoComponent implements OnInit {
           text:'Debes seleccionar al menos un clasificado',
           icon:null
         });
-  
-  
+
+
       }else{
         if(this.list_select.length==1){
-  
+
           swal.fire({
             text: "¿Marcar como vendido?",
             icon: null,
@@ -545,10 +550,10 @@ export class UsuarioClasificadoComponent implements OnInit {
             if (result.isConfirmed) {
               for (let index = 0; index < this.list_select.length; index++) {
                 const element = parseInt(this.list_select[index]);
-      
+
                 this.updateEstado(element, "V");
               }
-      
+
               this.snackBar.open('Información actualizada', 'Aceptar', {
                 duration: 3000
               });
@@ -571,10 +576,10 @@ export class UsuarioClasificadoComponent implements OnInit {
             if (result.isConfirmed) {
               for (let index = 0; index < this.list_select.length; index++) {
                 const element = parseInt(this.list_select[index]);
-      
+
                 this.updateEstado(element, "V");
               }
-      
+
               this.snackBar.open('Información actualizada', 'Aceptar', {
                 duration: 3000
               });
@@ -585,20 +590,20 @@ export class UsuarioClasificadoComponent implements OnInit {
             }
           });
         }
-  
-       
-  
+
+
+
       }
-  
+
 
     }
-   
 
 
-    
 
- 
+
+
+
   }
-  
+
 
 }

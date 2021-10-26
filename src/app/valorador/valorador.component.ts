@@ -562,7 +562,7 @@ export class ValoradorComponent implements OnInit {
             hash[current.idPregunta] = true;
             return exists;
           });
-          console.log(this.formVehiculo.value);
+          //console.log(this.formVehiculo.value);
           let dataFinal = {
             nombre: this.formVehiculo.value.nombre,
             telefono: this.formVehiculo.value.telefono,
