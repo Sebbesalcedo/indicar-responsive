@@ -1,0 +1,339 @@
+<div class="section-content publicar-section">
+
+<!-- SECTION FORMS PUBLICAR  -->
+<!-- <mat-horizontal-stepper [linear]="isLinear" #stepper> -->
+<!-- <mat-horizontal-stepper linear #stepper> -->
+<mat-horizontal-stepper #stepper>
+  <!-- FORMULARIO DE VEHICULO -->
+  <mat-step [stepControl]="formVehiculo">
+    <form [formGroup]="formVehiculo">
+      <ng-template matStepLabel>Vehículo</ng-template>
+        <div class="row">
+            <div class="col-md-6">
+              <!-- Clase -->
+              <label class="label-mat-form">Clase <span class="required">*</span></label>
+              <mat-form-field appearance="outline" class="col-12" id="fclase">
+                <mat-select formControlName="fclase" placeholder="Seleccione..." (selectionChange)="onChange($event)" required >
+                  <mat-option value="">Seleccione...</mat-option>
+                  <mat-option  *ngFor="let data of clases" value="{{data.campo_codigo}}">{{data.campo_descripcion}}</mat-option>
+                </mat-select>
+                <!-- <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required> -->
+              </mat-form-field>
+              <!-- Marca -->
+              <label class="label-mat-form">Marca <span class="required">*</span></label>
+              <mat-form-field appearance="outline" class="col-12">
+                <mat-select formControlName="fmarca" placeholder="Seleccione..." required (selectionChange)="onChange($event)">
+                  <mat-option value="">Seleccione...</mat-option>
+                  <mat-option  *ngFor="let data of marcas" value="{{data.campo_codigo}}">{{data.campo_descripcion}}</mat-option>
+                </mat-select>
+                <!-- <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required> -->
+              </mat-form-field>
+              <!-- Modelo -->
+              <label class="label-mat-form">Modelo <span class="required">*</span></label>
+              <mat-form-field appearance="outline" class="col-12">
+                <mat-select formControlName="fmodelo" placeholder="Seleccione..." required (selectionChange)="onChange($event)">
+                  <mat-option value="">Seleccione...</mat-option>
+                  <mat-option  *ngFor="let data of modelo" value="{{data.campo_codigo}}">{{data.campo_descripcion}}</mat-option>
+                </mat-select>
+                <!-- <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required> -->
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <!-- Familia -->
+              <label class="label-mat-form">Familia <span class="required">*</span></label>
+              <mat-form-field appearance="outline" class="col-12">
+                <mat-select formControlName="ffamilia" placeholder="Seleccione..." required (selectionChange)="onChange($event)">
+                  <mat-option value="">Seleccione...</mat-option>
+                  <mat-option  *ngFor="let data of familia" value="{{data.campo_codigo}}">
+                    <!-- <img class="example-option-img" aria-hidden src="{{data.fotoslinea_ruta}}" height="25"> -->
+                    <img class="example-option-img" aria-hidden src="{{data.fotoslinea_ruta}}" height="25">
+                    <span class="label-select">{{data.campo_descripcion}}</span></mat-option>
+                </mat-select>
+                <!-- <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required> -->
+              </mat-form-field>
+              <!-- Caja -->
+              <label class="label-mat-form">Caja <span class="required">*</span></label>
+              <mat-form-field appearance="outline" class="col-12">
+                  <mat-select placeholder="Seleccione..." formControlName="fcaja" required (selectionChange)="onChange($event)">
+                    <mat-option value="">Seleccione...</mat-option>
+                    <mat-option value="{{data.campo_codigo}}" *ngFor="let data of caja"> {{data.campo_descripcion}}</mat-option>
+                  </mat-select>
+              </mat-form-field>
+              <!-- Linea -->
+              <label class="label-mat-form">Línea <span class="required">*</span></label>
+              <mat-form-field appearance="outline" class="col-12">
+                  <mat-select placeholder="Seleccione..." formControlName="flinea" required (selectionChange)="onChange($event)">
+                    <mat-option value="">Seleccione...</mat-option>
+                    <mat-option value="{{data.campo_codigo}}" *ngFor="let data of linea"> {{data.campo_descripcion}}</mat-option>
+                  </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-12 text-center">
+                <!-- <button mat-button matStepperNext class="btn-next">Siguiente</button> -->
+                <button mat-button (click)="steps(1)" class="btn-next">Siguiente</button>
+            </div>
+        </div> 
+    </form>
+  </mat-step>
+  <!-- FORMULARIO DE DETALLE -->
+  <mat-step [stepControl]="formDetalle">
+    <form [formGroup]="formDetalle">
+      <ng-template matStepLabel>Detalle</ng-template>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- ubicacion vehiculo -->
+                <label class="label-mat-form">¿En dónde está el vehículo? <span class="required">*</span></label>
+                <mat-form-field appearance="outline" class="col-12">
+                  <input type="text" placeholder="Busque y seleccione..." matInput formControlName="fubicacion" [matAutocomplete]="ubicacion" (blur)="validateUbicacion()" (change)="formChanges()" (keyup)="filterOptions($event,'ubicacion')">
+                  <mat-autocomplete #ubicacion="matAutocomplete" [displayWith]="displayFn">
+                    <mat-option *ngFor="let option of ciudadesUbicacion" [value]="option">
+                      {{option.ciudad_nombre}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+                <!-- ciudad matricula -->
+                <label class="label-mat-form">Ciudad de mátricula <span class="required">*</span></label>
+                <mat-form-field appearance="outline" class="col-12">
+                  <input type="text" placeholder="Busque y seleccione..." matInput formControlName="fciudadmatricula" [matAutocomplete]="matricula" (blur)="validateMatricula()" (change)="formChanges()" (keyup)="filterOptions($event,'matricula')">
+                  <mat-autocomplete #matricula="matAutocomplete" [displayWith]="displayFn">
+                    <mat-option *ngFor="let option of ciudadesMatricula" [value]="option">
+                      {{option.ciudad_nombre}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+                <!-- placa -->
+                <label class="label-mat-form">Placa <span class="required">*</span></label>
+                <mat-form-field appearance="outline" class="col-12">
+                  <input matInput placeholder="" formControlName="fplaca" maxlength="7" style="text-transform: uppercase;" autocomplete="off" (change)="formChanges()" [mask]="maskplaca">
+                </mat-form-field>
+                <span class="text-alert-bold">Sólo se mostrará el último dígito</span>
+                <!-- kilometraje -->
+                <label class="label-mat-form">Kilometraje <span class="required">*</span></label>
+                <mat-form-field appearance="outline" class="col-12">
+                  <!-- <input matInput placeholder="Kilometraje" formControlName="fkilometraje" [textMask]="{mask: numberMask, guide: false}"  maxlength="8"> -->
+                  <input matInput placeholder="Kilometraje" formControlName="fkilometraje"  maxlength="8" autocomplete="off" mask="separator.2" thousandSeparator="," (change)="formChanges()">
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <label class="label-mat-form">Números de Contacto <span class="required">*</span></label>
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- telefono principal -->
+                  <mat-form-field class="col-md-12"  appearance="outline">
+                    <mat-select placeholder="Seleccione..." autocomplete="off" formControlName="fnumeroprincipal" (selectionChange)="formChanges()">
+                      <mat-option value="">Seleccione...</mat-option>
+                      <mat-option value="{{data.campo_codigo}}" *ngFor="let data of telefonos"> {{data.campo_descripcion}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <span class="text-simple-bold">Teléfono principal</span>   
+                </div>
+                <div class="col-md-6">
+                  <!--  telefono adicional -->
+                  <mat-form-field class="col-md-12"  appearance="outline">
+                    <input matInput type="tel" placeholder="" formControlName="fnumeroadicional" autocomplete="off" [mask]="maskphone" (change)="formChanges()">
+                    <!-- <mat-select placeholder="Seleccione..." formControlName="fnumeroadicional"  (change)="changeGeneral($event)">
+                      <mat-option value="">Seleccione...</mat-option>
+                      <mat-option value="{{data.campo_codigo}}" *ngFor="let data of telefonos"> {{data.campo_descripcion}} </mat-option>
+                    </mat-select> -->
+                  </mat-form-field>
+                  <span class="text-simple-bold">Teléfono adicional</span>
+                </div>
+              </div>
+              <div class="row pt-3">
+                <!-- unico duenio -->
+                <label class="label-mat-form col-md-4">Único dueño</label>
+                <mat-radio-group  formControlName="funicoduenio" class="col-md-8" (change)="formChanges()">
+                  <mat-radio-button value="S">Si</mat-radio-button>
+                  <mat-radio-button value="N">No</mat-radio-button>
+                  <mat-radio-button value="X">No informar</mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <div class="row">
+                <!-- comentarios -->
+                <label class="label-mat-form col-12">Comentarios</label>
+                <div class="col-md-12 comentarios">
+                  <!-- <ckeditor id="description-vehiculo" [editor]="Editor" data="<p>123</p>" formControlName="fcomentarios" (change)="formChanges()"
+                  [config]="{ 
+                      toolbar: [ 
+                          'heading', 
+                          '|',
+                          'bold',
+                          'italic',
+                          'link',
+                          'bulletedList',
+                          'numberedList',
+                          'blockQuote',
+                          'undo',
+                          'redo'
+                      ] }"></ckeditor> -->
+                      <ckeditor #editorComentario [editor]="Editor" [data]='comentarios' (change)="changeDescription($event)" [config]="{ 
+                        toolbar: [ 
+                            'heading', 
+                            '|',
+                            'bold',
+                            'italic',
+                            'link',
+                            'bulletedList',
+                            'numberedList',
+                            'blockQuote',
+                            'undo',
+                            'redo'
+                        ] }"></ckeditor>
+                <!-- <mat-form-field appearance="outline" class="col-12">
+                  <textarea matInput placeholder="Comentarios" formControlName="fcomentarios"></textarea>
+                </mat-form-field> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-12" *ngIf="cuser.tipocliente == '02'">
+              <hr style="margin-top: 2rem !important;margin-bottom: 0.5rem !important;">
+              <!-- asesores -->
+              <div class="row">
+                <label class="label-mat-form col-md-3">Asesores:</label>
+                <div class="col-md-4">
+                  <mat-form-field class="col-md-12"  appearance="outline">
+                    <mat-select placeholder="Seleccione..." autocomplete="off" formControlName="fasesor" (selectionChange)="formChanges()">
+                      <mat-option value="">Seleccione...</mat-option>
+                      <mat-option value="{{data.campo_codigo}}" *ngFor="let data of asesores"> {{data.campo_descripcion}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>          
+                  <span class="text-simple-bold">Asesor 1</span>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="col-md-12"  appearance="outline">
+                    <mat-select placeholder="Seleccione..." formControlName="fasesor2"  (selectionChange)="formChanges()">
+                    <mat-option value="">Seleccione...</mat-option>
+                    <mat-option value="{{data.campo_codigo}}" *ngFor="let data of asesores"> {{data.campo_descripcion}} </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <span class="text-simple-bold">Asesor 2 (Opcional)</span>
+                </div>
+              </div> 
+            </div>
+            <div class="col-12 text-center pt-3">
+              <hr style="margin-top: 2rem !important;margin-bottom: 0.5rem !important;">
+              <!-- <button mat-button matStepperPrevious class="btn-next">Atras</button> -->
+              <button mat-button (click)="stepPrevious()" class="btn-next">Atras</button>
+              <!-- <button mat-button matStepperNext class="btn-next">Siguiente</button> -->
+              <button mat-button (click)="steps(2)" class="btn-next">Siguiente</button>
+            </div>
+        </div>
+    </form>
+  </mat-step>
+  <!-- FORMULARIO DE FOTOS -->
+  <mat-step>
+    <ng-template matStepLabel>Fotos</ng-template>
+    <div class="row justify-content-md-center">
+      <div class="col-md-8 text-center">
+        <p class="text-alert">
+          <img src="./../../../assets/images/icon-advertencia.svg" alt="advertencia">
+          Todas las fotos deben ser tomadas y subidas horizontalmente.
+        </p>
+        <div class="vehiculo-ft">
+          <img src="./../../../assets/images/icono-carro-FL.svg" alt="vehiculo-frontal-lateral">
+          <p class="text-alert">
+            La foto principal debe ser frontal/lateral.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div cdkDropList cdkDropListOrientation="horizontal" id="uploadFilesBold" class="upload-file-bold" (cdkDropListDropped)="drop($event)" (cdkDragStarted)="modifyPictures()" (dragstart)="modifyPictures()" >
+          <div class="sec-middle" id="opt-otras" *ngIf="fotos.length == 0">
+              <button class="btn-file" (click)="openfolder()">Buscar</button>
+              <br>&oacute;<br>Arrastrar y soltar aquí las fotos.
+          </div>
+          <div class="foto-sortable" *ngFor="let foto of fotos; let i = index" cdkDrag cdkDragLockAxis="x"> 
+            <div class="btn-delete-pic" (click)="updatePhotos()">×</div>
+            <div class="labels" *ngIf="i==0; else itemIndex">
+                <div class="labels-pic">Principal</div>
+            </div>
+            <!-- <div class="labels-pic" *ngIf="i==0; else itemIndex">Principal</div> -->
+            <ng-template #itemIndex>
+              <div class="labels">
+                  <div class="labels-pic">{{i}}</div>
+              </div>
+                <!-- <div class="labels-pic">{{i}}</div> -->
+            </ng-template>
+            <img [src]="foto.src" class="item-fotos">
+          </div>
+          <div class="msg-drag" *ngIf="fotos.length >=1">
+            <img src="./../../../assets/images/drag.png" alt="arraste y suelte">
+            <span>Arrastra y ubica las imágenes en el orden que deseas que se visualicen en tu publicación.</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="options-upload" class="noview">
+        <div class="item-options-upload addImages" (click)="openfolder()">
+          <div title="Agregar imagenes">+</div>
+          <span>Agregar</span>
+        </div>
+        <div class="item-options-upload deleteAllImages" (click)="removeAll()">
+          <div title="Eliminar imagenes">&times;</div>
+          <span>Eliminar</span>
+        </div>
+      </div>
+      <input type="file" class="noview" multiple id="fotosotras" (change)="handleFile($event)" accept="image/*">
+        <div class="col-12 text-center">
+          <hr style="margin-top: 2rem !important;margin-bottom: 0.5rem !important;">
+          <button mat-button (click)="stepPrevious()" class="btn-next">Atras</button>
+          <button mat-button (click)="steps(3)" class="btn-next">Siguiente</button>
+            <!-- <button mat-button matStepperNext class="btn-next">Siguiente</button> -->
+        </div>
+    </div>
+  </mat-step>
+  <!-- FORMULARIO DE EQUIPAMIENTO -->
+  <mat-step [stepControl]="formEquipamiento">
+        <form [formGroup]="formEquipamiento">
+          <ng-template matStepLabel>Equipamiento</ng-template>
+          <div class="row">
+            <mat-selection-list formControlName="faccesorios" class="publicar_accesorios">
+              <div class="row">
+                <mat-list-option checkboxPosition='before' *ngFor="let data of accesorios"  class="col-md-4" [value]="data.accref_codigo" (click)="formChanges()">{{data.accref_nombre}}</mat-list-option>
+              </div> 
+            </mat-selection-list>
+            <div class="col-12 text-center">
+              <hr style="margin-top: 2rem !important;margin-bottom: 0.5rem !important;">
+              <button mat-button (click)="stepPrevious()" class="btn-next">Atras</button>
+              <button mat-button (click)="steps(4)" class="btn-next">Siguiente</button>
+            </div>
+          </div>
+        </form>
+  </mat-step>
+  <!-- FORMULARIO DE PRECIO -->
+  <mat-step [stepControl]="formPrecio">
+    <form [formGroup]="formPrecio">
+        <ng-template matStepLabel>Precio</ng-template>
+        <div class="row pt-5">
+          <!-- precio -->
+          <label class="precio-venta text-center">Precio Venta</label>
+          <div class='col-md-12'>
+            <mat-form-field class="input-full-width" appearance="outline" class="col-md-6 precio-publicar">
+              <input matInput formControlName="fprecio" id="precio-venta" minlength="7" maxlength="15" autocomplete="off" mask="separator.2" thousandSeparator="," prefix="$  " (change)="formChanges()">
+            </mat-form-field>
+          </div>
+          <div class='col-md-12'>
+            <mat-checkbox formControlName="fnegociable" class="offset-md-5 offset-sm-3" (change)="formChanges()">Negociable</mat-checkbox>
+          </div>
+          <div class='col-md-12'>
+            <mat-checkbox formControlName="fpublicarnombre" class="offset-md-5 offset-sm-3" *ngIf="!isConcesionario" (change)="formChanges()">Publicar nombre del anunciante</mat-checkbox>
+            <!-- <mat-checkbox formControlName="recibir_alertas" checked="true">Recibir alertas al correo eléctronico de posibles clientes</mat-checkbox> -->
+          </div>        
+          <div class="col-12 text-center">
+            <hr style="margin-top: 2rem !important;margin-bottom: 0.5rem !important;">
+            <button mat-button (click)="stepPrevious()" class="btn-next">Atras</button>
+            <button mat-button (click)="submitBold(1)" class="btn-red btn-red-publicar">Publicar</button>
+          </div>
+        </div>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>
+</div>
+
+
+<!-- loading -->
+<div class="load-content" *ngIf="loading">
+    <div class="content-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>

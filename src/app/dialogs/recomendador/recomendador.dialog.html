@@ -1,0 +1,126 @@
+<!-- CORREO -->
+<div>
+    <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+    <h1 mat-dialog-title class="title-modal-bold">Recomendador</h1>
+    <div mat-dialog-content> 
+        <p class="col-md-12 mb-2" style="color:#585858;">Deja que Indicar te ayude a elegir tu vehículo ideal</p>
+        <!-- <form [formGroup]="formRecomendador"> -->
+            <div class="row section-recomendador-modal">
+                <h4 class="col-12 text-center title-recomendador">Rango de precios</h4>
+                <div class="col-md-6">
+                    <label class="label-mat-form">Precio Mínimo <span class="required">*</span></label>
+                    <mat-slider
+                        class="example-margin"
+                        [max]="200000000"
+                        [min]="2000000"
+                        [step]="1000000"
+                        [thumbLabel]="true"
+                        [(ngModel)]="minPrice">
+                    </mat-slider>
+                    <input class="field-slider" *ngIf="minPrice != null" type="text" mask="separator.2" thousandSeparator="," prefix="$  " [(ngModel)]="minPrice">
+                </div>
+                <div class="col-md-6">
+                    <label class="label-mat-form">Máximo <span class="required">*</span></label>
+                    <mat-slider
+                        class="example-margin"
+                        [max]="600000000"
+                        [min]="20000000"
+                        [step]="1000000"
+                        [thumbLabel]="true"
+                        [(ngModel)]="maxPrice">
+                    </mat-slider>
+                    <input class="field-slider" *ngIf="maxPrice != null" type="text" mask="separator.2" thousandSeparator="," prefix="$  " [(ngModel)]="maxPrice">
+                </div>
+                <h4 class="col-12 text-center title-recomendador">Rango de años.</h4>
+                <div class="col-md-6">
+                    <label class="label-mat-form">Año Mínimo <span class="required">*</span></label>
+                    <mat-slider
+                        class="example-margin"
+                        [max]="constMaxYear"
+                        [min]="constMinYear"
+                        [step]="1"
+                        [thumbLabel]="true"
+                        [(ngModel)]="minYear">
+                    </mat-slider>
+                    <input class="field-slider" *ngIf="minYear != null" type="text" [(ngModel)]="minYear">
+                </div>
+                <div class="col-md-6">
+                    <label class="label-mat-form">Año Máximo <span class="required">*</span></label>
+                    <mat-slider
+                        class="example-margin"
+                        [max]="constMaxYear"
+                        [min]="constMinYear"
+                        [step]="1"
+                        [thumbLabel]="true"
+                        [(ngModel)]="maxYear">
+                    </mat-slider>
+                    <input class="field-slider" *ngIf="maxYear != null" type="text" [(ngModel)]="maxYear">
+                </div>
+                <h4 class="col-12 text-center title-recomendador">Indique sus preferencias</h4>
+                <div class="col-md-12 beneficios-recomendador">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- <div class="example-container"> -->
+                                <p class="label">Listado de preferencias</p>
+                                <div
+                                  cdkDropList
+                                  #todoList="cdkDropList"
+                                  [cdkDropListData]="beneficiosSelected"
+                                  [cdkDropListConnectedTo]="[doneList]"
+                                  class="example-list"
+                                  (cdkDropListDropped)="drop($event)">
+                                  <div class="example-box" *ngFor="let item of beneficiosSelected" cdkDrag>{{item.descripcion}}</div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="col-md-6">
+                            <!-- <div class="example-container"> -->
+                                <p class="label">Listado de opciones</p>
+                                <div
+                                  cdkDropList
+                                  #doneList="cdkDropList"
+                                  [cdkDropListData]="categoriaBeneficios"
+                                  [cdkDropListConnectedTo]="[todoList]"
+                                  class="example-list"
+                                  (cdkDropListDropped)="drop($event)">
+                                  <div class="example-box" *ngFor="let item of categoriaBeneficios" cdkDrag>{{item.descripcion}}</div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- <input  matInput formControlName="fphone" required [mask]="maskPhone"> -->
+                <!-- Correo --
+                <div class="col-12">
+                    <label class="label-mat-form">Precio Mínimo <span class="required">*</span></label>
+                    <mat-form-field class="input-full-width col-md-12" appearance="outline" id="change_mail">
+                        <!-- <input  matInput placeholder="Correo electrónico"  formControlName="fcorreo" required (blur)="checkEmail($event)"> --
+                        <input  matInput formControlName="fcorreo" required (blur)="checkEmail($event)">
+                    </mat-form-field>
+                </div>
+                <span class="error col-12 text-center">{{emailInvalid}}</span>
+                <!-- Confirmar correo --
+                <div class="col-12">
+                    <label class="label-mat-form">Confirmar correo <span class="required">*</span></label>
+                    <mat-form-field class="input-full-width col-md-12" appearance="outline">
+                        <input  matInput formControlName="fccorreo" required>
+                    </mat-form-field>
+                </div>-->
+                
+            </div>
+        <!-- </form> -->
+    </div>
+    <div mat-dialog-actions>
+        <div class="text-center col-12">
+            <button mat-button [mat-dialog-close]="" class="btn btn-danger">Cancelar</button>
+            <button mat-button (click)="getRecomendation()" class="btn btn-primary">Ver vehiculos recomendados</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    button{
+        margin: 3px 3px;
+        font-size: 14px;
+    }
+</style>

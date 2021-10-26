@@ -1,0 +1,221 @@
+<!-- LOGIN -->
+<div *ngIf="view == 'login'">
+    <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+    <h1 class="title-modal-bold">Bienvenido a Indicar</h1>
+    <div mat-dialog-content style="min-height: 210px;">
+      <form [formGroup]="formLogin" (submit)="onSubmitLogin()">
+        <div class="row">
+          <div class="col-12">
+            <label class="label-mat-form">Correo electrónico <span class="required">*</span></label>
+            <mat-form-field class="input-full-width col-md-12" appearance="outline" id="mailLogin">
+                <input matInput formControlName="fcorreo" (blur)="validateEmailSintaxisLogin($event)">
+            </mat-form-field>
+          </div>
+          <div class="col-12">
+            <label class="label-mat-form">Contraseña <span class="required">*</span></label>
+            <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
+                <input matInput [type]="inputTypeLogin" formControlName="fpass" >
+                <a class="material-icons" *ngIf="inputTypeLogin == 'password'" (click)="viewPassLogin()">visibility</a>
+                <a class="material-icons" *ngIf="inputTypeLogin == 'text'" (click)="hidePassLogin()">visibility_off</a>
+            </mat-form-field>
+          </div>
+        </div>
+        <div mat-dialog-actions>
+          <div class="text-center col-12">
+            <button mat-button class="btn-red" style="padding:8px 10px;" type="submit">Iniciar sesión</button><br>
+            <a (click)="passwordRecovery()" style="font-size: 14px; text-shadow: 0px 0px 1px grey; color: #007bff !important; cursor:pointer;">Olvidé mi contraseña</a>
+          </div>
+        </div>
+      </form>
+      <hr width='80%'>
+      <span>¿No tienes cuenta? <a (click)="viewRegisterForm()" class="enlace">¡Crea una!</a></span>
+    </div>
+</div>
+<!-- REGISTER -->
+<div *ngIf="view == 'register'" class="register">
+  <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+  <h1 class="title-modal-bold">Regístrate a la red de Indicar</h1>
+  <div mat-dialog-content style="padding: 20px 24px;">
+    <form [formGroup]="formRegister1">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <label class="label-mat-form">Correo electrónico <span class="required">*</span></label>
+          <mat-form-field class="input-full-width" appearance="outline" id="mailRegister">
+              <input matInput type="email" (change)="checkEmail($event)" formControlName="fcorreo" autocomplete="off">
+          </mat-form-field>
+          <span class="error">{{emailInvalid}}</span>
+        </div>
+        <div class="col-md-8 offset-md-2">
+            <mat-radio-group aria-label="Select an option" formControlName="ftiporegistro" (change)="changeTipoCuenta()">
+              <mat-radio-button value="01">Persona Natural</mat-radio-button>
+              <mat-radio-button value="02">Concesionario y/o compraventa</mat-radio-button>
+            </mat-radio-group>
+        </div>
+      </div>
+    </form>
+    <form [formGroup]="formRegister2">
+      <div *ngIf="isConcesionario == '01' else concesionario">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Nombres <span class="required">*</span></label>
+            <mat-form-field class="input-full-width" appearance="outline">
+                <!-- <input matInput placeholder="Nombres" formControlName="fname" autocomplete="off"> -->
+                <input matInput formControlName="fname" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Apellidos <span class="required">*</span></label>
+            <mat-form-field class="input-full-width" appearance="outline">
+              <!-- <input matInput placeholder="Apellidos" formControlName="flname" autocomplete="off"> -->
+              <input matInput formControlName="flname" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Celular <span class="required">*</span></label>
+            <mat-form-field class="input-full-width" appearance="outline">
+                <!-- <input matInput type="phone" placeholder="Celular *" [patterns]="customPatterns" mask="mask" formControlName="fphone1" autocomplete="off"> -->
+                <input matInput type="text" [mask]="mask" formControlName="fphone1" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Contraseña <span class="required">*</span></label>
+            <mat-form-field class="input-full-width password-input" appearance="outline">
+                <input matInput [type]="inputTypeRegister" formControlName="fpass1" autocomplete="off" >
+                <a class="material-icons" *ngIf="inputTypeRegister == 'password'" (click)="viewPassRegister()">visibility</a>
+                <a class="material-icons" *ngIf="inputTypeRegister == 'text'" (click)="hidePassRegister()">visibility_off</a>
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Confirmar contraseña <span class="required">*</span></label>
+            <mat-form-field class="input-full-width" appearance="outline">
+              <input matInput type="password" formControlName="fcpass1" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2 condiciones">
+            <mat-checkbox formControlName="fterm1">
+            </mat-checkbox>
+            <label>Acepto el <a class="anchor-link" href="/aviso-privacidad" target="_blank">Aviso de privacidad</a>, las politicas de <a class="anchor-link" href="/politicas-tratamiento-datos" target="_blank">tratamiento de datos</a> y  <a class="anchor-link" href="/politicas-publicacion" target="_blank">publicación de clasificados</a></label>
+          </div>
+        </div>
+      </div>
+      <ng-template #concesionario>
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Razon Social <span class="required">*</span></label>
+            <mat-form-field class="input-full-width" appearance="outline">
+              <input matInput formControlName="frazonsocial" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Nit <span class="required">*</span></label>
+            <mat-form-field class="input-full-width" appearance="outline">
+              <input matInput formControlName="fnit" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Dirección <span class="required">*</span></label>
+            <mat-form-field class="input-full-width" appearance="outline">
+                <input matInput formControlName="faddress" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Celular <span class="required">*</span></label>
+            <mat-form-field class="input-full-width" appearance="outline">
+                <input matInput [mask]="mask" formControlName="fphone2" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Contraseña <span class="required">*</span></label>
+            <mat-form-field class="input-full-width password-input" appearance="outline">
+                <input matInput [type]="inputTypeRegister" formControlName="fpass2" autocomplete="off">
+                <a class="material-icons" *ngIf="inputTypeRegister == 'password'" (click)="viewPassRegister()">visibility</a>
+                <a class="material-icons" *ngIf="inputTypeRegister == 'text'" (click)="hidePassRegister()">visibility_off</a>
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <label class="label-mat-form">Confirmar contraseña <span class="required">*</span></label>
+            <mat-form-field class="input-full-width" appearance="outline">
+                <input matInput type="password" formControlName="fcpass2" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="col-md-8 offset-md-2 condiciones">
+            <mat-checkbox formControlName="fterm2"></mat-checkbox>
+            <label>Acepto el <a class="anchor-link" href="/aviso-privacidad" target="_blank">Aviso de privacidad</a>, las politicas de <a class="anchor-link" href="/politicas-tratamiento-datos" target="_blank">tratamiento de datos</a> y  <a class="anchor-link" href="/politicas-publicacion" target="_blank">publicación de clasificados</a></label>
+          </div>
+        </div>
+      </ng-template>
+      <div mat-dialog-actions>
+        <div class="text-center col-12">
+          <button mat-button class="btn-red" style="padding: 8px 10px;" (click)="onSubmitRegister()">Registrate</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- RECOVERY -->
+<div *ngIf="view == 'recovery'">
+  <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+  <h1 class="title-modal-bold">Recuperar contraseña</h1>
+  <div mat-dialog-content style="min-height: 140px;">
+    <form [formGroup]="formRecovery" (submit)="onRecovery()">
+      <div class="row">
+        <div class="col-12 text-center">
+          <label class="label-mat-form" style="left: 0px;">Ingresa tu correo electrónico <span class="required">*</span></label>
+          <mat-form-field class="input-full-width col-md-12" appearance="outline" id="mailLogin">
+              <input matInput formControlName="fcorreo" (blur)="validateEmailSintaxisLogin($event)">
+          </mat-form-field>
+        </div>
+      </div>
+      <div mat-dialog-actions>
+        <div class="text-center col-12">
+          <button mat-button class="btn-red" style="padding:8px 10px;" type="submit">Recuperar</button><br>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- REOCVERY PASSWORD -->
+<div *ngIf="view == 'recoveryPassword'">
+  <span class="material-icons close-dialog" (click)="closeDialog()">close</span>
+  <h1 class="title-modal-bold">Restablecer contraseña</h1>
+  <div mat-dialog-content style="min-height: 210px;">
+    <form [formGroup]="formRecoveryPassword" (submit)="onSubmitRecovery()">
+      <div class="row">
+        <div class="col-12">
+          <label class="label-mat-form">Contraseña <span class="required">*</span></label>
+          <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
+              <input matInput [type]="passRecoveryType" formControlName="fpass" autocomplete="off">
+              <a class="material-icons" *ngIf="passRecoveryType == 'password'" (click)="passRecoveryType='text'">visibility</a>
+              <a class="material-icons" *ngIf="passRecoveryType == 'text'" (click)="passRecoveryType='password'">visibility_off</a>
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <label class="label-mat-form">Confirmar contraseña <span class="required">*</span></label>
+          <mat-form-field class="input-full-width password-input col-md-12" appearance="outline">
+              <input matInput [type]="passConfirmRecoveryType" formControlName="fcpass" autocomplete="off">
+              <a class="material-icons" *ngIf="passConfirmRecoveryType == 'password'" (click)="passConfirmRecoveryType='text'">visibility</a>
+              <a class="material-icons" *ngIf="passConfirmRecoveryType == 'text'" (click)="passConfirmRecoveryType='password'">visibility_off</a>
+          </mat-form-field>
+        </div>
+      </div>
+      <div mat-dialog-actions>
+        <div class="text-center col-12">
+          <button mat-button class="btn-red" style="padding:8px 10px;" type="submit">Restablecer</button><br>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Manejo de error -->
+<div class="text-center" *ngIf="error != ''">
+  <span class="error">{{error}}</span>
+</div>
+<style>
+  .anchor-link{
+    color: #007bff !important;
+    cursor: pointer;
+  }
+  .anchor-link:hover{
+    color: #0056b3 !important;
+  }
+</style>

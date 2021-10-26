@@ -1,0 +1,33 @@
+<section class="section-cards" *ngIf="total_items>0">
+    <div class="container-fluid fix p-0">
+        <div class="col-12 titulo-seccion">
+            <h3 class="titulo">Único Dueño<span id="region"></span></h3>        
+            <p class="subtitulo">Vehículos con único dueño.</p>
+        </div> 
+        <div class="row card-row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 items-card" *ngFor="let item of items_unico_duenio">
+                <div [routerLink]="['/clasificado/detalle',item.venta_codigo]" class="item-card">
+                    <a class="false_link" href="/clasificado/detalle/{{item.venta_codigo}}" (click)="$event.preventDefault()" (mousedown)="$event.preventDefault()">
+                        <div class="item-card-header">
+                            <img class="lazy" src="../../../assets/images/dots.png" data-src="../../../assets/images/dots.png"  data-srcset="{{item.fotosventa_ruta}}">
+                        </div>
+                        <div class="item-card-content">
+                            <h4 class="item-card-titulo">{{item.linea_nombrecorto}}</h4>
+                            <div class="item-card-precio">
+                                {{item.venta_valor | currency:'COP':'symbol-narrow':'2.0-1'}}
+                            </div>
+                            <div class="item-card-tags .info-box">
+                                <span *ngIf="item.venta_kilometraje != ''">{{item.venta_kilometraje | number : '1.0-1'}} Km</span>
+                                <span *ngIf="item.venta_modelo != ''">{{item.venta_modelo}}</span>
+                                <span *ngIf="item.traccion_nombre != ''">{{item.traccion_nombre}}</span>
+                                <span id="capacidad">{{item.capacidadmotor_nombre}}</span>
+                                <p class="ciudad">{{item.ciudad_nombre}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

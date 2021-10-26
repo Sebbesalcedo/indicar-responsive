@@ -1,0 +1,34 @@
+<div class="section-content">
+    <div class="container-fluid">
+        <!-- CONTENT -->
+        <!-- SECTION FILTROS RESPONSIVES -->
+        <div class="col aside-filtros-responsive" 
+            [ngClass]="{'active':encabezado.sidebarShowFilters==true,'inactive':encabezado.sidebarShowFilters==false}" 
+            *ngIf="encabezado.responsive == 'mobile'">
+            <app-usuario-filtros></app-usuario-filtros>
+        </div>
+        <div class="global-content">
+            <div class="row">
+                <!-- SECTION FILTROS -->
+                <div class="aside-filtros" *ngIf="encabezado.responsive == 'desktop' || encabezado.responsive == 'tab'">
+                    <app-usuario-filtros
+                    ></app-usuario-filtros>
+                </div>
+                <!-- SECTION RIGHT  -->
+                <div class="section-right-content cuenta">
+                    <router-outlet name="cuenta-opcion"></router-outlet>
+                </div>
+                <!-- /SECTION RIGHT -->
+            </div>
+        </div>
+        <!-- /CONTENT -->
+    </div>
+</div>         
+<!-- loading -->
+<div class="load-content" *ngIf="loading">
+    <div class="content-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>
+
+

@@ -1,0 +1,101 @@
+
+<h3 class="titulo mb-0">Clasificados {{estado}}</h3>
+<div class="opciones-clasificados">
+  <!-- <div class="option arrow-left" *ngIf="encabezado.responsive == 'mobile'">
+    <i class="material-icons"> keyboard_arrow_left</i>
+  </div> -->
+  <a [routerLink]="['/usuario', { outlets: {'cuenta-opcion':['clasificado','A']} }]" routerLinkActive="active-link">Aprobados ({{encabezado.aprobados}})</a>
+  <a [routerLink]="['/usuario', { outlets: {'cuenta-opcion':['clasificado','P']} }]" routerLinkActive="active-link">Pendientes ({{encabezado.pendientes}})</a>
+  <a [routerLink]="['/usuario', { outlets: {'cuenta-opcion':['clasificado','R']} }]" routerLinkActive="active-link">Rechazados ({{encabezado.rechazados}})</a>
+  <a [routerLink]="['/usuario', { outlets: {'cuenta-opcion':['clasificado','I']} }]" routerLinkActive="active-link">Inactivos ({{encabezado.inactivos}})</a>
+  <a [routerLink]="['/usuario', { outlets: {'cuenta-opcion':['clasificado','V']} }]" routerLinkActive="active-link">Vendidos ({{encabezado.vendidos}})</a>
+  <!-- <div class="option arrow-right" *ngIf="encabezado.responsive == 'mobile'">
+    <i class="material-icons"> keyboard_arrow_right</i>
+  </div> -->
+</div>
+<div class="row padding-row">
+  <div class="content-table-general">
+    <mat-toolbar> 
+      <mat-toolbar-row class="row-toolbar">
+        <div class="col-md-10 col-9">
+          <div class="input-search icon-input">
+            <input type="text" class="search-input-table" placeholder="Buscar clasificado" (keyup)="applyFilter($event.target.value)">
+            <i class="material-icons">search</i>
+          </div>
+        </div>
+        <div class="options-table-toolbar col-md-2 col-3">
+          <div class="btn-delete-table" matTooltip="Eliminar seleccionados" matTooltipShowDelay="300" matTooltipHideDelay="300">
+            <i class="material-icons" (click)='detailSelected("ELIMINAR")'>delete_forever</i>
+          </div>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="contenedor-tabla" *ngIf="records > 0">
+      <table mat-table [dataSource]="dataSource" matSort>
+        <!-- SELECT -->
+        <ng-container matColumnDef="select"> 
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element" class="td-check-table">
+            <mat-checkbox class="check-table" [checked]="element.select" [(ngModel)]="element.select"></mat-checkbox>
+          </td>
+        </ng-container>
+        <!-- Cod Column -->
+        <ng-container matColumnDef="cod">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="venta_codigo" class="text-center"> Cod </th>
+          <td mat-cell *matCellDef="let element" class="td-codigo-table text-center" >
+            <a routerLink="/clasificado/detalle/{{element.codEncriptado}}" class="codigo-table">{{element.venta_codigo}}</a>
+          </td>
+        </ng-container>
+        <!-- Vehículo Column -->
+        <ng-container matColumnDef="vehiculo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="linea_nombre" class="text-center"> Vehículo </th>
+          <td mat-cell *matCellDef="let element" class="d-flex align-items-center table-vehiculo" (click)='optionRow(element.codEncriptado,"VER",true)'>
+            <!-- <a class="d-flex align-items-center" routerLink="/clasificado/detalle/{{element.codEncriptado}}"> -->
+              <img src="{{element.fotosventa_ruta}}">
+              <b>{{element.linea_nombre}}</b>
+            <!-- </a> -->
+          </td>
+        </ng-container>
+        <!-- Placa Column -->
+        <ng-container matColumnDef="placa">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header='venta_matricula_placa' class="text-center"> Placa </th>
+          <td mat-cell *matCellDef="let element" class="text-center"> {{element.venta_matricula_placa}} </td>
+        </ng-container>
+        <!-- Modelo Column -->
+        <ng-container matColumnDef="modelo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="ano_modelo" class="text-center"> Modelo </th>
+          <td mat-cell *matCellDef="let element" class="text-center"> {{element.ano_modelo}} </td>
+        </ng-container>
+        <!-- Visitas Column -->
+        <ng-container matColumnDef="visitas">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="venta_visto" class="text-center"> Visitas </th>
+          <td mat-cell *matCellDef="let element" class="text-center"> {{element.venta_visto}} </td>
+        </ng-container>
+        <!-- Acciones Column -->
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <td mat-cell *matCellDef="let element" class="table-actions">
+            <button *ngIf="visible_ver"       class="table-link-button" (click)='optionRow(element.codEncriptado,"VER",true)' matTooltip="Ver"  matTooltipShowDelay="300" matTooltipHideDelay="300"><i class="material-icons">visibility</i></button>
+            <button *ngIf="visible_editar"    class="table-link-button" (click)='optionRow(element.codEncriptado,"EDITAR")' matTooltip="Editar" matTooltipShowDelay="300" matTooltipHideDelay="300"><i class="material-icons">mode_edit</i></button>
+            <button *ngIf="visible_reactivar" class="table-link-button" (click)='optionRow(element.codEncriptado,"REACTIVAR")' matTooltip="Reactivar" matTooltipShowDelay="300" matTooltipHideDelay="300"><i class="material-icons">replay</i></button>
+            <button *ngIf="visible_anular"    class="table-link-button" (click)='optionRow(element.codEncriptado,"ANULAR")' matTooltip="Inactivar" matTooltipShowDelay="300" matTooltipHideDelay="300"><i class="material-icons">visibility_off</i></button>
+            <button *ngIf="visible_vendido"   class="table-link-button" (click)='optionRow(element.codEncriptado,"VENDIDO")' matTooltip="Vendido" matTooltipShowDelay="300" matTooltipHideDelay="300"><i class="material-icons">gavel</i></button> 
+            <button *ngIf="visible_eliminar"  class="table-link-button" (click)='optionRow(element.codEncriptado,"ELIMINAR")' matTooltip="Eliminar"  matTooltipShowDelay="300" matTooltipHideDelay="300"><i class="material-icons">delete_forever</i></button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+        </tr>
+      </table>
+    </div>
+    <h2 *ngIf="records == 0" class="no-register"> No hay clasificados...</h2>
+    <mat-paginator [length]="records" [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>                      
+<!-- loading -->
+<div class="load-content" *ngIf="loading">
+    <div class="content-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>
+

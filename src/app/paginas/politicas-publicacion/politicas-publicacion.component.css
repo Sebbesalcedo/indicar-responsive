@@ -1,0 +1,42 @@
+.content-politica-publicacion{
+    background: white;
+}
+.title-section{
+    font-size: 40px;
+    text-shadow: 0px 0px 1px #000;
+}
+.content-text{
+    width:100%;
+    margin:0 auto;
+    text-align: justify;
+    line-height: 25px;
+    padding: 20px 68px;
+}
+
+.right-image{
+    background-image: url('../../../assets/images/publicacion-light.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px 55px;
+}
+
+@media (min-width:300px) and (max-width: 768px){
+    .title-section{
+        font-size: 30px;
+    }
+    .right-image {
+        padding: 20px;
+        background: none;
+    }
+    .content-text{
+        padding: 20px 30px;
+    }
+    .header-responsive{
+        display: block;
+        height: 140px;
+        background-image: url('../../../assets/images/publicacion.jpg');
+        background-size: cover;
+        /* background-position: center 225px; */
+    }
+}

@@ -1,0 +1,74 @@
+<div class="section-content">
+    <div class="container-fluid">
+        <!-- SECTION FILTROS RESPONSIVES -->
+        <!-- SECTION FILTROS RESPONSIVES -->
+        <div class="col aside-filtros-responsive" 
+            [ngClass]="{'active':encabezado.sidebarShowFilters==true,'inactive':encabezado.sidebarShowFilters==false}" 
+            *ngIf="encabezado.responsive == 'mobile'">
+            <app-concesionarios-filtro
+                (filter)="closeFilter($event)"
+                (concesionarios)="buscarConcesionarios($event)"
+                (reload)="reload($event)">
+            </app-concesionarios-filtro>
+        </div>
+    <!-- CONTENT -->
+    <div class="global-content">
+            <div class="row padding-row">
+                <!-- SECTION FILTROS -->
+                <div class="aside-filtros" *ngIf="encabezado.responsive == 'desktop' || encabezado.responsive == 'tab'">
+                    <app-concesionarios-filtro
+                    (concesionarios)="buscarConcesionarios($event)"
+                    (filter)="closeFilter($event)"
+                    (reload)="reload($event)">
+                </app-concesionarios-filtro>
+                </div>
+                <!-- SECTION RIGHT  -->
+                <!-- SECTION CLASIFICADOS  -->
+                <div class="section-right-content">
+                    <div class="col-12 titulo mb-4">
+                        <div class="row">
+                            <div class="col-lg-9 col p-0">
+                                <div class="subtitulo responsive" (click)="clearFilter()" *ngIf="encabezado.responsive == 'mobile'">
+                                    <a (click)="clearFilter()">Concesionarios</a><br>
+                                    <span style="color: red">{{registros}} </span>
+                                    <label>Concesionarios</label>
+                                </div>
+                                <div *ngIf="encabezado.responsive != 'mobile'">
+                                    <h3 class="titulo">
+                                        <a (click)="clearFilter()">Concesionarios</a>
+                                    </h3>
+                                    <p class="subtitulo">
+                                        <span style="color: red">{{registros}}</span> opciones de concesionarios</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- TARJETAS DE CONCESIONARIOS -->
+                    <div class="contenedor-tarjeta row padding-row concesionarios" *ngIf="registros>0">
+                        <div class="normal col-sm-6 col-md-6 col-lg-4 col-xl-4 pr-0" *ngFor="let item of items"  id="tarjeta">                
+                            <div class="" >
+                                <div class="tarjeta-imagen image-list"  [routerLink]="['/clasificados']" [queryParams]="{p_cliente:item.codigo}"  >
+                                    <img src="{{item.imagen}}">                    
+                                </div>
+                            </div>
+                            <div>
+                              <span class="concesionariohover" [routerLink]="['/clasificados']" [queryParams]="{p_cliente:item.codigo}">{{item.concesionario}} ({{item.cant_vehiculos}})</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PAGINADOR -->
+                    <app-bold-paginator [items]="registros" (setPaginator)="setPage($event)"></app-bold-paginator>
+                </div>
+                <!-- /SECTION RIGHT -->
+            </div>
+        </div>
+        <!-- /CONTENT -->
+    </div>
+</div>         
+<!-- loading -->
+<div class="load-content" *ngIf="loading">
+    <div class="content-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>

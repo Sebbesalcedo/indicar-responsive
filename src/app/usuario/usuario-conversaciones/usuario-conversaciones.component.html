@@ -1,0 +1,94 @@
+<h3 class="titulo mb-0">Conversaciones</h3>
+<div class="row padding-row">
+  <mat-toolbar> 
+    <mat-toolbar-row class="row-toolbar">
+      <div class="col-md-10 col-8">
+        <div class="input-search icon-input">
+          <input type="text" class="search-input-table" id="input-search" placeholder="Buscar conversaciones" (keyup)="applyFilter($event.target.value)">
+          <i class="material-icons">search</i>
+        </div>
+      </div>
+      <div class="options-table-toolbar col-md-2 col-4">
+        <div class="btn-delete-table" matTooltip="Eliminar seleccionados" matTooltipShowDelay="300" matTooltipHideDelay="300">
+          <i class="material-icons" (click)='detailSelected("ELIMINAR")'>delete_forever</i>
+        </div>
+        <div class="btn-delete-table" matTooltip="Exportar a excel los seleccionados" matTooltipShowDelay="300" matTooltipHideDelay="300">
+          <i class="material-icons" (click)='detailSelected("EXPORTAR")'>save_alt</i>
+        </div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <!-- CONVERSACIONES -->
+  <mat-accordion class="conversacion" *ngIf="records > 0" >
+      <!-- vehiculo -->
+      <mat-expansion-panel class="producto"   *ngFor='let detail of datos;let i = index' (opened)="sendVisto(detail,i)"   >
+        
+        <!-- Nombre del vehiculo -->
+        <mat-expansion-panel-header>
+            <div class="alerta_notificacion" *ngIf="detail.pendientes > 0" >
+                <span>{{detail.pendientes}}</span>
+                <div class="nueva_alerta"></div>
+            </div>  
+            <mat-panel-title>
+              <mat-panel-description class="no-space">
+                <mat-checkbox (click)="$event.stopPropagation();" [checked]="datos[i].select" [(ngModel)]="datos[i].select"></mat-checkbox>
+              </mat-panel-description>
+              <div class="foto-conversacion content-pic">
+                <img src="{{detail.fotosventa_ruta}}">
+              </div>    
+            </mat-panel-title>
+            <mat-panel-description>
+             {{detail.conv_nombre}}
+            </mat-panel-description>
+            <mat-panel-description>
+            {{detail.conv_correo}}
+            </mat-panel-description>
+            <mat-panel-description class="nv-m">
+             {{detail.conv_telefono}}
+            </mat-panel-description>
+            <mat-panel-description class="nv-m">
+             {{detail.fultimamod}}
+            </mat-panel-description>
+            <mat-panel-description class="nv-m">
+             {{detail.venta_matricula_placa}}
+            </mat-panel-description>
+           
+        </mat-expansion-panel-header>    
+        <!--comentarios--->
+        <div class="titulo-comentarios producto-usuario" *ngFor='let detail_c of  detail.ldetalle ;let j = index' >
+          <div class="dialogo">
+            <div class="pregunta" id="dialogo" *ngIf="detail_c.tmensaje=='2'" >
+              <div class="position-relative">
+                  <p class="comentario">
+                    <!-- <span>{{detail_c.fechahora_p | amTimeAgo}}</span> -->
+                    {{detail_c.detaveco_mensaje }}
+                  <p> 
+              </div>
+            </div>
+            <div class="respuesta" id="dialogo"  *ngIf="detail_c.tmensaje=='1'" >
+                <div class="position-relative">
+                    <p class="comentario">
+                      <!-- <span>{{detail_c.fechahora_p | amTimeAgo}}</span> -->
+                      {{detail_c.detaveco_mensaje}}
+                    </p> 
+                </div>
+              </div>
+             <!-- respuesta-->
+          </div>
+        </div>
+        <div class="row mt-4 mb-2">
+          <div class="responder">
+            <input class="chat" placeholder="Escribe tu mensaje" [(ngModel)]="datos[i].repuesta">                
+            <button ng-class="myVar='my-class'"  class="btn btn-primary"  (click)="sendMensajeRespuesta(detail,i)">Enviar</button>           
+          </div>        
+        </div>
+      </mat-expansion-panel>
+  </mat-accordion>
+  <h2 *ngIf="records == 0" class="no-register"> No hay conversaciones...</h2>
+</div>                      
+<!-- loading -->
+<div class="load-content" *ngIf="loading">
+    <div class="content-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>

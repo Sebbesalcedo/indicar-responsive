@@ -1,0 +1,60 @@
+<!-- SECTION SIDE NAV -->
+<aside class="sidebar">
+    <div class="content-sidebar">
+        <ul class="content-menu">
+            <li class="item-menu-desktop">
+                <mat-panel-title>
+                    <i class="material-icons">person</i>
+                    <a [routerLink]="[{ outlets: { 'cuenta-opcion': ['cuenta'] } }]" routerLinkActive="active-link">Mi cuenta</a>
+                </mat-panel-title>
+            </li>
+            <li class="item-menu-desktop">
+                <mat-panel-title *ngIf="cuser.tipocliente == '02'">
+                    <i class="material-icons">web</i>
+                    <a [routerLink]="['/clasificados']" [queryParams]="{p_cliente: cuser.codigo}" routerLinkActive="active-link">Mi micrositio</a>
+                </mat-panel-title>
+            </li>
+            <li class="item-menu-desktop">
+                <mat-panel-title>
+                    <i class="material-icons">message</i>
+                    <a [routerLink]="[{ outlets: { 'cuenta-opcion': ['conversaciones'] } }]" routerLinkActive="active-link">Mensajes</a>
+                </mat-panel-title>
+            </li>
+            <li class="item-menu-desktop">
+                <mat-accordion>
+                    <mat-expansion-panel [expanded]="expandedPanel" >
+                      <mat-expansion-panel-header class="clasificados-panel">
+                        <mat-panel-title>
+                            <i class="material-icons">directions_car</i>
+                            <a>Mis clasificados</a>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                        <ul class="menu-mat-expansion">
+                            <li class="item-menu-desktop">
+                                <a [routerLink]="[{ outlets: { 'cuenta-opcion': ['clasificado','A'] } }]" routerLinkActive="active-link">Aprobados ({{encabezado.aprobados}})</a>
+                            </li>
+                            <li class="item-menu-desktop">
+                                <a [routerLink]="[{ outlets: { 'cuenta-opcion': ['clasificado','P'] } }]" routerLinkActive="active-link">Pendientes ({{encabezado.pendientes}})</a>
+                            </li>
+                            <li class="item-menu-desktop">
+                                <a [routerLink]="[{ outlets: { 'cuenta-opcion': ['clasificado','R'] } }]" routerLinkActive="active-link">Rechazados ({{encabezado.rechazados}})</a>
+                            </li>
+                            <li class="item-menu-desktop">
+                                <a [routerLink]="[{ outlets: { 'cuenta-opcion': ['clasificado','I'] } }]" routerLinkActive="active-link">Inactivos ({{encabezado.inactivos}})</a>
+                            </li>
+                             <li class="item-menu-desktop">
+                                <a [routerLink]="[{ outlets: { 'cuenta-opcion': ['clasificado','V'] } }]" routerLinkActive="active-link">Vendidos ({{encabezado.vendidos}})</a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </li>
+            <li class="item-menu-desktop">
+                <mat-panel-title>
+                    <i class="material-icons">favorite</i>
+                    <a [routerLink]="[{ outlets: {'cuenta-opcion':['favoritos']} }]" routerLinkActive="active-link">Mis favoritos</a>
+                </mat-panel-title>
+            </li>
+        </ul>
+    </div>
+</aside>

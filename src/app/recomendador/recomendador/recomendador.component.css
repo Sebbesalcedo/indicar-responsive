@@ -1,0 +1,177 @@
+.comparator {
+    overflow: auto;
+    width: 950px;
+    margin: 10px auto;
+}
+.comparator-term {
+    width: 230px;
+    display: block;
+    float: left;
+    background: #f7f7f7;
+    position: relative;
+    /* margin-top: 140px; */
+    padding-top: 235px;
+    z-index: 2;
+}
+.container-comparator {
+    display: block;
+    width: calc(100% - 230px);
+    float: left;
+    overflow: auto;
+}
+.comparator-header, .comparator-body{
+    display: block;
+    overflow: hidden;
+    width: 720px;
+}
+.comparator-header{
+    /* min-height:140px; */
+    min-height:235px;
+    position: relative;
+    background: white;
+    box-shadow: 0px 0px 10px -4px rgba(0,0,0,0.7);
+}
+
+.comparator-item{
+    display: block;
+    width: 180px;
+    float:left;
+    overflow: hidden;
+}
+.comparator-img {
+    overflow: hidden;
+    width:100%;
+    padding: 4px;
+    height: auto;
+    max-height: 130px;
+    margin-bottom:10px;
+    position: relative;
+}
+.comparator-img img {
+    width: 100%;
+    max-height: 119px;
+    max-width: 180px;
+}
+.comparator-img .delete-vehicle {
+    display: block;
+    position: absolute;
+    background: red;
+    top: 0px;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px -1px black;
+    cursor:pointer;
+}
+
+.comparator-term .term {
+    font-weight: 600;
+    padding: 4px;
+}
+.term{
+    font-size: 12px;
+    line-height: 15px;
+    color: #868686;
+    padding: 5px 0px;
+    margin: 0px 4px;
+    border-bottom: 1px solid #ececec;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.comparator-term .term-group{
+    display: flex;
+    height: 50px;
+    font-size: 13px;
+    /* color: #156be6; */
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* background: #d8d8d8; */
+    background: linear-gradient(to bottom, #457bcc 50%, #276bd0, #1d4a8e);
+    line-height: 14px;
+}
+.comparator-body .term-group {
+    display: flex;
+    height: 50px;
+    /* background: #d8d8d8; */
+    background: linear-gradient(to bottom, #457bcc 50%, #276bd0, #1d4a8e);
+}
+.comparator-body .comparator-item:nth-child(even){
+    background: rgb(247, 247, 247);
+}
+.hasComponent{
+    font-size: 20px;
+    font-weight: 900;
+    color: #7269fd;
+}
+
+
+.detail-vehiculo{
+    padding: 4px 5px 10px 5px;
+}
+.description-vehicle {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0562e6;
+    text-align: center;
+}
+.beneficios-niveles span.categoria{
+    font-size: 12px;
+    color: #9c9c9c;
+}
+.nivel .porcentaje {
+    display: block;
+    width: 53%;
+    background: #ff974d;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.nivel {
+    display: block;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #dedede;
+}
+
+h3.titulo {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+
+
+@media(min-width:300px) and (max-width:480px){
+    .comparator-term{
+        width: 130px;
+    }
+    .comparator-term .term {
+        font-weight: 300;
+        font-size: 12px;
+    }
+    .container-comparator{
+        width: calc(100% - 130px);
+    }
+
+    .comparator-item{
+        width:150px;
+    }
+    .comparator-img{
+        max-height: 102px;
+    }
+}

@@ -1,0 +1,73 @@
+<div class="global-content-full solicitar-credito">
+    <div class="section-content">
+        <div class="content-form col-md-6 offset-md-1">
+            <form  class="" [formGroup]="formSolicitarCredito">
+                <div class="section-header">
+                    <h1>Solicitar crédito</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Nombre -->
+                        <label class="label-mat-form">Nombre completo <span class="required">*</span></label>
+                        <mat-form-field class="input-full-width col-md-12" appearance="outline">
+                            <input matInput placeholder="Nombre" formControlName="fname">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Perfil -->
+                        <label class="label-mat-form">Perfil <span class="required">*</span></label>
+                        <mat-form-field class="input-full-width col-md-12" appearance="outline">
+                            <mat-select placeholder="Perfil" formControlName="fperfil">
+                                <mat-option value="{{data.campo_codigo}}" *ngFor="let data of perfiles"> {{data.campo_descripcion}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Telefono -->
+                        <label class="label-mat-form">Teléfono <span class="required">*</span></label>
+                        <mat-form-field class="input-full-width col-md-12" appearance="outline">
+                            <input matInput placeholder="Telefono" formControlName="fphone"
+                            [mask]="maskphone">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Lugar residencia -->
+                        <label class="label-mat-form">Lugar de residencia <span class="required">*</span></label>
+                        <mat-form-field appearance="outline" class="col-12">
+                          <input type="text" placeholder="Busque y seleccione..." matInput formControlName="fciudad" [matAutocomplete]="ciudad" (blur)="validateUbicacion()" (keyup)="filterOptions($event)">
+                          <mat-autocomplete #ciudad="matAutocomplete" [displayWith]="displayFn">
+                            <mat-option *ngFor="let option of ciudadesUbicacion" [value]="option">
+                              {{option.ciudad_nombre}}
+                            </mat-option>
+                          </mat-autocomplete>
+                        </mat-form-field>
+                    </div>
+                    <!-- email -->
+                    <label class="label-mat-form">E-mail <span class="required">*</span></label>
+                    <mat-form-field class="input-full-width col-md-12" appearance="outline">
+                        <input matInput placeholder="E-mail" formControlName="fcorreo">
+                    </mat-form-field>
+                    <!-- email -->
+                    <label class="label-mat-form">Repita su e-mail <span class="required">*</span></label>
+                    <mat-form-field class="input-full-width col-md-12" appearance="outline">
+                        <input matInput placeholder="Repita su E-mail" formControlName="frcorreo">
+                    </mat-form-field>
+                </div>
+                <div class="col-12 text-center terminos">
+                    <p>Al decidir por cual de la(s) opciones desea solicitar un crédito de financiamiento, usted esta aceptando el
+                        <a target="_blank" ng-reflect-router-link="/aviso-privacidad" href="/aviso-privacidad">Aviso
+                        de privacidad</a> y la <a target="_blank" ng-reflect-router-link="/politicas-tratamiento-datos" href="/politicas-tratamiento-datos">Política
+                        de tratamiento de datos</a>
+                    </p>
+                </div>
+                <div class="col-12 text-center">
+                    <button (click)="onSubmit(4)" class="btn-next">Solicitar</button>
+                </div>
+            </form>        
+        </div>
+    
+    </div>
+</div>
+
+

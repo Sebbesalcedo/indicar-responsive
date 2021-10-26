@@ -1,0 +1,71 @@
+<div class="global-content-full">
+    <div class="pqrs">
+        <div class="section-content row">
+            <div class="content-form col-md-8 offset-md-3">
+                <form [formGroup]="formPqrs">
+                    <div class="section-header">
+                        <h1>PQRS</h1>
+                    </div>
+                    <div class="col-md-12 msg-usuario">
+                        <p><b>Estimado usuario:</b></p>
+                        <p>Nos interesa mejorar la calidad de los servicios que te ofrecemos. En este espacio podrás registrar tu petición, queja o reclamo. </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!-- nombre -->
+                            <label class="label-mat-form">Nombre <span class="required">*</span></label>
+                            <mat-form-field  class="input-full-width col-md-12" appearance="outline">
+                                <input matInput formControlName="fname" placeholder="Nombre">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4">
+                            <!-- email -->
+                            <label class="label-mat-form">E-mail <span class="required">*</span></label>
+                            <mat-form-field  class="input-full-width col-md-12" appearance="outline" id="mailPqrs">
+                                <input matInput formControlName="fcorreo" placeholder="E-mail" (blur)="checkEmail($event)">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4">
+                            <!-- tipo de solicitud -->
+                            <label class="label-mat-form">Tipo de solicitud <span class="required">*</span></label>
+                            <mat-form-field  class="input-full-width col-md-12" appearance="outline">
+                                <mat-select formControlName="ftipo" placeholder="Tipo de solicitud" >
+                                    <mat-option value="P">Petición</mat-option>
+                                    <mat-option value="R">Queja / Reclamo</mat-option>
+                                    <mat-option value="F">Felicitar</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12">
+                            <!-- texto solicitud -->
+                            <label class="label-mat-form">Por favor amplie su solicitud <span class="required">*</span></label>
+                            <mat-form-field class="input-full-width col-md-12" appearance="outline">
+                                <textarea formControlName="ftexto" matInput placeholder="Escriba su solicitud"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center attach_file_content">
+                        <button class="attach_file" (click)="attachFile()"><i class="material-icons">attach_file</i></button>
+                        <span class="attach_label">Adjuntar archivo</span>
+                        <span class="attach_label">Max. tamaño: 3Mb. Archivos permitidos: .doc, .docx, .jpg, .png, .pdf, .xls, .xlsx, .svg, .jfif</span>
+                        <input type="file" name="adjunto" class="noview" placeholder="Adjunto" id="attach_file" (change)="handleLabel($event)">
+                    </div>
+                    <div class="col-md-12 text-center files_content">
+                    </div>
+                    <div class="col-12 text-center">
+                        <button (click)="onSubmit()" mat-button class="btn btn-primary">Enviar información</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- loading -->
+<div class="load-content" *ngIf="loading">
+    <div class="content-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+    <span class="span_wait">Por favor espere un momento mientras enviamos su información..</span>
+</div>
+
+
