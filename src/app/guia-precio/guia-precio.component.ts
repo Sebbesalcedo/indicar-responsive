@@ -252,7 +252,7 @@ export class GuiaPrecioComponent implements OnInit {
   obtenerPrecio() {
     this._globalService.getData(this.urlPrecios).subscribe(
       (res) => {
-      
+       console.log(res);
         this.listPrecios = res;
         this.listAnoNuevo=res[0].lista_nuevo;
         this.listAnoUsados=res[0].lista_usado;

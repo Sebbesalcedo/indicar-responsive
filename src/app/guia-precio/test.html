@@ -1,123 +1,98 @@
-<mat-toolbar class="mat-elevation-z8">
-  <button
-    mat-icon-button
-    *ngIf="sidenav.mode === 'over'"
-    (click)="sidenav.toggle()"
-  >
-    <div *ngIf="!sidenav.opened">
-      <i class="fas fa-filter"></i>&nbsp;&nbsp;<strong>Filtros</strong>
-    </div>
 
-    <div *ngIf="sidenav.opened">
-      <i class="far fa-times-circle"></i>&nbsp;&nbsp;<strong>Cerrar</strong>
-    </div>
-  </button>
-</mat-toolbar>
+        <table class="table table-borderless compact">
+          <thead>
+            <tr>
+              <th colspan="2"></th>
+              <th colspan="3">Nuevos</th>
+              <th colspan="22">Usados</th>
+            </tr>
+            <tr>
+              <th colspan="2"></th>
+              <span class="precioNuevo" *ngFor="let item of listAnoNuevo">
+                <th>
+                  {{ item.modelo }}
+                </th>
+              </span>
 
-<mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
-    <div class="container-fluid fix filtros-contenido p-0">
-      <div class="form-group col">
-        <label class="title-menu"><strong>Tipo de Busqueda</strong></label>
-        <mat-form-field appearance="outline" class="col-12">
-          <mat-select class="input-border" placeholder="Seleccione..." required>
-            <mat-option value="1">Busqueda Basica</mat-option>
-            <mat-option value="2">Busqueda Avanzada</mat-option>
-
-            <mat-option value="3">Busqueda Profesional</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-
-      <mat-divider></mat-divider>
-
-      <div class="form-group col">
-        <label class="title-menu"><strong>Clase de vehículo</strong></label>
-        <div class="check-filtro">
-          <mat-checkbox
-            (change)="getDataFilter('marca', $event)"
-            *ngFor="let data of listClases; let i = index"
-            value="{{ data.id }}"
-            >{{ data.nombre }}</mat-checkbox
-          >
-        </div>
-      </div>
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Marcas</strong></label>
-
-        <div class="check-filtro">
-          <mat-checkbox
-            (change)="getDataFilter('familia', $event, data)"
-            *ngFor="let data of listMarcas"
-            value="{{ data.id }}"
-            >{{ data.nombre }}</mat-checkbox
-          >
-        </div>
-      </div>
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Familia</strong></label>
-
-        <div class="section">
-          <div *ngFor="let familia of listFamilias">
-            <label
-              ><strong>{{ familia.nombre }}</strong></label
+              <span *ngFor="let item of listAnoUsados">
+                <th >
+                  {{ item.modelo }}
+                </th>
+              </span>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="
+                let dataPrecio of listPrecios | paginate: page_size:page_number
+              "
             >
+            <th>
+              <div>
+                <img style="width: 60px" [src]="dataPrecio.imagen" alt="" />
+              </div>
+            </th>
 
-            <div class="check-filtros">
-              <mat-checkbox
-                (change)="getDataFilter('linea', $event, familia)"
-                *ngFor="let data of familia.data"
-                value="{{ data.id }}"
-                >{{ data.nombre }}</mat-checkbox
+
+              <td style="width: 35px">
+                <p class="link-right">{{ dataPrecio.nombre }}</p>
+              </td>
+              <!-- precio de vehiculos nuevos -->
+              <span
+                class="precioNuevo"
+                *ngFor="let precioNuevo of dataPrecio.lista_nuevo"
               >
-            </div>
-            <hr />
-          </div>
-        </div>
-      </div>
+                <ng-container
+                  *ngIf="precioNuevo.precio == 'N/A'; else elseTemplate"
+                >
+                  <td>
+                    <strong>
+                      {{ precioNuevo.precio }}
+                    </strong>
+                  </td>
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <td>
+                    <strong>
+                      {{ precioNuevo.precio | currency }}
+                    </strong>
+                  </td>
+                </ng-template>
+              </span>
 
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Tipo de Caja</strong></label>
+              <!-- precio de vehiculos usados -->
 
-        <div>
-          <mat-checkbox
-            *ngFor="let caja of listCajaTipo"
-            (change)="getDataFilter('caja', $event, caja)"
-            value="{{ caja.id }}"
-            >{{ caja.nombre }}</mat-checkbox
-          >
-        </div>
-      </div>
-      <mat-divider></mat-divider>
-
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Linea</strong></label>
-        <div class="section">
-          <div *ngFor="let linea of listLineas">
-            <label>{{ linea.nombre }}</label>
-            <hr />
-            <div class="check-filtros">
-              <!-- (change)="getDataFilter('linea', $event,familia)" -->
-              <mat-checkbox
-                *ngFor="let data of linea.data"
-                value="{{ data.id }}"
-                >{{ data.nombre }}</mat-checkbox
+              <span
+              class="precioUsados"
+              *ngFor="let precioUsado of dataPrecio.listAnoUsados"
+            >
+              <ng-container
+                *ngIf="precioUsado.precio == 'N/A'; else elseTemplate"
               >
-            </div>
-            <hr />
-          </div>
-        </div>
-      </div>
-      <mat-divider></mat-divider>
-    </div>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="content mat-elevation-z8 table-scroll">
-     
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+                <td>
+                  <strong>
+                    {{ precioUsado.precio }}
+                  </strong>
+                </td>
+              </ng-container>
+              <ng-template #elseTemplate>
+                <td>
+                  <strong>
+                    {{ precioUsado.precio | currency }}
+                  </strong>
+                </td>
+              </ng-template>
+            </span>
+            </tr>
+
+            <div class="link-top"></div>
+          </tbody>
+        </table>
+        <mat-paginator
+        [length]="listPrecios.length"
+        [pageSize]="page_size"
+        [pageSizeOptions]="pageSizeOptions"
+        (page)="handlePage($event)"
+        showFirstLastButtons
+      ></mat-paginator>
+        <!--  -->

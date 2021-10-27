@@ -48,7 +48,6 @@
 
         <div class="check-filtros">
           <mat-checkbox
-          
             (change)="getDataFilter('familia', $event, data)"
             *ngFor="let data of listMarcas"
             value="{{ data.id }}"
@@ -61,27 +60,21 @@
         <label class="title-menu"><strong>Familia</strong></label>
 
         <div class="section">
-          <ng-container *ngIf="listFamilias.length==0; else elseTemplate">
-              <label >No has seleccionado ninguna marca</label>
-          </ng-container>
-          <ng-template #elseTemplate>
-            <div *ngFor="let familia of listFamilias">
-              <label
-                ><strong>{{ familia.nombre }}</strong></label
+          <div *ngFor="let familia of listFamilias">
+            <label
+              ><strong>{{ familia.nombre }}</strong></label
+            >
+
+            <div class="check-filtros">
+              <mat-checkbox
+                (change)="getDataFilter('linea', $event, familia)"
+                *ngFor="let data of familia.data"
+                value="{{ data.id }}"
+                >{{ data.nombre }}</mat-checkbox
               >
-  
-              <div class="check-filtros">
-                <mat-checkbox
-                  (change)="getDataFilter('linea', $event, familia)"
-                  *ngFor="let data of familia.data"
-                  value="{{ data.id }}"
-                  >{{ data.nombre }}</mat-checkbox
-                >
-              </div>
-              <hr />
             </div>
-          </ng-template>
-          
+            <hr />
+          </div>
         </div>
       </div>
 
@@ -124,7 +117,83 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="content mat-elevation-z8 table-scroll">
-     
+      <div class="preciosList">
+
+
+
+        <div *ngFor="let dataPrecio of listPrecios | paginate: page_size:page_number">
+          <section class="flex-container">
+            <div class="caja">
+              <img style="width: 90px;" [src]="dataPrecio.imagen" alt="" />
+            </div>
+            <div class="textCja">
+              <strong>
+                {{ dataPrecio.nombre }}
+              </strong>
+            </div> 
+           <!--  <div class="textCja">
+              
+             <label  > {{ dataPrecio.nombre }}</label>
+              
+              
+            </div> -->
+            <span
+              class="precioNuevo"
+              *ngFor="let precioNuevo of dataPrecio.lista_nuevo"
+            >
+              <ng-container
+                *ngIf="precioNuevo.precio == 'N/A'; else elseTemplate"
+              >
+                <div class="caja">
+                  <strong>
+                    {{ precioNuevo.precio }}
+                  </strong>
+                </div>
+              </ng-container>
+              <ng-template #elseTemplate>
+                <div class="caja">
+                  <strong>
+                    {{ precioNuevo.precio | currency }}
+                  </strong>
+                </div>
+              </ng-template>
+            </span>
+
+            <span
+              class="precioUsados"
+              *ngFor="let precioUsado of dataPrecio.lista_usado"
+            >
+              <ng-container
+                *ngIf="precioUsado.precio == 'N/A'; else elseTemplate"
+              >
+                <div class="caja">
+                  <strong>
+                    {{ precioUsado.precio }}
+                  </strong>
+                </div>
+              </ng-container>
+              <ng-template #elseTemplate>
+                <div class="caja">
+                  <strong>
+                    {{ precioUsado.precio | currency }}
+                  </strong>
+                </div>
+              </ng-template>
+            </span>
+
+
+            
+          </section>
+         <hr>
+        </div>
+        <mat-paginator
+        [length]="listPrecios.length"
+        [pageSize]="page_size"
+        [pageSizeOptions]="pageSizeOptions"
+        (page)="handlePage($event)"
+        showFirstLastButtons
+      ></mat-paginator>
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
