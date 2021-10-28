@@ -44,6 +44,36 @@
       </div>
       <mat-divider></mat-divider>
       <div class="form-group col">
+        <label class="title-menu"><strong>Forma de vehículo</strong></label>
+        <div class="section">
+          <div class="check-filtros">
+            <!-- (change)="getDataFilter('linea', $event,familia)" -->
+            <mat-checkbox
+              *ngFor="let forma of listForma"
+              value="{{ forma.id }}"
+              >{{ forma.nombre }}</mat-checkbox
+            >
+          </div>
+        </div>
+      </div>
+
+      <mat-divider></mat-divider>
+      <div class="form-group col">
+        <label class="title-menu"><strong>Tipo de carrocería</strong></label>
+        <div class="section">
+          <div class="check-filtros">
+            <!-- (change)="getDataFilter('linea', $event,familia)" -->
+            <mat-checkbox
+              *ngFor="let forma of listForma"
+              value="{{ forma.id }}"
+              >{{ forma.nombre }}</mat-checkbox
+            >
+          </div>
+        </div>
+      </div>
+
+      <mat-divider></mat-divider>
+      <div class="form-group col">
         <label class="title-menu"><strong>Marcas</strong></label>
 
         <div class="check-filtros">
@@ -92,8 +122,67 @@
         </div>
       </div>
       <mat-divider></mat-divider>
+      <div class="form-group col">
+        <label class="title-menu"><strong>Tipo de Motor</strong></label>
+        <mat-form-field appearance="outline" class="col-12">
+          <mat-select class="input-border" placeholder="Seleccione..." required>
+            <mat-option
+              *ngFor="let motor of listTipoMotor"
+              [value]="motor.id"
+            >
+              {{ motor.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
 
       <mat-divider></mat-divider>
+      <div class="form-group col">
+        <label class="title-menu"><strong>Tipo de Motor</strong></label>
+        <mat-form-field appearance="outline" class="col-12">
+          <mat-select class="input-border" placeholder="Seleccione..." required>
+            <mat-option
+              *ngFor="let motor of listTipoMotor"
+              [value]="motor.id"
+            >
+              {{ motor.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <mat-divider></mat-divider>
+      <!-- traccion -->
+      <div class="form-group col">
+        <label class="title-menu"><strong>Tracción</strong></label>
+        <mat-form-field appearance="outline" class="col-12">
+          <mat-select class="input-border" placeholder="Seleccione..." required>
+            <mat-option
+              *ngFor="let traccion of listTraccion"
+              [value]="traccion.id"
+            >
+              {{ traccion.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <mat-divider></mat-divider>
+      <!-- Equipamento -->
+      <div class="form-group col">
+        <label class="title-menu"><strong>Equipamento</strong></label>
+        <mat-form-field appearance="outline" class="col-12">
+          <mat-select class="input-border" placeholder="Seleccione..." required>
+            <mat-option
+              *ngFor="let traccion of listTraccion"
+              [value]="traccion.id"
+            >
+              {{ traccion.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <mat-divider></mat-divider>
+      <!-- Linea -->
       <div class="form-group col">
         <label class="title-menu"><strong>Linea</strong></label>
         <div class="section">
@@ -112,31 +201,58 @@
           </div>
         </div>
       </div>
-      <mat-divider></mat-divider>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="content mat-elevation-z8 table-scroll">
-      <div class="preciosList">
+      <div>
+        <h3 class="titleheader">
+          Consulta el valor del vehículo que quieres vender <br />
+          o comprar y compara los precios por año modelo <br />
+          de los vehículos de tu interés
+        </h3>
+      </div>
 
+      <div>
+        <section class="flex-container">
+          <div class="cajaHeader1"></div>
 
+          <div class="cajaNuevo precioNuevo"><Strong>Nuevos</Strong></div>
+          <div class="cajaUsado precioUsados"><strong>Usados</strong></div>
+        </section>
 
-        <div *ngFor="let dataPrecio of listPrecios | paginate: page_size:page_number">
+        <!-- años de los vehiculos -->
+        <section class="flex-container">
+          <div class="cajaHeader1"></div>
+
+          <span class="cajaHeader" *ngFor="let nuevo of listAnoNuevo">
+            <div class="cajaHeader precioNuevoAnos">
+              <strong>{{ nuevo.modelo }}</strong>
+            </div>
+          </span>
+
+          <span *ngFor="let usado of listAnoUsados">
+            <div class="cajaHeader precioUsadosAnos">
+              <strong>{{ usado.modelo }}</strong>
+            </div>
+          </span>
+        </section>
+        <hr style="width: 100%" />
+        <!-- años de los precios data -->
+
+        <div
+          *ngFor="
+            let dataPrecio of listPrecios | paginate: page_size:page_number
+          "
+        >
           <section class="flex-container">
             <div class="caja">
-              <img style="width: 90px;" [src]="dataPrecio.imagen" alt="" />
+              <img style="width: 90px" [src]="dataPrecio.imagen" alt="" />
             </div>
             <div class="textCja">
-              <strong>
-                {{ dataPrecio.nombre }}
-              </strong>
-            </div> 
-           <!--  <div class="textCja">
-              
-             <label  > {{ dataPrecio.nombre }}</label>
-              
-              
-            </div> -->
+              {{ dataPrecio.nombre }}
+            </div>
+
             <span
               class="precioNuevo"
               *ngFor="let precioNuevo of dataPrecio.lista_nuevo"
@@ -180,20 +296,18 @@
                 </div>
               </ng-template>
             </span>
-
-
-            
           </section>
-         <hr>
+          <hr />
         </div>
-        <mat-paginator
-        [length]="listPrecios.length"
-        [pageSize]="page_size"
-        [pageSizeOptions]="pageSizeOptions"
-        (page)="handlePage($event)"
-        showFirstLastButtons
-      ></mat-paginator>
       </div>
+
+      <!-- <mat-paginator
+              [length]="listPrecios.length"
+              [pageSize]="page_size"
+              [pageSizeOptions]="pageSizeOptions"
+              (page)="handlePage($event)"
+              showFirstLastButtons
+            ></mat-paginator> -->
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

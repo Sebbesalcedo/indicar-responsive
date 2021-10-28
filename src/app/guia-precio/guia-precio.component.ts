@@ -43,6 +43,11 @@ export class GuiaPrecioComponent implements OnInit {
   public listCajaTipo: any = [];
   public listLineas: any = [];
 
+  public listTraccion:any=[];
+  public listForma:any=[];
+  public listTipoMotor:any=[];
+
+
   public listPrecio: any = [];
 
   public familiasSeleccion: any = [];
@@ -62,7 +67,17 @@ export class GuiaPrecioComponent implements OnInit {
   public listAnoUsados:any =[];
   public cantAnosUsuados:0;
 
-  page_size: number = 10; // CANTIDAD DE ELEMENTOS POR PAGINA
+
+
+  public marca;
+  public familia;
+
+  public linea;
+
+
+
+  page_size: number = 10
+  ; // CANTIDAD DE ELEMENTOS POR PAGINA
   page_number: number = 1;
   pageSizeOptions = [5, 10, 20, 50, 100];
   constructor(
@@ -100,7 +115,59 @@ export class GuiaPrecioComponent implements OnInit {
         console.log(err);
       }
     );
+
+    this._globalService.getData(this.urlFiltros + "traccion").subscribe(
+      (res) => {
+        
+        this.listTraccion = res;
+        console.log(this.listTraccion);
+
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+
+    this._globalService.getData(this.urlFiltros + "formas").subscribe(
+      (res) => {
+        
+        this.listForma = res;
+       
+
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+
+
+        this._globalService.getData(this.urlFiltros + "formas").subscribe(
+      (res) => {
+        
+        this.listForma = res;
+       
+
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+    this._globalService.getData(this.urlFiltros + "tipomotor").subscribe(
+      (res) => {
+        
+        this.listTipoMotor = res;
+       
+
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+
+    
   }
+
+ 
 
   getMarca() {
     this._globalService
@@ -118,6 +185,7 @@ export class GuiaPrecioComponent implements OnInit {
   getDataFilter(key, event, dta) {
     let data = event.source.value;
 
+      console.log(data);
     switch (key) {
       case "marca":
         this._globalService
@@ -265,4 +333,28 @@ export class GuiaPrecioComponent implements OnInit {
       }
     );
   }
+  // ────────────────────────────────────────────────────────────────────────────────
+  // ───────────────────────────Metodos para obtener los precios cpn los filtros
+  // ────────────────────────────────────────────────────────────────────────────────
+
+
+
+
+ obtenerFiltro() {
+    this._globalService.getData(this.urlPrecios).subscribe(
+      (res) => {
+       console.log(res);
+        this.listPrecios = res;
+        this.listAnoNuevo=res[0].lista_nuevo;
+        this.listAnoUsados=res[0].lista_usado;
+        this.cantAnosUsuados=this.listAnoUsados.length;
+       
+
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+
 }

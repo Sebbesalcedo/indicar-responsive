@@ -31,6 +31,9 @@
       venta de carros
     </title>
     <base href="/" />
+    
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <!-- fonts -->
@@ -104,5 +107,11 @@
   //       });
 
 
+  </script>
+  <script>
+     var hamburger = document.querySelector(".hamburger");
+  hamburger.addEventListener("click", function(){
+    document.querySelector("body").classList.toggle("active");
+  })
   </script>
 </html>

@@ -29,8 +29,6 @@ mat-divider {
   grid-area: contenido;
 }
 
-
-
 .section {
   max-height: 250px;
   padding: 1rem;
@@ -130,48 +128,155 @@ mat-sidenav-container {
 
 /* precio Nuevos */
 
+.precioNuevoAnos {
+  color: rgb(4, 189, 4);
+  font-size: 1.50rem;
+}
+.precioUsadosAnos {
+  color: #0054b7;
+  font-size: 1.50rem;
+}
+
 .precioNuevo {
   color: rgb(4, 189, 4);
-  font-size: 0.89rem;
+  font-size: 0.99rem;
 }
 .precioUsados {
   color: #0054b7;
-  font-size: 0.89rem;
+  font-size: 0.99rem;
 }
 .preciosList {
   padding: 40px;
 }
 
+
+
+
+
+.titleheader{
+	color: #004195;
+	text-align: justify;
+	/* text-align: center; */
+	margin: 20px;
+	padding: 10px;
+	align-items: flex-end;
+	display: flex;
+   
+	justify-content: right;
+   
+
+}
+
 .check-filtros {
   margin-right: 100%;
 }
-.flex-container{
+
+
+
+  .flex-container {
+	display: flex;
+  }
+.caja {
+  /* border: 1px  solid  #004195; */
+  font-family: Arial, Helvetica, sans-serif;
+
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  flex: 0 0 auto;
+  text-align: justify;
+  margin: 35px;
+  align-items: center;
   display: flex;
+ 
+  justify-content: center;
 }
-.caja{
 
-  
-  border: 1px  solid  #004195;
+.cajaNuevo{
+   
+  border-bottom: 2px  solid  #37a114;
   font-family: Arial, Helvetica, sans-serif;
   
-  width: 100px;
+  width: 290px;
   height: 80px;
   line-height: 80px;
-  text-align: center;
-  margin: 10px;
+  flex: 0 0 auto;
+  text-align: justify;
+  margin: 25px;
+  align-items: center;
+  display: flex;
+   font-size: 1.7em;
+  justify-content: center;
+  
   
 }
-.textCja{
-  font-size: 0.89em;
+.cajaUsado {
+  border-bottom: 2px  solid  #004195;
+font-family: Arial, Helvetica, sans-serif;
 
+width: 100%;
+height: 80px;
+line-height: 80px;
+flex: 0 0 auto;
+text-align: justify;
+margin: 25px;
 
-  border: 1px  solid  #004195;
-  font-family: Arial, Helvetica, sans-serif;
+align-items: center;
+display: flex;
+font-size: 1.7em;
+justify-content: center;
+}
+
+.cajaHeader1{
+   
+    /* border: 1px  solid  #004195; */
+    font-family: Arial, Helvetica, sans-serif;
+    
+    width: 300px;
+    height: 70px;
+    line-height: 70px;
+    flex: 0 0 auto;
+    text-align: justify;
+    margin: 2px;
+    align-items: center;
+    display: flex;
+     
+    justify-content: center;
+    
+}
+.cajaHeader {
+	/* border: 1px  solid  #004195; */
+	font-family: Arial, Helvetica, sans-serif;
   
-  width: 300px;
+	width: 90px;
+	height: 20px; 
+	line-height: 20px;
+	flex: 0 0 auto;
+	text-align: justify;
+	margin: 30px;
+	align-items: center;
+	display: flex;
+   
+	justify-content: center;
+  }
+.textCja {
+  font-size: 0.8em;
+
+  flex: 0 0 auto;
+  /* border: 1px  solid  #004195; */
+  font-family: Arial, Helvetica, sans-serif;
+
+  width: 150px;
   height: 80px;
-  line-height: 80px;
-  text-align: center;
-  margin: 10px;
+  /* line-height: 40px; */
+  text-align: justify;
+  /* text-align: center; */
+  margin: 5px;
+
+  align-items: center;
+  display: flex;
+ 
+  justify-content: left;
+ 
 }
 
