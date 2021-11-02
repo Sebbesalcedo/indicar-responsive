@@ -18,13 +18,12 @@
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
     <div class="container-fluid fix filtros-contenido p-0">
       <div class="form-group col">
-        <label class="title-menu"><strong>Tipo de Busqueda</strong></label>
+        <label class="title-menu"><strong>Tipo de Búsqueda</strong></label>
         <mat-form-field appearance="outline" class="col-12">
-          <mat-select class="input-border" placeholder="Seleccione..." required>
-            <mat-option value="1">Busqueda Basica</mat-option>
-            <mat-option value="2">Busqueda Avanzada</mat-option>
-
-            <mat-option value="3">Busqueda Profesional</mat-option>
+          <mat-select class="input-border" (selectionChange)="tipoBusqueda($event)"  placeholder="Seleccione..." required>
+            <mat-option selected value="1">Búsqueda Basica</mat-option>
+            <mat-option value="2">Búsqueda Avanzada</mat-option>
+            <mat-option value="3">Búsqueda Profesional</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -32,7 +31,7 @@
       <mat-divider></mat-divider>
 
       <div class="form-group col">
-        <label class="title-menu"><strong>Clase de vehículo</strong></label>
+        <label class="title-menu"><strong>Clase de Vehículo</strong></label>
         <div class="check-filtros">
           <mat-checkbox
             (change)="getDataFilter('marca', $event)"
@@ -42,9 +41,10 @@
           >
         </div>
       </div>
+      <div *ngIf="profesional|| avanzada">
       <mat-divider></mat-divider>
       <div class="form-group col">
-        <label class="title-menu"><strong>Forma de vehículo</strong></label>
+        <label class="title-menu"><strong>Forma de Vehículo</strong></label>
         <div class="section">
           <div class="check-filtros">
             <!-- (change)="getDataFilter('linea', $event,familia)" -->
@@ -55,22 +55,55 @@
             >
           </div>
         </div>
+      </div>
+    </div>
+      <div *ngIf="profesional">
+      <mat-divider></mat-divider>
+      <div class="form-group col">
+        <label class="title-menu"><strong>Tipo de Carrocería</strong></label>
+        <div class="section">
+          <div class="check-filtros">
+            <!-- (change)="getDataFilter('linea', $event,familia)" -->
+            <mat-checkbox
+              *ngFor="let forma of listForma"
+              value="{{ forma.id }}"
+              >{{ forma.nombre }}</mat-checkbox
+            >
+          </div>
+        </div>
+      </div>
+     
+      <mat-divider></mat-divider>
+      <div class="form-group col">
+        <label class="title-menu"><strong>Tipo de Segmento</strong></label>
+        <mat-form-field appearance="outline" class="col-12">
+          <mat-select class="input-border" placeholder="Seleccione..." required>
+            <mat-option
+              *ngFor="let segmento of listSegmento"
+              [value]="segmento.id"
+            >
+              {{ segmento.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    
+        <mat-divider></mat-divider>
+      <div class="form-group col">
+        <label class="title-menu"><strong>Tipo de Servicio</strong></label>
+        <mat-form-field appearance="outline" class="col-12">
+          <mat-select class="input-border" placeholder="Seleccione..." required>
+            <mat-option
+              *ngFor="let servicio of listTipoServicio"
+              [value]="servicio.id"
+            >
+              {{ servicio.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
       </div>
 
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Tipo de carrocería</strong></label>
-        <div class="section">
-          <div class="check-filtros">
-            <!-- (change)="getDataFilter('linea', $event,familia)" -->
-            <mat-checkbox
-              *ngFor="let forma of listForma"
-              value="{{ forma.id }}"
-              >{{ forma.nombre }}</mat-checkbox
-            >
-          </div>
-        </div>
-      </div>
 
       <mat-divider></mat-divider>
       <div class="form-group col">
@@ -87,7 +120,7 @@
       </div>
       <mat-divider></mat-divider>
       <div class="form-group col">
-        <label class="title-menu"><strong>Familia</strong></label>
+        <label class="title-menu"><strong>Familias</strong></label>
 
         <div class="section">
           <div *ngFor="let familia of listFamilias">
@@ -107,49 +140,8 @@
           </div>
         </div>
       </div>
+     <div *ngIf="avanzada ||  profesional">
 
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Tipo de Caja</strong></label>
-
-        <div class="check-filtros">
-          <mat-checkbox
-            *ngFor="let caja of listCajaTipo"
-            (change)="getDataFilter('caja', $event, caja)"
-            value="{{ caja.id }}"
-            >{{ caja.nombre }}</mat-checkbox
-          >
-        </div>
-      </div>
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Tipo de Motor</strong></label>
-        <mat-form-field appearance="outline" class="col-12">
-          <mat-select class="input-border" placeholder="Seleccione..." required>
-            <mat-option
-              *ngFor="let motor of listTipoMotor"
-              [value]="motor.id"
-            >
-              {{ motor.nombre }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Tipo de Motor</strong></label>
-        <mat-form-field appearance="outline" class="col-12">
-          <mat-select class="input-border" placeholder="Seleccione..." required>
-            <mat-option
-              *ngFor="let motor of listTipoMotor"
-              [value]="motor.id"
-            >
-              {{ motor.nombre }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
       <mat-divider></mat-divider>
       <!-- traccion -->
       <div class="form-group col">
@@ -165,20 +157,59 @@
           </mat-select>
         </mat-form-field>
       </div>
-      <mat-divider></mat-divider>
-      <!-- Equipamento -->
-      <div class="form-group col">
-        <label class="title-menu"><strong>Equipamento</strong></label>
+     </div>
+
+ 
+    <mat-divider></mat-divider>
+    <div class="form-group col">
+      <label class="title-menu"><strong>Tipo de Caja</strong></label>
+
+      <div class="check-filtros">
+        <mat-checkbox
+          *ngFor="let caja of listCajaTipo"
+          (change)="getDataFilter('caja', $event, caja)"
+          value="{{ caja.id }}"
+          >{{ caja.nombre }}</mat-checkbox
+        >
+      </div>
+    </div>
+ 
+      
+
+      <div *ngIf="profesional">
+        <mat-divider></mat-divider>
+        <div class="form-group col">
+          <label class="title-menu"><strong>Tipo de Motor</strong></label>
+          <mat-form-field appearance="outline" class="col-12">
+            <mat-select class="input-border" placeholder="Seleccione..." required>
+              <mat-option
+                *ngFor="let motor of listTipoMotor"
+                [value]="motor.id"
+              >
+                {{ motor.nombre }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+     
+       <!-- Equipamento -->
+      <div *ngIf="profesional">
+        <mat-divider></mat-divider>
+     
+      <div class="form-group col" >
+        <label class="title-menu"><strong>Equipamiento</strong></label>
         <mat-form-field appearance="outline" class="col-12">
           <mat-select class="input-border" placeholder="Seleccione..." required>
             <mat-option
-              *ngFor="let traccion of listTraccion"
-              [value]="traccion.id"
+              *ngFor="let equipamento of listEquipamento"
+              [value]="equipamento.id"
             >
-              {{ traccion.nombre }}
+              {{ equipamento.nombre }}
             </mat-option>
           </mat-select>
         </mat-form-field>
+      </div>
       </div>
 
       <mat-divider></mat-divider>

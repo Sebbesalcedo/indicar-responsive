@@ -42,10 +42,12 @@ export class GuiaPrecioComponent implements OnInit {
   public listFamilias: any = [];
   public listCajaTipo: any = [];
   public listLineas: any = [];
-
-  public listTraccion:any=[];
-  public listForma:any=[];
-  public listTipoMotor:any=[];
+  public listTraccion: any = [];
+  public listForma: any = [];
+  public listTipoMotor: any = [];
+  public listTipoServicio: any = [];
+  public listSegmento: any = [];
+  public listEquipamento: any = [];
 
 
   public listPrecio: any = [];
@@ -62,22 +64,38 @@ export class GuiaPrecioComponent implements OnInit {
   public position = 0;
   public encontrado = false;
 
+  public listAnoNuevo: any = [];
+  public listAnoUsados: any = [];
+  public cantAnosUsuados: 0;
 
-  public listAnoNuevo:any =[];
-  public listAnoUsados:any =[];
-  public cantAnosUsuados:0;
+  public basica: Boolean = false;
 
-
+  public avanzada: Boolean = false;
+  public profesional: Boolean = false;
 
   public marca;
   public familia;
 
   public linea;
 
+  public dataFiltro: any = [];
+  public filterData: any = [];
 
+  public Fclase:0;
+  public Fmarca:0;
+  public Fmarcas:any=[];
+  public Ffamilia:0;
+  public Fforma:0;
+  public Ftipo_carroceria:0;
+  public Ftipo_servicio:0;
+  public Flinea_traccion:0;
+  public Ftipo_motor:0;
+  public Fcaja_cambios:0;
+  public Fnivel_equipamient:0;
+  public Flinea:0;
+  public Fsegmento:0;
 
-  page_size: number = 10
-  ; // CANTIDAD DE ELEMENTOS POR PAGINA
+  page_size: number = 10; // CANTIDAD DE ELEMENTOS POR PAGINA
   page_number: number = 1;
   pageSizeOptions = [5, 10, 20, 50, 100];
   constructor(
@@ -118,10 +136,8 @@ export class GuiaPrecioComponent implements OnInit {
 
     this._globalService.getData(this.urlFiltros + "traccion").subscribe(
       (res) => {
-        
         this.listTraccion = res;
         console.log(this.listTraccion);
-
       },
       (err) => {
         console.log(err);
@@ -130,23 +146,18 @@ export class GuiaPrecioComponent implements OnInit {
 
     this._globalService.getData(this.urlFiltros + "formas").subscribe(
       (res) => {
-        
         this.listForma = res;
-       
-
+        console.log(this.listForma);
       },
       (err) => {
         console.log(err);
       }
     );
 
-
-        this._globalService.getData(this.urlFiltros + "formas").subscribe(
+    this._globalService.getData(this.urlFiltros + "segmento").subscribe(
       (res) => {
-        
-        this.listForma = res;
-       
-
+        this.listSegmento = res;
+        console.log(this.listSegmento);
       },
       (err) => {
         console.log(err);
@@ -154,20 +165,31 @@ export class GuiaPrecioComponent implements OnInit {
     );
     this._globalService.getData(this.urlFiltros + "tipomotor").subscribe(
       (res) => {
-        
         this.listTipoMotor = res;
-       
-
       },
       (err) => {
         console.log(err);
       }
     );
 
-    
-  }
+    this._globalService.getData(this.urlFiltros + "tiposervicio").subscribe(
+      (res) => {
+        this.listTipoServicio = res;
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
 
- 
+    this._globalService.getData(this.urlFiltros + "equipamiento").subscribe(
+      (res) => {
+        this.listEquipamento = res;
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
 
   getMarca() {
     this._globalService
@@ -182,12 +204,38 @@ export class GuiaPrecioComponent implements OnInit {
       );
   }
 
+  tipoBusqueda(event) {
+    let data = parseInt(event.value);
+    switch (data) {
+      case 1:
+        this.basica = true;
+        this.avanzada = false;
+        this.profesional = false;
+
+        break;
+
+      case 2:
+        this.avanzada = true;
+        this.profesional = false;
+
+        break;
+      case 3:
+        this.avanzada = false;
+        this.profesional = true;
+
+        break;
+    }
+  }
+
   getDataFilter(key, event, dta) {
+    console.log( event, dta);
     let data = event.source.value;
 
-      console.log(data);
+   
     switch (key) {
+      
       case "marca":
+      this.Fmarcas.push(data);
         this._globalService
           .getData(this.urlFiltros + "marcas?clase=" + data)
           .subscribe(
@@ -317,16 +365,45 @@ export class GuiaPrecioComponent implements OnInit {
   // ───────────────────────────Metodos para obtener los precios
   // ────────────────────────────────────────────────────────────────────────────────
 
+  // getFiltroLinea() {
+    
+
+  //   for (let index = 0; index < this.dataFiltro.length; index++) {
+  //     const element = this.dataFiltro[index];
+
+  //     this.filterData.push();
+
+  //   }
+
+  //   this._globalService
+  //     .getData(this.urlFiltros + "lineas?marca=" + dta.id + "&familia=" + data)
+  //     .subscribe(
+  //       (res) => {
+  //         let array = {
+  //           id: data,
+  //           nombre: dta.nombre,
+  //           marca: dta.id,
+  //           familia: data,
+  //           data: res,
+  //         };
+
+  //         this.familiasSeleccion.push(data);
+  //         this.listLineas.push(array);
+  //       },
+  //       (err) => {
+  //         console.log(err);
+  //       }
+  //     );
+  // }
+
   obtenerPrecio() {
     this._globalService.getData(this.urlPrecios).subscribe(
       (res) => {
-       console.log(res);
+        console.log(res);
         this.listPrecios = res;
-        this.listAnoNuevo=res[0].lista_nuevo;
-        this.listAnoUsados=res[0].lista_usado;
-        this.cantAnosUsuados=this.listAnoUsados.length;
-       
-
+        this.listAnoNuevo = res[0].lista_nuevo;
+        this.listAnoUsados = res[0].lista_usado;
+        this.cantAnosUsuados = this.listAnoUsados.length;
       },
       (err) => {
         console.log(err);
@@ -337,24 +414,24 @@ export class GuiaPrecioComponent implements OnInit {
   // ───────────────────────────Metodos para obtener los precios cpn los filtros
   // ────────────────────────────────────────────────────────────────────────────────
 
+  // obtenerFiltro() {
+
+  //   let urlFinal;
 
 
+  //   if (condition) {
+      
+  //   } 
 
- obtenerFiltro() {
-    this._globalService.getData(this.urlPrecios).subscribe(
-      (res) => {
-       console.log(res);
-        this.listPrecios = res;
-        this.listAnoNuevo=res[0].lista_nuevo;
-        this.listAnoUsados=res[0].lista_usado;
-        this.cantAnosUsuados=this.listAnoUsados.length;
+  //   this._globalService.getData(this.urlPrecios).subscribe(
+  //     (res) => {
+  //       console.log(res);
+  //       this.listPrecios = res;
        
-
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
-  }
-
+  //     },
+  //     (err) => {
+  //       console.log(err);
+  //     }
+  //   );
+  // }
 }
