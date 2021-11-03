@@ -49,7 +49,6 @@ export class GuiaPrecioComponent implements OnInit {
   public listSegmento: any = [];
   public listEquipamento: any = [];
 
-
   public listPrecio: any = [];
 
   public familiasSeleccion: any = [];
@@ -81,21 +80,10 @@ export class GuiaPrecioComponent implements OnInit {
   public dataFiltro: any = [];
   public filterData: any = [];
 
-  public Fclase:0;
-  public Fmarca:0;
-  public Fmarcas:any=[];
-  public Ffamilia:0;
-  public Fforma:0;
-  public Ftipo_carroceria:0;
-  public Ftipo_servicio:0;
-  public Flinea_traccion:0;
-  public Ftipo_motor:0;
-  public Fcaja_cambios:0;
-  public Fnivel_equipamient:0;
-  public Flinea:0;
-  public Fsegmento:0;
+  public generateUrl: any = [];
+  public urlGenerada: any = [];
 
-  page_size: number = 10; // CANTIDAD DE ELEMENTOS POR PAGINA
+  page_size: number = 50; // CANTIDAD DE ELEMENTOS POR PAGINA
   page_number: number = 1;
   pageSizeOptions = [5, 10, 20, 50, 100];
   constructor(
@@ -137,7 +125,6 @@ export class GuiaPrecioComponent implements OnInit {
     this._globalService.getData(this.urlFiltros + "traccion").subscribe(
       (res) => {
         this.listTraccion = res;
-        console.log(this.listTraccion);
       },
       (err) => {
         console.log(err);
@@ -147,7 +134,6 @@ export class GuiaPrecioComponent implements OnInit {
     this._globalService.getData(this.urlFiltros + "formas").subscribe(
       (res) => {
         this.listForma = res;
-        console.log(this.listForma);
       },
       (err) => {
         console.log(err);
@@ -157,7 +143,6 @@ export class GuiaPrecioComponent implements OnInit {
     this._globalService.getData(this.urlFiltros + "segmento").subscribe(
       (res) => {
         this.listSegmento = res;
-        console.log(this.listSegmento);
       },
       (err) => {
         console.log(err);
@@ -228,14 +213,11 @@ export class GuiaPrecioComponent implements OnInit {
   }
 
   getDataFilter(key, event, dta) {
-    console.log( event, dta);
     let data = event.source.value;
 
-   
     switch (key) {
-      
+      // Al seleccionar una clase se cargan las marcas
       case "marca":
-      this.Fmarcas.push(data);
         this._globalService
           .getData(this.urlFiltros + "marcas?clase=" + data)
           .subscribe(
@@ -249,7 +231,7 @@ export class GuiaPrecioComponent implements OnInit {
           );
 
         break;
-
+      // al seleccionar una marca se cargue la lista de familia
       case "familia":
         for (let index = 0; index < this.listFamilias.length; index++) {
           const element = this.listFamilias[index];
@@ -267,7 +249,6 @@ export class GuiaPrecioComponent implements OnInit {
             .getData(this.urlFiltros + "familias?marca=" + data)
             .subscribe(
               (res) => {
-                console.log(res);
                 let array = {
                   id: dta.id,
                   nombre: dta.nombre,
@@ -280,7 +261,158 @@ export class GuiaPrecioComponent implements OnInit {
                 console.log(err);
               }
             );
+          //para la lista de precios
+          this._globalService
+            .getData(this.urlPrecios + "?marca=" + data)
+            .subscribe(
+              (res) => {
+                //Eliminamos los datos de inicio
+                for (let index = 0; index < this.listPrecios.length; index++) {
+                  const element = this.listPrecios[index];
+
+                  if (element.id === 199703) {
+                    this.listPrecios = [];
+                  }
+                }
+
+                let precios = {
+                  id: parseInt(data),
+                  data: res,
+                };
+
+                if (this.listPrecios == null) {
+                  this.listPrecios.push(precios);
+                } else {
+                  for (
+                    let index = 0;
+                    index < this.listPrecios.length;
+                    index++
+                  ) {
+                    const element = this.listPrecios[index];
+                    if (element.id === parseInt(data)) {
+                      this.listPrecios.splice(index, 1);
+                      console.log("object");
+                    
+                    } else {
+                      this.listPrecios.push(precios);
+                      console.log("1234object");
+                    }
+                  }
+                }
+              },
+              (err) => {
+                console.log(err);
+              }
+            );
         }
+
+        break;
+      case "linea":
+        console.log(this.listPrecios);
+        for (let index = 0; index < this.listLineas.length; index++) {
+          const element = this.listLineas[index];
+          if (element.id == data) {
+            this.position = index;
+            this.encontrado = true;
+          }
+        }
+        if (this.encontrado) {
+          this.listLineas.splice(this.position, 1);
+          this.familiasSeleccion.splice(this.position, 1);
+          this.position = 0;
+          this.encontrado = false;
+        } else {
+          this._globalService
+            .getData(
+              this.urlFiltros + "lineas?marca=" + dta.id + "&familia=" + data
+            )
+            .subscribe(
+              (res) => {
+                let array = {
+                  id: data,
+                  nombre: dta.nombre,
+                  marca: dta.id,
+                  familia: data,
+                  data: res,
+                };
+
+                this.familiasSeleccion.push(data);
+                this.listLineas.push(array);
+              },
+              (err) => {
+                console.log(err);
+              }
+            );
+
+          for (let index = 0; index < this.listPrecios.length; index++) {
+            const element = this.listPrecios[index];
+            console.log(element);
+            if (element.id == dta.id) {
+            
+              this.position = index;
+              this.encontrado = true;
+            }
+          }
+          if (this.encontrado) {
+            this.listPrecios.splice(this.position, 1);
+            console.log( this.listPrecios);
+            
+          } else {
+
+               //para la lista de precios
+          this._globalService
+            .getData(this.urlPrecios + "?marca=" + dta.id + "&familia=" + data)
+            .subscribe(
+              (res) => {
+                let precios = {
+                  id: dta.id,
+                  data: res,
+                };
+
+                this.listPrecios.push(precios);
+              },
+              (err) => {
+                console.log(err);
+              }
+            );
+
+          }
+         
+        }
+
+        break;
+
+      case "precioLinea":
+        //para la lista de precios
+        this._globalService
+          .getData(this.urlPrecios + "?linea=" + data)
+          .subscribe(
+            (res) => {
+              for (let index = 0; index < this.listPrecios.length; index++) {
+                const element = this.listPrecios[index];
+                console.log(element.id, res[0].linea);
+                if (
+                  element.id === res[0].linea ||
+                  element.id === res[0].marca
+                ) {
+                  this.listPrecios.splice(index, 1);
+                }
+              }
+
+              console.log(this.listPrecios);
+
+              console.log(res);
+              let precios = {
+                id: data,
+                data: res,
+              };
+
+              this.listPrecios.push(precios);
+            },
+            (err) => {
+              console.log(err);
+            }
+          );
 
         break;
 
@@ -319,45 +451,6 @@ export class GuiaPrecioComponent implements OnInit {
         }
 
         break;
-
-      case "linea":
-        for (let index = 0; index < this.listLineas.length; index++) {
-          const element = this.listLineas[index];
-          if (element.id == data) {
-            this.position = index;
-            this.encontrado = true;
-          }
-        }
-        if (this.encontrado) {
-          this.listLineas.splice(this.position, 1);
-          this.familiasSeleccion.splice(this.position, 1);
-          this.position = 0;
-          this.encontrado = false;
-        } else {
-          this._globalService
-            .getData(
-              this.urlFiltros + "lineas?marca=" + dta.id + "&familia=" + data
-            )
-            .subscribe(
-              (res) => {
-                let array = {
-                  id: data,
-                  nombre: dta.nombre,
-                  marca: dta.id,
-                  familia: data,
-                  data: res,
-                };
-
-                this.familiasSeleccion.push(data);
-                this.listLineas.push(array);
-              },
-              (err) => {
-                console.log(err);
-              }
-            );
-        }
-
-        break;
     }
   }
 
@@ -365,44 +458,33 @@ export class GuiaPrecioComponent implements OnInit {
   // ───────────────────────────Metodos para obtener los precios
   // ────────────────────────────────────────────────────────────────────────────────
 
-  // getFiltroLinea() {
-    
-
-  //   for (let index = 0; index < this.dataFiltro.length; index++) {
-  //     const element = this.dataFiltro[index];
-
-  //     this.filterData.push();
-
-  //   }
-
-  //   this._globalService
-  //     .getData(this.urlFiltros + "lineas?marca=" + dta.id + "&familia=" + data)
-  //     .subscribe(
-  //       (res) => {
-  //         let array = {
-  //           id: data,
-  //           nombre: dta.nombre,
-  //           marca: dta.id,
-  //           familia: data,
-  //           data: res,
-  //         };
-
-  //         this.familiasSeleccion.push(data);
-  //         this.listLineas.push(array);
-  //       },
-  //       (err) => {
-  //         console.log(err);
-  //       }
-  //     );
-  // }
+  getFilter() {
+    for (let index = 0; index < this.generateUrl.length; index++) {
+      const element = this.generateUrl[index];
+    }
+  }
 
   obtenerPrecio() {
     this._globalService.getData(this.urlPrecios).subscribe(
       (res) => {
-        console.log(res);
-        this.listPrecios = res;
+        let usado = {
+          linea: 0,
+          data: res[0].lista_usado,
+        };
+        let nuevo = {
+          linea: 0,
+          data: res[0].lista_nuevo,
+        };
+
+        let precios = {
+          id: 199703,
+          data: res,
+        };
+
+        this.listPrecios.push(precios);
         this.listAnoNuevo = res[0].lista_nuevo;
         this.listAnoUsados = res[0].lista_usado;
+
         this.cantAnosUsuados = this.listAnoUsados.length;
       },
       (err) => {
@@ -414,24 +496,17 @@ export class GuiaPrecioComponent implements OnInit {
   // ───────────────────────────Metodos para obtener los precios cpn los filtros
   // ────────────────────────────────────────────────────────────────────────────────
 
-  // obtenerFiltro() {
+  obtenerFiltro() {
+    let urlFinal;
 
-  //   let urlFinal;
-
-
-  //   if (condition) {
-      
-  //   } 
-
-  //   this._globalService.getData(this.urlPrecios).subscribe(
-  //     (res) => {
-  //       console.log(res);
-  //       this.listPrecios = res;
-       
-  //     },
-  //     (err) => {
-  //       console.log(err);
-  //     }
-  //   );
-  // }
+    this._globalService.getData(this.urlPrecios).subscribe(
+      (res) => {
+        console.log(res);
+        this.listPrecios = res;
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
 }

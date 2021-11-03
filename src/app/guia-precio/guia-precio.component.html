@@ -20,7 +20,12 @@
       <div class="form-group col">
         <label class="title-menu"><strong>Tipo de Búsqueda</strong></label>
         <mat-form-field appearance="outline" class="col-12">
-          <mat-select class="input-border" (selectionChange)="tipoBusqueda($event)"  placeholder="Seleccione..." required>
+          <mat-select
+            class="input-border"
+            (selectionChange)="tipoBusqueda($event)"
+            placeholder="Seleccione..."
+            required
+          >
             <mat-option selected value="1">Búsqueda Basica</mat-option>
             <mat-option value="2">Búsqueda Avanzada</mat-option>
             <mat-option value="3">Búsqueda Profesional</mat-option>
@@ -33,77 +38,84 @@
       <div class="form-group col">
         <label class="title-menu"><strong>Clase de Vehículo</strong></label>
         <div class="check-filtros">
+          <!-- (change)="getDataFilter('marca', $event)" -->
           <mat-checkbox
-            (change)="getDataFilter('marca', $event)"
             *ngFor="let data of listClases; let i = index"
             value="{{ data.id }}"
             >{{ data.nombre }}</mat-checkbox
           >
         </div>
       </div>
-      <div *ngIf="profesional|| avanzada">
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Forma de Vehículo</strong></label>
-        <div class="section">
-          <div class="check-filtros">
-            <!-- (change)="getDataFilter('linea', $event,familia)" -->
-            <mat-checkbox
-              *ngFor="let forma of listForma"
-              value="{{ forma.id }}"
-              >{{ forma.nombre }}</mat-checkbox
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-      <div *ngIf="profesional">
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Tipo de Carrocería</strong></label>
-        <div class="section">
-          <div class="check-filtros">
-            <!-- (change)="getDataFilter('linea', $event,familia)" -->
-            <mat-checkbox
-              *ngFor="let forma of listForma"
-              value="{{ forma.id }}"
-              >{{ forma.nombre }}</mat-checkbox
-            >
-          </div>
-        </div>
-      </div>
-     
-      <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Tipo de Segmento</strong></label>
-        <mat-form-field appearance="outline" class="col-12">
-          <mat-select class="input-border" placeholder="Seleccione..." required>
-            <mat-option
-              *ngFor="let segmento of listSegmento"
-              [value]="segmento.id"
-            >
-              {{ segmento.nombre }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-    
+      <div *ngIf="profesional || avanzada">
         <mat-divider></mat-divider>
-      <div class="form-group col">
-        <label class="title-menu"><strong>Tipo de Servicio</strong></label>
-        <mat-form-field appearance="outline" class="col-12">
-          <mat-select class="input-border" placeholder="Seleccione..." required>
-            <mat-option
-              *ngFor="let servicio of listTipoServicio"
-              [value]="servicio.id"
-            >
-              {{ servicio.nombre }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+        <div class="form-group col">
+          <label class="title-menu"><strong>Forma de Vehículo</strong></label>
+          <div class="section">
+            <div class="check-filtros">
+              <!-- (change)="getDataFilter('linea', $event,familia)" -->
+              <mat-checkbox
+                *ngFor="let forma of listForma"
+                value="{{ forma.id }}"
+                >{{ forma.nombre }}</mat-checkbox
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
+      <div *ngIf="profesional">
+        <mat-divider></mat-divider>
+        <div class="form-group col">
+          <label class="title-menu"><strong>Tipo de Carrocería</strong></label>
+          <div class="section">
+            <div class="check-filtros">
+              <!-- (change)="getDataFilter('linea', $event,familia)" -->
+              <mat-checkbox
+                *ngFor="let forma of listForma"
+                value="{{ forma.id }}"
+                >{{ forma.nombre }}</mat-checkbox
+              >
+            </div>
+          </div>
+        </div>
 
+        <mat-divider></mat-divider>
+        <div class="form-group col">
+          <label class="title-menu"><strong>Tipo de Segmento</strong></label>
+          <mat-form-field appearance="outline" class="col-12">
+            <mat-select
+              class="input-border"
+              placeholder="Seleccione..."
+              required
+            >
+              <mat-option
+                *ngFor="let segmento of listSegmento"
+                [value]="segmento.id"
+              >
+                {{ segmento.nombre }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <mat-divider></mat-divider>
+        <div class="form-group col">
+          <label class="title-menu"><strong>Tipo de Servicio</strong></label>
+          <mat-form-field appearance="outline" class="col-12">
+            <mat-select
+              class="input-border"
+              placeholder="Seleccione..."
+              required
+            >
+              <mat-option
+                *ngFor="let servicio of listTipoServicio"
+                [value]="servicio.id"
+              >
+                {{ servicio.nombre }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
 
       <mat-divider></mat-divider>
       <div class="form-group col">
@@ -140,48 +152,52 @@
           </div>
         </div>
       </div>
-     <div *ngIf="avanzada ||  profesional">
+      <div *ngIf="avanzada || profesional">
+        <mat-divider></mat-divider>
+        <!-- traccion -->
+        <div class="form-group col">
+          <label class="title-menu"><strong>Tracción</strong></label>
+          <mat-form-field appearance="outline" class="col-12">
+            <mat-select
+              class="input-border"
+              placeholder="Seleccione..."
+              required
+            >
+              <mat-option
+                *ngFor="let traccion of listTraccion"
+                [value]="traccion.id"
+              >
+                {{ traccion.nombre }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
 
       <mat-divider></mat-divider>
-      <!-- traccion -->
       <div class="form-group col">
-        <label class="title-menu"><strong>Tracción</strong></label>
-        <mat-form-field appearance="outline" class="col-12">
-          <mat-select class="input-border" placeholder="Seleccione..." required>
-            <mat-option
-              *ngFor="let traccion of listTraccion"
-              [value]="traccion.id"
-            >
-              {{ traccion.nombre }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-     </div>
+        <label class="title-menu"><strong>Tipo de Caja</strong></label>
 
- 
-    <mat-divider></mat-divider>
-    <div class="form-group col">
-      <label class="title-menu"><strong>Tipo de Caja</strong></label>
-
-      <div class="check-filtros">
-        <mat-checkbox
-          *ngFor="let caja of listCajaTipo"
-          (change)="getDataFilter('caja', $event, caja)"
-          value="{{ caja.id }}"
-          >{{ caja.nombre }}</mat-checkbox
-        >
+        <div class="check-filtros">
+          <mat-checkbox
+            *ngFor="let caja of listCajaTipo"
+            (change)="getDataFilter('caja', $event, caja)"
+            value="{{ caja.id }}"
+            >{{ caja.nombre }}</mat-checkbox
+          >
+        </div>
       </div>
-    </div>
- 
-      
 
       <div *ngIf="profesional">
         <mat-divider></mat-divider>
         <div class="form-group col">
           <label class="title-menu"><strong>Tipo de Motor</strong></label>
           <mat-form-field appearance="outline" class="col-12">
-            <mat-select class="input-border" placeholder="Seleccione..." required>
+            <mat-select
+              class="input-border"
+              placeholder="Seleccione..."
+              required
+            >
               <mat-option
                 *ngFor="let motor of listTipoMotor"
                 [value]="motor.id"
@@ -192,24 +208,28 @@
           </mat-form-field>
         </div>
       </div>
-     
-       <!-- Equipamento -->
+
+      <!-- Equipamento -->
       <div *ngIf="profesional">
         <mat-divider></mat-divider>
-     
-      <div class="form-group col" >
-        <label class="title-menu"><strong>Equipamiento</strong></label>
-        <mat-form-field appearance="outline" class="col-12">
-          <mat-select class="input-border" placeholder="Seleccione..." required>
-            <mat-option
-              *ngFor="let equipamento of listEquipamento"
-              [value]="equipamento.id"
+
+        <div class="form-group col">
+          <label class="title-menu"><strong>Equipamiento</strong></label>
+          <mat-form-field appearance="outline" class="col-12">
+            <mat-select
+              class="input-border"
+              placeholder="Seleccione..."
+              required
             >
-              {{ equipamento.nombre }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
+              <mat-option
+                *ngFor="let equipamento of listEquipamento"
+                [value]="equipamento.id"
+              >
+                {{ equipamento.nombre }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
       </div>
 
       <mat-divider></mat-divider>
@@ -221,8 +241,8 @@
             <label>{{ linea.nombre }}</label>
             <hr />
             <div class="check-filtros">
-              <!-- (change)="getDataFilter('linea', $event,familia)" -->
               <mat-checkbox
+                (change)="getDataFilter('precioLinea', $event, familia)"
                 *ngFor="let data of linea.data"
                 value="{{ data.id }}"
                 >{{ data.nombre }}</mat-checkbox
@@ -270,65 +290,64 @@
         </section>
         <hr style="width: 100%" />
         <!-- años de los precios data -->
+        <!-- | paginate: page_size:page_number -->
+        <div *ngFor="let item of listPrecios">
+         
+          <div *ngFor="let dataPrecio of item.data">
+            <section class="flex-container">
+              <div class="caja">
+                <img style="width: 90px" [src]="dataPrecio.imagen" alt="" />
+              </div>
+              <div class="textCja">
+                {{ dataPrecio.nombre }}
+              </div>
 
-        <div
-          *ngFor="
-            let dataPrecio of listPrecios | paginate: page_size:page_number
-          "
-        >
-          <section class="flex-container">
-            <div class="caja">
-              <img style="width: 90px" [src]="dataPrecio.imagen" alt="" />
-            </div>
-            <div class="textCja">
-              {{ dataPrecio.nombre }}
-            </div>
-
-            <span
-              class="precioNuevo"
-              *ngFor="let precioNuevo of dataPrecio.lista_nuevo"
-            >
-              <ng-container
-                *ngIf="precioNuevo.precio == 'N/A'; else elseTemplate"
+              <span
+                class="precioNuevo"
+                *ngFor="let precioNuevo of dataPrecio.lista_nuevo"
               >
-                <div class="caja">
-                  <strong>
-                    {{ precioNuevo.precio }}
-                  </strong>
-                </div>
-              </ng-container>
-              <ng-template #elseTemplate>
-                <div class="caja">
-                  <strong>
-                    {{ precioNuevo.precio | currency }}
-                  </strong>
-                </div>
-              </ng-template>
-            </span>
+                <ng-container
+                  *ngIf="precioNuevo.precio == 'N/A'; else elseTemplate"
+                >
+                  <div class="caja">
+                    <strong>
+                      {{ precioNuevo.precio }}
+                    </strong>
+                  </div>
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <div class="caja">
+                    <strong>
+                      {{ precioNuevo.precio | currency }}
+                    </strong>
+                  </div>
+                </ng-template>
+              </span>
 
-            <span
-              class="precioUsados"
-              *ngFor="let precioUsado of dataPrecio.lista_usado"
-            >
-              <ng-container
-                *ngIf="precioUsado.precio == 'N/A'; else elseTemplate"
+              <span
+                class="precioUsados"
+                *ngFor="let precioUsado of dataPrecio.lista_usado"
               >
-                <div class="caja">
-                  <strong>
-                    {{ precioUsado.precio }}
-                  </strong>
-                </div>
-              </ng-container>
-              <ng-template #elseTemplate>
-                <div class="caja">
-                  <strong>
-                    {{ precioUsado.precio | currency }}
-                  </strong>
-                </div>
-              </ng-template>
-            </span>
-          </section>
-          <hr />
+                <ng-container
+                  *ngIf="precioUsado.precio == 'N/A'; else elseTemplate"
+                >
+                  <div class="caja">
+                    <strong>
+                      {{ precioUsado.precio }}
+                    </strong>
+                  </div>
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <div class="caja">
+                    <strong>
+                      {{ precioUsado.precio | currency }}
+                    </strong>
+                  </div>
+                </ng-template>
+              </span>
+            </section>
+            <hr />
+          </div>
         </div>
       </div>
 
